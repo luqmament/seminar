@@ -2,7 +2,7 @@
 
 class M_jurusan_fak extends CI_Model {
     
-    function check_fakultas($fakultas, $status_fak = '') {
+    function check_jurusan_fakultas($jur_fakultas, $status_jur_fak = '') {
 	$this->db->select('*');
 	$this->db->where('nama_fakultas', $fakultas);
 	if(!empty($status_fak)){
@@ -16,7 +16,7 @@ class M_jurusan_fak extends CI_Model {
 	}
     }
     
-    public function InsertFakultas($tabelName,$data){
+    public function InsertJurusanFakultas($tabelName,$data){
 	$res = $this->db->insert($tabelName,$data);	
 	return $res;    
     }
@@ -33,9 +33,9 @@ class M_jurusan_fak extends CI_Model {
         }
     }
     
-    function detailFakultas($idFakultas){
-	$this->db->where('id_fakultas', $idFakultas); 
-	$query = $this->db->get('fakultas');
+    function detailJurusanFakultas($idJurusanFakultas){
+	$this->db->where('id_jurusan_fakultas', $idJurusanFakultas); 
+	$query = $this->db->get('jurusan_fakultas');
 	if($query->num_rows() > 0){
 		return $query->row();
 	}else{
@@ -43,7 +43,7 @@ class M_jurusan_fak extends CI_Model {
 	}
     }
     
-    public function UpdateFakultas($tabelName,$data,$where){
+    public function UpdateJurusanFakultas($tabelName,$data,$where){
 	$res = $this->db->update($tabelName,$data,$where);	
 	return $res;			    
     }

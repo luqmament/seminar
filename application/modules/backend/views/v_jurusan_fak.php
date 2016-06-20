@@ -31,37 +31,38 @@
 				echo validation_errors();
 				?>
 			    </div>
-			<form action="<?php echo site_url('backend/c_fakultas/submit_fakultas')?>" method="post" id="form_fakultas" type_form="<?php echo $type_form;?>">
+			<form action="<?php echo site_url('backend/c_jurusan_fak/submit_jurusan_fakultas')?>" method="post" id="form_jurusan_fakultas" type_form="<?php echo $type_form;?>">
 			    <fieldset>
-				<?php if (isset($getDetail->id_fakultas)){ ?>
+				<?php if (isset($getDetail->id_jurusan_fakultas)){ ?>
 				<div class="form-group">
-					<label>ID Fakultas</label>
-					<input class="form-control" placeholder="id" name="id" type="text" readonly="true" value="<?php echo (isset($getDetail->id_fakultas) ? $getDetail->id_fakultas : '')?>"></input>
+					<label>ID Jurusan Fakultas</label>
+					<input class="form-control" placeholder="id" name="id" type="text" readonly="true" value="<?php echo (isset($getDetail->id_jurusan_fakultas) ? $getDetail->id_jurusan_fakultas : '')?>"></input>
 				</div>
 				<?php } ?>				
 				<div class="form-group">
 					<label>Nama Jurusan</label>
-					<input class="form-control" placeholder="Nama Fakultas" id="nama_jurusan_fak" name="nama_jurusan_fak" type="text" autofocus="" value="<?php echo set_value('nama_jurusan_fakultas', $getDetail->nama_jurusan_fakultas)?> "></input>
+					<input class="form-control" placeholder="Nama Jurusan Fakultas" id="nama_jurusan_fak" name="nama_jurusan_fak" type="text" autofocus="" value="<?php echo set_value('nama_jurusan', $getDetail->nama_jurusan)?> "></input>
 				</div>
 
 				<div class="form-group">
 					<label>Nama fakultas</label>
 					<select class="form-control" id="nama_fakultas" name="nama_fakultas">
 						<option value="">Pilih fakultas</option>
-						<?php foreach ($listFakultas as $key => $value) { ?>
-							<option value="<?php echo $value['id_fakultas'];?>"><?php echo $value['nama_fakultas'];?></option>
+						<?php foreach ($listFakultas as $key => $value) { 
+							$selectedFak = (($getDetail->id_fakultas == $value['id_fakultas']) ? 'selected' : '') ;	?>
+							<option value="<?php echo $value['id_fakultas'];?>" <?php echo $selectedFak?>><?php echo $value['nama_fakultas'];?></option>
 						<?php }	?>
 					</select>
 					
 				</div>
-				<?php if (isset($getDetail->id_fakultas)){ ?>
+				<?php if (isset($getDetail->id_jurusan_fakultas)){ ?>
 				<div class="form-group">
 					<label>Status Fakultas</label>
-					<select class="form-control" id="status_fakultas" name="status_fakultas">
+					<select class="form-control" id="status_jurusan_fakultas" name="status_jurusan_fakultas">
 						<?php 
 							$status_fak = array('1' => "Active", '2' => 'Non Active');
 							foreach ($status_fak as $key => $value) {
-								$selected = (($getDetail->status_fakultas == $key) ? 'selected' : '') ;
+								$selected = (($getDetail->status_jurusan == $key) ? 'selected' : '') ;
 						?>
 						<option value="<?php echo $key ?>" <?php echo $selected;?>><?php echo $value?></option>
 						<?php } ?>
@@ -107,12 +108,12 @@
 </script>
 <script>
 $(document).ready(function(){
-    $('#form_fakultas').on('submit',(function(e) {
-        var type_form = $('#form_fakultas').attr('type_form');
+    $('#form_jurusan_fakultas').on('submit',(function(e) {
+        var type_form = $('#form_jurusan_fakultas').attr('type_form');
 	if (type_form == 'edit') {
-	    if($('#nama').val() == ""){
-		alert("Nama Masih Kosong!");
-		$('#nama').focus();
+	    if($('#nama_jurusan_fak').val() == ""){
+		alert("Nama Jurusan Masih Kosong!");
+		$('#nama_jurusan_fak').focus();
 		return false;
 	    }
 	    return true;

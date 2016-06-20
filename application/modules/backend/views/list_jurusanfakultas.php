@@ -18,10 +18,10 @@
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading"><a href="<?php echo site_url('backend/c_jurusan_fak/v_jurusan_fakultas')?>" class="btn btn-primary">Add Fakultas</a></div>
-					<?php if($this->session->flashdata('infoFakultas')){ ?>
+					<?php if($this->session->flashdata('infoJurusanFakultas')){ ?>
 						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>Success!</strong> <?php echo $this->session->flashdata('infoFakultas'); ?>
+							<strong>Success!</strong> <?php echo $this->session->flashdata('infoJurusanFakultas'); ?>
 						</div>
 					<?php } ?>
 					<?php if($this->session->flashdata('infoDeleteUser')){ ?>
@@ -30,10 +30,10 @@
 							<strong>Success!</strong> <?php echo $this->session->flashdata('infoDeleteUser'); ?>
 						</div>
 					<?php } ?>
-					<?php if($this->session->flashdata('infoCheckFakultas')){ ?>
+					<?php if($this->session->flashdata('infoCheckJurusanFakultas')){ ?>
 						<div class="alert alert-warning" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>Failed!</strong> <?php echo $this->session->flashdata('infoCheckFakultas'); ?>
+							<strong>Failed!</strong> <?php echo $this->session->flashdata('infoCheckJurusanFakultas'); ?>
 						</div>
 					<?php } ?>
 					<div class="panel-body">
@@ -52,11 +52,12 @@
 							foreach($listJurusanFakultas as $key => $value){ ?>
 							<tr>
 								<td><?php echo ++$start ?></td>
-								<td><?php echo $value['nama_jurusan'] ?></td>	
-								<td><?php echo (($value['nama_fakultas'] == 1) ? '<span class="label label-success">Active</span>' : '<span class="label label-danger">Non Active</span>' ); ?></td>								
+								<td><?php echo $value['nama_jurusan'] ?></td>
+								<td><?php echo $value['nama_fakultas'] ?></td>	
+								<td><?php echo (($value['status_jurusan'] == 1) ? '<span class="label label-success">Active</span>' : '<span class="label label-danger">Non Active</span>' ); ?></td>								
 								<td class="text-center">
 								    <a href="<?php echo site_url('backend/c_jurusan_fak/v_jurusan_fakultas/'.$value['id_jurusan_fakultas'])?>" >Edit</a>  
-								    | <a id="delete_fakultas" id_fakultas="<?php echo $value['id_jurusan_fakultas']?>" >Delete</td>
+								    | <a id="delete_jurusan_fakultas" id_jur_fakultas="<?php echo $value['id_jurusan_fakultas']?>" >Delete</td>
 							</tr>  
 							<?php }  ?>
 							</tbody>
@@ -101,19 +102,19 @@
 	})
 </script>
 <script>
-$(document).on("click","#delete_fakultas", function(){
-    var answer = confirm("Are you sure you want to Delete Fakultas ID = "+$(this).attr('id_fakultas')+' ?');
+$(document).on("click","#delete_jurusan_fakultas", function(){
+    var answer = confirm("Are you sure you want to Delete Jurusan Fakultas ID = "+$(this).attr('id_jur_fakultas')+' ?');
     if(answer){
              $.ajax({
                 type: "POST",
-                url: base_url+'backend/c_fakultas/do_delete',
-                data: {id : $(this).attr('id_fakultas')},
+                url: base_url+'backend/c_jurusan_fak/do_delete',
+                data: {id : $(this).attr('id_jur_fakultas')},
                 dataType: "json",
                 success: function(result){				
                     switch(result.returnVal){
                     case "success":
 				alert(result.alert);
-                    window.location.reload(base_url+'fakultas');
+                    window.location.reload(base_url+'jurusan-fak');
                     break;
                     default:
                         alert(result.alert);

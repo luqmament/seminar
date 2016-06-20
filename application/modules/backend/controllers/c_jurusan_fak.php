@@ -67,20 +67,22 @@ class C_jurusan_fak extends MY_Controller {
         $data['listFakultas'] 	= $this->m_jurusan_fak->getAllDataFakultas();
 		$data['type_form']		= 'add' ;
         if(!empty($id)){
-            $detail	= $this->m_fakultas->detailFakultas($id);
+            $detail	= $this->m_jurusan_fak->detailJurusanFakultas($id);
             $data['getDetail']  = $detail ;
 	    $data['type_form']	= 'edit' ;
         }
         $this->doview('v_jurusan_fak', $data);
     
     }
-    public function submit_fakultas(){
+    public function submit_jurusan_fakultas(){
 	$data   = array();
 	$post 	= $this->input->post();
 	$id 	= $post['id'];
 	if(!isset($id)){
+	    $this->form_validation->set_rules('nama_jurusan_fak', 'Nama Jurusan', 'required');
 	    $this->form_validation->set_rules('nama_fakultas', 'Name', 'required');
 	}else{
+		$this->form_validation->set_rules('nama_jurusan_fak', 'Nama Jurusan', 'required');
 	    $this->form_validation->set_rules('nama_fakultas', 'Name', 'required');
 	}
         
@@ -88,56 +90,59 @@ class C_jurusan_fak extends MY_Controller {
 	if ($this->form_validation->run() == FALSE)
 	{
 	    if(!isset($id)){
-			$this->doview('v_fakultas', $data);
+			$this->doview('v_jurusan_fak', $data);
 	    }
 	}
 	else
 	{
-	    $nama_fakultas		= trim(strtoupper($post['nama_fakultas']));
-	    $status_fakultas 	= $post['status_fakultas'];
+	    $nama_jurusan_fak		= trim(strtoupper($post['nama_jurusan_fak']));
+	    $id_fakultas			= trim(strtoupper($post['nama_fakultas']));
+	    $status_jurusan_fakultas= $post['status_jurusan_fakultas'];
 	    
 	    if(isset($id))
 	    {
-	    	$whereKondisi		= ($status_fakultas == 1) ? 1 : 2 ;
-			$checkFakultas 		= $this->m_fakultas->check_fakultas($nama_fakultas, $whereKondisi);
-			if($checkFakultas){
-			    $this->session->set_flashdata('infoCheckFakultas', 'Maaf nama fakultas sudah di gunakan');
-			    redirect('fakultas');
+	    	$whereKondisi			= ($status_jurusan_fakultas == 1) ? 1 : 2 ;
+			$checkJurFakultas 		= $this->m_jurusan_fak->check_jurusan_fakultas($nama_jurusan_fak, $whereKondisi);
+			if($checkJurFakultas){
+			    $this->session->set_flashdata('infoCheckJurusanFakultas', 'Maaf nama jurusan fakultas sudah di gunakan');
+			    redirect('jurusan-fak');
 			    exit;
 			}else{
 			    $data = array(
-			    'nama_fakultas'		=> $nama_fakultas,
-			    'status_fakultas'	=> $status_fakultas,
+			    'nama_jurusan'		=> $nama_jurusan_fak,
+			    'id_fakultas'		=> $id_fakultas,
+			    'status_jurusan'	=> $status_jurusan_fakultas,
 				'date_update' 		=> date('Y-m-d H:i:s')	
 			    );
 			}		
 	    }else{
-			$checkFakultas 		= $this->m_fakultas->check_fakultas($nama_fakultas);
-			if($checkFakultas){
-			    $this->session->set_flashdata('infoCheckFakultas', 'Maaf nama fakultas sudah di gunakan');
-			    redirect('fakultas');
+			$checkJurFakultas 	= $this->m_jurusan_fak->check_jurusan_fakultas($nama_jurusan_fak);
+			if($checkJurFakultas){
+			    $this->session->set_flashdata('infoCheckJurusanFakultas', 'Maaf nama jurusan fakultas sudah di gunakan');
+			    redirect('jurusan-fak');
 			    exit;
 			}else{
 			    $data = array(
-				'nama_fakultas'	=> $nama_fakultas,
+				'nama_jurusan'		=> $nama_jurusan_fak,
+			    'id_fakultas'		=> $id_fakultas,
 				'date_create' 	=> date('Y-m-d H:i:s')
 			    );	
 			}			
 	    }
 	    if(isset($id)){
-			$key = array('id_fakultas' => $id) ;
-			$res = $this->m_fakultas->UpdateFakultas('fakultas',$data, $key);
+			$key = array('id_jurusan_fakultas' => $id) ;
+			$res = $this->m_jurusan_fak->UpdateJurusanFakultas('jurusan_fakultas',$data, $key);
 	    }else{
-			$res = $this->m_fakultas->InsertFakultas('fakultas',$data);
+			$res = $this->m_jurusan_fak->InsertJurusanFakultas('jurusan_fakultas',$data);
 	    }
 	    
 	    if ($res){
 			if(isset($id)){
-				$this->session->set_flashdata('infoFakultas', 'Data Berhasil Di Ubah');
+				$this->session->set_flashdata('infoJurusanFakultas', 'Data Berhasil Di Ubah');
 			}else{
-				$this->session->set_flashdata('infoFakultas', 'Data Berhasil Di Tambah');
+				$this->session->set_flashdata('infoJurusanFakultas', 'Data Berhasil Di Tambah');
 			}
-			redirect('fakultas');			
+			redirect('jurusan-fak');			
 	    } else{
 			echo "<h2>INsert Data Gagal</h2>";            
 	    }
@@ -146,11 +151,11 @@ class C_jurusan_fak extends MY_Controller {
     }
     public function do_delete($id = ''){
 	$id 	= $this->input->post('id');
-	$data 	= array('status_fakultas'	=> 2);	
-    $where 	= array ('id_fakultas' 		=> $id);
+	$data 	= array('status_jurusan'	=> 2);	
+    $where 	= array ('id_jurusan_fakultas' 		=> $id);
 	
-	$delete_user = $this->m_fakultas->UpdateFakultas('fakultas',$data, $where);
-        if($delete_user){
+	$delete_jurusan_fakultas = $this->m_jurusan_fak->UpdateJurusanFakultas('jurusan_fakultas',$data, $where);
+        if($delete_jurusan_fakultas){
             $alert = 'Data Berhasil Di Hapus';		
             $returnVal = 'success';
         }else{
