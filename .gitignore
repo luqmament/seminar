@@ -1,6 +1,5 @@
 /assets/*
 /application/config/database.php
-/application/config/config.php
 /application/logs/*
 /application/cache/*
 .htaccess
