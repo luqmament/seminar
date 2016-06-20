@@ -1,0 +1,446 @@
+<TicketAvailRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/TicketAvailRS.xsd" totalItems="24" echoToken="DummyEchoToken">
+  <AuditData>
+    <ProcessTime>370</ProcessTime>
+    <Timestamp>2013-03-18 17:10:07.325</Timestamp>
+    <RequestHost>10.162.36.76</RequestHost>
+    <ServerName>TEST</ServerName>
+    <ServerId>TS</ServerId>
+    <SchemaRelease>2005/06</SchemaRelease>
+    <HydraCoreRelease>2.0.201303181303</HydraCoreRelease>
+    <HydraEnumerationsRelease>1.0.201303181303</HydraEnumerationsRelease>
+    <MerlinRelease>N/A</MerlinRelease>
+  </AuditData>
+  <PaginationData currentPage="1" totalPages="5"/>
+  <ServiceTicket xsi:type="ServiceTicket" availToken="OXUKXdXOpVWbPV/9e315vQ==">
+    <DateFrom date="20130509"/>
+    <DateTo date="20130511"/>
+    <Currency code="EUR">Euro</Currency>
+    <TicketInfo xsi:type="ProductTicket">
+      <Code>000200515</Code>
+      <Name>PALMA AQUARIUM</Name>
+      <DescriptionList>
+        <Description type="generalDescription" languageCode="ENG">Discover the best kept secrets of the oceans as you walk around this wonderful Marine Park with over 8,000 animals representing 700 different species and more than 5 million litres of salt water. Follow the 900 metre itinerary through the park and discover its amazing secrets. You will enjoy a host of activities allowing you to learn about life in marine environments while you enjoy fun animations suitable for all ages, especially for kids. Take a plunge and go diving in the deepest shark aquarium in Europe and you&#x2019;ll have the one of the most amazing experiences of your life. Palma Aquarium is the only tourist attraction in the Balearic Islands that is open all year round 365 days a year. During the summer months, the heat can sometimes be unbearable, and for this reason we have thought up loads of fun and refreshing activities for you to enjoy and cool down at the same time. You&#x2019;ll really feel like you&#x2019;re swimming in the sea as you dive among the playful manta rays and have a ball in the fountain jets in the playground or just cool down and enjoy the Jungle or the air-conditioned aquariums indoors. So when you start to feel the heat ... we&#x2019;ll be waiting for you!</Description>
+      </DescriptionList>
+      <ImageList>
+        <Image>
+          <Type>L</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/big/01353/01353_1.jpg</Url>
+        </Image>
+        <Image>
+          <Type>S</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/small/01353/01353_1.jpg</Url>
+        </Image>
+      </ImageList>
+      <CompanyCode>E10</CompanyCode>
+      <TicketClass>T</TicketClass>
+      <Destination type="SIMPLE" code="PMI"/>
+      <TicketZone xsi:type="ProductZone"/>
+    </TicketInfo>
+    <AvailableModality code="0#8">
+      <Name>GENERAL ENTRANCE</Name>
+      <Contract>
+        <Name>AQUARIUM 11</Name>
+        <IncomingOffice code="1"/>
+      </Contract>
+      <PriceList>
+        <Price>
+          <Amount>20.500</Amount>
+          <Description>ADULT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>20.500</Amount>
+          <Description>CHILD PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>0.000</Amount>
+          <Description>INFANT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>20.500</Amount>
+          <Description>SERVICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>22.500</Amount>
+          <Description>TICKET OFFICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>22.500</Amount>
+          <Description>CHILD TICKET OFFICE PRICE</Description>
+        </Price>
+      </PriceList>
+      <Type code="D">Days</Type>
+      <Mode code="P">Person</Mode>
+      <OperationDateList>
+        <OperationDate date="20130509" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130510" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130511" minimumDuration="1" maximumDuration="1"/>
+      </OperationDateList>
+      <ChildAge ageFrom="4" ageTo="12"/>
+      <ContentSequence>1353</ContentSequence>
+    </AvailableModality>
+    <AvailableModality code="1#8">
+      <Name>GENERAL ENTRANCE</Name>
+      <Contract>
+        <Name>AQUARIUM 13</Name>
+        <IncomingOffice code="1"/>
+      </Contract>
+      <PriceList>
+        <Price>
+          <Amount>20.500</Amount>
+          <Description>ADULT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>15.500</Amount>
+          <Description>CHILD PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>0.000</Amount>
+          <Description>INFANT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>20.500</Amount>
+          <Description>SERVICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>22.500</Amount>
+          <Description>TICKET OFFICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>15.500</Amount>
+          <Description>CHILD TICKET OFFICE PRICE</Description>
+        </Price>
+      </PriceList>
+      <Type code="D">Days</Type>
+      <Mode code="P">Person</Mode>
+      <OperationDateList>
+        <OperationDate date="20130509" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130510" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130511" minimumDuration="1" maximumDuration="1"/>
+      </OperationDateList>
+      <ChildAge ageFrom="4" ageTo="12"/>
+      <ContentSequence>1353</ContentSequence>
+    </AvailableModality>
+    <Paxes>
+      <AdultCount>1</AdultCount>
+      <ChildCount>0</ChildCount>
+    </Paxes>
+  </ServiceTicket>
+  <ServiceTicket xsi:type="ServiceTicket" availToken="OXUKXdXOpVWbPV/9e315vQ==">
+    <DateFrom date="20130509"/>
+    <DateTo date="20130511"/>
+    <Currency code="EUR">Euro</Currency>
+    <TicketInfo xsi:type="ProductTicket">
+      <Code>000200519</Code>
+      <Name>SOLLER TRAIN</Name>
+      <DescriptionList>
+        <Description type="generalDescription" languageCode="ENG">Discover a hidden side to Mallorca on a train ride through its stunning Serra de Tramuntana recently put on UNESCO's World Heritage List.
+&lt;br&gt;&lt;br&gt;
+Sit back and enjoy the views as this historic electric train takes a route north from the capital across the plains, winding through the impressive landscapes, fragrant pine forests and 13 tunnels of the Serra de Tramuntana, finally ending in the the northern town of S&#xF3;ller.
+&lt;br&gt;&lt;br&gt;
+Work began on the railway in 1911 on the profits of the orange and lemon trade, which at the time was booming and the train still conserves its original rolling stock and fittings, meticulously finished, and lovingly maintained using traditional methods. 
+&lt;br&gt;&lt;br&gt;
+S&#xF3;ller itself is a charming town surrounded by orange and lemon groves. Walk around its beautifully kept streets with sombre stone houses revealing verdant patios, have a coffee and pastry or try some freshly squeezed orange juice as you watch the world go by at one of the many pavement caf&#xE9;s on its laid-back main square. The railway station also contains a small museum where you can see works by Picasso and Mir&#xF3;.
+&lt;br&gt;&lt;br&gt;
+You can also catch the rickety tram down to the nearby port with its crescent-shaped beach, fishing harbour, two lighthouses and many waterfront restaurants and caf&#xE9;s before returning to the station to catch the train back to Palma. 
+&lt;br&gt;&lt;br&gt;
+This excursion includes hotel pick up and drop off, all transfers and the services of an English-speaking guide throughout.</Description>
+      </DescriptionList>
+      <ImageList>
+        <Image>
+          <Type>L</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/big/08416/08416_1.jpg</Url>
+        </Image>
+        <Image>
+          <Type>S</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/small/08416/08416_1.jpg</Url>
+        </Image>
+      </ImageList>
+      <CompanyCode>E10</CompanyCode>
+      <TicketClass>T</TicketClass>
+      <Destination type="SIMPLE" code="PMI"/>
+      <TicketZone xsi:type="ProductZone"/>
+    </TicketInfo>
+    <AvailableModality code="0#8">
+      <Name>Train &amp; tram round trip</Name>
+      <Contract>
+        <Name>TREN</Name>
+        <IncomingOffice code="1"/>
+      </Contract>
+      <PriceList>
+        <Price>
+          <Amount>28.000</Amount>
+          <Description>ADULT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>14.000</Amount>
+          <Description>CHILD PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>0.000</Amount>
+          <Description>INFANT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>28.000</Amount>
+          <Description>SERVICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>28.000</Amount>
+          <Description>TICKET OFFICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>14.000</Amount>
+          <Description>CHILD TICKET OFFICE PRICE</Description>
+        </Price>
+      </PriceList>
+      <Type code="D">Days</Type>
+      <Mode code="P">Person</Mode>
+      <OperationDateList>
+        <OperationDate date="20130509" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130510" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130511" minimumDuration="1" maximumDuration="1"/>
+      </OperationDateList>
+      <ChildAge ageFrom="3" ageTo="12"/>
+      <ContentSequence>8416</ContentSequence>
+    </AvailableModality>
+    <Paxes>
+      <AdultCount>1</AdultCount>
+      <ChildCount>0</ChildCount>
+    </Paxes>
+  </ServiceTicket>
+  <ServiceTicket xsi:type="ServiceTicket" availToken="OXUKXdXOpVWbPV/9e315vQ==">
+    <DateFrom date="20130509"/>
+    <DateTo date="20130511"/>
+    <Currency code="EUR">Euro</Currency>
+    <TicketInfo xsi:type="ProductTicket">
+      <Code>000200541</Code>
+      <Name>CRUCERO DIA DE MAR</Name>
+      <DescriptionList>
+        <Description type="generalDescription" languageCode="ENG">Combines unbeatable views of the South West coast of our island with a great food abroad one of our ships, bordering the cost we arrived at one of the coves where you can relax with a swim, continue navigating towards Camp de Mar where you will enjoy a delicious paella on Board of our boat accompained by ensaimada and cava, this lively with music on board.</Description>
+      </DescriptionList>
+      <ImageList>
+        <Image>
+          <Type>L</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/big/06489/06489_1.jpg</Url>
+        </Image>
+        <Image>
+          <Type>S</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/small/06489/06489_1.jpg</Url>
+        </Image>
+      </ImageList>
+      <CompanyCode>E10</CompanyCode>
+      <TicketClass>T</TicketClass>
+      <Destination type="SIMPLE" code="PMI"/>
+      <TicketZone xsi:type="ProductZone"/>
+      <Classification code="CRUIS">Cruise &amp; Sailing</Classification>
+    </TicketInfo>
+    <AvailableModality code="0#8">
+      <Name>D&#xED;a de Mar - direct</Name>
+      <Contract>
+        <Name>DIA DE MAR</Name>
+        <IncomingOffice code="1"/>
+      </Contract>
+      <PriceList>
+        <Price>
+          <Amount>35.000</Amount>
+          <Description>ADULT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>17.500</Amount>
+          <Description>CHILD PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>0.000</Amount>
+          <Description>INFANT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>35.000</Amount>
+          <Description>SERVICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>35.000</Amount>
+          <Description>TICKET OFFICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>17.500</Amount>
+          <Description>CHILD TICKET OFFICE PRICE</Description>
+        </Price>
+      </PriceList>
+      <Type code="D">Days</Type>
+      <Mode code="P">Person</Mode>
+      <OperationDateList>
+        <OperationDate date="20130509" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130511" minimumDuration="1" maximumDuration="1"/>
+      </OperationDateList>
+      <ChildAge ageFrom="2" ageTo="11"/>
+      <ContentSequence>6489</ContentSequence>
+    </AvailableModality>
+    <Paxes>
+      <AdultCount>1</AdultCount>
+      <ChildCount>0</ChildCount>
+    </Paxes>
+  </ServiceTicket>
+  <ServiceTicket xsi:type="ServiceTicket" availToken="OXUKXdXOpVWbPV/9e315vQ==">
+    <DateFrom date="20130509"/>
+    <DateTo date="20130511"/>
+    <Currency code="EUR">Euro</Currency>
+    <TicketInfo xsi:type="ProductTicket">
+      <Code>000200522</Code>
+      <Name>MARINELAND</Name>
+      <DescriptionList>
+        <Description type="generalDescription" languageCode="ENG">Come and have a great day out at this award-winning Dolphinarium, easily the best in Spain. You cannot afford to miss this wonderful zoo, specializing in entertainment, education, research and interaction with nature. Our latest attraction is the new penguin enclosure, their cheeky antics will delight your  children with an igloo, rocks, lots of water and a whole new world to discover. You will also be surprised at the friendliness and intelligence of our bottlenose dolphins and California sea lions. You&#x2018;ll then be able to enjoy one of the most renowned dolphin shows in the world and an amazing walk through the underwater tunnel where you can see the majestic and fearful sharks swimming just inches away from you, together with hundreds of different species of fish brought from all over the world. You will also be able to see giant snakes (boas, anacondas and pythons), prehistoric iguanas, lizards, freshwater fish and lethal piranhas. Younger visitors will also enjoy the Mini Park with a pirate ship, a small swimming pool to cool off and slides. Be surprised by nature and have fun.</Description>
+      </DescriptionList>
+      <ImageList>
+        <Image>
+          <Type>L</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/big/00177/Marineland_1.jpg</Url>
+        </Image>
+        <Image>
+          <Type>S</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/small/00177/Marineland_1.jpg</Url>
+        </Image>
+      </ImageList>
+      <CompanyCode>E10</CompanyCode>
+      <TicketClass>T</TicketClass>
+      <Destination type="SIMPLE" code="PMI"/>
+      <TicketZone xsi:type="ProductZone"/>
+    </TicketInfo>
+    <AvailableModality code="0#8">
+      <Name>GENERAL ENTRANCE</Name>
+      <Contract>
+        <Name>MARINELAND 13</Name>
+        <IncomingOffice code="1"/>
+      </Contract>
+      <PriceList>
+        <Price>
+          <Amount>22.000</Amount>
+          <Description>ADULT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>16.500</Amount>
+          <Description>CHILD PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>0.000</Amount>
+          <Description>INFANT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>22.000</Amount>
+          <Description>SERVICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>22.000</Amount>
+          <Description>TICKET OFFICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>16.500</Amount>
+          <Description>CHILD TICKET OFFICE PRICE</Description>
+        </Price>
+      </PriceList>
+      <Type code="D">Days</Type>
+      <Mode code="P">Person</Mode>
+      <OperationDateList>
+        <OperationDate date="20130509" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130510" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130511" minimumDuration="1" maximumDuration="1"/>
+      </OperationDateList>
+      <ChildAge ageFrom="4" ageTo="12"/>
+      <ContentSequence>177</ContentSequence>
+    </AvailableModality>
+    <Paxes>
+      <AdultCount>1</AdultCount>
+      <ChildCount>0</ChildCount>
+    </Paxes>
+  </ServiceTicket>
+  <ServiceTicket xsi:type="ServiceTicket" availToken="OXUKXdXOpVWbPV/9e315vQ==">
+    <DateFrom date="20130509"/>
+    <DateTo date="20130511"/>
+    <Currency code="EUR">Euro</Currency>
+    <TicketInfo xsi:type="ProductTicket">
+      <Code>000200530</Code>
+      <Name>HIDROPARK ALCUDIA- ENTRANCE</Name>
+      <DescriptionList>
+        <Description type="generalDescription" languageCode="ENG">HidroPark in Alcudia is the only water park in the northern part of Mallorca. It offers a lot more than pools and funny slides for the entire familly!</Description>
+      </DescriptionList>
+      <ImageList>
+        <Image>
+          <Type>L</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/big/07911/07911_1.jpg</Url>
+        </Image>
+        <Image>
+          <Type>S</Type>
+          <Order>0</Order>
+          <VisualizationOrder>0</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/extras/small/07911/07911_1.jpg</Url>
+        </Image>
+      </ImageList>
+      <CompanyCode>E10</CompanyCode>
+      <TicketClass>T</TicketClass>
+      <Destination type="SIMPLE" code="PMI"/>
+      <TicketZone xsi:type="ProductZone"/>
+    </TicketInfo>
+    <AvailableModality code="0#8">
+      <Name>General Entrance</Name>
+      <Contract>
+        <Name>HIDROPARK 12</Name>
+        <IncomingOffice code="1"/>
+      </Contract>
+      <PriceList>
+        <Price>
+          <Amount>20.000</Amount>
+          <Description>ADULT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>13.000</Amount>
+          <Description>CHILD PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>0.000</Amount>
+          <Description>INFANT PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>20.000</Amount>
+          <Description>SERVICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>20.000</Amount>
+          <Description>TICKET OFFICE PRICE</Description>
+        </Price>
+        <Price>
+          <Amount>13.000</Amount>
+          <Description>CHILD TICKET OFFICE PRICE</Description>
+        </Price>
+      </PriceList>
+      <Type code="D">Days</Type>
+      <Mode code="P">Person</Mode>
+      <OperationDateList>
+        <OperationDate date="20130509" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130510" minimumDuration="1" maximumDuration="1"/>
+        <OperationDate date="20130511" minimumDuration="1" maximumDuration="1"/>
+      </OperationDateList>
+      <ChildAge ageFrom="3" ageTo="11"/>
+      <ContentSequence>7911</ContentSequence>
+    </AvailableModality>
+    <Paxes>
+      <AdultCount>1</AdultCount>
+      <ChildCount>0</ChildCount>
+    </Paxes>
+  </ServiceTicket>
+</TicketAvailRS>

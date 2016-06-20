@@ -1,0 +1,174 @@
+<ServiceAddRS xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/ServiceAddRS.xsd" echoToken="DummyEchoToken" xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AuditData>
+		<ProcessTime>142</ProcessTime>
+		<Timestamp>2014-04-30 13:52:54.351</Timestamp>
+		<RequestHost>10.162.42.120</RequestHost>
+		<ServerName>LIVE</ServerName>
+		<ServerId>76</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201404231120</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201404231120</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<Purchase purchaseToken="63194134425" timeToExpiration="1799863">
+		<Status>SHOPPING_CART</Status>
+		<Agency>
+			<Code>30502</Code>
+			<Branch>1</Branch>
+		</Agency>
+		<Language>ENG</Language>
+		<CreationUser>16776</CreationUser>
+		<ServiceList>
+			<Service xsi:type="ServiceTransfer" transferType="IN" SPUI="1#T#1">
+				<Status>NEW</Status>
+				<ContractList>
+					<Contract>
+						<Name>ADAPTADO SU14</Name>
+						<IncomingOffice code="1"/>
+						<Sequence>79896</Sequence>
+						<CommentList>
+							<Comment type="CONTRACT">MAXIMUM CAPACITY 3 PAX- HANDYCAP PRIVATE TRANSPORT (One  Wheelchair per Vehicle)PALMA AIRPORT PROCEDURES Arrivals:- Clients are required to go to the Ultramar /Hotelbeds airport office upon arrival our office is located between arrival doors 6 and 7 client must show their transfer voucher and would be given information regarding the transfer to their hotel.- Maximum waiting time is 60 minutes upon arrival to our Ultramar/Hotelbeds office. In case of your exit being delayed due to luggage problem, proceed immediately to notify Ultramar/Hotelbeds office in order to advise the transfer to wait or to be allocated to the next service. Departures: - For the departure, clients will receive a fax at their hotel reception 48 to 24 hours before the departure date, confirming their pick-up time. We remind you to be ready and prepared to leave 20 mins before the stated time on the fax.- It is up to the client to check the departure time. If details do not correspond with the reservation, please contact your agency urgently.Conditions: - Please be aware that we always have to be notified in advance about any special luggage such as bikes, golf-bags, wheelchairs, surfboards or anything similar as these items have an extra chargeIn the event of an emergency or delay, please call:SPAIN: +34971211601</Comment>
+						</CommentList>
+					</Contract>
+				</ContractList>
+				<Supplier name="HOTELBEDS SPAIN S.L.U." vatNumber="B28916765"/>
+				<DateFrom date="20140630"/>
+				<Currency code="EUR">Euro</Currency>
+				<TotalAmount>40.230</TotalAmount>
+				<AdditionalCostList>
+					<AdditionalCost type="AG_COMMISSION">
+						<Price>
+							<Amount>6.280</Amount>
+						</Price>
+					</AdditionalCost>
+					<AdditionalCost type="COMMISSION_VAT">
+						<Price>
+							<Amount>0.930</Amount>
+						</Price>
+					</AdditionalCost>
+					<AdditionalCost type="COMMISSION_PCT">
+						<Price>
+							<Amount>11.000</Amount>
+						</Price>
+					</AdditionalCost>
+				</AdditionalCostList>
+				<ModificationPolicyList>
+					<ModificationPolicy>Cancellation</ModificationPolicy>
+					<ModificationPolicy>Confirmation</ModificationPolicy>
+				</ModificationPolicyList>
+				<TransferInfo xsi:type="ProductTransfer">
+					<Code>1#T#1</Code>
+					<DescriptionList>
+						<Description type="GENERAL" languageCode="ENG">Private hire with driver</Description>
+						<Description type="PRODUCT" languageCode="ENG">Special product type</Description>
+						<Description type="VEHICLE" languageCode="ENG">Disabled</Description>
+					</DescriptionList>
+					<ImageList>
+						<Image>
+							<Type>L</Type>
+							<Url>adapted.png</Url>
+						</Image>
+					</ImageList>
+					<Type code="H">Handicapped vehicle</Type>
+					<VehicleType code="H">Adapted vehicle</VehicleType>
+					<TransferSpecificContent>
+						<GenericTransferGuidelinesList>
+							<TransferBulletPoint id="SPLU">
+								<Description>SPECIAL LUGGAGE</Description>
+								<DetailedDescription> In the event of extra luggage or special equipment (bicycles, golf clubs, surfboard etc.) being checked in, advise the agency in advance as these items carry an extra charge. </DetailedDescription>
+							</TransferBulletPoint>
+							<TransferBulletPoint id="LGPR">
+								<Description>LUGGAGE PROBLEMS</Description>
+								<DetailedDescription>If the event of a problem with your luggage,  please call the emergency number in order to advise of the delay and take the necessary steps.</DetailedDescription>
+							</TransferBulletPoint>
+							<TransferBulletPoint id="DRVR">
+								<Description>CAN'T FIND DRIVER</Description>
+								<DetailedDescription>In the event of being unable to locate the driver, please call the emergency number indicated in this voucher.</DetailedDescription>
+							</TransferBulletPoint>
+							<TransferBulletPoint id="CHIN">
+								<Description>CHECK INFORMATION</Description>
+								<DetailedDescription>If the details do not correspond with the reservation, please contact your agency immediately.</DetailedDescription>
+							</TransferBulletPoint>
+						</GenericTransferGuidelinesList>
+						<MaximumWaitingTime time="60">minutes</MaximumWaitingTime>
+					</TransferSpecificContent>
+				</TransferInfo>
+				<Paxes>
+					<AdultCount>1</AdultCount>
+					<ChildCount>0</ChildCount>
+					<GuestList>
+						<Customer type="AD">
+							<CustomerId>1</CustomerId>
+							<Age>30</Age>
+						</Customer>
+						<Customer type="AD">
+							<CustomerId>2</CustomerId>
+							<Age>30</Age>
+						</Customer>
+					</GuestList>
+				</Paxes>
+				<PickupLocation xsi:type="ProductTransferTerminal">
+					<Code>PMI</Code>
+					<Name>Palma Majorca, Son Sant Joan Airport</Name>
+					<TransferZone xsi:type="ProductZone">
+						<Code>AEROPUERTO</Code>
+					</TransferZone>
+					<Country code="ES">
+						<Name>SPAIN  </Name>
+					</Country>
+					<TerminalType>A</TerminalType>
+				</PickupLocation>
+				<DestinationLocation xsi:type="ProductTransferHotel">
+					<Code>1523</Code>
+					<Name>Visit Hotel Alexandra</Name>
+					<TransferZone xsi:type="ProductZone">
+						<Code>CPASTILLA</Code>
+					</TransferZone>
+				</DestinationLocation>
+				<EstimatedTransferDuration>20</EstimatedTransferDuration>
+				<ProductSpecifications>
+					<MasterServiceType code="PRVT" name="Private"/>
+					<MasterProductType code="SPCL" name="Special"/>
+					<MasterVehicleType code="DSBLD" name="Disabled"/>
+					<TransferGeneralInfoList>
+						<TransferBulletPoint id="ER" order="1">
+							<Description>Exclusive ride for you</Description>
+						</TransferBulletPoint>
+						<TransferBulletPoint id="DTDS" order="2">
+							<Description>Door to door service </Description>
+						</TransferBulletPoint>
+						<TransferBulletPoint id="AV247" order="3">
+							<Description>Available 24/7</Description>
+						</TransferBulletPoint>
+					</TransferGeneralInfoList>
+				</ProductSpecifications>
+				<TransferPickupTime date="20140630" time="1255"/>
+				<ArrivalTravelInfo>
+					<DepartInfo xsi:type="ProductTransferTerminal"/>
+					<ArrivalInfo xsi:type="ProductTransferTerminal">
+						<Code>PMI</Code>
+						<Name>Palma Majorca, Son Sant Joan Airport</Name>
+						<DateTime date="20140630" time="1500"/>
+						<Country code="ES">
+							<Name>SPAIN  </Name>
+						</Country>
+						<TerminalType>A</TerminalType>
+					</ArrivalInfo>
+				</ArrivalTravelInfo>
+				<DepartureTravelInfo/>
+				<CancellationPolicies>
+					<CancellationPolicy amount="40.23" dateFrom="20140627" time="0000"/>
+				</CancellationPolicies>
+				<RetailPrice>40.23</RetailPrice>
+			</Service>
+		</ServiceList>
+		<Currency code="EUR"/>
+		<PaymentData>
+			<PaymentType code="P"/>
+			<InvoiceCompany/>
+			<Description>UNKNOWN</Description>
+		</PaymentData>
+		<TotalPrice>40.230</TotalPrice>
+		<PendingAmount>34.880</PendingAmount>
+	</Purchase>
+</ServiceAddRS>

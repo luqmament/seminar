@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceAddRQ echoToken="DummyEchoToken" xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/ServiceAddRQ.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2013/12">
+	<Language>ENG</Language>
+	<Credentials>
+		<User>TEST</User>
+		<Password>TEST</Password>
+	</Credentials>
+	<Service availToken="2U8/Kt4ffZ7WpYK27GwKwQeL" xsi:type="ServiceHotel">
+		<ContractList>
+			<Contract>
+				<Name>CG-ALL</Name>
+				<IncomingOffice code="1"/>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140626"/>
+		<DateTo date="20140627"/>
+		<Currency code="EUR"/>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>4301</Code>
+			<Destination code="PMI" type="SIMPLE"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+					<GuestList>
+						<Customer type='AD'>
+							<Age>45</Age>
+						</Customer>
+					</GuestList>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="3" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="SH">SOLO HABITACI&#211;N</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">DOBLE 1 O 2 CAMAS STANDARD</RoomType>
+			</HotelRoom>
+		</AvailableRoom>
+	</Service>
+</ServiceAddRQ>

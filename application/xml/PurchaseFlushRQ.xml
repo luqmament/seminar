@@ -1,0 +1,7 @@
+<PurchaseFlushRQ purchaseToken="TS092356022" xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance ../xsd/PurchaseFlushRQ.xsd" version="2013/12">
+	<Language>ENG</Language>
+	<Credentials>
+		<User>TEST</User>
+		<Password>TEST</Password>
+	</Credentials>
+</PurchaseFlushRQ>

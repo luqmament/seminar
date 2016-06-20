@@ -1,0 +1,602 @@
+<TransferValuedAvailRS xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/TransferValuedAvailRS.xsd" totalItems="6" xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AuditData>
+		<ProcessTime>443</ProcessTime>
+		<Timestamp>2014-04-30 09:09:29.169</Timestamp>
+		<RequestHost>10.162.42.120</RequestHost>
+		<ServerName>LIVE</ServerName>
+		<ServerId>42</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201404231120</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201404231120</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<ServiceTransfer xsi:type="ServiceTransfer" transferType="IN" availToken="OlThkBFSxIGv3g/2Qzp9LA==">
+		<ContractList>
+			<Contract>
+				<Name>ADAPTADO SU14</Name>
+				<IncomingOffice code="1"/>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140630" time="1500"/>
+		<Currency code="EUR"/>
+		<TotalAmount>40.230</TotalAmount>
+		<NetPrice>40.230</NetPrice>
+		<TransferInfo xsi:type="ProductTransfer">
+			<Code>0|0|0</Code>
+			<DescriptionList>
+				<Description type="GENERAL" languageCode="ENG">Private hire with driver</Description>
+				<Description type="PRODUCT" languageCode="ENG">Special product type</Description>
+				<Description type="VEHICLE" languageCode="ENG">Disabled</Description>
+			</DescriptionList>
+			<ImageList>
+				<Image>
+					<Type>L</Type>
+					<Url>http://transferstatic.hotelbeds.com/giata/transfers/TRD/prvt-spcl-dsbld.png</Url>
+				</Image>
+			</ImageList>
+			<Type code="H">Handicapped vehicle</Type>
+			<VehicleType code="H">Adapted vehicle</VehicleType>
+			<TransferSpecificContent id="220">
+				<GenericTransferGuidelinesList>
+					<TransferBulletPoint id="SPLU">
+						<Description>SPECIAL LUGGAGE</Description>
+						<DetailedDescription> In the event of extra luggage or special equipment (bicycles, golf clubs, surfboard etc.) being checked in, advise the agency in advance as these items carry an extra charge. </DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="LGPR">
+						<Description>LUGGAGE PROBLEMS</Description>
+						<DetailedDescription>If the event of a problem with your luggage,  please call the emergency number in order to advise of the delay and take the necessary steps.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="DRVR">
+						<Description>CAN'T FIND DRIVER</Description>
+						<DetailedDescription>In the event of being unable to locate the driver, please call the emergency number indicated in this voucher.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="CHIN">
+						<Description>CHECK INFORMATION</Description>
+						<DetailedDescription>If the details do not correspond with the reservation, please contact your agency immediately.</DetailedDescription>
+					</TransferBulletPoint>
+				</GenericTransferGuidelinesList>
+				<MaximumWaitingTime time="60">minutes</MaximumWaitingTime>
+			</TransferSpecificContent>
+		</TransferInfo>
+		<Paxes>
+			<AdultCount>1</AdultCount>
+			<ChildCount>0</ChildCount>
+		</Paxes>
+		<PickupLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<Name>Palma Majorca, Son Sant Joan Airport</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>AEROPUERTO</Code>
+			</TransferZone>
+			<TerminalType>A</TerminalType>
+		</PickupLocation>
+		<DestinationLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+			<Name>Visit Hotel Alexandra</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>CPASTILLA</Code>
+			</TransferZone>
+		</DestinationLocation>
+		<EstimatedTransferDuration>20</EstimatedTransferDuration>
+		<ProductSpecifications>
+			<MasterServiceType code="PRVT" name="Private"/>
+			<MasterProductType code="SPCL" name="Special"/>
+			<MasterVehicleType code="DSBLD" name="Disabled"/>
+			<TransferGeneralInfoList>
+				<TransferBulletPoint id="ER" order="1">
+					<Description>Exclusive ride for you</Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="DTDS" order="2">
+					<Description>Door to door service </Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="AV247" order="3">
+					<Description>Available 24/7</Description>
+				</TransferBulletPoint>
+			</TransferGeneralInfoList>
+		</ProductSpecifications>
+		<ArrivalTravelInfo>
+			<ArrivalInfo xsi:type="ProductTransferTerminal">
+				<Code>PMI</Code>
+				<Name>Palma Majorca, Son Sant Joan Airport</Name>
+				<TransferZone xsi:type="ProductZone">
+					<Code>AEROPUERTO</Code>
+				</TransferZone>
+				<DateTime date="20140630" time="1500"/>
+				<TerminalType>A</TerminalType>
+			</ArrivalInfo>
+		</ArrivalTravelInfo>
+		<CancellationPolicies>
+			<CancellationPolicy amount="40.23" dateFrom="20140627" time="0000"/>
+		</CancellationPolicies>
+	</ServiceTransfer>
+	<ServiceTransfer xsi:type="ServiceTransfer" transferType="IN" availToken="OlThkBFSxIGv3g/2Qzp9LA==">
+		<ContractList>
+			<Contract>
+				<Name>MIN -BOL14-15</Name>
+				<IncomingOffice code="1"/>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140630" time="1500"/>
+		<Currency code="EUR"/>
+		<TotalAmount>24.800</TotalAmount>
+		<NetPrice>24.800</NetPrice>
+		<TransferInfo xsi:type="ProductTransfer">
+			<Code>0|0|1</Code>
+			<DescriptionList>
+				<Description type="GENERAL" languageCode="ENG">Private hire with driver</Description>
+				<Description type="PRODUCT" languageCode="ENG">Luxury product type</Description>
+				<Description type="VEHICLE" languageCode="ENG">Car</Description>
+			</DescriptionList>
+			<ImageList>
+				<Image>
+					<Type>L</Type>
+					<Url>http://transferstatic.hotelbeds.com/giata/transfers/TRD/prvt-lxr-cr.png</Url>
+				</Image>
+			</ImageList>
+			<Type code="P">Private</Type>
+			<VehicleType code="C">Private car</VehicleType>
+			<TransferSpecificContent id="219">
+				<GenericTransferGuidelinesList>
+					<TransferBulletPoint id="SPLU">
+						<Description>SPECIAL LUGGAGE</Description>
+						<DetailedDescription> In the event of extra luggage or special equipment (bicycles, golf clubs, surfboard etc.) being checked in, advise the agency in advance as these items carry an extra charge. </DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="LGPR">
+						<Description>LUGGAGE PROBLEMS</Description>
+						<DetailedDescription>If the event of a problem with your luggage,  please call the emergency number in order to advise of the delay and take the necessary steps.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="DRVR">
+						<Description>CAN'T FIND DRIVER</Description>
+						<DetailedDescription>In the event of being unable to locate the driver, please call the emergency number indicated in this voucher.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="CHIN">
+						<Description>CHECK INFORMATION</Description>
+						<DetailedDescription>If the details do not correspond with the reservation, please contact your agency immediately.</DetailedDescription>
+					</TransferBulletPoint>
+				</GenericTransferGuidelinesList>
+				<MaximumWaitingTime time="60">minutes</MaximumWaitingTime>
+			</TransferSpecificContent>
+		</TransferInfo>
+		<Paxes>
+			<AdultCount>1</AdultCount>
+			<ChildCount>0</ChildCount>
+		</Paxes>
+		<PickupLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<Name>Palma Majorca, Son Sant Joan Airport</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>AEROPUERTO</Code>
+			</TransferZone>
+			<TerminalType>A</TerminalType>
+		</PickupLocation>
+		<DestinationLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+			<Name>Visit Hotel Alexandra</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>CPASTILLA</Code>
+			</TransferZone>
+		</DestinationLocation>
+		<EstimatedTransferDuration>20</EstimatedTransferDuration>
+		<ProductSpecifications>
+			<MasterServiceType code="PRVT" name="Private"/>
+			<MasterProductType code="LXR" name="Luxury"/>
+			<MasterVehicleType code="CR" name="Car"/>
+			<TransferGeneralInfoList>
+				<TransferBulletPoint id="ER" order="1">
+					<Description>Exclusive ride for you</Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="DTDS" order="2">
+					<Description>Door to door service </Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="AV247" order="3">
+					<Description>Available 24/7</Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="M&amp;GS" order="4">
+					<Description>Meet &amp; Greet service</Description>
+				</TransferBulletPoint>
+			</TransferGeneralInfoList>
+		</ProductSpecifications>
+		<ArrivalTravelInfo>
+			<ArrivalInfo xsi:type="ProductTransferTerminal">
+				<Code>PMI</Code>
+				<Name>Palma Majorca, Son Sant Joan Airport</Name>
+				<TransferZone xsi:type="ProductZone">
+					<Code>AEROPUERTO</Code>
+				</TransferZone>
+				<DateTime date="20140630" time="1500"/>
+				<TerminalType>A</TerminalType>
+			</ArrivalInfo>
+		</ArrivalTravelInfo>
+		<CancellationPolicies>
+			<CancellationPolicy amount="24.80" dateFrom="20140627" time="0000"/>
+		</CancellationPolicies>
+	</ServiceTransfer>
+	<ServiceTransfer xsi:type="ServiceTransfer" transferType="IN" availToken="OlThkBFSxIGv3g/2Qzp9LA==">
+		<ContractList>
+			<Contract>
+				<Name>SHUTTLE MINSU13</Name>
+				<IncomingOffice code="1"/>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140630" time="1500"/>
+		<Currency code="EUR"/>
+		<TotalAmount>5.350</TotalAmount>
+		<NetPrice>5.350</NetPrice>
+		<TransferInfo xsi:type="ProductTransfer">
+			<Code>0|0|2</Code>
+			<DescriptionList>
+				<Description type="GENERAL" languageCode="ENG">With other passengers</Description>
+				<Description type="PRODUCT" languageCode="ENG">Standard product type</Description>
+				<Description type="VEHICLE" languageCode="ENG">Bus</Description>
+			</DescriptionList>
+			<ImageList>
+				<Image>
+					<Type>L</Type>
+					<Url>http://transferstatic.hotelbeds.com/giata/transfers/TRD/shrd-stnd-bs.png</Url>
+				</Image>
+			</ImageList>
+			<Type code="B">Shared</Type>
+			<VehicleType code="B">Bus</VehicleType>
+			<TransferSpecificContent id="218">
+				<GenericTransferGuidelinesList>
+					<TransferBulletPoint id="SPLU">
+						<Description>SPECIAL LUGGAGE</Description>
+						<DetailedDescription> In the event of extra luggage or special equipment (bicycles, golf clubs, surfboard etc.) being checked in, advise the agency in advance as these items carry an extra charge. </DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="MTPT">
+						<Description>CAN'T FIND MEETING POINT</Description>
+						<DetailedDescription>In the event of being unable to locate the meeting point, please call the emergency number indicated in this voucher.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="LGPR">
+						<Description>LUGGAGE PROBLEMS</Description>
+						<DetailedDescription>If the event of a problem with your luggage,  please call the emergency number in order to advise of the delay and take the necessary steps.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="CHIN">
+						<Description>CHECK INFORMATION</Description>
+						<DetailedDescription>If the details do not correspond with the reservation, please contact your agency immediately.</DetailedDescription>
+					</TransferBulletPoint>
+				</GenericTransferGuidelinesList>
+				<MaximumWaitingTime time="60">minutes</MaximumWaitingTime>
+				<MaximumNumberStops maxstops="13"/>
+			</TransferSpecificContent>
+		</TransferInfo>
+		<Paxes>
+			<AdultCount>1</AdultCount>
+			<ChildCount>0</ChildCount>
+		</Paxes>
+		<PickupLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<Name>Palma Majorca, Son Sant Joan Airport</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>AEROPUERTO</Code>
+			</TransferZone>
+			<TerminalType>A</TerminalType>
+		</PickupLocation>
+		<DestinationLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+			<Name>Visit Hotel Alexandra</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>CPASTILLA</Code>
+			</TransferZone>
+		</DestinationLocation>
+		<ProductSpecifications>
+			<MasterServiceType code="SHRD" name="Shared"/>
+			<MasterProductType code="STND" name="Standard"/>
+			<MasterVehicleType code="BS" name="Bus"/>
+			<TransferGeneralInfoList>
+				<TransferBulletPoint id="SR" order="1">
+					<Description>Shared ride</Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="THS" order="2">
+					<Description>Terminal to hotel service </Description>
+				</TransferBulletPoint>
+			</TransferGeneralInfoList>
+		</ProductSpecifications>
+		<ArrivalTravelInfo>
+			<ArrivalInfo xsi:type="ProductTransferTerminal">
+				<Code>PMI</Code>
+				<Name>Palma Majorca, Son Sant Joan Airport</Name>
+				<TransferZone xsi:type="ProductZone">
+					<Code>AEROPUERTO</Code>
+				</TransferZone>
+				<DateTime date="20140630" time="1500"/>
+				<TerminalType>A</TerminalType>
+			</ArrivalInfo>
+		</ArrivalTravelInfo>
+	</ServiceTransfer>
+	<ServiceTransfer xsi:type="ServiceTransfer" transferType="OUT" availToken="OlThkBFSxIGv3g/2Qzp9LA==">
+		<ContractList>
+			<Contract>
+				<Name>ADAPTADO SU14</Name>
+				<IncomingOffice code="1"/>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140702" time="1500"/>
+		<Currency code="EUR"/>
+		<TotalAmount>40.230</TotalAmount>
+		<NetPrice>40.230</NetPrice>
+		<TransferInfo xsi:type="ProductTransfer">
+			<Code>1|0|0</Code>
+			<DescriptionList>
+				<Description type="GENERAL" languageCode="ENG">Private hire with driver</Description>
+				<Description type="PRODUCT" languageCode="ENG">Special product type</Description>
+				<Description type="VEHICLE" languageCode="ENG">Disabled</Description>
+			</DescriptionList>
+			<ImageList>
+				<Image>
+					<Type>L</Type>
+					<Url>http://transferstatic.hotelbeds.com/giata/transfers/TRD/prvt-spcl-dsbld.png</Url>
+				</Image>
+			</ImageList>
+			<Type code="H">Handicapped vehicle</Type>
+			<VehicleType code="H">Adapted vehicle</VehicleType>
+			<TransferSpecificContent id="220">
+				<GenericTransferGuidelinesList>
+					<TransferBulletPoint id="SPLU">
+						<Description>SPECIAL LUGGAGE</Description>
+						<DetailedDescription> In the event of extra luggage or special equipment (bicycles, golf clubs, surfboard etc.) being checked in, advise the agency in advance as these items carry an extra charge. </DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="LGPR">
+						<Description>LUGGAGE PROBLEMS</Description>
+						<DetailedDescription>If the event of a problem with your luggage,  please call the emergency number in order to advise of the delay and take the necessary steps.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="DRVR">
+						<Description>CAN'T FIND DRIVER</Description>
+						<DetailedDescription>In the event of being unable to locate the driver, please call the emergency number indicated in this voucher.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="CHIN">
+						<Description>CHECK INFORMATION</Description>
+						<DetailedDescription>If the details do not correspond with the reservation, please contact your agency immediately.</DetailedDescription>
+					</TransferBulletPoint>
+				</GenericTransferGuidelinesList>
+				<MaximumWaitingTime time="20">minutes</MaximumWaitingTime>
+				<MaximumWaitingTimeSupplier time="15">minutes</MaximumWaitingTimeSupplier>
+			</TransferSpecificContent>
+		</TransferInfo>
+		<Paxes>
+			<AdultCount>1</AdultCount>
+			<ChildCount>0</ChildCount>
+		</Paxes>
+		<PickupLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+			<Name>Visit Hotel Alexandra</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>CPASTILLA</Code>
+			</TransferZone>
+		</PickupLocation>
+		<DestinationLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<Name>Palma Majorca, Son Sant Joan Airport</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>AEROPUERTO</Code>
+			</TransferZone>
+			<TerminalType>A</TerminalType>
+		</DestinationLocation>
+		<ProductSpecifications>
+			<MasterServiceType code="PRVT" name="Private"/>
+			<MasterProductType code="SPCL" name="Special"/>
+			<MasterVehicleType code="DSBLD" name="Disabled"/>
+			<TransferGeneralInfoList>
+				<TransferBulletPoint id="ER" order="1">
+					<Description>Exclusive ride for you</Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="DTDS" order="2">
+					<Description>Door to door service </Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="AV247" order="3">
+					<Description>Available 24/7</Description>
+				</TransferBulletPoint>
+			</TransferGeneralInfoList>
+		</ProductSpecifications>
+		<DepartureTravelInfo>
+			<DepartInfo xsi:type="ProductTransferTerminal">
+				<Code>PMI</Code>
+				<Name>Palma Majorca, Son Sant Joan Airport</Name>
+				<TransferZone xsi:type="ProductZone">
+					<Code>AEROPUERTO</Code>
+				</TransferZone>
+				<DateTime date="20140702" time="1500"/>
+				<TerminalType>A</TerminalType>
+			</DepartInfo>
+		</DepartureTravelInfo>
+		<CancellationPolicies>
+			<CancellationPolicy amount="40.23" dateFrom="20140629" time="0000"/>
+		</CancellationPolicies>
+	</ServiceTransfer>
+	<ServiceTransfer xsi:type="ServiceTransfer" transferType="OUT" availToken="OlThkBFSxIGv3g/2Qzp9LA==">
+		<ContractList>
+			<Contract>
+				<Name>MIN -BOL14-15</Name>
+				<IncomingOffice code="1"/>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140702" time="1500"/>
+		<Currency code="EUR"/>
+		<TotalAmount>24.800</TotalAmount>
+		<NetPrice>24.800</NetPrice>
+		<TransferInfo xsi:type="ProductTransfer">
+			<Code>1|0|1</Code>
+			<DescriptionList>
+				<Description type="GENERAL" languageCode="ENG">Private hire with driver</Description>
+				<Description type="PRODUCT" languageCode="ENG">Luxury product type</Description>
+				<Description type="VEHICLE" languageCode="ENG">Car</Description>
+			</DescriptionList>
+			<ImageList>
+				<Image>
+					<Type>L</Type>
+					<Url>http://transferstatic.hotelbeds.com/giata/transfers/TRD/prvt-lxr-cr.png</Url>
+				</Image>
+			</ImageList>
+			<Type code="P">Private</Type>
+			<VehicleType code="C">Private car</VehicleType>
+			<TransferSpecificContent id="219">
+				<GenericTransferGuidelinesList>
+					<TransferBulletPoint id="SPLU">
+						<Description>SPECIAL LUGGAGE</Description>
+						<DetailedDescription> In the event of extra luggage or special equipment (bicycles, golf clubs, surfboard etc.) being checked in, advise the agency in advance as these items carry an extra charge. </DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="LGPR">
+						<Description>LUGGAGE PROBLEMS</Description>
+						<DetailedDescription>If the event of a problem with your luggage,  please call the emergency number in order to advise of the delay and take the necessary steps.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="DRVR">
+						<Description>CAN'T FIND DRIVER</Description>
+						<DetailedDescription>In the event of being unable to locate the driver, please call the emergency number indicated in this voucher.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="CHIN">
+						<Description>CHECK INFORMATION</Description>
+						<DetailedDescription>If the details do not correspond with the reservation, please contact your agency immediately.</DetailedDescription>
+					</TransferBulletPoint>
+				</GenericTransferGuidelinesList>
+				<MaximumWaitingTime time="20">minutes</MaximumWaitingTime>
+				<MaximumWaitingTimeSupplier time="20">minutes</MaximumWaitingTimeSupplier>
+			</TransferSpecificContent>
+		</TransferInfo>
+		<Paxes>
+			<AdultCount>1</AdultCount>
+			<ChildCount>0</ChildCount>
+		</Paxes>
+		<PickupLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+			<Name>Visit Hotel Alexandra</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>CPASTILLA</Code>
+			</TransferZone>
+		</PickupLocation>
+		<DestinationLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<Name>Palma Majorca, Son Sant Joan Airport</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>AEROPUERTO</Code>
+			</TransferZone>
+			<TerminalType>A</TerminalType>
+		</DestinationLocation>
+		<ProductSpecifications>
+			<MasterServiceType code="PRVT" name="Private"/>
+			<MasterProductType code="LXR" name="Luxury"/>
+			<MasterVehicleType code="CR" name="Car"/>
+			<TransferGeneralInfoList>
+				<TransferBulletPoint id="ER" order="1">
+					<Description>Exclusive ride for you</Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="DTDS" order="2">
+					<Description>Door to door service </Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="AV247" order="3">
+					<Description>Available 24/7</Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="M&amp;GS" order="4">
+					<Description>Meet &amp; Greet service</Description>
+				</TransferBulletPoint>
+			</TransferGeneralInfoList>
+		</ProductSpecifications>
+		<DepartureTravelInfo>
+			<DepartInfo xsi:type="ProductTransferTerminal">
+				<Code>PMI</Code>
+				<Name>Palma Majorca, Son Sant Joan Airport</Name>
+				<TransferZone xsi:type="ProductZone">
+					<Code>AEROPUERTO</Code>
+				</TransferZone>
+				<DateTime date="20140702" time="1500"/>
+				<TerminalType>A</TerminalType>
+			</DepartInfo>
+		</DepartureTravelInfo>
+		<CancellationPolicies>
+			<CancellationPolicy amount="24.80" dateFrom="20140629" time="0000"/>
+		</CancellationPolicies>
+	</ServiceTransfer>
+	<ServiceTransfer xsi:type="ServiceTransfer" transferType="OUT" availToken="OlThkBFSxIGv3g/2Qzp9LA==">
+		<ContractList>
+			<Contract>
+				<Name>SHUTTLE MINSU13</Name>
+				<IncomingOffice code="1"/>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140702" time="1500"/>
+		<Currency code="EUR"/>
+		<TotalAmount>5.350</TotalAmount>
+		<NetPrice>5.350</NetPrice>
+		<TransferInfo xsi:type="ProductTransfer">
+			<Code>1|0|2</Code>
+			<DescriptionList>
+				<Description type="GENERAL" languageCode="ENG">With other passengers</Description>
+				<Description type="PRODUCT" languageCode="ENG">Standard product type</Description>
+				<Description type="VEHICLE" languageCode="ENG">Bus</Description>
+			</DescriptionList>
+			<ImageList>
+				<Image>
+					<Type>L</Type>
+					<Url>http://transferstatic.hotelbeds.com/giata/transfers/TRD/shrd-stnd-bs.png</Url>
+				</Image>
+			</ImageList>
+			<Type code="B">Shared</Type>
+			<VehicleType code="B">Bus</VehicleType>
+			<TransferSpecificContent id="218">
+				<GenericTransferGuidelinesList>
+					<TransferBulletPoint id="SPLU">
+						<Description>SPECIAL LUGGAGE</Description>
+						<DetailedDescription> In the event of extra luggage or special equipment (bicycles, golf clubs, surfboard etc.) being checked in, advise the agency in advance as these items carry an extra charge. </DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="MTPT">
+						<Description>CAN'T FIND MEETING POINT</Description>
+						<DetailedDescription>In the event of being unable to locate the meeting point, please call the emergency number indicated in this voucher.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="LGPR">
+						<Description>LUGGAGE PROBLEMS</Description>
+						<DetailedDescription>If the event of a problem with your luggage,  please call the emergency number in order to advise of the delay and take the necessary steps.</DetailedDescription>
+					</TransferBulletPoint>
+					<TransferBulletPoint id="CHIN">
+						<Description>CHECK INFORMATION</Description>
+						<DetailedDescription>If the details do not correspond with the reservation, please contact your agency immediately.</DetailedDescription>
+					</TransferBulletPoint>
+				</GenericTransferGuidelinesList>
+				<MaximumWaitingTime time="30">minutes</MaximumWaitingTime>
+				<MaximumWaitingTimeSupplier time="5">minutes</MaximumWaitingTimeSupplier>
+				<MaximumNumberStops maxstops="13"/>
+			</TransferSpecificContent>
+		</TransferInfo>
+		<Paxes>
+			<AdultCount>1</AdultCount>
+			<ChildCount>0</ChildCount>
+		</Paxes>
+		<PickupLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+			<Name>Visit Hotel Alexandra</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>CPASTILLA</Code>
+			</TransferZone>
+		</PickupLocation>
+		<DestinationLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<Name>Palma Majorca, Son Sant Joan Airport</Name>
+			<TransferZone xsi:type="ProductZone">
+				<Code>AEROPUERTO</Code>
+			</TransferZone>
+			<TerminalType>A</TerminalType>
+		</DestinationLocation>
+		<ProductSpecifications>
+			<MasterServiceType code="SHRD" name="Shared"/>
+			<MasterProductType code="STND" name="Standard"/>
+			<MasterVehicleType code="BS" name="Bus"/>
+			<TransferGeneralInfoList>
+				<TransferBulletPoint id="SR" order="1">
+					<Description>Shared ride</Description>
+				</TransferBulletPoint>
+				<TransferBulletPoint id="THS" order="2">
+					<Description>Terminal to hotel service </Description>
+				</TransferBulletPoint>
+			</TransferGeneralInfoList>
+		</ProductSpecifications>
+		<DepartureTravelInfo>
+			<DepartInfo xsi:type="ProductTransferTerminal">
+				<Code>PMI</Code>
+				<Name>Palma Majorca, Son Sant Joan Airport</Name>
+				<TransferZone xsi:type="ProductZone">
+					<Code>AEROPUERTO</Code>
+				</TransferZone>
+				<DateTime date="20140702" time="1500"/>
+				<TerminalType>A</TerminalType>
+			</DepartInfo>
+		</DepartureTravelInfo>
+	</ServiceTransfer>
+</TransferValuedAvailRS>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<PurchaseConfirmRQ xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages PurchaseConfirmRQ.xsd" echoToken="1233fe1d3dc4f7b26fde8bfd3">
+    <Language>ENG</Language>
+    <Credentials>
+        <User>PANORAMTOUID64884</User>
+        <Password>PANORAMTOUID64884</Password>
+    </Credentials>
+    <ConfirmationData purchaseToken="O0052229411">
+        <Holder type="AD">
+            <Name>test</Name>
+            <LastName>test</LastName>
+        </Holder>
+        <AgencyReference>test</AgencyReference>
+        <ConfirmationServiceDataList>
+            <ServiceData xsi:type="ConfirmationServiceDataHotel" SPUI="325#H#1">
+                <CustomerList>
+                    <Customer xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" type="AD">
+                        <CustomerId>1</CustomerId>
+                        <Age>30</Age>
+                        <Name>test</Name>
+                        <LastName>test</LastName>
+                    </Customer>
+                    <Customer xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" type="AD">
+                        <CustomerId>2</CustomerId>
+                        <Age>30</Age>
+                        <Name>test</Name>
+                        <LastName>test</LastName>
+                    </Customer>
+                </CustomerList>
+            </ServiceData>
+        </ConfirmationServiceDataList>
+    </ConfirmationData>
+</PurchaseConfirmRQ>

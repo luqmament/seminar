@@ -1,0 +1,14 @@
+<PurchaseFlushRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance ../xsd/PurchaseFlushRS.xsd" >
+	<AuditData>
+		<ProcessTime>45</ProcessTime>
+		<Timestamp>2013-03-09 09:37:41.581</Timestamp>
+		<RequestHost>10.0.44.157, 10.0.1.82</RequestHost>
+		<ServerName>TEST</ServerName>
+		<ServerId>TS</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201301251118</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201301251118</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<Status>Y</Status>
+</PurchaseFlushRS>

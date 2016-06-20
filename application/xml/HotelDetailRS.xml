@@ -1,0 +1,564 @@
+<HotelDetailRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/HotelDetailRS.xsd" echoToken="DummyEchoToken">
+	<AuditData>
+		<ProcessTime>5055</ProcessTime>
+		<Timestamp>2016-01-05 15:58:17.756</Timestamp>
+		<RequestHost>10.162.36.52</RequestHost>
+		<ServerName>LIVE</ServerName>
+		<ServerId>01</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201310291722</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201310291722</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<Hotel xsi:type="ProductHotel">
+		<Code>2814</Code>
+		<Name>Torre de los Guzmanes</Name>
+		<DescriptionList>
+			<Description type="HotelDescription" languageCode="ENG" languageName="Ingles">Built in 1991 and renovated in 2001, this fully air-conditioned hotel comprises 2 floors with a total of 56 rooms of which 1 is a single and 55 are doubles. Amongst the facilities count a foyer with a 24-hour reception desk, a games room, a TV room, a car park and a garage. Dining options include an air-conditioned restaurant and a caf&#233; and guests may additionally make use of the public Internet terminal as well as the laundry service.</Description>
+		</DescriptionList>
+		<ImageList>
+			<Image>
+				<Type>GEN</Type>
+				<Order>1</Order>
+				<VisualizationOrder>1</VisualizationOrder>
+				<Description>General view</Description>
+				<Url>http://www.hotelbeds.com/giata/00/002814/002814a_hb_a_001.jpg</Url>
+			</Image>
+			<Image>
+				<Type>GEN</Type>
+				<Order>3</Order>
+				<VisualizationOrder>2</VisualizationOrder>
+				<Description>General view</Description>
+				<Url>http://www.hotelbeds.com/giata/00/002814/002814a_hb_a_003.jpg</Url>
+			</Image>
+			<Image>
+				<Type>GEN</Type>
+				<Order>4</Order>
+				<VisualizationOrder>3</VisualizationOrder>
+				<Description>General view</Description>
+				<Url>http://www.hotelbeds.com/giata/00/002814/002814a_hb_a_004.jpg</Url>
+			</Image>
+			<Image>
+				<Type>HAB</Type>
+				<Order>2</Order>
+				<VisualizationOrder>4</VisualizationOrder>
+				<Description>Room</Description>
+				<Url>http://www.hotelbeds.com/giata/00/002814/002814a_hb_w_002.jpg</Url>
+			</Image>
+			<Image>
+				<Type>HAB</Type>
+				<Order>5</Order>
+				<VisualizationOrder>5</VisualizationOrder>
+				<Description>Room</Description>
+				<Url>http://www.hotelbeds.com/giata/00/002814/002814a_hb_w_005.jpg</Url>
+			</Image>
+			<Image>
+				<Type>PIS</Type>
+				<Order>6</Order>
+				<VisualizationOrder>6</VisualizationOrder>
+				<Description>Pool</Description>
+				<Url>http://www.hotelbeds.com/giata/00/002814/002814a_hb_p_006.jpg</Url>
+			</Image>
+			<Image>
+				<Type>RES</Type>
+				<Order>7</Order>
+				<VisualizationOrder>7</VisualizationOrder>
+				<Description>Restaurant</Description>
+				<Url>http://www.hotelbeds.com/giata/00/002814/002814a_hb_r_007.jpg</Url>
+			</Image>
+			<Image>
+				<Type>BAR</Type>
+				<Order>8</Order>
+				<VisualizationOrder>8</VisualizationOrder>
+				<Description>Bar</Description>
+				<Url>http://www.hotelbeds.com/giata/00/002814/002814a_hb_ba_008.jpg</Url>
+			</Image>
+		</ImageList>
+		<Contact>
+			<Address>
+				<StreetTypeId>.</StreetTypeId>
+				<StreetTypeName> </StreetTypeName>
+				<StreetName>CTRA 8006 KM 18.900</StreetName>
+				<PostalCode>41980</PostalCode>
+				<City>LA ALGABA</City>
+				<CountryCode>ES</CountryCode>
+			</Address>
+			<EmailList>
+				<Email>INFO@HOTELTORREDELOSGUZMANES.COM</Email>
+			</EmailList>
+			<PhoneList>
+				<ContactNumber type="phoneHotel">955789175</ContactNumber>
+			</PhoneList>
+			<FaxList>
+				<ContactNumber>955789205</ContactNumber>
+			</FaxList>
+			<WebList>
+				<Web>www.hoteltorredelosguzmanes.com</Web>
+			</WebList>
+		</Contact>
+		<Category type="SIMPLE" code="3EST" shortname="3*">3 STARS</Category>
+		<Destination type="SIMPLE" code="SVQ">
+			<Name>Sevilla</Name>
+			<ZoneList>
+				<Zone type="SIMPLE" code="74">La Algaba</Zone>
+			</ZoneList>
+		</Destination>
+		<FacilityList>
+			<Feature xsi:type="ProductFeatureSport" group="10">
+				<Code>20</Code>
+				<Name>buildingFacility</Name>
+				<Description>Year of construction</Description>
+				<Value>1991</Value>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="10">
+				<Code>30</Code>
+				<Name>buildingFacility</Name>
+				<Description>Year of most recent renovation</Description>
+				<Value>2001</Value>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="10">
+				<Code>50</Code>
+				<Name>buildingFacility</Name>
+				<Description>Number of floors (main building)</Description>
+				<Value>2</Value>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="10">
+				<Code>70</Code>
+				<Name>buildingFacility</Name>
+				<Description>Total number of rooms</Description>
+				<Value>56</Value>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="10">
+				<Code>80</Code>
+				<Name>buildingFacility</Name>
+				<Description>Single rooms</Description>
+				<Value>1</Value>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="10">
+				<Code>90</Code>
+				<Name>buildingFacility</Name>
+				<Description>Double rooms</Description>
+				<Value>55</Value>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="10">
+				<Code>124</Code>
+				<Name>buildingFacility</Name>
+				<Description>Disability-friendly rooms</Description>
+				<Value>1</Value>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="10">
+				<Code>130</Code>
+				<Name>buildingFacility</Name>
+				<Description>Terrace</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="20">
+				<Code>10</Code>
+				<Name>hotelTypeFacility</Name>
+				<Description>Hotel</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureData" group="30">
+				<Code>60</Code>
+				<Name>credCardsFacility</Name>
+				<Description>Visa</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureData" group="30">
+				<Code>90</Code>
+				<Name>credCardsFacility</Name>
+				<Description>Visa Electr&#243;n</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureData" group="30">
+				<Code>50</Code>
+				<Name>credCardsFacility</Name>
+				<Description>MasterCard</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureData" group="30">
+				<Code>10</Code>
+				<Name>credCardsFacility</Name>
+				<Description>American Express</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureData" group="30">
+				<Code>40</Code>
+				<Name>credCardsFacility</Name>
+				<Description>Diners Club</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureData" group="30">
+				<Code>80</Code>
+				<Name>credCardsFacility</Name>
+				<Description>Maestro</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" fee="N" group="60">
+				<Code>80</Code>
+				<Name>roomFacility</Name>
+				<Description>Radio</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" fee="N" group="60">
+				<Code>90</Code>
+				<Name>roomFacility</Name>
+				<Description>Hi-fi</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="60" yesorno="S">
+				<Code>250</Code>
+				<Name>roomFacility</Name>
+				<Description>Wheelchair-accessible</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="60" yesorno="S">
+				<Code>260</Code>
+				<Name>roomFacility</Name>
+				<Description>Disability-friendly bathroom</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="60">
+				<Code>230</Code>
+				<Name>roomFacility</Name>
+				<Description>Balcony</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="60">
+				<Code>240</Code>
+				<Name>roomFacility</Name>
+				<Description>Terrace</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="60">
+				<Code>10</Code>
+				<Name>roomFacility</Name>
+				<Description>Bathroom</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="60">
+				<Code>30</Code>
+				<Name>roomFacility</Name>
+				<Description>Bathtub</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" fee="N" group="60">
+				<Code>100</Code>
+				<Name>roomFacility</Name>
+				<Description>Internet access</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" fee="N" group="60">
+				<Code>55</Code>
+				<Name>roomFacility</Name>
+				<Description>TV</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" fee="N" group="60">
+				<Code>50</Code>
+				<Name>roomFacility</Name>
+				<Description>Direct dial telephone</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" fee="N" group="60">
+				<Code>180</Code>
+				<Name>roomFacility</Name>
+				<Description>Individually adjustable air conditioning</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="60">
+				<Code>190</Code>
+				<Name>roomFacility</Name>
+				<Description>Central heating</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" group="60">
+				<Code>195</Code>
+				<Name>roomFacility</Name>
+				<Description>Individually adjustable heating </Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureSport" fee="N" group="60">
+				<Code>60</Code>
+				<Name>roomFacility</Name>
+				<Description>Satellite / cable TV</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="70">
+				<Code>30</Code>
+				<Name>servicesFacility</Name>
+				<Description>24-hour reception</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="N" group="70">
+				<Code>280</Code>
+				<Name>servicesFacility</Name>
+				<Description>Laundry service</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="Y" group="70">
+				<Code>285</Code>
+				<Name>servicesFacility</Name>
+				<Description>Launderette</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="N" group="70">
+				<Code>250</Code>
+				<Name>servicesFacility</Name>
+				<Description>Wired Internet</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="Y" group="70">
+				<Code>550</Code>
+				<Name>servicesFacility</Name>
+				<Description>Wi-fi</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="70">
+				<Code>10</Code>
+				<Name>servicesFacility</Name>
+				<Description>Air conditioning in public areas</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="70" yesorno="S">
+				<Code>320</Code>
+				<Name>servicesFacility</Name>
+				<Description>Car park</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="70" yesorno="S">
+				<Code>330</Code>
+				<Name>servicesFacility</Name>
+				<Description>Garage</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="N" group="70">
+				<Code>240</Code>
+				<Name>servicesFacility</Name>
+				<Description>Mobile phone coverage</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="70">
+				<Code>125</Code>
+				<Name>servicesFacility</Name>
+				<Description>Garden</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="70">
+				<Code>195</Code>
+				<Name>servicesFacility</Name>
+				<Description>Breakfast room</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="70">
+				<Code>197</Code>
+				<Name>servicesFacility</Name>
+				<Description>Dining room</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="N" group="70">
+				<Code>365</Code>
+				<Name>servicesFacility</Name>
+				<Description>Outdoor pool</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="N" group="70">
+				<Code>370</Code>
+				<Name>servicesFacility</Name>
+				<Description>Fresh water pool</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="71">
+				<Code>80</Code>
+				<Name>cateringFacility</Name>
+				<Description>Caf&#233;</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="71">
+				<Code>130</Code>
+				<Name>cateringFacility</Name>
+				<Description>Bar</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="71">
+				<Code>220</Code>
+				<Name>cateringFacility</Name>
+				<Description>Non-smoking area</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="71">
+				<Code>555</Code>
+				<Name>cateringFacility</Name>
+				<Description>Poolside snack bar</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="Y" group="73">
+				<Code>395</Code>
+				<Name>entertainmentFacility</Name>
+				<Description>Sun loungers</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" fee="Y" group="73">
+				<Code>400</Code>
+				<Name>entertainmentFacility</Name>
+				<Description>Parasols</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="73">
+				<Code>190</Code>
+				<Name>entertainmentFacility</Name>
+				<Description>Games room</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureService" group="80">
+				<Code>30</Code>
+				<Name>mealsFacility</Name>
+				<Description>Breakfast buffet</Description>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="40">
+				<Code>10</Code>
+				<Name>distancesFacility</Name>
+				<Description>City centre</Description>
+				<DistanceList>
+					<Distance unit="mts">800</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="40">
+				<Code>145</Code>
+				<Name>distancesFacility</Name>
+				<Description>Bus/Train station</Description>
+				<DistanceList>
+					<Distance unit="mts">12000</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="40">
+				<Code>20</Code>
+				<Name>distancesFacility</Name>
+				<Description>Nearest Bus / Metro Stop</Description>
+				<DistanceList>
+					<Distance unit="mts">7</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="40">
+				<Code>40</Code>
+				<Name>distancesFacility</Name>
+				<Description>Beach</Description>
+				<DistanceList>
+					<Distance unit="mts">8000</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="40">
+				<Code>130</Code>
+				<Name>distancesFacility</Name>
+				<Description>Golf course</Description>
+				<DistanceList>
+					<Distance unit="mts">15000</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="100">
+				<Code>10</Code>
+				<Name>highLightFacility</Name>
+				<Description>1</Description>
+				<Remark>ISLA MAGICA</Remark>
+				<DistanceList>
+					<Distance unit="mts">10000</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="100">
+				<Code>20</Code>
+				<Name>highLightFacility</Name>
+				<Description>2</Description>
+				<Remark>Italica</Remark>
+				<DistanceList>
+					<Distance unit="mts">7000</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="100">
+				<Code>30</Code>
+				<Name>highLightFacility</Name>
+				<Description>3</Description>
+				<Remark>Parque Tecnologia Cartuja</Remark>
+				<DistanceList>
+					<Distance unit="mts">10000</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="100">
+				<Code>40</Code>
+				<Name>highLightFacility</Name>
+				<Description>4</Description>
+				<Remark>Palacio de Congresos</Remark>
+				<DistanceList>
+					<Distance unit="mts">12000</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="100">
+				<Code>50</Code>
+				<Name>highLightFacility</Name>
+				<Description>5</Description>
+				<Remark>Aeropolis-Parque Tecnologico Aeroespacial de Andalucia</Remark>
+				<DistanceList>
+					<Distance unit="mts">14000</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="40">
+				<Code>TSVQ</Code>
+				<Name>airPortDistanceFacility</Name>
+				<Description>ESTACION SANTA JUSTA (TREN)</Description>
+				<DistanceList>
+					<Distance unit="km">14</Distance>
+				</DistanceList>
+			</Feature>
+			<Feature xsi:type="ProductFeatureDistance" group="40">
+				<Code>SVQ</Code>
+				<Name>airPortDistanceFacility</Name>
+				<Description>SEVILLA AIRPORT</Description>
+				<DistanceList>
+					<Distance unit="km">15</Distance>
+				</DistanceList>
+			</Feature>
+		</FacilityList>
+		<LicenseNumber>14/98</LicenseNumber>
+		<Position latitude="37.47813" longitude="-6.00849"/>
+		<ProductRoomList>
+			<ProductRoom>
+				<CompanyCode>E10</CompanyCode>
+				<RoomCode>DBT</RoomCode>
+				<FeatureCode>ST</FeatureCode>
+				<Features xsi:type="RoomFeature" fee="N" group="60">
+					<Code>10</Code>
+					<Name>Bathroom</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="N">
+					<Code>250</Code>
+					<Name>Wheelchair-accessible</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="N">
+					<Code>260</Code>
+					<Name>Disability-friendly bathroom</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="N">
+					<Code>287</Code>
+					<Name>Smoking rooms</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60">
+					<Code>295</Code>
+					<Name>Superficie habitaci&#243;n</Name>
+					<Value>30</Value>
+				</Features>
+			</ProductRoom>
+			<ProductRoom>
+				<CompanyCode>E10</CompanyCode>
+				<RoomCode>DUS</RoomCode>
+				<FeatureCode>ST</FeatureCode>
+				<Features xsi:type="RoomFeature" fee="N" group="60">
+					<Code>10</Code>
+					<Name>Bathroom</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="N">
+					<Code>250</Code>
+					<Name>Wheelchair-accessible</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="N">
+					<Code>260</Code>
+					<Name>Disability-friendly bathroom</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="S">
+					<Code>287</Code>
+					<Name>Smoking rooms</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60">
+					<Code>295</Code>
+					<Name>Superficie habitaci&#243;n</Name>
+					<Value>30</Value>
+				</Features>
+			</ProductRoom>
+			<ProductRoom>
+				<CompanyCode>E10</CompanyCode>
+				<RoomCode>TPL</RoomCode>
+				<FeatureCode>ST</FeatureCode>
+				<Features xsi:type="RoomFeature" fee="N" group="60">
+					<Code>10</Code>
+					<Name>Bathroom</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="N">
+					<Code>250</Code>
+					<Name>Wheelchair-accessible</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="N">
+					<Code>260</Code>
+					<Name>Disability-friendly bathroom</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60" yesorno="N">
+					<Code>287</Code>
+					<Name>Smoking rooms</Name>
+				</Features>
+				<Features xsi:type="RoomFeature" fee="N" group="60">
+					<Code>295</Code>
+					<Name>Superficie habitaci&#243;n</Name>
+					<Value>50</Value>
+				</Features>
+			</ProductRoom>
+			<ProductRoom>
+				<CompanyCode>E10</CompanyCode>
+				<RoomCode>TWN</RoomCode>
+				<FeatureCode>ST</FeatureCode>
+			</ProductRoom>
+		</ProductRoomList>
+	</Hotel>
+</HotelDetailRS>

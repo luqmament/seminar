@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceAddRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/ServiceAddRS.xsd" echoToken="DummyEchoToken">
+	<AuditData>
+		<ProcessTime>185</ProcessTime>
+		<Timestamp>2014-04-30 16:31:02.049</Timestamp>
+		<RequestHost>10.162.36.58</RequestHost>
+		<ServerName>LIVE</ServerName>
+		<ServerId>41</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201404231120</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201404231120</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<Purchase purchaseToken="10642576100" timeToExpiration="1799820">
+		<Status>SHOPPING_CART</Status>
+		<Agency>
+			<Code>30502</Code>
+			<Branch>1</Branch>
+		</Agency>
+		<Language>CAS</Language>
+		<CreationUser>16776</CreationUser>
+		<ServiceList>
+			<Service xsi:type="ServiceTicket" SPUI="1#O#1">
+				<Status>NEW</Status>
+				<ContractList>
+					<Contract>
+						<Name>HIDROPARK 12</Name>
+						<IncomingOffice code="1"/>
+					</Contract>
+				</ContractList>
+				<Supplier name="HOTELBEDS SPAIN S.L.U." vatNumber="B28916765"/>
+				<CommentList>
+					<Comment type="CONTRACT">El cliente puede canjear el bono en la oficina de billetes de Alcudia Hidropark en la Avenida Tuc&#225;n, s/n &#8226; Pto. Alcudia Del 1 de Mayo hasta el 31 de Octubre: Mayo, Junio, Septiembre &amp; Octubre cada d&#237;a de 10:00 a 17:00h Julio &amp; Agosto cada d&#237;a de 10:00 a 18:00h El cliente no puede olvidar llevar su documento de identidad. En caso de emergencia, el cliente deber&#225; llamar al siguiente n&#250;mero: (+34) 971 211 601</Comment>
+				</CommentList>
+				<DateFrom date="20140626"/>
+				<DateTo date="20140626"/>
+				<Currency code="EUR">Euro</Currency>
+				<TotalAmount>24.000</TotalAmount>
+				<AdditionalCostList>
+					<AdditionalCost type="AG_COMMISSION">
+						<Price>
+							<Amount>2.636</Amount>
+						</Price>
+					</AdditionalCost>
+					<AdditionalCost type="COMMISSION_VAT">
+						<Price>
+							<Amount>0.554</Amount>
+						</Price>
+					</AdditionalCost>
+					<AdditionalCost type="COMMISSION_PCT">
+						<Price>
+							<Amount>0.000</Amount>
+						</Price>
+					</AdditionalCost>
+				</AdditionalCostList>
+				<ServiceExtraInfoList>
+					<ExtendedData type="EXT_ADDITIONAL_INFO">
+						<Name>INFO_TTOO_SERVICE_AMOUNT</Name>
+						<Value>24.000</Value>
+					</ExtendedData>
+				</ServiceExtraInfoList>
+				<ModificationPolicyList>
+					<ModificationPolicy>Cancellation</ModificationPolicy>
+					<ModificationPolicy>Confirmation</ModificationPolicy>
+					<ModificationPolicy>Modification</ModificationPolicy>
+				</ModificationPolicyList>
+				<TicketInfo xsi:type="ProductTicket">
+					<Code>000200530</Code>
+					<Name>Hidropark Alcudia</Name>
+					<CompanyCode>E10</CompanyCode>
+					<TicketClass>T</TicketClass>
+					<Destination type="SIMPLE" code="PMI">
+						<Name>Mallorca</Name>
+					</Destination>
+					<TicketZone xsi:type="ProductZone"/>
+				</TicketInfo>
+				<AvailableModality code="8">
+					<Name>Entrada </Name>
+					<Contract>
+						<Name>HIDROPARK 12</Name>
+						<IncomingOffice code="1"/>
+					</Contract>
+					<PriceList>
+						<Price>
+							<Amount>24.000</Amount>
+							<Description>Adults Price</Description>
+						</Price>
+						<Price>
+							<Amount>0.000</Amount>
+							<Description>Babies Price</Description>
+						</Price>
+						<Price>
+							<Amount>0.000</Amount>
+							<Description>Children Price</Description>
+						</Price>
+						<Price>
+							<Amount>24.000</Amount>
+							<Description>Total Price</Description>
+						</Price>
+						<Price>
+							<Amount>24.000</Amount>
+							<Description>Ticket Office Price</Description>
+						</Price>
+						<Price>
+							<Amount>0.000</Amount>
+							<Description>Child Ticket Office Price</Description>
+						</Price>
+						<Price paxCount="1">
+							<Amount>0</Amount>
+							<Description>Real Adult Number</Description>
+						</Price>
+						<Price paxCount="0">
+							<Amount>0</Amount>
+							<Description>Real Child Number</Description>
+						</Price>
+					</PriceList>
+				</AvailableModality>
+				<Paxes>
+					<AdultCount>1</AdultCount>
+					<ChildCount>0</ChildCount>
+					<GuestList>
+						<Customer type="AD">
+							<CustomerId>1</CustomerId>
+							<Age>45</Age>
+						</Customer>
+					</GuestList>
+				</Paxes>
+			</Service>
+		</ServiceList>
+		<Currency code="EUR"/>
+		<PaymentData>
+			<PaymentType code="P"/>
+			<InvoiceCompany/>
+			<Description>UNKNOWN</Description>
+		</PaymentData>
+		<PurchaseExtraInfoList>
+			<ExtendedData type="EXT_ADDITIONAL_INFO">
+				<Name>INFO_TTOO_PENDING_AMOUNT</Name>
+				<Value>20.810</Value>
+			</ExtendedData>
+		</PurchaseExtraInfoList>
+		<TotalPrice>24.000</TotalPrice>
+		<PendingAmount>20.810</PendingAmount>
+	</Purchase>
+</ServiceAddRS>

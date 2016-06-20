@@ -1,0 +1,118 @@
+<PurchaseConfirmRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance ../xsd/PurchaseConfirmRS.xsd"  echoToken="String">
+	<AuditData>
+		<ProcessTime>7546</ProcessTime>
+		<Timestamp>2013-03-19 15:45:50.784</Timestamp>
+		<RequestHost>10.0.44.139</RequestHost>
+		<ServerName>ITINTERNET02</ServerName>
+		<ServerId>LO</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201303061155</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201303061155</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<Purchase purchaseToken="LO034528007" timeToExpiration="1799750">
+		<Reference>
+			<FileNumber>297131</FileNumber>
+			<IncomingOffice code="44"/>
+		</Reference>
+		<Status>BOOKING</Status>
+		<Agency>
+			<Code>30542</Code>
+			<Branch>1</Branch>
+		</Agency>
+		<Language>CAS</Language>
+		<CreationDate date="20130319"/>
+		<Holder type="AD">
+			<Name>TEST</Name>
+			<LastName>TEST</LastName>
+		</Holder>
+		<AgencyReference>TEST</AgencyReference>
+		<ServiceList>
+			<Service xsi:type="ServiceHotel" SPUI="44#H#1">
+				<Reference>
+					<FileNumber>297131-H1</FileNumber>
+					<IncomingOffice code="44"/>
+				</Reference>
+				<Status>CONFIRMED</Status>
+				<ContractList>
+					<Contract>
+						<Name>CG-TODOS</Name>
+						<IncomingOffice code="44"/>
+					</Contract>
+				</ContractList>
+				<Supplier name="CANCO" vatNumber="B- 38877676"/>
+				<DateFrom date="20130328"/>
+				<DateTo date="20130331"/>
+				<Currency code="EUR">Euro</Currency>
+				<TotalAmount>340.200</TotalAmount>
+				<AdditionalCostList>
+					<AdditionalCost type="AG_COMMISSION">
+						<Price>
+							<Amount>0.000</Amount>
+						</Price>
+					</AdditionalCost>
+					<AdditionalCost type="COMMISSION_VAT">
+						<Price>
+							<Amount>0.000</Amount>
+						</Price>
+					</AdditionalCost>
+				</AdditionalCostList>
+				<ModificationPolicyList>
+					<ModificationPolicy>Cancellation</ModificationPolicy>
+					<ModificationPolicy>Confirmation</ModificationPolicy>
+					<ModificationPolicy>Modification</ModificationPolicy>
+				</ModificationPolicyList>
+				<HotelInfo xsi:type="ProductHotel">
+					<Code>1009</Code>
+					<Name>Condes de Barcelona</Name>
+					<Category type="SIMPLE" code="4EST">4 ESTRELLAS</Category>
+					<Destination type="SIMPLE" code="BCN">
+						<Name>Barcelona</Name>
+						<ZoneList>
+							<Zone type="SIMPLE" code="42">Paseo de Gracia</Zone>
+						</ZoneList>
+					</Destination>
+				</HotelInfo>
+				<AvailableRoom>
+					<HotelOccupancy>
+						<RoomCount>1</RoomCount>
+						<Occupancy>
+							<AdultCount>2</AdultCount>
+							<ChildCount>0</ChildCount>
+							<GuestList>
+								<Customer type="AD">
+									<CustomerId>2</CustomerId>
+									<Age>30</Age>
+									<Name>dummy</Name>
+									<LastName>dummy</LastName>
+								</Customer>
+								<Customer type="AD">
+									<CustomerId>1</CustomerId>
+									<Age>30</Age>
+									<Name>test</Name>
+									<LastName>test</LastName>
+								</Customer>
+							</GuestList>
+						</Occupancy>
+					</HotelOccupancy>
+					<HotelRoom SHRUI="ITMHIn94Np+sxa103rbKOQ==" availCount="1" status="CONFIRMED">
+						<Board type="SIMPLE" code="SH-E10">SOLO HABITACION</Board>
+						<RoomType type="SIMPLE" code="DBL-E10" characteristic="ST">DOBLE</RoomType>
+						<Price>
+							<Amount>340.200</Amount>
+						</Price>
+						<CancellationPolicy>
+							<Price>
+								<Amount>113.400</Amount>
+								<DateTimeFrom date="20130327" time="0000"/>
+								<DateTimeTo date="20130328"/>
+							</Price>
+						</CancellationPolicy>
+					</HotelRoom>
+				</AvailableRoom>
+			</Service>
+		</ServiceList>
+		<Currency code="EUR"/>
+		<TotalPrice>340.200</TotalPrice>
+	</Purchase>
+</PurchaseConfirmRS>

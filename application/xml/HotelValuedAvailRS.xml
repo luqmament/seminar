@@ -1,0 +1,2832 @@
+<HotelValuedAvailRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/HotelValuedAvailRS.xsd" timeToExpiration="1799957" totalItems="192" echoToken="DummyEchoToken">
+	<AuditData>
+		<ProcessTime>2128</ProcessTime>
+		<Timestamp>2014-05-06 11:35:52.042</Timestamp>
+		<RequestHost>127.0.0.1</RequestHost>
+		<ServerName>SIS</ServerName>
+		<ServerId>01</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201405051526</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201405051526</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<PaginationData currentPage="1" totalPages="10"/>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>NRF-TODOS1~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NRF">Non refundable rate</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>1499</Code>
+			<Name>Amic Gala</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/001499/001499a_hb_w_002.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/001499/001499a_hb_r_005.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="3EST" shortname="3*">3 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="74">Ca'n Pastilla</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.53611999999999682132" longitude="2.71932000000000018147"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="10" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>94.560</Amount>
+					<SellingPrice mandatory="Y">94.560</SellingPrice>
+					<NetPrice>78.960</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="94.560" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="82LafAHrfGSTNGqn9I45+g==" availCount="10" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>98.560</Amount>
+					<SellingPrice mandatory="Y">98.560</SellingPrice>
+					<NetPrice>82.300</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="98.560" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Qidcnpfoboo6h6u5Z10BNA==" availCount="10" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>127.360</Amount>
+					<SellingPrice mandatory="Y">127.360</SellingPrice>
+					<NetPrice>106.350</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="127.360" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="0Mq+IP0qg4gMBmH+CSKOgw==" availCount="10" onRequest="N">
+				<Board type="SIMPLE" code="FB-E10" shortname="FB">FULL BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>156.160</Amount>
+					<SellingPrice mandatory="Y">156.160</SellingPrice>
+					<NetPrice>130.390</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="156.160" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS1~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>1499</Code>
+			<Name>Amic Gala</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/001499/001499a_hb_w_002.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/001499/001499a_hb_r_005.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="3EST" shortname="3*">3 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="74">Ca'n Pastilla</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.53611999999999682132" longitude="2.71932000000000018147"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="10" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>118.200</Amount>
+					<SellingPrice mandatory="Y">118.200</SellingPrice>
+					<NetPrice>98.700</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="59.100" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="82LafAHrfGSTNGqn9I45+g==" availCount="10" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>123.200</Amount>
+					<SellingPrice mandatory="Y">123.200</SellingPrice>
+					<NetPrice>102.870</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="61.600" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Qidcnpfoboo6h6u5Z10BNA==" availCount="10" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>159.200</Amount>
+					<SellingPrice mandatory="Y">159.200</SellingPrice>
+					<NetPrice>132.930</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="79.600" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="0Mq+IP0qg4gMBmH+CSKOgw==" availCount="10" onRequest="N">
+				<Board type="SIMPLE" code="FB-E10" shortname="FB">FULL BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>195.200</Amount>
+					<SellingPrice mandatory="Y">195.200</SellingPrice>
+					<NetPrice>162.990</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="97.600" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS2~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>1499</Code>
+			<Name>Amic Gala</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/001499/001499a_hb_w_002.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/001499/001499a_hb_r_005.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="3EST" shortname="3*">3 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="74">Ca'n Pastilla</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.53611999999999682132" longitude="2.71932000000000018147"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="gGaFWT7Y2JMjOgm2lkgXdA==" availCount="9" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>160.000</Amount>
+					<SellingPrice mandatory="Y">160.000</SellingPrice>
+					<NetPrice>133.600</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="80.000" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="ii/LWyvTbbZhvfJuBHnZUg==" availCount="9" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>165.000</Amount>
+					<SellingPrice mandatory="Y">165.000</SellingPrice>
+					<NetPrice>137.780</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="82.500" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="j31M6seuMewtTTfrX4HmDg==" availCount="9" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>201.000</Amount>
+					<SellingPrice mandatory="Y">201.000</SellingPrice>
+					<NetPrice>167.840</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="100.500" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Q15NCv1THdg+IwgWPSyiog==" availCount="9" onRequest="N">
+				<Board type="SIMPLE" code="FB-E10" shortname="FB">FULL BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>237.000</Amount>
+					<SellingPrice mandatory="Y">237.000</SellingPrice>
+					<NetPrice>197.890</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="118.500" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-MERCHANT~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>14530</Code>
+			<Name>San Francisco</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/01/014530/014530a_hb_r_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/01/014530/014530a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="HS" shortname="HO">HOSTEL 1*</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="90">Cala d'Or</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.37374487943699818970" longitude="3.22988927364349986959"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="99" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>103.540</Amount>
+					<SellingPrice mandatory="Y">103.540</SellingPrice>
+					<NetPrice>86.460</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="51.770" dateFrom="20140703" time="2359"/>
+					<CancellationPolicy amount="103.540" dateFrom="20140704" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="82LafAHrfGSTNGqn9I45+g==" availCount="99" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>111.540</Amount>
+					<SellingPrice mandatory="Y">111.540</SellingPrice>
+					<NetPrice>93.140</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="55.770" dateFrom="20140703" time="2359"/>
+					<CancellationPolicy amount="111.540" dateFrom="20140704" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-ALL~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>199768</Code>
+			<Name>Hostal Can Tiu</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/19/199768/199768a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/19/199768/199768a_hb_a_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="HSR2">RURAL HOSTEL 2*</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="10">Palma</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="0"/>
+			<Position latitude="39.70588999999999657575" longitude="2.78973000000000004306"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="78lXW0ynjNE8OM8BkihFPg==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBL-E10" characteristic="ST">DOUBLE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>104.000</Amount>
+					<SellingPrice mandatory="Y">104.000</SellingPrice>
+					<NetPrice>89.960</NetPrice>
+					<Commission>13.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="26.000" dateFrom="20140605" time="2359"/>
+					<CancellationPolicy amount="52.000" dateFrom="20140628" time="2359"/>
+					<CancellationPolicy amount="72.800" dateFrom="20140705" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Pq9drSGF22pL1bZkoR1hRQ==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBL-E10" characteristic="ST">DOUBLE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>128.000</Amount>
+					<SellingPrice mandatory="Y">128.000</SellingPrice>
+					<NetPrice>110.720</NetPrice>
+					<Commission>13.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="32.000" dateFrom="20140605" time="2359"/>
+					<CancellationPolicy amount="64.000" dateFrom="20140628" time="2359"/>
+					<CancellationPolicy amount="89.600" dateFrom="20140705" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="rM6+/Qd2wC4iJKeZU0hr4w==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="TPL-E10" characteristic="ST">TRIPLE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>144.000</Amount>
+					<SellingPrice mandatory="Y">144.000</SellingPrice>
+					<NetPrice>124.560</NetPrice>
+					<Commission>13.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="36.000" dateFrom="20140605" time="2359"/>
+					<CancellationPolicy amount="72.000" dateFrom="20140628" time="2359"/>
+					<CancellationPolicy amount="100.800" dateFrom="20140705" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="wxbxmrGqUcVBjsxZat02nA==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="TPL-E10" characteristic="ST">TRIPLE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>168.000</Amount>
+					<SellingPrice mandatory="Y">168.000</SellingPrice>
+					<NetPrice>145.320</NetPrice>
+					<Commission>13.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="42.000" dateFrom="20140605" time="2359"/>
+					<CancellationPolicy amount="84.000" dateFrom="20140628" time="2359"/>
+					<CancellationPolicy amount="117.600" dateFrom="20140705" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>212236</Code>
+			<Name>Hostal Calma</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/21/212236/212236a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/21/212236/212236a_hb_a_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="HS" shortname="HO">HOSTEL 1*</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="40">Puerto de Alcudia</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="8"/>
+			<Position latitude="39.84173017158948226779" longitude="3.13556752380372927291"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="L+gHetvthnAUoZJShUQCqA==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="TWN-E10" characteristic="ST">TWIN STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>104.000</Amount>
+					<SellingPrice mandatory="Y">104.000</SellingPrice>
+					<NetPrice>89.960</NetPrice>
+					<Commission>13.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="52.000" dateFrom="20140628" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="vr1/lgj8CuF+YEAYpJtZUg==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="TWN-E10" characteristic="ST">TWIN STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>120.000</Amount>
+					<SellingPrice mandatory="Y">120.000</SellingPrice>
+					<NetPrice>103.800</NetPrice>
+					<Commission>13.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="60.000" dateFrom="20140628" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS1~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>740</Code>
+			<Name>Amic Can Pastilla</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/000740/000740a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/000740/000740a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="2EST" shortname="2*">2 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="74">Ca'n Pastilla</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.53582000000000107320" longitude="2.72009999999999996234"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="99" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>115.000</Amount>
+					<SellingPrice mandatory="Y">115.000</SellingPrice>
+					<NetPrice>96.030</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="57.500" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS2~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>740</Code>
+			<Name>Amic Can Pastilla</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/000740/000740a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/000740/000740a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="2EST" shortname="2*">2 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="74">Ca'n Pastilla</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.53582000000000107320" longitude="2.72009999999999996234"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="gGaFWT7Y2JMjOgm2lkgXdA==" availCount="99" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>135.000</Amount>
+					<SellingPrice mandatory="Y">135.000</SellingPrice>
+					<NetPrice>112.720</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="67.500" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>161032</Code>
+			<Name>Gomila Park</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/16/161032/161032a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/16/161032/161032a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="1LL" shortname="1K">1 KEY</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="10">Palma</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.56623689999999982092" longitude="2.62797899999999984288"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="xIYSOw/Wlp2KpQY0Xsif+A==" availCount="5" onRequest="N">
+				<Board type="SIMPLE" code="SC-E10" shortname="SC">SELF CATERING</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>118.000</Amount>
+					<SellingPrice mandatory="Y">118.000</SellingPrice>
+					<NetPrice>98.530</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="59.000" dateFrom="20140704" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Sd4m89NgbA5sgyG3lD1Prw==" availCount="3" onRequest="N">
+				<Board type="SIMPLE" code="SC-E10" shortname="SC">SELF CATERING</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="C3">STUDIO 3 PEOPLE</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>150.000</Amount>
+					<SellingPrice mandatory="Y">150.000</SellingPrice>
+					<NetPrice>125.250</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="75.000" dateFrom="20140704" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>NRF-TODOSCOM~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NRF">Non refundable rate</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>162879</Code>
+			<Name>La Perla Negra</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/16/162879/162879a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/16/162879/162879a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="1LL" shortname="1K">1 KEY</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="87">Cala Ratjada</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="11"/>
+			<Position latitude="39.71650000000000346745" longitude="3.45972999999999997200"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="xIYSOw/Wlp2KpQY0Xsif+A==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="SC-E10" shortname="SC">SELF CATERING</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>126.000</Amount>
+					<SellingPrice mandatory="Y">126.000</SellingPrice>
+					<NetPrice>105.210</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="126.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="2Mz67AK46m3Fs857MuBGGw==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>147.600</Amount>
+					<SellingPrice mandatory="Y">147.600</SellingPrice>
+					<NetPrice>123.250</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="147.600" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="oFN6a0uYngLOciXFJLu0PA==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>169.200</Amount>
+					<SellingPrice mandatory="Y">169.200</SellingPrice>
+					<NetPrice>141.280</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="169.200" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="J+CiVsZEMujTK+rjCQKKRg==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="SC-E10" shortname="SC">SELF CATERING</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>189.000</Amount>
+					<SellingPrice mandatory="Y">189.000</SellingPrice>
+					<NetPrice>157.810</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="189.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="uTB+ciezGSHThwD8KAyhRQ==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>210.600</Amount>
+					<SellingPrice mandatory="Y">210.600</SellingPrice>
+					<NetPrice>175.850</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="210.600" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Zy1ItUrRM0yjaxJUunPvFA==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>232.200</Amount>
+					<SellingPrice mandatory="Y">232.200</SellingPrice>
+					<NetPrice>193.890</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="232.200" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-OPACOCOM~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>162879</Code>
+			<Name>La Perla Negra</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/16/162879/162879a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/16/162879/162879a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="1LL" shortname="1K">1 KEY</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="87">Cala Ratjada</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="11"/>
+			<Position latitude="39.71650000000000346745" longitude="3.45972999999999997200"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="xIYSOw/Wlp2KpQY0Xsif+A==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="SC-E10" shortname="SC">SELF CATERING</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>140.000</Amount>
+					<SellingPrice mandatory="Y">140.000</SellingPrice>
+					<NetPrice>116.900</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="70.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="2Mz67AK46m3Fs857MuBGGw==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>164.000</Amount>
+					<SellingPrice mandatory="Y">164.000</SellingPrice>
+					<NetPrice>136.940</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="82.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="oFN6a0uYngLOciXFJLu0PA==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>188.000</Amount>
+					<SellingPrice mandatory="Y">188.000</SellingPrice>
+					<NetPrice>156.980</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="94.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="J+CiVsZEMujTK+rjCQKKRg==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="SC-E10" shortname="SC">SELF CATERING</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>210.000</Amount>
+					<SellingPrice mandatory="Y">210.000</SellingPrice>
+					<NetPrice>175.350</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="105.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="uTB+ciezGSHThwD8KAyhRQ==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>234.000</Amount>
+					<SellingPrice mandatory="Y">234.000</SellingPrice>
+					<NetPrice>195.390</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="117.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Zy1ItUrRM0yjaxJUunPvFA==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>258.000</Amount>
+					<SellingPrice mandatory="Y">258.000</SellingPrice>
+					<NetPrice>215.430</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="129.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOSCOM~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>162879</Code>
+			<Name>La Perla Negra</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/16/162879/162879a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/16/162879/162879a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="1LL" shortname="1K">1 KEY</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="87">Cala Ratjada</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="11"/>
+			<Position latitude="39.71650000000000346745" longitude="3.45972999999999997200"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="xIYSOw/Wlp2KpQY0Xsif+A==" availCount="5" onRequest="N">
+				<Board type="SIMPLE" code="SC-E10" shortname="SC">SELF CATERING</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>140.000</Amount>
+					<SellingPrice mandatory="Y">140.000</SellingPrice>
+					<NetPrice>116.900</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="70.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="2Mz67AK46m3Fs857MuBGGw==" availCount="5" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>164.000</Amount>
+					<SellingPrice mandatory="Y">164.000</SellingPrice>
+					<NetPrice>136.940</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="82.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="oFN6a0uYngLOciXFJLu0PA==" availCount="5" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="STU-E10" characteristic="ST">STUDIO STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>188.000</Amount>
+					<SellingPrice mandatory="Y">188.000</SellingPrice>
+					<NetPrice>156.980</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="94.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="J+CiVsZEMujTK+rjCQKKRg==" availCount="5" onRequest="N">
+				<Board type="SIMPLE" code="SC-E10" shortname="SC">SELF CATERING</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>210.000</Amount>
+					<SellingPrice mandatory="Y">210.000</SellingPrice>
+					<NetPrice>175.350</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="105.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="uTB+ciezGSHThwD8KAyhRQ==" availCount="5" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>234.000</Amount>
+					<SellingPrice mandatory="Y">234.000</SellingPrice>
+					<NetPrice>195.390</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="117.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Zy1ItUrRM0yjaxJUunPvFA==" availCount="5" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="APT-E10" characteristic="ST">APARTMENT STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>258.000</Amount>
+					<SellingPrice mandatory="Y">258.000</SellingPrice>
+					<NetPrice>215.430</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="129.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>NRF-MERCHANT~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NRF">Non refundable rate</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>147287</Code>
+			<Name>Es Riquers</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/14/147287/147287a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/14/147287/147287a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="HR" shortname="HR">RURAL HOTEL</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="52">Porreras</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.51188786566891053553" longitude="2.99512129509730584687"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="JykpRifYJVlaIVRUL+In9w==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="PR">Double or Twin PROMOROOM</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>130.500</Amount>
+					<SellingPrice mandatory="Y">130.500</SellingPrice>
+					<NetPrice>108.970</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="130.500" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="gGaFWT7Y2JMjOgm2lkgXdA==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>138.000</Amount>
+					<SellingPrice mandatory="Y">138.000</SellingPrice>
+					<NetPrice>115.230</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="138.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="sg6+x73IHbk0b6rTjo5VuQ==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="PR">Double or Twin PROMOROOM</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>142.500</Amount>
+					<SellingPrice mandatory="Y">142.500</SellingPrice>
+					<NetPrice>118.990</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="142.500" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="ii/LWyvTbbZhvfJuBHnZUg==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>150.000</Amount>
+					<SellingPrice mandatory="Y">150.000</SellingPrice>
+					<NetPrice>125.250</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="150.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="9jiYdvs2Kh8fXX5DyHx73A==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="DX">Double or Twin DELUXE</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>153.000</Amount>
+					<SellingPrice mandatory="Y">153.000</SellingPrice>
+					<NetPrice>127.750</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="153.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="GVQJY2oe/pOlzs61f40IdQ==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="DX">Double or Twin DELUXE</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>165.000</Amount>
+					<SellingPrice mandatory="Y">165.000</SellingPrice>
+					<NetPrice>137.780</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="165.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="XKQXMgW1lX3Ot/OARkEO7Q==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="SUI-E10" characteristic="ST">SUITE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>183.000</Amount>
+					<SellingPrice mandatory="Y">183.000</SellingPrice>
+					<NetPrice>152.810</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="183.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="sJaoeQkrZUhlzgZ7OlmNDQ==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="SUI-E10" characteristic="ST">SUITE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>195.000</Amount>
+					<SellingPrice mandatory="Y">195.000</SellingPrice>
+					<NetPrice>162.820</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="195.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="uNeeewShHSbT6RnzMa3LRg==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="PR">Double or Twin PROMOROOM</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>198.000</Amount>
+					<SellingPrice mandatory="Y">198.000</SellingPrice>
+					<NetPrice>165.330</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="198.000" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="j31M6seuMewtTTfrX4HmDg==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>205.500</Amount>
+					<SellingPrice mandatory="Y">205.500</SellingPrice>
+					<NetPrice>171.590</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="205.500" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="m7h6hRiJ33JmARMf4we/XQ==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="DX">Double or Twin DELUXE</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>220.500</Amount>
+					<SellingPrice mandatory="Y">220.500</SellingPrice>
+					<NetPrice>184.120</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="220.500" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="W6WsUv+GkS+Y0qdHtf/rjw==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="SUI-E10" characteristic="ST">SUITE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>250.500</Amount>
+					<SellingPrice mandatory="Y">250.500</SellingPrice>
+					<NetPrice>209.170</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="250.500" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-MERCHANT~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>147287</Code>
+			<Name>Es Riquers</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/14/147287/147287a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/14/147287/147287a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="HR" shortname="HR">RURAL HOTEL</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="52">Porreras</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.51188786566891053553" longitude="2.99512129509730584687"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="JykpRifYJVlaIVRUL+In9w==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="PR">Double or Twin PROMOROOM</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>147.900</Amount>
+					<SellingPrice mandatory="Y">147.900</SellingPrice>
+					<NetPrice>123.500</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="73.950" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="gGaFWT7Y2JMjOgm2lkgXdA==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>156.400</Amount>
+					<SellingPrice mandatory="Y">156.400</SellingPrice>
+					<NetPrice>130.590</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="78.200" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="sg6+x73IHbk0b6rTjo5VuQ==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="PR">Double or Twin PROMOROOM</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>161.500</Amount>
+					<SellingPrice mandatory="Y">161.500</SellingPrice>
+					<NetPrice>134.850</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="80.750" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="ii/LWyvTbbZhvfJuBHnZUg==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>170.000</Amount>
+					<SellingPrice mandatory="Y">170.000</SellingPrice>
+					<NetPrice>141.950</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="85.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="9jiYdvs2Kh8fXX5DyHx73A==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="DX">Double or Twin DELUXE</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>173.400</Amount>
+					<SellingPrice mandatory="Y">173.400</SellingPrice>
+					<NetPrice>144.790</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="86.700" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="GVQJY2oe/pOlzs61f40IdQ==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="DX">Double or Twin DELUXE</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>187.000</Amount>
+					<SellingPrice mandatory="Y">187.000</SellingPrice>
+					<NetPrice>156.150</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="93.500" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="XKQXMgW1lX3Ot/OARkEO7Q==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="SUI-E10" characteristic="ST">SUITE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>207.400</Amount>
+					<SellingPrice mandatory="Y">207.400</SellingPrice>
+					<NetPrice>173.180</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="103.700" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="sJaoeQkrZUhlzgZ7OlmNDQ==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="SUI-E10" characteristic="ST">SUITE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>221.000</Amount>
+					<SellingPrice mandatory="Y">221.000</SellingPrice>
+					<NetPrice>184.530</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="110.500" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="uNeeewShHSbT6RnzMa3LRg==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="PR">Double or Twin PROMOROOM</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>224.400</Amount>
+					<SellingPrice mandatory="Y">224.400</SellingPrice>
+					<NetPrice>187.370</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="112.200" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="j31M6seuMewtTTfrX4HmDg==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>232.900</Amount>
+					<SellingPrice mandatory="Y">232.900</SellingPrice>
+					<NetPrice>194.470</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="116.450" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="m7h6hRiJ33JmARMf4we/XQ==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="DX">Double or Twin DELUXE</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>249.900</Amount>
+					<SellingPrice mandatory="Y">249.900</SellingPrice>
+					<NetPrice>208.670</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="124.950" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="W6WsUv+GkS+Y0qdHtf/rjw==" availCount="1" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="SUI-E10" characteristic="ST">SUITE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>283.900</Amount>
+					<SellingPrice mandatory="Y">283.900</SellingPrice>
+					<NetPrice>237.060</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="141.950" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS1~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>8518</Code>
+			<Name>Amic Miraflores</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/008518/008518a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/008518/008518a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="2EST" shortname="2*">2 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="74">Ca'n Pastilla</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.53611999999999682132" longitude="2.71932000000000018147"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="96" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>136.000</Amount>
+					<SellingPrice mandatory="Y">136.000</SellingPrice>
+					<NetPrice>113.560</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="68.000" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="82LafAHrfGSTNGqn9I45+g==" availCount="96" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>141.000</Amount>
+					<SellingPrice mandatory="Y">141.000</SellingPrice>
+					<NetPrice>117.730</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="70.500" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS2~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>8518</Code>
+			<Name>Amic Miraflores</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/008518/008518a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/008518/008518a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="2EST" shortname="2*">2 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="74">Ca'n Pastilla</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.53611999999999682132" longitude="2.71932000000000018147"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="gGaFWT7Y2JMjOgm2lkgXdA==" availCount="99" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>156.000</Amount>
+					<SellingPrice mandatory="Y">156.000</SellingPrice>
+					<NetPrice>130.260</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="78.000" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="ii/LWyvTbbZhvfJuBHnZUg==" availCount="99" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="SU">Double or Twin SUPERIOR</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>161.000</Amount>
+					<SellingPrice mandatory="Y">161.000</SellingPrice>
+					<NetPrice>134.440</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="80.500" dateFrom="20140702" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>96004</Code>
+			<Name>Portocolom</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/09/096004/096004a_hb_a_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/09/096004/096004a_hb_w_002.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="HS" shortname="HO">HOSTEL 1*</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="37">Porto Colom</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.41983985680686686237" longitude="3.26184879988431930542"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>136.800</Amount>
+					<SellingPrice mandatory="Y">136.800</SellingPrice>
+					<NetPrice>114.230</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="68.400" dateFrom="20140704" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="82LafAHrfGSTNGqn9I45+g==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>144.000</Amount>
+					<SellingPrice mandatory="Y">144.000</SellingPrice>
+					<NetPrice>120.240</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="72.000" dateFrom="20140704" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="xE3h/EL+IqrVE8IgwOq8Wg==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="JSU-E10" characteristic="ST">JUNIOR SUITE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>172.800</Amount>
+					<SellingPrice mandatory="Y">172.800</SellingPrice>
+					<NetPrice>144.290</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="86.400" dateFrom="20140704" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="dLKFgV9EpTZoVHhrf0vIYQ==" availCount="2" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="JSU-E10" characteristic="ST">JUNIOR SUITE STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>180.000</Amount>
+					<SellingPrice mandatory="Y">180.000</SellingPrice>
+					<NetPrice>150.300</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="90.000" dateFrom="20140704" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-TODOS~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>200697</Code>
+			<Name>Petit Hotel Hostatgeria Sant Salvador</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/20/200697/200697a_hb_r_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/20/200697/200697a_hb_k_800.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="HR" shortname="HR">RURAL HOTEL</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="9">Felanitx</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="3"/>
+			<Position latitude="39.49874200000000001864" longitude="3.17504900000000001015"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="17" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>138.000</Amount>
+					<SellingPrice mandatory="Y">138.000</SellingPrice>
+					<NetPrice>115.230</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="69.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="82LafAHrfGSTNGqn9I45+g==" availCount="17" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>170.000</Amount>
+					<SellingPrice mandatory="Y">170.000</SellingPrice>
+					<NetPrice>141.950</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="85.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="Qidcnpfoboo6h6u5Z10BNA==" availCount="17" onRequest="N">
+				<Board type="SIMPLE" code="HB-E10" shortname="HB">HALF BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>210.000</Amount>
+					<SellingPrice mandatory="Y">210.000</SellingPrice>
+					<NetPrice>175.350</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="105.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="0Mq+IP0qg4gMBmH+CSKOgw==" availCount="17" onRequest="N">
+				<Board type="SIMPLE" code="FB-E10" shortname="FB">FULL BOARD</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>234.000</Amount>
+					<SellingPrice mandatory="Y">234.000</SellingPrice>
+					<NetPrice>195.390</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="117.000" dateFrom="20140706" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>NRF-MERCHANT~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NRF">Non refundable rate</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>168</Code>
+			<Name>Mirablau</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/000168/000168a_hb_w_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/000168/000168a_hb_p_004.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="3EST" shortname="3*">3 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="86">Cala Mayor</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.55239999999999866986" longitude="2.61100000000000020961"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="25" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>138.600</Amount>
+					<SellingPrice mandatory="Y">138.600</SellingPrice>
+					<NetPrice>115.730</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="138.600" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="82LafAHrfGSTNGqn9I45+g==" availCount="25" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>163.800</Amount>
+					<SellingPrice mandatory="Y">163.800</SellingPrice>
+					<NetPrice>136.770</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="163.800" dateFrom="20140505" time="2359"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+	<ServiceHotel xsi:type="ServiceHotel" availToken="1T30xpRg+eHNFvzJSa38uwbd">
+		<DirectPayment>Y</DirectPayment>
+		<ContractList>
+			<Contract>
+				<Name>CG-MERCHANT~</Name>
+				<IncomingOffice code="1"/>
+				<Classification code="NOR">Online Price</Classification>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140706"/>
+		<DateTo date="20140708"/>
+		<Currency code="EUR">Euro</Currency>
+		<PackageRate>N</PackageRate>
+		<TravelAgent>N</TravelAgent>
+		<HotelInfo xsi:type="ProductHotel">
+			<Code>168</Code>
+			<Name>Mirablau</Name>
+			<ImageList>
+				<Image>
+					<Type>jpg</Type>
+					<Order>1</Order>
+					<VisualizationOrder>1</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/000168/000168a_hb_w_001.jpg</Url>
+				</Image>
+				<Image>
+					<Type>jpg</Type>
+					<Order>2</Order>
+					<VisualizationOrder>2</VisualizationOrder>
+					<Url>http://www.hotelbeds.com/giata/small/00/000168/000168a_hb_p_004.jpg</Url>
+				</Image>
+			</ImageList>
+			<Category type="SIMPLE" code="3EST" shortname="3*">3 STARS</Category>
+			<Destination type="SIMPLE" code="PMI">
+				<Name>Majorca</Name>
+				<ZoneList>
+					<Zone type="SIMPLE" code="86">Cala Mayor</Zone>
+				</ZoneList>
+			</Destination>
+			<ChildAge ageFrom="0" ageTo="12"/>
+			<Position latitude="39.55239999999999866986" longitude="2.61100000000000020961"/>
+		</HotelInfo>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="azRX8L17pO1vJQ18i8A7+w==" availCount="25" onRequest="N">
+				<Board type="SIMPLE" code="RO-E10" shortname="RO">ROOM ONLY</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>154.000</Amount>
+					<SellingPrice mandatory="Y">154.000</SellingPrice>
+					<NetPrice>128.590</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="75.000" dateFrom="20140705" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+		<AvailableRoom>
+			<HotelOccupancy>
+				<RoomCount>1</RoomCount>
+				<Occupancy>
+					<AdultCount>2</AdultCount>
+					<ChildCount>0</ChildCount>
+				</Occupancy>
+			</HotelOccupancy>
+			<HotelRoom SHRUI="82LafAHrfGSTNGqn9I45+g==" availCount="25" onRequest="N">
+				<Board type="SIMPLE" code="BB-E10" shortname="BB">BED AND BREAKFAST</Board>
+				<RoomType type="SIMPLE" code="DBT-E10" characteristic="ST">Double or Twin STANDARD</RoomType>
+				<ProductType>P</ProductType>
+				<FreeNights>0</FreeNights>
+				<Price>
+					<Amount>182.000</Amount>
+					<SellingPrice mandatory="Y">182.000</SellingPrice>
+					<NetPrice>151.970</NetPrice>
+					<Commission>16.500</Commission>
+				</Price>
+				<CancellationPolicies>
+					<CancellationPolicy amount="89.000" dateFrom="20140705" time="1200"/>
+				</CancellationPolicies>
+			</HotelRoom>
+		</AvailableRoom>
+	</ServiceHotel>
+</HotelValuedAvailRS>

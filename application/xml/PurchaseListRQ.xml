@@ -1,0 +1,12 @@
+<PurchaseListRQ echoToken="DummyEchoToken" sessionId="DummySessionId" xmlns="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/PurchaseListRQ.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2013/12">
+	<Language>ENG</Language>
+	<Credentials>
+		<User>TEST</User>
+		<Password>TEST</Password>
+	</Credentials>
+	<PaginationData itemsPerPage="25" pageNumber="1"/>
+	<DateFrom date="20130301"/>
+	<DateTo date="20130310"/>
+	<IncludeCancelled>Y</IncludeCancelled>
+	<FilterType>E</FilterType>
+</PurchaseListRQ>

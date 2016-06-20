@@ -1,0 +1,118 @@
+<PurchaseCancelRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance ../xsd/PurchaseCancelRS.xsd"  type="V" echoToken="PurchaseCancelRQ">
+	<AuditData>
+		<ProcessTime>101</ProcessTime>
+		<Timestamp>2013-03-09 09:52:51.989</Timestamp>
+		<RequestHost>172.22.136.5</RequestHost>
+		<ServerName>LIVE</ServerName>
+		<ServerId>12</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201301021600</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201301021600</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<Purchase purchaseToken="12095251134" timeToExpiration="1799955">
+		<Reference>
+			<FileNumber>368769</FileNumber>
+			<IncomingOffice code="1"/>
+		</Reference>
+		<Status>BOOKING</Status>
+		<Agency>
+			<Code>30543</Code>
+			<Branch>1</Branch>
+		</Agency>
+		<Language>CAS</Language>
+		<CreationDate date="20130309"/>
+		<Holder type="AD">
+			<Name>TEST</Name>
+			<LastName>TEST</LastName>
+		</Holder>
+		<AgencyReference>TEST REFERENCE</AgencyReference>
+		<ServiceList>
+			<Service xsi:type="ServiceHotel" SPUI="1#H#1">
+				<Reference>
+					<FileNumber>368769-H1</FileNumber>
+					<IncomingOffice code="1"/>
+				</Reference>
+				<Status>CONFIRMED</Status>
+				<ContractList>
+					<Contract>
+						<Name>CGM-VARIOS</Name>
+						<IncomingOffice code="1"/>
+					</Contract>
+				</ContractList>
+				<Supplier name="HOTELBEDS PRODUCT,S.L.U." vatNumber="B38877676"/>
+				<DateFrom date="20130509"/>
+				<DateTo date="20130512"/>
+				<Currency code="EUR">Euro</Currency>
+				<TotalAmount>62.430</TotalAmount>
+				<AdditionalCostList>
+					<AdditionalCost type="AG_COMMISSION">
+						<Price>
+							<Amount>8.741</Amount>
+						</Price>
+					</AdditionalCost>
+					<AdditionalCost type="COMMISSION_VAT">
+						<Price>
+							<Amount>1.400</Amount>
+						</Price>
+					</AdditionalCost>
+				</AdditionalCostList>
+				<ModificationPolicyList>
+					<ModificationPolicy>Cancellation</ModificationPolicy>
+					<ModificationPolicy>Confirmation</ModificationPolicy>
+					<ModificationPolicy>Modification</ModificationPolicy>
+				</ModificationPolicyList>
+				<HotelInfo xsi:type="ProductHotel">
+					<Code>3813</Code>
+					<Name>Africamar</Name>
+					<Category type="SIMPLE" code="APTH3">APARTHOTEL 3*</Category>
+					<Destination type="SIMPLE" code="PMI">
+						<Name>Mallorca</Name>
+						<ZoneList>
+							<Zone type="SIMPLE" code="39">Ca&apos;n Picafort</Zone>
+						</ZoneList>
+					</Destination>
+				</HotelInfo>
+				<AvailableRoom>
+					<HotelOccupancy>
+						<RoomCount>1</RoomCount>
+						<Occupancy>
+							<AdultCount>2</AdultCount>
+							<ChildCount>0</ChildCount>
+							<GuestList>
+								<Customer type="AD">
+									<CustomerId>2</CustomerId>
+									<Age>30</Age>
+								</Customer>
+								<Customer type="AD">
+									<CustomerId>1</CustomerId>
+									<Age>30</Age>
+									<Name>test</Name>
+									<LastName>test</LastName>
+								</Customer>
+							</GuestList>
+						</Occupancy>
+					</HotelOccupancy>
+					<HotelRoom SHRUI="scgjgUP6mPwQo7timZ3Ydg==" availCount="1" status="CONFIRMED">
+						<Board type="SIMPLE" code="SA-E10">SOLO ALOJAMIENTO</Board>
+						<RoomType type="SIMPLE" code="DBL-E10" characteristic="ST">DOBLE</RoomType>
+						<Price>
+							<Amount>62.430</Amount>
+						</Price>
+						<CancellationPolicy>
+							<Price>
+								<Amount>20.810</Amount>
+								<DateTimeFrom date="20130507" time="0000"/>
+								<DateTimeTo date="20130509"/>
+							</Price>
+						</CancellationPolicy>
+					</HotelRoom>
+				</AvailableRoom>
+			</Service>
+		</ServiceList>
+		<Currency code="EUR"/>
+		<TotalPrice>62.430</TotalPrice>
+	</Purchase>
+	<Currency code="EUR"/>
+	<Amount>0.000</Amount>
+</PurchaseCancelRS>

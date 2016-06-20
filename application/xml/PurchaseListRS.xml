@@ -1,0 +1,69 @@
+<PurchaseListRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance ../xsd/PurchaseListRS.xsd"  totalItems="1" echoToken="DummyEchoToken">
+	<AuditData>
+		<ProcessTime>465</ProcessTime>
+		<Timestamp>2013-01-16 10:15:40.209</Timestamp>
+		<RequestHost>10.0.44.157</RequestHost>
+		<ServerName>DEVEL</ServerName>
+		<ServerId>DV</ServerId>
+		<SchemaRelease>2005/06</SchemaRelease>
+		<HydraCoreRelease>2.0.201301021600</HydraCoreRelease>
+		<HydraEnumerationsRelease>1.0.201301021600</HydraEnumerationsRelease>
+		<MerlinRelease>N/A</MerlinRelease>
+	</AuditData>
+	<PaginationData currentPage="1" totalPages="1"/>
+	<Purchase>
+		<Reference>
+			<FileNumber>339458</FileNumber>
+			<IncomingOffice code="1"/>
+		</Reference>
+		<Status>BOOKING</Status>
+		<Agency>
+			<Code>30543</Code>
+			<Branch>1</Branch>
+		</Agency>
+		<Language>ENG</Language>
+		<CreationDate date="20061218"/>
+		<Holder type="AD">
+			<AdditionalInfo>
+				<ExtendedData type="EXT_DATA">
+					<Name>DATA_HOLDER_COMPLETE_NAME</Name>
+					<Value>TEST  TEST</Value>
+				</ExtendedData>
+			</AdditionalInfo>
+		</Holder>
+		<AgencyReference>TEST</AgencyReference>
+		<ServiceList>
+			<Service xsi:type="ServiceHotel">
+				<Status>CONFIRMED</Status>
+				<ContractList>
+					<Contract>
+						<Name>CGM-VARIOS</Name>
+						<IncomingOffice code="1"/>
+					</Contract>
+				</ContractList>
+				<DateFrom date="20130118"/>
+				<DateTo date="20130119"/>
+				<Currency code="EUR">Euro</Currency>
+				<HotelInfo xsi:type="ProductHotel">
+					<Code>5322</Code>
+					<Name>Monaco</Name>
+				</HotelInfo>
+				<AvailableRoom>
+					<HotelOccupancy>
+						<RoomCount>1</RoomCount>
+						<Occupancy>
+							<AdultCount>2</AdultCount>
+							<ChildCount>2</ChildCount>
+						</Occupancy>
+					</HotelOccupancy>
+					<HotelRoom SHRUI="ja9Q7LETdjj6fve+ekJ/Xw==">
+						<Board type="SIMPLE" code="HD">BED AND BREAKFAST</Board>
+						<RoomType type="SIMPLE" code="DBL" characteristic="ST">DOUBLE/ TWIN</RoomType>
+					</HotelRoom>
+				</AvailableRoom>
+			</Service>
+		</ServiceList>
+		<Currency code="EUR">Euro</Currency>
+		<TotalPrice>41.280</TotalPrice>
+	</Purchase>
+</PurchaseListRS>

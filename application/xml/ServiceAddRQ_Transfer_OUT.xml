@@ -1,0 +1,40 @@
+<ServiceAddRQ echoToken="DummyEchoToken" xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/ServiceAddRQ.xsd" version="2013/12">
+	<Language>ENG</Language>
+	<Credentials>
+		<User>16776</User>
+		<Password>16776</Password>
+	</Credentials>
+	<Service xsi:type="ServiceTransfer" transferType="OUT" availToken="6DuACgVAewcyd3ib/Xyang==">
+		<ContractList>
+			<Contract>
+				<Name>ADAPTADO SU14</Name>
+				<IncomingOffice code="1"/>
+			</Contract>
+		</ContractList>
+		<DateFrom date="20140702" time="1500"/>
+		<TransferInfo xsi:type="ProductTransfer">
+			<Code>1|0|0</Code>
+			<Type code="H"/>
+			<VehicleType code="H"/>
+		</TransferInfo>
+		<Paxes>
+			<AdultCount>2</AdultCount>
+			<ChildCount>0</ChildCount>
+            <GuestList>
+				<Customer type="AD">
+					<Age>30</Age>
+				</Customer>
+				<Customer type="AD">
+					<Age>30</Age>
+				</Customer>
+			</GuestList>
+		</Paxes>
+		<PickupLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+		</PickupLocation>
+        <DestinationLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<DateTime date="20140702" time="1500"/>
+		</DestinationLocation>
+	</Service>
+</ServiceAddRQ>

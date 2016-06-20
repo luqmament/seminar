@@ -1,0 +1,46 @@
+<TransferValuedAvailRQ xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ../xsd/TransferValuedAvailRQ.xsd" xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" echoToken="DummyEchoToken" sessionId="545454545" version="2013/12">
+	<Language>CAS</Language>
+	<Credentials>
+		<User>TEST</User>
+		<Password>TEST</Password>
+	</Credentials>
+	<AvailData type="IN">
+		<ServiceDate date="20140630" time="1500"/>
+		<Occupancy>
+			<AdultCount>1</AdultCount>
+			<ChildCount>0</ChildCount>
+			<GuestList>
+				<Customer type="AD"></Customer>
+				<Customer type="AD"></Customer>
+			</GuestList>
+		</Occupancy>
+		<PickupLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<DateTime date="20140630" time="1500"/>
+		</PickupLocation>
+		<DestinationLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+			<TransferZone xsi:type="ProductZone">
+				<Code>74</Code>
+			</TransferZone>
+		</DestinationLocation>
+	</AvailData>
+	<AvailData type="OUT">
+		<ServiceDate date="20140702" time="1500"/>
+		<Occupancy>
+			<AdultCount>1</AdultCount>
+			<ChildCount>0</ChildCount>
+		</Occupancy>
+		<PickupLocation xsi:type="ProductTransferHotel">
+			<Code>1523</Code>
+			<TransferZone xsi:type="ProductZone">
+				<Code>74</Code>
+			</TransferZone>
+		</PickupLocation>
+		<DestinationLocation xsi:type="ProductTransferTerminal">
+			<Code>PMI</Code>
+			<DateTime date="20140702" time="1500"/>
+		</DestinationLocation>
+	</AvailData>
+	<ReturnContents>Y</ReturnContents>
+</TransferValuedAvailRQ>
