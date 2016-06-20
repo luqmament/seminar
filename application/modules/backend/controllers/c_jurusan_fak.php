@@ -58,7 +58,6 @@ class C_jurusan_fak extends MY_Controller {
         $data['listJurusanFakultas'] 	= $this->m_jurusan_fak->list_dataJurusanFakultas($config["per_page"],$data['page']);
         
 		$data['pagination'] = $this->pagination->create_links();
-		echo '<pre>',print_r($data);
         $this->doview('list_jurusanfakultas', $data);
     }
             
