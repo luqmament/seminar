@@ -9,7 +9,7 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Jurusan Fakultas</h1>
+				<h1 class="page-header">Seminar</h1>
 			</div>
 		</div><!--/.row-->
 				
@@ -17,7 +17,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading"><a href="<?php echo site_url('backend/c_jurusan_fak/v_jurusan_fakultas')?>" class="btn btn-primary">Add Jurusan Fakultas</a></div>
+					<div class="panel-heading"><a href="<?php echo site_url('backend/c_seminar/v_seminar')?>" class="btn btn-primary">Add Seminar</a></div>
 					<?php if($this->session->flashdata('infoJurusanFakultas')){ ?>
 						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -41,23 +41,37 @@
 							<thead>
 							  <tr>
 								<th>No</th>
-								<th>Nama Jurusan</th>
-								<th>Nama Fakultas</th>
-								<th>Status Jurusan</th>
+								<th>Tema Seminar</th>
+								<th>Jadwal Seminar</th>
+								<th>Pembicara Seminar</th>
+								<th>Tempat Seminar</th>
+								<th>Kuota Seminar</th>
+								<th>Sisa Kuota</th>
+								<th>Kelas Seminar</th>
+								<th>Semester Seminar</th>
+								<th>Jurusan Seminar</th>
+								<th>Status Seminar</th>								
 								<th>Action</th>
 							  </tr>
 							</thead>
 							<tbody>
 							<?php
-							foreach($listJurusanFakultas as $key => $value){ ?>
+							foreach($listSeminar as $key => $value){ ?>
 							<tr>
 								<td><?php echo ++$start ?></td>
-								<td><?php echo $value['nama_jurusan'] ?></td>
-								<td><?php echo $value['nama_fakultas'] ?></td>	
-								<td><?php echo (($value['status_jurusan'] == 1) ? '<span class="label label-success">Active</span>' : '<span class="label label-danger">Non Active</span>' ); ?></td>								
+								<td><?php echo $value['tema_seminar'] ?></td>
+								<td><?php echo $value['jadwal_seminar'] ?></td>	
+								<td><?php echo $value['pembicara_seminar'] ?></td>	
+								<td><?php echo $value['tempat_seminar'] ?></td>	
+								<td><?php echo $value['kuota_seminar'] ?></td>	
+								<td><?php echo $value['sisa_kuota'] ?></td>	
+								<td><?php echo $value['untuk_kelas'] ?></td>	
+								<td><?php echo $value['semester_seminar'] ?></td>
+								<td><?php echo $value['jurusan_seminar'] ?></td>	
+								<td><?php echo (($value['status_seminar'] == 1) ? '<span class="label label-success">Active</span>' : '<span class="label label-danger">Non Active</span>' ); ?></td>								
 								<td class="text-center">
-								    <a href="<?php echo site_url('backend/c_jurusan_fak/v_jurusan_fakultas/'.$value['id_jurusan_fakultas'])?>" >Edit</a>  
-								    | <a id="delete_jurusan_fakultas" id_jur_fakultas="<?php echo $value['id_jurusan_fakultas']?>" >Delete</td>
+								    <a href="<?php echo site_url('backend/c_seminar/v_seminar/'.$value['id_seminar'])?>" >Edit</a>  
+								    | <a id="delete_seminar" id_delete_seminar="<?php echo $value['id_seminar']?>" >Delete</td>
 							</tr>  
 							<?php }  ?>
 							</tbody>

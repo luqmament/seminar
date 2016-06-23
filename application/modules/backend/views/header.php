@@ -6,8 +6,9 @@
 <title>Lumino - Forms</title>
 
 <link href="<?php echo base_url()?>assets/backend/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo base_url()?>assets/backend/css/datepicker3.css" rel="stylesheet">
+<link href="<?php echo base_url()?>assets/backend/css/bootstrap-datetimepicker.css" rel="stylesheet">
 <link href="<?php echo base_url()?>assets/backend/css/styles.css" rel="stylesheet">
+<link href="<?php echo base_url()?>assets/backend/css/select2.min.css" rel="stylesheet">
 
 <!--Icons-->
 <script src="<?php echo base_url()?>assets/backend/js/lumino.glyphs.js"></script>

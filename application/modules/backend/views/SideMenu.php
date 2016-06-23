@@ -9,6 +9,7 @@
 			<li><a href="<?php echo site_url('register_user');?>"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Register User</a></li>
 			<li><a href="<?php echo site_url('fakultas');?>"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Fakultas</a></li>
 			<li><a href="<?php echo site_url('jurusan-fak');?>"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Jurusan Fakultas</a></li>
+			<li><a href="<?php echo site_url('seminar');?>"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg>Seminar</a></li>
 			<li><a href="tables.html"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Tables</a></li>
 			<li><a href="forms.html"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Forms</a></li>
 			<li><a href="panels.html"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Alerts &amp; Panels</a></li>
