@@ -18,7 +18,7 @@ class M_register extends CI_Model {
         $this->db->where('m.id_mahasiswa', $where);
         $query =  $this->db->get();
         if($query->num_rows() > 0){
-            return $query->row();
+            return $query->row_array();
         }else{
         	return false;
         }
@@ -46,6 +46,18 @@ class M_register extends CI_Model {
         	return false ;
         }
 
+    }
+
+    function updateData($table, $data, $where){
+        
+        $this->db->where($where);
+        $query = $this->db->update($table, $data);
+
+        if($query){
+            return true ;
+        }else{
+            return false ;
+        }
     }
 
     function do_login_mahasiswa($nim, $password) {

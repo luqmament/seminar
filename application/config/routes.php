@@ -53,7 +53,8 @@ $route['seminar'] 		= 'backend/c_seminar';
 //Management URL link Frontend
 $route['login'] 					= 'front/mahasiswa';
 $route['logout'] 					= 'front/mahasiswa/logout';
-$route['mahasiswa-dasboard'] 		= 'front/c_biomhs';
+$route['mahasiswa-dashboard'] 		= 'front/c_biomhs';
+$route['update-mahasiswa'] 			= 'front/c_biomhs/update_mahasiswa';
 
 $route['404_override']          = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -1,13 +1,13 @@
-<div style="margin-top : 20px; margin-bottom : 20px">
-	<div class="container">
-		<h3 style="font-family: 'Alegreya', serif;">Biodata Mahasiswa</h3>
+<div>
+	<div class="container" style="background: white; box-shadow: 0 5px 5px 0 grey;">
+		<h3 style="font-family: 'Alegreya', serif; margin-top: 40px">Biodata Mahasiswa</h3>
 		<div style="margin-top: 10px; height: 10px; border: 0; box-shadow: 0 10px 10px -10px #0066FF inset; border-radius: 5px;"></div>
 		<div style="margin-top:25px">
 			<div class="col-md-3" style="font-size : 14px ;font-family : tahoma">
 				<div class="list-group">
 					<a href="<?php echo site_url('mahasiswa-dashboard')?>" class="list-group-item active">Aksi Cepat</a>
-					<a href="#" class="list-group-item">Detail Mahasiswa</a>
-					<a href="#" class="list-group-item">Edit Mahasiswa</a>
+					<a href="<?php echo site_url('mahasiswa-dashboard')?>" class="list-group-item">Detail Mahasiswa</a>
+					<a href="<?php echo site_url('update-mahasiswa')?>" class="list-group-item">Edit Mahasiswa</a>
 					<a href="#" class="list-group-item">Porta ac consectetur ac</a>
 					<a href="#" class="list-group-item">Vestibulum at eros</a>
 				</div>
