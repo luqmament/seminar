@@ -75,6 +75,138 @@
 		</div>
 	</div>
 </div>
+<div style="padding: 60px 0">
+	<div class="container">
+		<h2 class="tittle">DAFTAR SEMINAR</h2>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			    <a href="#" class="thumbnail">
+			      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" alt="...">
+			    </a>
+			    <table class="table">
+			    	<tr>
+			    		<td>Tema Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Perjuangan</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Pembicara Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Bpk. Basuki</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Jadwal Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>12 januari 2016 pukul 14.30</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Tempat Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Aula Kampus Esa Unggul</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Kuota Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>80 Kursi</td>
+			    	</tr>			    	
+			    	<tr>
+			    		<td>Semester Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>1 s/d 4 semester</td>
+			    	</tr>
+			    </table>
+			    <button type="button" class="btn btn-primary btn-lg btn-block">Daftar</button>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			    <a href="#" class="thumbnail">
+			      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" alt="...">
+			    </a>
+			    <table class="table">
+			    	<tr>
+			    		<td>Tema Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Perjuangan</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Pembicara Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Dr. Mahendra</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Jadwal Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>16 Mei 2016 pukul 14.30</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Tempat Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Aula Kampus Esa Unggul</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Kuota Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>120 Kursi</td>
+			    	</tr>			    	
+			    	<tr>
+			    		<td>Semester Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Paralel</td>
+			    	</tr>
+			    </table>
+			    <button type="button" class="btn btn-primary btn-lg btn-block">Daftar</button>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			    <a href="#" class="thumbnail">
+			      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" alt="...">
+			    </a>
+			    <table class="table">
+			    	<tr>
+			    		<td>Tema Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Bangkit Pemuda Indonesia</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Pembicara Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Bp. Jenderal </td>
+			    	</tr>
+			    	<tr>
+			    		<td>Jadwal Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>16 Mei 2016 pukul 14.30</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Tempat Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>Aula Kampus Esa Unggul</td>
+			    	</tr>
+			    	<tr>
+			    		<td>Kuota Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>120 Kursi</td>
+			    	</tr>			    	
+			    	<tr>
+			    		<td>Semester Seminar</td>
+			    		<td width="10px">:</td>
+			    		<td>1, 6, 8 semester</td>
+			    	</tr>
+			    </table>
+			    <button type="button" class="btn btn-primary btn-lg btn-block">Daftar</button>
+			  </div>
+			</div>
+		</div>
+	</div>	
+</div>
+
 <div class="teachers">
 	<div class="container">
 		<div class="teach-head">
