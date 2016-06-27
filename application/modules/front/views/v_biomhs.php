@@ -58,13 +58,23 @@
 				    			<td>Semester</td>
 				    			<td>
 				    			<?php 
-				    				$tahun_masuk = $session_mhs['tahun_masuk'] ;
-				    				$now		 = date('Y');
-				    				$intervalThn = $now - $tahun_masuk ;
+				    				$tahun_masuk	= $session_mhs['tahun_masuk'] ;
+				    				$now		 	= date('Y');
+				    				$bulan			= date('m');
+				    				$intervalThn 	= $now - $tahun_masuk + 1;
+
 				    				if($session_mhs['semester_mahasiswa'] == 'ganjil'){
-				    					$intervalThn = ($intervalThn * 2 ) + 1 ;
+				    					if($bulan <= 6){
+				    						$intervalThn = ($intervalThn * 2 ) - 1;
+				    					}else{
+				    						$intervalThn = ($intervalThn * 2 );
+				    					}				    					
 				    				}else{
-				    					$intervalThn = ($intervalThn * 1 ) + 1 ;
+				    					if($bulan <= 6){
+				    						$intervalThn = ($intervalThn * 2 ) - 2;
+				    					}else{
+				    						$intervalThn = ($intervalThn * 2 ) - 1;
+				    					}
 				    				}
 				    				echo $intervalThn;
 				    			?></td>

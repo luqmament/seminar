@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 html, body{
 	margin:0;
-	background:	#fff;
+	background:	url('../images/bg-image.png');
 	font-family: 'Open Sans', sans-serif;
 }
 h4, h5, h6,
