@@ -152,6 +152,7 @@
 								    	<?php } ?>
 								    </select>
 							  	</div>
+							  	<div class="form-group" id="kota_form" style="display:none"></div>
 							  	<div class="form-group">
 							    	<label for="passwordMHS">Password</label>
 							    	<input type="password" class="form-control" id="password" name="password" placeholder="Password">
@@ -327,24 +328,44 @@ $(document).ready(function() {
 		});
 </script>
 <script type="text/javascript">
+$(document).ready(function() {
   	$("#fakultas").change(function(){
-  		alert();
-  		return false;
-    		var selectValues = $("#propinsi_id").val();
-    		if (selectValues == 0){
-    			var msg = "Kota / Kabupaten :<br><select name=\"kota_id\" disabled><option value=\"Pilih Kota / Kabupaten\">Pilih Propinsi Dahulu</option></select>";
-    			$('#kota').html(msg);
+    		var selectValues = $("#fakultas").val();
+    		var listJurusan  = '' ;
+    		if (selectValues == 0 || selectValues == ""){
+    			//var msg = "Kota / Kabupaten :<br><select name=\"kota_id\" disabled><option value=\"Pilih Kota / Kabupaten\">Pilih Propinsi Dahulu</option></select>";
+  
+    			$('#kota_form').hide('fade-out');
+    			$('#kota_form').html('');
     		}else{
-    			var propinsi_id = {propinsi_id:$("#propinsi_id").val()};
+    			var fakultas_id = {id_fakultas:selectValues};
     			$('#kota_id').attr("disabled",true);
     			$.ajax({
-						type: "POST",
-						url : "<?php echo site_url('chain/select_kota')?>",
-						data: propinsi_id,
-						success: function(msg){
-							$('#kota').html(msg);
-						}
-			  	});
+                        type: "POST",
+                        data: fakultas_id,
+                        url: "<?php echo site_url('front/mahasiswa/get_jurusan')?>",
+                        dataType: "json",
+                        success: function(res){
+                        	//list Jurusan
+                        	listJurusan += '<label>Pilih Jurusan</label>'
+				            listJurusan += '<select class="form-control" name="jurusan_fakultas" id="jurusan_fakultas">' ;
+				            listJurusan += '<option value=""> -- Pilih Jurusan --</option>';
+				            $.each(res.jurusan_fakultas, function( index, value ) {
+				                //var selected = (value.name_area == res.data.testimonial["testimonial_lokasi"] ? 'selected' : '') ;
+				                listJurusan += '<option value="'+value.id_jurusan_fakultas+'" >'+value.nama_jurusan+'</option>';
+				            });
+				            listJurusan += '</select>' 
+				            $('#kota_form').show('fade-in');
+				            $('#kota_form').html(listJurusan);
+                			
+                            
+                            /*$('#jurusan_form').show('fade-in');
+    						$('#jurusan_form').html(listJurusan);*/
+                		
+                        }
+                
+                    });
     		}
     });
+});
 </script>

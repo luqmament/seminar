@@ -48,8 +48,7 @@ class Mahasiswa extends MY_Controller {
                 $this->form_validation->set_rules('NIMmhs', 'NIM', 'required');
                 $this->form_validation->set_rules('thn_masuk', 'Year', 'required');
                 $this->form_validation->set_rules('status_smt', 'Stat', 'required');
-                $this->form_validation->set_rules('fakultas', 'Fakultas', 'required');
-                $this->form_validation->set_rules('fakultas', 'Fakultas', 'required');        
+                $this->form_validation->set_rules('jurusan_fakultas', 'Fakultas Jurusan', 'required');     
                 $this->form_validation->set_rules('password', 'Password', 'required|matches[repassword]');
                 $this->form_validation->set_rules('repassword', 'Retype Password', 'required');
                 if ($this->form_validation->run() == FALSE)
@@ -74,8 +73,8 @@ class Mahasiswa extends MY_Controller {
                         $alamat_mhs     = trim($post['alamat_mhs']) ;
                         $telp_mhs       = trim($post['telp_mhs']) ;
                         $thn_masuk      = trim($post['thn_masuk']) ;
-                        $status_smt     = trim($post['status_smt']) ;
-                        $fakultas       = trim($post['fakultas']) ;
+                        $status_smt         = trim($post['status_smt']) ;
+                        $jurusan_fakultas   = trim($post['jurusan_fakultas']) ;
                         $password       = trim(encryptPass($post['password'])) ;
                         $file_name      = base_url('/assets/uploads/mahasiswa/display/100/150/no-photo.png');
                         if(!empty($_FILES['photo_mhs']['name'])){
@@ -94,7 +93,7 @@ class Mahasiswa extends MY_Controller {
                                 'tahun_masuk'           => $thn_masuk,
                                 'semester_mahasiswa'    => $status_smt,
                                 'password_mahasiswa'    => $password,
-                                'id_fakultas'           => $fakultas,
+                                'id_jurusan_fak'        => $jurusan_fakultas,
                                 'photo_mahasiswa'       => $file_name,
                                 'date_create'           => date('Y-m-d')
                             );
@@ -104,20 +103,22 @@ class Mahasiswa extends MY_Controller {
                         if($insert_mhs){
                             $last_id                = $this->db->insert_id();
                             $getLastIdInsertMhs     = $this->m_register->getDetailMahasiswa($last_id);
+                            //echo '<pre>',print_r($getLastIdInsertMhs);die();
                             if($getLastIdInsertMhs){
                                 //buat session untuk masuk mahasiswa
                                 $sessionMHS = array(
-                                        'id_mahasiswa'          => $getLastIdInsertMhs->id_mahasiswa,
-                                        'nama_depan'            => $getLastIdInsertMhs->nama_depan,
-                                        'nama_belakang'         => $getLastIdInsertMhs->nama_belakang,
-                                        'nim_mahasiswa'         => $getLastIdInsertMhs->nim_mahasiswa,
-                                        'email_mahasiswa'       => $getLastIdInsertMhs->email_mahasiswa,
-                                        'alamat_mahasiswa'      => $getLastIdInsertMhs->alamat_mahasiswa,
-                                        'telp_mahasiswa'        => $getLastIdInsertMhs->telp_mahasiswa,
-                                        'tahun_masuk'           => $getLastIdInsertMhs->tahun_masuk,
-                                        'semester_mahasiswa'    => $getLastIdInsertMhs->semester_mahasiswa,
-                                        'photo_mahasiswa'       => $getLastIdInsertMhs->photo_mahasiswa,
-                                        'nama_fakultas'         => $getLastIdInsertMhs->nama_fakultas
+                                        'id_mahasiswa'          => $getLastIdInsertMhs['id_mahasiswa'],
+                                        'nama_depan'            => $getLastIdInsertMhs['nama_depan'],
+                                        'nama_belakang'         => $getLastIdInsertMhs['nama_belakang'],
+                                        'nim_mahasiswa'         => $getLastIdInsertMhs['nim_mahasiswa'],
+                                        'email_mahasiswa'       => $getLastIdInsertMhs['email_mahasiswa'],
+                                        'alamat_mahasiswa'      => $getLastIdInsertMhs['alamat_mahasiswa'],
+                                        'telp_mahasiswa'        => $getLastIdInsertMhs['telp_mahasiswa'],
+                                        'tahun_masuk'           => $getLastIdInsertMhs['tahun_masuk'],
+                                        'semester_mahasiswa'    => $getLastIdInsertMhs['semester_mahasiswa'],
+                                        'photo_mahasiswa'       => $getLastIdInsertMhs['photo_mahasiswa'],
+                                        'nama_fakultas'         => $getLastIdInsertMhs['nama_fakultas'],
+                                        'nama_jurusan'          => $getLastIdInsertMhs['nama_jurusan']
                                     );
                                 $this->session->set_userdata('CMS_mahasiswa', $sessionMHS);
                                 redirect('mahasiswa-dashboard');
@@ -139,6 +140,12 @@ class Mahasiswa extends MY_Controller {
             }
         }
         
+    }
+    function get_jurusan(){
+        $id_fakultas = $this->input->post('id_fakultas');
+
+        $get_jurusan = $this->m_register->getDataKey('jurusan_fakultas',array('id_fakultas' => $id_fakultas));
+        echo json_encode((object) array('jurusan_fakultas'=>$get_jurusan));
     }
 
     public function mahasiswa_login() {

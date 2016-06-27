@@ -12,9 +12,10 @@ class M_register extends CI_Model {
     }
 
     function getDetailMahasiswa($where){
-        $this->db->select('m.*, f.*');
+        $this->db->select('m.*, jf.nama_jurusan, f.nama_fakultas');
         $this->db->from('mahasiswa m');
-        $this->db->join('fakultas f', 'm.id_fakultas = f.id_fakultas');
+        $this->db->join('jurusan_fakultas jf', 'm.id_jurusan_fak = jf.id_jurusan_fakultas');
+        $this->db->join('fakultas f', 'jf.id_jurusan_fakultas = f.id_fakultas');
         $this->db->where('m.id_mahasiswa', $where);
         $query =  $this->db->get();
         if($query->num_rows() > 0){
@@ -23,9 +24,6 @@ class M_register extends CI_Model {
         	return false;
         }
     }
-
-
-
     function CheckNIM($table, $where){
 		$this->db->where($where);
         $query = $this->db->get($table);

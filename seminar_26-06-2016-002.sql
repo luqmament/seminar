@@ -140,13 +140,13 @@ CREATE TABLE `mahasiswa` (
   `tahun_masuk` varchar(8) NOT NULL,
   `semester_mahasiswa` varchar(10) NOT NULL,
   `password_mahasiswa` varchar(150) NOT NULL,
-  `id_fakultas` varchar(5) NOT NULL,
+  `id_jurusan_fak` varchar(5) NOT NULL,
   `photo_mahasiswa` varchar(200) DEFAULT NULL,
   `update_date` datetime DEFAULT NULL,
   `status_mahasiswa` varchar(15) DEFAULT '1',
   `date_create` datetime DEFAULT NULL,
   PRIMARY KEY (`id_mahasiswa`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,7 +155,7 @@ CREATE TABLE `mahasiswa` (
 
 LOCK TABLES `mahasiswa` WRITE;
 /*!40000 ALTER TABLE `mahasiswa` DISABLE KEYS */;
-INSERT INTO `mahasiswa` VALUES (1,'Luqman','Hakim','4151412013712','luqman@gmail.com','jkarta','mament','1','2014','ganjil','NmZkNzQyYTYxYmQwMzQ4MDRjMDBjNDliMTgwNDUwMjA=','1','http://localhost/seminar3/assets/uploads/mahasiswa/display/100/150/e86yjfcqoq.jpg',NULL,'1','2016-06-17 00:00:00'),(2,'Luqman','Hakim','4151412','luqman@gmail.com','Jakarta Barat','090909','1','2015','ganjil','202cb962ac59075b964b07152d234b70','2','http://localhost/seminar3/assets/uploads/mahasiswa/display/100/150/955lu4ve1m.jpg',NULL,'1','2016-06-18 00:00:00'),(3,'Luqman','aja','6767','test@gmail.com','jakarta brat','098988','1','2016','genap','NmZkNzQyYTYxYmQwMzQ4MDRjMDBjNDliMTgwNDUwMjA=','2','http://localhost/seminar/assets/uploads/mahasiswa/display/100/150',NULL,'1','2016-06-27 00:00:00');
+INSERT INTO `mahasiswa` VALUES (1,'Luqman','Hakim','4151412013712','luqman@gmail.com','jkarta','mament','1','2014','ganjil','NmZkNzQyYTYxYmQwMzQ4MDRjMDBjNDliMTgwNDUwMjA=','1','http://localhost/seminar3/assets/uploads/mahasiswa/display/100/150/e86yjfcqoq.jpg',NULL,'1','2016-06-17 00:00:00'),(2,'Luqman','Hakim','4151412','luqman@gmail.com','Jakarta Barat','090909','1','2015','ganjil','202cb962ac59075b964b07152d234b70','2','http://localhost/seminar3/assets/uploads/mahasiswa/display/100/150/955lu4ve1m.jpg',NULL,'1','2016-06-18 00:00:00'),(3,'Luqman','aja','6767','test@gmail.com','jakarta brat','098988','1','2016','genap','NmZkNzQyYTYxYmQwMzQ4MDRjMDBjNDliMTgwNDUwMjA=','2','http://localhost/seminar/assets/uploads/mahasiswa/display/100/150',NULL,'1','2016-06-27 00:00:00'),(4,'Ariev','P','12345','ariep@gmail.com','Jakarta Barat','08989898','1','2014','genap','Mjk2NTA2OTAyYzY5M2I0NTg3MDdhZDZmN2UyNGE1NDQ=','3','http://localhost/seminar/assets/uploads/mahasiswa/display/100/150/2sjts1wncp.jpg',NULL,'1','2016-06-27 00:00:00'),(5,'asdf','asdf','sdfa','sdaff@gmail.com','asdfsdf','asdfsdf','1','2011','genap','Y2NmNWQ4ODUzNDZmYzAxZjBjYTk1Njk4MTQyY2QxMDM=','2','http://localhost/seminar/assets/uploads/mahasiswa/display/100/150/99i0p39nnz.jpg',NULL,'1','2016-06-27 00:00:00'),(6,'Lqu','asd','789','789@gmail.com','jl. kayu besar','090999','2','2014','genap','Mjk2NTA2OTAyYzY5M2I0NTg3MDdhZDZmN2UyNGE1NDQ=','3','http://localhost/seminar/assets/uploads/mahasiswa/display/100/150/w5fb82d6hg.jpg',NULL,'1','2016-06-27 00:00:00'),(7,'ANisa','Chibi','0909','0909@gmail.com','jakarta','089999','1','2016','ganjil','Mjk2NTA2OTAyYzY5M2I0NTg3MDdhZDZmN2UyNGE1NDQ=','1','http://localhost/seminar/assets/uploads/mahasiswa/display/100/150/lbeeea7dc7.jpg',NULL,'1','2016-06-27 00:00:00'),(8,'sandra','dj','1212','1212@gm.mn','asdf','123','1','2012','ganjil','Mjk2NTA2OTAyYzY5M2I0NTg3MDdhZDZmN2UyNGE1NDQ=','5','http://localhost/seminar/assets/uploads/mahasiswa/display/100/150/no-photo.png',NULL,'1','2016-06-27 00:00:00'),(9,'asdf','asdf','1234','asd@gm.co','asdfsd','1234','1','2013','ganjil','Mjk2NTA2OTAyYzY5M2I0NTg3MDdhZDZmN2UyNGE1NDQ=','3','http://localhost/seminar/assets/uploads/mahasiswa/display/100/150/no-photo.png',NULL,'1','2016-06-27 00:00:00');
 /*!40000 ALTER TABLE `mahasiswa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -299,4 +299,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-27 14:18:53
+-- Dump completed on 2016-06-27 19:05:20
