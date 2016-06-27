@@ -17,7 +17,8 @@
 				  <div class="panel-heading"><h4>Detail Mahasiswa</h4></div>
 				  <div class="panel-body">
 				    	<table class="table table-bordered" style="font-weight : bold ; font-size: 16px ; color : #fff">
-				    	<?php $session_mhs = $this->session->userdata('CMS_mahasiswa');	?>
+				    	<?php $session_mhs = $this->session->userdata('CMS_mahasiswa');
+				    		?>
 				    		<tr>
 				    			<td>NIM</td>
 				    			<td><?php echo $session_mhs['nim_mahasiswa']?></td>
@@ -33,6 +34,10 @@
 				    		<tr>
 				    			<td>Fakultas</td>
 				    			<td><?php echo $session_mhs['nama_fakultas']?></td>
+				    		</tr>
+				    		<tr>
+				    			<td>Fakultas</td>
+				    			<td><?php echo $session_mhs['nama_jurusan']?></td>
 				    		</tr>
 				    		<tr>
 				    			<td>Email</td>
