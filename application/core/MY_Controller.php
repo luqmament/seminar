@@ -35,6 +35,6 @@ class MY_Controller extends MX_Controller {
     function frview($template, $data = array()) {
         $this->load->view('front/header', $data);
         $this->load->view($template, $data);
-        $this->load->view('front/footer', $data);
+        //$this->load->view('front/footer', $data);
     }
 }
