@@ -68,6 +68,7 @@ class M_register extends CI_Model {
         $this->db->where('m.nim_mahasiswa', $nim);
         $this->db->where('m.password_mahasiswa', encryptPass($password));
         $query =  $this->db->get();
+        //echo $this->db->last_query();
         if ($query->num_rows() > 0) {
             return $query->row();
         }else{
