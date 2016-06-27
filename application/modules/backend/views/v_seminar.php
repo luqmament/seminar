@@ -74,7 +74,7 @@
 				<div id="form_semester">
 				<div class="form-group">
 					<label>Semester Seminar</label>
-					<select class="form-control seminar-multiple-select2" id="semester_seminar" name="semester_seminar" multiple="multiple" >
+					<select class="form-control seminar-multiple-select2" id="semester_seminar" name="semester_seminar[]" multiple="multiple" >
 						<?php 
 							$semester = array('1', '2', '3', '4', '5', '6', '7', '8', 'all');
 							foreach ($semester as $key => $value) {
@@ -88,7 +88,7 @@
 				</div>
 				<div class="form-group">
 					<label>Jurusan Seminar</label>
-					<select class="form-control jurusan-multiple-select2" id="nama_jurusan" name="nama_jurusan" multiple="multiple">
+					<select class="form-control jurusan-multiple-select2" id="nama_jurusan" name="nama_jurusan[]" multiple="multiple">
 						<?php foreach ($listfakultas as $keyFak => $valueFak) { ?>
 							<optgroup label="<?php echo $valueFak['nama_fakultas']?>">
 								<?php foreach ($valueFak['listjurusan'] as $keyJur => $valueJur) { ?>
@@ -213,7 +213,9 @@ $(document).ready(function(){
 	})
 	  .trigger( "change" );
 
-	$('#jadwal_seminar').datetimepicker();
+	$('#jadwal_seminar').datetimepicker({
+		Default: 'MMMM YYYY',
+	});
 
     
 })
