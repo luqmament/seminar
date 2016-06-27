@@ -120,7 +120,7 @@ class Mahasiswa extends MY_Controller {
                                         'nama_fakultas'         => $getLastIdInsertMhs->nama_fakultas
                                     );
                                 $this->session->set_userdata('CMS_mahasiswa', $sessionMHS);
-                                redirect('mahasiswa-dasboard');
+                                redirect('mahasiswa-dashboard');
                             }else{
                                 $this->session->set_flashdata('infoInsertFailed', 'Maaf register anda gagal , silahkan hubungi IT');
                                 $this->frview('v_register_mhs',$data);
@@ -171,7 +171,7 @@ class Mahasiswa extends MY_Controller {
                         'tipe_mahasiswa'        => $mahasiswa_login->tipe_mahasiswa
                     );
                 $this->session->set_userdata('CMS_mahasiswa', $sessionMHS);
-                redirect('mahasiswa-dasboard');
+                redirect('mahasiswa-dashboard');
             }else{
                 $this->session->set_flashdata('infoInsertFailed', 'Maaf register anda gagal , silahkan hubungi IT');
                 $this->frview('v_register_mhs',$data);
