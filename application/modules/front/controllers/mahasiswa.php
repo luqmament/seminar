@@ -154,6 +154,7 @@ class Mahasiswa extends MY_Controller {
             $nim_mahasiswa      = $post['nim_login'];
             $password           = $post['password_login'];
             $mahasiswa_login    = $this->m_register->do_login_mahasiswa($nim_mahasiswa, $password);
+            echo '<pre>',print_r($mahasiswa_login);die();
             if($mahasiswa_login){
                 //buat session untuk masuk mahasiswa
                 $sessionMHS = array(
