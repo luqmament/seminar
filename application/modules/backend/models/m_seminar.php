@@ -16,10 +16,11 @@ class M_seminar extends CI_Model {
 	}
     }
     
-    public function InsertJurusanFakultas($tabelName,$data){
-	$res = $this->db->insert($tabelName,$data);	
-	return $res;    
+    public function InsertSeminar($tabelName,$data){
+		$res = $this->db->insert($tabelName,$data);	
+		return $res;    
     }
+
     function list_dataSeminar($limit, $start){
 	    $this->db->select('s.*');
 	    $this->db->from('seminar s');
@@ -76,6 +77,31 @@ class M_seminar extends CI_Model {
             return FALSE;
         }
     }
+
+    function manual_ticket($seminar_id = '', $quantity = '', $input = ''){
+		$last_voucher_num = $this->db->query("SELECT COUNT(*) AS coupon_num FROM `ticket_manual` WHERE id_seminar = '". $seminar_id ."'");
+		$last_voucher = $last_voucher_num->row_array();
+		
+		$v_num = isset($last_voucher['coupon_num']) ? $last_voucher['coupon_num'] : 0;
+		
+		for ($i = 0; $i < $quantity; $i++)
+		{
+			
+			$sequenz 			= str_pad($seminar_id,4,'0',STR_PAD_LEFT );
+			$ticket_sequenz 	= str_pad($v_num,4,'0',STR_PAD_LEFT );
+			
+			$data_post = array(
+				'serial' 		=> 'SEMINAR'. $sequenz . $ticket_sequenz,
+				'secret' 		=> uniqid(),
+				'id_seminar' 	=> $seminar_id,
+				//'expire_time' 	=> strtotime($input['expired_date']),
+				'consume' 		=> 0,
+				'created_time' 	=> time(),
+			);
+			$this->db->insert('ticket_manual', $data_post);
+			$v_num++;
+		}
+	}
 	
 }	
 

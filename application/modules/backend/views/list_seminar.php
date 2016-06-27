@@ -18,10 +18,10 @@
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading"><a href="<?php echo site_url('backend/c_seminar/v_seminar')?>" class="btn btn-primary">Add Seminar</a></div>
-					<?php if($this->session->flashdata('infoJurusanFakultas')){ ?>
+					<?php if($this->session->flashdata('infoSeminar')){ ?>
 						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>Success!</strong> <?php echo $this->session->flashdata('infoJurusanFakultas'); ?>
+							<strong>Success!</strong> <?php echo $this->session->flashdata('infoSeminar'); ?>
 						</div>
 					<?php } ?>
 					<?php if($this->session->flashdata('infoDeleteUser')){ ?>
@@ -30,10 +30,10 @@
 							<strong>Success!</strong> <?php echo $this->session->flashdata('infoDeleteUser'); ?>
 						</div>
 					<?php } ?>
-					<?php if($this->session->flashdata('infoCheckJurusanFakultas')){ ?>
+					<?php if($this->session->flashdata('infoErrorsPhoto')){ ?>
 						<div class="alert alert-warning" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>Failed!</strong> <?php echo $this->session->flashdata('infoCheckJurusanFakultas'); ?>
+							<strong>Failed!</strong> <?php echo $this->session->flashdata('infoErrorsPhoto'); ?>
 						</div>
 					<?php } ?>
 					<div class="panel-body">

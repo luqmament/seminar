@@ -1,3 +1,7 @@
+
+<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+
 <!--Mulai input Body-->		
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 	<div class="row">
@@ -31,7 +35,7 @@
 				echo validation_errors();
 				?>
 			    </div>
-			<form action="<?php echo site_url('backend/c_seminar/submit_seminar')?>" method="post" id="form_seminar" type_form="<?php echo $type_form;?>">
+			<form action="<?php echo site_url('backend/c_seminar/submit_seminar')?>" method="post" id="form_seminar" type_form="<?php echo $type_form;?>" enctype="multipart/form-data">
 			    <fieldset>
 				<?php if (isset($getDetail->id_seminar)){ ?>
 				<div class="form-group">
@@ -100,11 +104,11 @@
 				</div>
 				<div class="form-group">
 					<label>Poster Seminar</label>
-					<input id="poster_seminar" name="poster_seminar" type="file" autofocus="" value="<?php echo set_value('tempat_seminar', $getDetail->tempat_seminar)?> "></input>
+					<input id="poster_seminar" name="poster_seminar" type="file" autofocus="" ></input>
 				</div>
 				<div class="form-group">
 					<label>Sertifikat Seminar</label>
-					<input id="sertifikat_seminar" name="sertifikat_seminar" type="file" autofocus="" value="<?php echo set_value('tempat_seminar', $getDetail->tempat_seminar)?> "></input>
+					<input id="sertifikat_seminar" name="sertifikat_seminar" type="file" autofocus="" ></input>
 				</div>
 				<?php if (isset($getDetail->id_jurusan_fakultas)){ ?>
 				<div class="form-group">
@@ -141,9 +145,9 @@
 <script src="<?php echo base_url()?>assets/backend/js/chart-data.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/easypiechart.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/easypiechart-data.js"></script>
+<script src="<?php echo base_url()?>assets/backend/js/select2.full.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/moment-with-locales.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/bootstrap-datetimepicker.js"></script>
-<script src="<?php echo base_url()?>assets/backend/js/select2.full.js"></script>
 <script>
 	!function ($) {
 		$(document).on("click","ul.nav li.parent > a > span.icon", function(){		  
@@ -212,11 +216,16 @@ $(document).ready(function(){
 	    /*$( "#hasil_selected" ).text( str );*/
 	})
 	  .trigger( "change" );
-
 	$('#jadwal_seminar').datetimepicker({
-		Default: 'MMMM YYYY',
+		locale : 'id'
 	});
 
+	/*$('#jadwal_seminar').datepicker({
+            dateFormat: "yy-mm-dd",
+            changeYear: true,
+            changeMonth: true,
+            yearRange: "-100:+0"
+    }); */
     
 })
 </script>

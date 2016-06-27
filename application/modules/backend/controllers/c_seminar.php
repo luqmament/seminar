@@ -18,6 +18,14 @@ class C_seminar extends MY_Controller {
 	//    }
 	    redirect('backend/c_login');
 	}
+
+		$this->arr_dimension_poster = array();
+        $this->arr_dimension_poster['display']['width'] = 250;
+        $this->arr_dimension_poster['display']['height'] = 400;
+
+        $this->arr_dimension_sertifikat = array();
+        $this->arr_dimension_sertifikat['display']['width'] = 400;
+        $this->arr_dimension_sertifikat['display']['height'] = 150;
     }
 	
     public function index(){
@@ -81,31 +89,84 @@ class C_seminar extends MY_Controller {
     }
     public function submit_seminar(){
 	$data   = array();
+	$data['listfakultas'] 	= $this->m_seminar->getAllDataFakultas();
+    foreach ($data['listfakultas'] as $key => $value) {
+    	$data['listfakultas'][$key]['listjurusan']	= $this->m_seminar->getAllDataJurusan($value['id_fakultas']);
+    }
 	$post 	= $this->input->post();
-	echo '<pre>',print_r($post);die();
+	//echo '<pre>',print_r($post);die();
 
 	$id 	= $post['id'];
 	if(!isset($id)){
-	    $this->form_validation->set_rules('nama_jurusan_fak', 'Nama Jurusan', 'required');
-	    $this->form_validation->set_rules('nama_fakultas', 'Name', 'required');
+	    $this->form_validation->set_rules('tema_seminar', 'Tema Fakultas', 'required');
+	    $this->form_validation->set_rules('jadwal_seminar', 'Jadwal Seminar', 'required');
+	    $this->form_validation->set_rules('pembicara_seminar', 'Pembicara Seminar', 'required');
+	    $this->form_validation->set_rules('tempat_seminar', 'Tempat Seminar', 'required');
+	    $this->form_validation->set_rules('kuota_seminar', 'Kuota Seminar', 'required');
+	    $this->form_validation->set_rules('kelas_seminar', 'Kelas Seminar', 'required');
+	    $this->form_validation->set_rules('semester_seminar', 'Semester Seminar', 'required');
+	    $this->form_validation->set_rules('nama_jurusan', 'Jurusan Seminar', 'required');
+	    //$this->form_validation->set_rules('poster_seminar', 'Poster Seminar', 'required');
+	    //$this->form_validation->set_rules('sertifikat_seminar', 'Poster Seminar', 'required');
 	}else{
-		$this->form_validation->set_rules('nama_jurusan_fak', 'Nama Jurusan', 'required');
-	    $this->form_validation->set_rules('nama_fakultas', 'Name', 'required');
+		$this->form_validation->set_rules('tema_seminar', 'Tema Fakultas', 'required');
+	    $this->form_validation->set_rules('jadwal_seminar', 'Jadwal Seminar', 'required');
+	    $this->form_validation->set_rules('pembicara_seminar', 'Pembicara Seminar', 'required');
+	    $this->form_validation->set_rules('tempat_seminar', 'Tempat Seminar', 'required');
+	    $this->form_validation->set_rules('kuota_seminar', 'Kuota Seminar', 'required');
+	    $this->form_validation->set_rules('kelas_seminar', 'Kelas Seminar', 'required');
+	    $this->form_validation->set_rules('semester_seminar', 'Semester Seminar', 'required');
+	    $this->form_validation->set_rules('nama_jurusan', 'Jurusan Seminar', 'required');
+	    //$this->form_validation->set_rules('poster_seminar', 'Poster Seminar', 'required');
+	    //$this->form_validation->set_rules('sertifikat_seminar', 'Poster Seminar', 'required');
 	}
         
 	
 	if ($this->form_validation->run() == FALSE)
 	{
 	    if(!isset($id)){
-			$this->doview('v_jurusan_fak', $data);
+			$this->doview('v_seminar', $data);
 	    }
 	}
 	else
 	{
-	    $nama_jurusan_fak		= trim(strtoupper($post['nama_jurusan_fak']));
-	    $id_fakultas			= trim(strtoupper($post['nama_fakultas']));
-	    $status_jurusan_fakultas= $post['status_jurusan_fakultas'];
-	    
+	    $tema_seminar				= trim(strtoupper($post['tema_seminar']));
+	    $jadwal_seminar				= $post['jadwal_seminar'];
+	    $originalDate = $jadwal_seminar ;
+		$newDate = date("Y-m-d H:i:s", strtotime($originalDate));
+	    $pembicara_seminar			= trim(strtoupper($post['pembicara_seminar']));
+	    $tempat_seminar				= trim(strtoupper($post['tempat_seminar']));
+	    $kuota_seminar				= trim(strtoupper($post['kuota_seminar']));
+	    $sisa_kuota					= trim(strtoupper($post['kuota_seminar']));
+	    $untuk_kelas				= trim(strtoupper($post['kelas_seminar']));
+	    $semester_seminar			= $post['semester_seminar'];
+	   	foreach ($semester_seminar as $key => $value) {
+	   		$semester_seminar		.= $value.','; 
+	   	}
+
+	   	$semester_seminar			= rtrim(trim($semester_seminar,"Array"),",") ;
+
+	    $jurusan_seminar			= $post['nama_jurusan'];
+	    foreach ($jurusan_seminar as $key => $value) {
+	   		$jurusan_seminar		.= $value.','; 
+	   	}
+	   	$jurusan_seminar			= rtrim(trim($jurusan_seminar,"Array"),",") ;
+
+	    //$poster_seminar				= $_FILES['poster_seminar'];
+	    $poster_seminar      		= base_url('/assets/uploads/poster_seminar/display/250/400/no-photo.png');
+        if(!empty($_FILES['poster_seminar']['name'])){
+            $filename_poster  		= $this->upload_image_poster($_FILES['poster_seminar']);
+            $poster_seminar 		= base_url('/assets/uploads/poster_seminar/display/250/400/'.$filename_poster);
+        }
+
+
+	    $sertifikat_seminar			= base_url('/assets/uploads/sertifikat_seminar/display/400/150/no-photo.png');
+	    if(!empty($_FILES['sertifikat_seminar']['name'])){
+            $filename_sertifikat  	= $this->upload_image_sertifikat($_FILES['sertifikat_seminar']);
+            $sertifikat_seminar 	= base_url('/assets/uploads/sertifikat_seminar/display/400/150/'.$filename_sertifikat);
+        }
+
+
 	    if(isset($id))
 	    {
 	    	$whereKondisi			= ($status_jurusan_fakultas == 1) ? 1 : 2 ;
@@ -123,33 +184,39 @@ class C_seminar extends MY_Controller {
 			    );
 			}		
 	    }else{
-			$checkJurFakultas 	= $this->m_jurusan_fak->check_jurusan_fakultas($nama_jurusan_fak);
-			if($checkJurFakultas){
-			    $this->session->set_flashdata('infoCheckJurusanFakultas', 'Maaf nama jurusan fakultas sudah di gunakan');
-			    redirect('jurusan-fak');
-			    exit;
-			}else{
-			    $data = array(
-				'nama_jurusan'		=> $nama_jurusan_fak,
-			    'id_fakultas'		=> $id_fakultas,
-				'date_create' 	=> date('Y-m-d H:i:s')
-			    );	
-			}			
+			$data_seminar = array(
+				'tema_seminar'			=> $tema_seminar,
+			    'jadwal_seminar'		=> $newDate,
+				'pembicara_seminar' 	=> $pembicara_seminar,
+				'tempat_seminar' 		=> $tempat_seminar,
+				'kuota_seminar' 		=> $kuota_seminar,
+				'sisa_kuota' 			=> $kuota_seminar,
+				'untuk_kelas' 			=> $untuk_kelas,
+				'semester_seminar' 		=> $semester_seminar,
+				'jurusan_seminar' 		=> $jurusan_seminar,
+				'poster_seminar' 		=> $poster_seminar,
+				'sertifikat_seminar' 	=> $sertifikat_seminar,
+				'create_date_seminar' 	=> date('Y-m-d H:i:s')
+		    );
 	    }
 	    if(isset($id)){
 			$key = array('id_jurusan_fakultas' => $id) ;
 			$res = $this->m_jurusan_fak->UpdateJurusanFakultas('jurusan_fakultas',$data, $key);
 	    }else{
-			$res = $this->m_jurusan_fak->InsertJurusanFakultas('jurusan_fakultas',$data);
+			$res = $this->m_seminar->InsertSeminar('seminar',$data_seminar);
+			$seminar_id = $this->db->insert_id();
+			//echo $seminar_id;die();
+			// Generate TIcket (Ticket manual)
+            $this->m_seminar->manual_ticket($seminar_id, $kuota_seminar, $this->input->post());
 	    }
 	    
 	    if ($res){
 			if(isset($id)){
-				$this->session->set_flashdata('infoJurusanFakultas', 'Data Berhasil Di Ubah');
+				$this->session->set_flashdata('infoSeminar', 'Data Berhasil Di Ubah');
 			}else{
-				$this->session->set_flashdata('infoJurusanFakultas', 'Data Berhasil Di Tambah');
+				$this->session->set_flashdata('infoSeminar', 'Data Berhasil Di Tambah');
 			}
-			redirect('jurusan-fak');			
+			redirect('seminar');			
 	    } else{
 			echo "<h2>INsert Data Gagal</h2>";            
 	    }
@@ -172,6 +239,112 @@ class C_seminar extends MY_Controller {
         
         echo json_encode((object) array('alert'=>$alert,'returnVal'=>$returnVal));
             
+    }
+
+
+    private function upload_image_poster($image) {
+        $data                   = array();
+        $config['upload_path'] = FCPATH.'assets/uploads/poster_seminar';
+        if (!is_dir($config['upload_path'])) {
+            @mkdir($config['upload_path'], 0775);
+        }
+        
+        $info = pathinfo($image['name']);
+        
+        $url_title = url_title($info['filename'], '_', TRUE);
+        $file_name = generateRandomString(10) . '.' . $info['extension'];
+        $config['file_name'] = $file_name;
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
+        $this->load->library('upload', $config);
+        //$this->upload->initialize($config);
+        $upload = $this->upload->do_upload('poster_seminar');
+        
+        if (!$upload) {
+            $invalid = $this->upload->display_errors();
+            $this->session->set_flashdata('infoErrorsPhoto', $invalid);
+            $this->frview('v_seminar',$data);
+        } else {
+            /* First size */
+            $configSize1['image_library'] = 'gd2';
+            $configSize1['source_image'] = FCPATH.'assets/uploads/poster_seminar/'.$file_name;
+            $configSize1['create_thumb'] = false;
+            $configSize1['maintain_ratio'] = true;
+            $configSize1['width'] = $this->arr_dimension_poster['display']['width'];
+            $configSize1['height'] = $this->arr_dimension_poster['display']['height'];
+
+            $path1['display'] = FCPATH.'assets/uploads/poster_seminar/display';
+            if (!is_dir($path1['display'])) {
+                mkdir($path1['display'], 0775, true);
+            }
+            $path2['250'] = FCPATH.'assets/uploads/poster_seminar/display/' . $this->arr_dimension_poster['display']['width'];
+            if (!is_dir($path2['250'])) {
+                mkdir($path2['250'], 0775, true);
+            }
+            $path3['400'] = FCPATH.'assets/uploads/poster_seminar/display/' . $this->arr_dimension_poster['display']['width'] . '/' . $this->arr_dimension_poster['display']['height'];
+            if (!is_dir($path3['400'])) {
+                mkdir($path3['400'], 0775, true);
+            }
+
+            $configSize1['new_image'] = FCPATH.'assets/uploads/poster_seminar/display/' . $this->arr_dimension_poster['display']['width'] . '/' . $this->arr_dimension_poster['display']['height'] . '/' . $file_name;
+            $this->image_lib->initialize($configSize1);
+            $this->image_lib->resize();
+            $this->image_lib->clear();
+            return $file_name; 
+        }
+        
+    }
+
+    private function upload_image_sertifikat($image) {
+        $data                   = array();
+        $config['upload_path'] = FCPATH.'assets/uploads/sertifikat_seminar';
+        if (!is_dir($config['upload_path'])) {
+            @mkdir($config['upload_path'], 0775);
+        }
+        
+        $info = pathinfo($image['name']);
+        
+        $url_title = url_title($info['filename'], '_', TRUE);
+        $file_name = generateRandomString(10) . '.' . $info['extension'];
+        $config['file_name'] = $file_name;
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
+        //$this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        $upload = $this->upload->do_upload('sertifikat_seminar');
+        
+        if (!$upload) {
+            $invalid = $this->upload->display_errors();
+
+            $this->session->set_flashdata('infoErrorsPhoto', $invalid);
+            $this->frview('v_seminar',$data);
+        } else {
+            /* First size */
+            $configSize1['image_library'] = 'gd2';
+            $configSize1['source_image'] = FCPATH.'assets/uploads/sertifikat_seminar/'.$file_name;
+            $configSize1['create_thumb'] = false;
+            $configSize1['maintain_ratio'] = true;
+            $configSize1['width'] = $this->arr_dimension_sertifikat['display']['width'];
+            $configSize1['height'] = $this->arr_dimension_sertifikat['display']['height'];
+
+            $path1['display'] = FCPATH.'assets/uploads/sertifikat_seminar/display';
+            if (!is_dir($path1['display'])) {
+                mkdir($path1['display'], 0775, true);
+            }
+            $path2['400'] = FCPATH.'assets/uploads/sertifikat_seminar/display/' . $this->arr_dimension_sertifikat['display']['width'];
+            if (!is_dir($path2['400'])) {
+                mkdir($path2['400'], 0775, true);
+            }
+            $path3['150'] = FCPATH.'assets/uploads/sertifikat_seminar/display/' . $this->arr_dimension_sertifikat['display']['width'] . '/' . $this->arr_dimension_sertifikat['display']['height'];
+            if (!is_dir($path3['150'])) {
+                mkdir($path3['150'], 0775, true);
+            }
+
+            $configSize1['new_image'] = FCPATH.'assets/uploads/sertifikat_seminar/display/' . $this->arr_dimension_sertifikat['display']['width'] . '/' . $this->arr_dimension_sertifikat['display']['height'] . '/' . $file_name;
+            $this->image_lib->initialize($configSize1);
+            $this->image_lib->resize();
+            $this->image_lib->clear();
+            return $file_name; 
+        }
+        
     }
 }
 ?>
