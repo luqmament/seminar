@@ -78,16 +78,11 @@
 <div style="padding: 60px 0">
 	<div class="container">
 		<h2 class="tittle">DAFTAR SEMINAR</h2>
-<<<<<<< HEAD
-		<div class="col-md-4">
-=======
-
 		<?php
 			//echo "<pre>", print_r($seminar);
 			foreach ($seminar as $key => $value):
 		?>
 			<div class="col-md-4">
->>>>>>> 6f75d4b5f6b3ab29dc1b35f4fde49279075bc67d
 			<div class="panel panel-default">
 			  <div class="panel-body" style="height:840px">
 			    <a href="#" class="thumbnail">

@@ -9,6 +9,9 @@ class C_biomhs extends MY_Controller {
         if(!$this->sessionData){
             redirect(base_url());
         }
+        $this->arr_dimension = array();
+        $this->arr_dimension['display']['width'] = 100;
+        $this->arr_dimension['display']['height'] = 150;
     }
     public function index(){
         $data               = array();
@@ -94,7 +97,7 @@ class C_biomhs extends MY_Controller {
                                 'alamat_mahasiswa'      => $alamat_mhs,
                                 'telp_mahasiswa'        => $telp_mhs,
                                 'photo_mahasiswa'       => $file_name,
-                                'date_update'           => date('Y-m-d')
+                                'date_update'           => date('Y-m-d H:i:s')
                             );
 
                         //insert to table mahasiswa ;
@@ -138,7 +141,57 @@ class C_biomhs extends MY_Controller {
         }
         
     }
+     private function upload_image($image) {
+        $data                   = array();
+        $config['upload_path'] = FCPATH.'assets/uploads/mahasiswa';
+        if (!is_dir($config['upload_path'])) {
+            @mkdir($config['upload_path'], 0775);
+        }
+        
+        $info = pathinfo($image['name']);
+        
+        $url_title = url_title($info['filename'], '_', TRUE);
+        $file_name = generateRandomString(10) . '.' . $info['extension'];
+        $config['file_name'] = $file_name;
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
+        $this->load->library('upload', $config);
+        //$this->upload->initialize($config);
+        $upload = $this->upload->do_upload('photo_mhs');
+        
+        if (!$upload) {
+            $invalid = $this->upload->display_errors();
+            $this->session->set_flashdata('infoErrorsPhoto', $invalid);
+            $this->frview('v_register_mhs',$data);
+        } else {
+            /* First size */
+            $configSize1['image_library'] = 'gd2';
+            $configSize1['source_image'] = FCPATH.'assets/uploads/mahasiswa/'.$file_name;
+            $configSize1['create_thumb'] = false;
+            $configSize1['maintain_ratio'] = true;
+            $configSize1['width'] = $this->arr_dimension['display']['width'];
+            $configSize1['height'] = $this->arr_dimension['display']['height'];
 
+            $path1['display'] = FCPATH.'assets/uploads/mahasiswa/display';
+            if (!is_dir($path1['display'])) {
+                mkdir($path1['display'], 0775);
+            }
+            $path2['100'] = FCPATH.'assets/uploads/mahasiswa/display/' . $this->arr_dimension['display']['width'];
+            if (!is_dir($path2['100'])) {
+                mkdir($path2['100'], 0775);
+            }
+            $path3['150'] = FCPATH.'assets/uploads/mahasiswa/display/' . $this->arr_dimension['display']['width'] . '/' . $this->arr_dimension['display']['height'];
+            if (!is_dir($path3['150'])) {
+                mkdir($path3['150'], 0775);
+            }
+
+            $configSize1['new_image'] = FCPATH.'assets/uploads/mahasiswa/display/' . $this->arr_dimension['display']['width'] . '/' . $this->arr_dimension['display']['height'] . '/' . $file_name;
+            $this->image_lib->initialize($configSize1);
+            $this->image_lib->resize();
+            $this->image_lib->clear();
+            return $file_name; 
+        }
+        
+    }
 }
 
 /* End of file users.php */
