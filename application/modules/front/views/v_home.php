@@ -80,139 +80,116 @@
 		<h2 class="tittle">DAFTAR SEMINAR</h2>
 
 		<?php
-
-			echo "<pre>",print_r($seminar);
+			//echo "<pre>", print_r($seminar);
+			foreach ($seminar as $key => $value):
 		?>
-
-		<div class="col-md-4">
+			<div class="col-md-4">
 			<div class="panel panel-default">
-			  <div class="panel-body">
+			  <div class="panel-body" style="height:840px">
 			    <a href="#" class="thumbnail">
-			      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" alt="...">
+			      <img src="<?php echo $value['poster_seminar'] ?>" style="height:360px" alt="...">
 			    </a>
 			    <table class="table">
 			    	<tr>
-			    		<td>Tema Seminar</td>
+			    		<td width="140px">Tema Seminar</td>
 			    		<td width="10px">:</td>
-			    		<td>Perjuangan</td>
+			    		<td><?php echo $value['tema_seminar'] ?></td>
 			    	</tr>
 			    	<tr>
 			    		<td>Pembicara Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Bpk. Basuki</td>
+			    		<td>:</td>
+			    		<td><?php echo $value['pembicara_seminar'] ?></td>
 			    	</tr>
 			    	<tr>
 			    		<td>Jadwal Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>12 januari 2016 pukul 14.30</td>
+			    		<td>:</td>
+			    		<td><?php echo $value['jadwal_seminar'] ?></td>
 			    	</tr>
 			    	<tr>
 			    		<td>Tempat Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Aula Kampus Esa Unggul</td>
+			    		<td>:</td>
+			    		<td><?php echo $value['tempat_seminar'] ?></td>
 			    	</tr>
 			    	<tr>
 			    		<td>Kuota Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>80 Kursi</td>
+			    		<td>:</td>
+			    		<td><?php echo $value['kuota_seminar'] ?></td>
 			    	</tr>			    	
 			    	<tr>
 			    		<td>Semester Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>1 s/d 4 semester</td>
+			    		<td>:</td>
+			    		<td><?php echo $value['semester_seminar'] ?></td>
 			    	</tr>
 			    </table>
-			    <button type="button" class="btn btn-primary btn-lg btn-block">Daftar</button>
+			    <button type="button" class="btn btn-primary btn-lg" style="position: absolute; bottom: 36px; width:83%" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
 			  </div>
 			</div>
 		</div>
 
-		<div class="col-md-4">
-			<div class="panel panel-default">
-			  <div class="panel-body">
-			    <a href="#" class="thumbnail">
-			      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" alt="...">
-			    </a>
-			    <table class="table">
-			    	<tr>
-			    		<td>Tema Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Perjuangan</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Pembicara Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Dr. Mahendra</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Jadwal Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>16 Mei 2016 pukul 14.30</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Tempat Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Aula Kampus Esa Unggul</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Kuota Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>120 Kursi</td>
-			    	</tr>			    	
-			    	<tr>
-			    		<td>Semester Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Paralel</td>
-			    	</tr>
-			    </table>
-			    <button type="button" class="btn btn-primary btn-lg btn-block">Daftar</button>
-			  </div>
-			</div>
+		<!-- Modal -->
+		<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Seminar</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div class="panel panel-default">
+				  <div class="panel-body">
+				  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
+				  //echo "<pre>",print_r($session_mhs);
+				  ?>
+				    <table class="table">
+				    	<tr>
+				    		<td width="140px">Tema Seminar</td>
+				    		<td width="10px">:</td>
+				    		<td><?php echo $value['tema_seminar'] ?></td>
+				    	</tr>
+				    	<tr>
+				    		<td>Jadwal Seminar</td>
+				    		<td>:</td>
+				    		<td><?php echo $value['jadwal_seminar'] ?></td>
+				    	</tr>
+				    	<tr>
+				    		<td>NIM Mahasiswa</td>
+				    		<td>:</td>
+				    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
+				    	</tr>
+				    	<tr>
+				    		<td>Nama Mahasiswa</td>
+				    		<td>:</td>
+				    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
+				    	</tr>
+				    	<tr>
+				    		<td>Email Mahasiswa</td>
+				    		<td>:</td>
+				    		<td><?php echo $session_mhs['email_mahasiswa']?></td>
+				    	</tr>			    	
+				    	<tr>
+				    		<td colspan="3" style="color:red">*Pastikan data sudah benar, jika belum silahkan ubah data mahasiswa</td>
+				    	</tr>
+				    </table>
+				  </div>
+				</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
+		      </div>
+		    </div>
+
+		  </div>
 		</div>
-		<div class="col-md-4">
-			<div class="panel panel-default">
-			  <div class="panel-body">
-			    <a href="#" class="thumbnail">
-			      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" alt="...">
-			    </a>
-			    <table class="table">
-			    	<tr>
-			    		<td>Tema Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Bangkit Pemuda Indonesia</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Pembicara Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Bp. Jenderal </td>
-			    	</tr>
-			    	<tr>
-			    		<td>Jadwal Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>16 Mei 2016 pukul 14.30</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Tempat Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>Aula Kampus Esa Unggul</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Kuota Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>120 Kursi</td>
-			    	</tr>			    	
-			    	<tr>
-			    		<td>Semester Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td>1, 6, 8 semester</td>
-			    	</tr>
-			    </table>
-			    <button type="button" class="btn btn-primary btn-lg btn-block">Daftar</button>
-			  </div>
-			</div>
-		</div>
-	</div>	
+
+		<?php		
+			endforeach;
+		?>
+	</div>
 </div>
+
+
 
 <div class="teachers">
 	<div class="container">
@@ -427,6 +404,9 @@
 
 </body>
 </html>
+
+
+
 <!-- js -->
 <script src="<?php echo base_url()?>assets/frontend/js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -494,4 +474,35 @@ $(document).ready(function() {
 		}
 		});
 		});
+
+
+	function daftar_seminar(id_seminar){
+
+		var id_mhs 		= "<?php echo $session_mhs['nim_mahasiswa']?>";
+
+		if(!id_mhs){
+			alert('Anda harus login sebelum mendaftar!');
+		}else{
+			$.ajax({
+		        type: 'POST',
+		        url: "<?php echo base_url('front/home') ?>",
+		        data: {
+		         'id_mhs': id_mhs,
+		         'id_seminar': id_seminar
+
+		        },
+		        dataType: 'html',
+		        success: function(results){
+		             if(results){
+		              $('.error_msg').html('error msg');
+		              return false;
+		             }
+		        }
+	  		});
+		}
+
+		
+
+	}
+
 </script>
