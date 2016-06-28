@@ -78,12 +78,6 @@
 <div style="padding: 60px 0">
 	<div class="container">
 		<h2 class="tittle">DAFTAR SEMINAR</h2>
-
-		<?php
-
-			echo "<pre>",print_r($seminar);
-		?>
-
 		<div class="col-md-4">
 			<div class="panel panel-default">
 			  <div class="panel-body">
