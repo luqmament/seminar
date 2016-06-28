@@ -1,7 +1,8 @@
 <!-- banner -->
-<div class="banner">
-	<div class="container">
-			<div  id="top" class="callbacks_container">
+<!-- <div class="banner"> -->
+<!-- <div style="padding: 60px 0"> -->
+	<div class="container-row">
+			<!-- <div  id="top" class="callbacks_container">
 				<ul class="rslides" id="slider3">
 					<li>
 						<div class="banner-info">
@@ -24,9 +25,66 @@
 						</div>
 					</li>
 				</ul>
-			</div>
+			</div> -->
+		<!-- Responsive slider - START -->
+    	<div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+        <div class="slides" data-group="slides">
+      		<ul>
+  	    		<li>
+              <div class="slide-body" data-group="slide">
+                <img src="<?php echo base_url()?>assets/frontend/images/slide-1.jpg">
+                <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                  <h2>Responsive slider</h2>
+                  <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">With one to one swipe movement!</div>
+                </div> -->
+                <div class="caption img-html5" data-animate="slideAppearLeftToRight" data-delay="200">
+                  <img src="<?php echo base_url()?>assets/frontend/images/html5.png">
+                </div>
+                <div class="caption img-css3" data-animate="slideAppearLeftToRight">
+                  <img src="<?php echo base_url()?>assets/frontend/images/css3.png">
+                </div>
+              </div>
+  	    		</li>
+  	    		<li>
+              <div class="slide-body" data-group="slide">
+                <img src="<?php echo base_url()?>assets/frontend/images/slide-2.jpg">
+                <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                  <h2>Twitter Boostrap</h2>
+                  <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Compatible!</div>
+                </div> -->
+                <div class="caption img-bootstrap" data-animate="slideAppearDownToUp" data-delay="200">
+                  <img src="<?php echo base_url()?>assets/frontend/images/bootstrap.png">
+                </div>
+                <div class="caption img-twitter" data-animate="slideAppearUpToDown">
+                  <img src="<?php echo base_url()?>assets/frontend/images/twitter.png">
+                </div>
+              </div>
+  	    		</li>
+  	    		<li>
+              <div class="slide-body" data-group="slide">
+                <img src="<?php echo base_url()?>assets/frontend/images/slide-3.jpg">
+                <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                  <h2>Custom animations</h2>
+                  <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">For any caption you use!</div>
+                </div> -->
+                <div class="caption img-jquery" data-animate="slideAppearDownToUp" data-delay="200">
+                  <img src="<?php echo base_url()?>assets/frontend/images/jquery.png">
+                </div>
+              </div>
+  	    		</li>
+  	    	</ul>
+        </div>
+        <a class="slider-control left" href="#" data-jump="prev">Prev</a>
+        <a class="slider-control right" href="#" data-jump="next">Next</a>
+        <div class="pages">
+          <a class="page" href="#" data-jump-to="1">1</a>
+          <a class="page" href="#" data-jump-to="2">2</a>
+          <a class="page" href="#" data-jump-to="3">3</a>
+        </div>
+    	</div>
+      <!-- Responsive slider - END -->
 	</div>
-</div>
+<!-- </div> -->
 <div class="banner-bottom">
 	<div class="container">
 		<h2 class="tittle">WELCOME TO TUTELAGE</h2> 
@@ -454,7 +512,8 @@ $(document).ready(function() {
 				$(".swipebox").swipebox();
 			});
 </script>
-<script src="<?php echo base_url()?>assets/frontend/js/responsiveslides.min.js"></script>
+<script src="<?php echo base_url()?>assets/frontend/js/jquery.event.move.js"></script>
+<script src="<?php echo base_url()?>assets/frontend/js/responsive-slider.js"></script>
 <script>
 	// You can also use "$(window).load(function() {"
 	$(function () {

@@ -13,6 +13,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="<?php echo base_url()?>assets/frontend/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="<?php echo base_url()?>assets/frontend/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url()?>assets/frontend/css/responsive-slider.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="<?php echo base_url()?>assets/frontend/css/swipebox.css">
 <!-- fonts -->
 <!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -44,7 +45,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-					    <h1><a class="navbar-brand" href="<?php echo base_url()?>"><i class="glyphicon glyphicon-education" aria-hidden="true"></i><span>Tute</span>Lage</a></h1>
+					    <h1><a class="navbar-brand" href="<?php echo base_url()?>"><i class="glyphicon glyphicon-education" aria-hidden="true"></i><span>Event</span>Organizer</a></h1>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
