@@ -32,7 +32,7 @@
       		<ul>
   	    		<li>
               <div class="slide-body" data-group="slide">
-                <img src="<?php echo base_url()?>assets/frontend/images/slide-1.jpg">
+                <img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
                 <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
                   <h2>Responsive slider</h2>
                   <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">With one to one swipe movement!</div>
@@ -47,7 +47,7 @@
   	    		</li>
   	    		<li>
               <div class="slide-body" data-group="slide">
-                <img src="<?php echo base_url()?>assets/frontend/images/slide-2.jpg">
+                <img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
                 <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
                   <h2>Twitter Boostrap</h2>
                   <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Compatible!</div>
@@ -62,7 +62,7 @@
   	    		</li>
   	    		<li>
               <div class="slide-body" data-group="slide">
-                <img src="<?php echo base_url()?>assets/frontend/images/slide-3.jpg">
+                <img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
                 <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
                   <h2>Custom animations</h2>
                   <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">For any caption you use!</div>
