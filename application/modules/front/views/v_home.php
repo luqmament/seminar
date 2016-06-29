@@ -478,25 +478,33 @@ $(document).ready(function() {
 
 	function daftar_seminar(id_seminar){
 
-		var id_mhs 		= "<?php echo $session_mhs['nim_mahasiswa']?>";
+		var id_mhs 		= "<?php echo $session_mhs['id_mahasiswa']?>";
 
 		if(!id_mhs){
-			alert('Anda harus login sebelum mendaftar!');
+			alert('Maaf, Anda harus login sebelum mendaftar!');
+			location.href = "<?php echo base_url('login'); ?>";
 		}else{
 			$.ajax({
 		        type: 'POST',
-		        url: "<?php echo base_url('front/home') ?>",
+		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
 		        data: {
 		         'id_mhs': id_mhs,
 		         'id_seminar': id_seminar
 
 		        },
-		        dataType: 'html',
+		        dataType: 'json',
 		        success: function(results){
-		             if(results){
-		              $('.error_msg').html('error msg');
-		              return false;
-		             }
+		        	//console.log(results);
+	             	if(results.status == "success"){
+		              	alert("Terima kasih, Anda telah terdaftar di seminar");
+		              	location.href = results.location;
+		              	return true;
+	             	}else{
+	             		alert("Maaf, seminar ini tidak bisa diikuti");
+		              	return false;
+	             	}
+
+	             	return false;
 		        }
 	  		});
 		}
