@@ -34,141 +34,114 @@
       <!-- Responsive slider - END -->
 	</div>
 <!-- </div> -->
+
 <div style="padding: 60px 0">
 	<div class="container">
-		<div class="col-md-9">
-			<h2 class="tittle">SEMUA SEMINAR</h2>
-			<div class="row">
-				<!-- Start Daftar semua seminar -->
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
+			<div class="col-md-9">
+			<h2 class="tittle">DAFTAR SEMINAR</h2>
+			<?php
+				//echo "<pre>", print_r($seminar);
+				foreach ($seminar as $key => $value):
+			?>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					  	<p class="title-seminar"><?php echo $value['tema_seminar'] ?></p>
+					    <a href="#" class="thumbnail">
+					      <img src="<?php echo $value['poster_seminar'] ?>" style="height:360px" alt="...">
+					    </a>
+					    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
+					  </div>
+					</div>
 				</div>
+
+			<!-- Modal -->
+			<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Seminar</h4>
+			      </div>
+			      <div class="modal-body">
+			        <div class="panel panel-default">
+					  <div class="panel-body">
+					  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
+					  //echo "<pre>",print_r($session_mhs);
+					  ?>
+					    <table class="table">
+					    	<tr>
+				    		<td width="160px">Tema Seminar</td>
+					    		<td width="10px">:</td>
+					    		<td><?php echo $value['tema_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Pembicara Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['pembicara_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Jadwal Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['jadwal_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Tempat Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['tempat_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Kuota Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['kuota_seminar'] ?></td>
+					    	</tr>			    	
+					    	<tr>
+					    		<td>Semester Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['semester_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>NIM Mahasiswa</td>
+					    		<td>:</td>
+					    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Nama Mahasiswa</td>
+					    		<td>:</td>
+					    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Email Mahasiswa</td>
+					    		<td>:</td>
+					    		<td><?php echo $session_mhs['email_mahasiswa']?></td>
+					    	</tr>			    	
+					    	<tr>
+					    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
+					    	</tr>
+					    </table>
+					  </div>
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
+			      </div>
+			    </div>
+
+			  </div>
 			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				  	
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				  	
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				  <div class="title" style="padding: 0 0 20px 0; text-align: center; color: #757070; font-family: monospace, fantasy;">
-				  	<label>Perkembangan masa depan</label>
-				  </div>
-				  	
-				    <a href="#" class="thumbnail">
-				      <img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-				    <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
-			<!-- End Daftar semua seminar -->
-			</div>	
+
+			<?php		
+				endforeach;
+			?>
 		</div>
+		<!-- Comming soon -->
 		<div class="col-md-3">
 			<h2 class="tittle">Coming Soon</h2>	
-			<div class="row">
-			<!-- Comming soon -->
+			<div class="row" style="border : 1px solid grey ; background: #c1c1c1 ; border-radius : 5px ; padding : 5px; margin-bottom: 10px">			
 				<!-- baris 1 -->
-		  		<div style="border : 1px solid grey ; background: #0066FF ; border-radius : 5px ; padding : 5px; margin-bottom: 10px">
+		  		<div>
 		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
 				  		<label>Perkembangan masa depan</label>
 				  	</div>
@@ -203,15 +176,12 @@
 				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
 				    </a>
 		  		</div>
-			<!-- END Comming soon -->
+			
 			</div>
 		</div>
-			
-
-			
+		<!-- END Comming soon -->
 	</div>
 </div>
-
 
 
 <div class="teachers">

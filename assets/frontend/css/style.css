@@ -2219,9 +2219,16 @@ h3.tittle.tit3 {
 /*-- //responsive media queries --*/
 
   /* added css */
-  .txt-title-seminar{
+  .title-seminar-home{
     text-align:center;
     font-size: 16px;
     padding-bottom: 10px;
     font-weight: bold;
+  }
+
+  .title-seminar{
+    padding: 0 0 20px 0; 
+    text-align: center; 
+    color: #757070; 
+    font-family: monospace, fantasy;
   }

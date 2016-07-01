@@ -10,9 +10,9 @@ class Seminar extends MY_Controller {
     
     public function index(){
 
-    	$data['seminar'] = $this->m_seminar->getDataKey('seminar', array('status_seminar' => 1), 'jadwal_seminar desc', 3);
+    	$data['seminar'] = $this->m_seminar->getDataKey('seminar', array('status_seminar' => 1), 'jadwal_seminar desc');
 
-	   	$this->frview('v_home',$data);
+	   	$this->frview('v_allSeminar',$data);
     }
 
     public function submit_order(){

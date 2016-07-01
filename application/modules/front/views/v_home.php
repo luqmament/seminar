@@ -92,7 +92,7 @@
 			<div class="col-md-4">
 			<div class="panel panel-default">
 			  <div class="panel-body">
-			  	<p class="txt-title-seminar"><?php echo $value['tema_seminar'] ?></p>
+			  	<p class="title-seminar-home"><?php echo $value['tema_seminar'] ?></p>
 			    <a href="#" class="thumbnail">
 			      <img src="<?php echo $value['poster_seminar'] ?>" style="height:360px" alt="...">
 			    </a>
