@@ -91,11 +91,12 @@
 		?>
 			<div class="col-md-4">
 			<div class="panel panel-default">
-			  <div class="panel-body" style="height:840px">
+			  <div class="panel-body">
+			  	<p class="txt-title-seminar"><?php echo $value['tema_seminar'] ?></p>
 			    <a href="#" class="thumbnail">
 			      <img src="<?php echo $value['poster_seminar'] ?>" style="height:360px" alt="...">
 			    </a>
-			    <table class="table">
+			    <!-- <table class="table">
 			    	<tr>
 			    		<td width="140px">Tema Seminar</td>
 			    		<td width="10px">:</td>
@@ -126,8 +127,8 @@
 			    		<td>:</td>
 			    		<td><?php echo $value['semester_seminar'] ?></td>
 			    	</tr>
-			    </table>
-			    <button type="button" class="btn btn-primary btn-lg" style="position: absolute; bottom: 36px; width:83%" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
+			    </table> -->
+			    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
 			  </div>
 			</div>
 		</div>
@@ -150,14 +151,34 @@
 				  ?>
 				    <table class="table">
 				    	<tr>
-				    		<td width="140px">Tema Seminar</td>
+			    		<td width="160px">Tema Seminar</td>
 				    		<td width="10px">:</td>
 				    		<td><?php echo $value['tema_seminar'] ?></td>
+				    	</tr>
+				    	<tr>
+				    		<td>Pembicara Seminar</td>
+				    		<td>:</td>
+				    		<td><?php echo $value['pembicara_seminar'] ?></td>
 				    	</tr>
 				    	<tr>
 				    		<td>Jadwal Seminar</td>
 				    		<td>:</td>
 				    		<td><?php echo $value['jadwal_seminar'] ?></td>
+				    	</tr>
+				    	<tr>
+				    		<td>Tempat Seminar</td>
+				    		<td>:</td>
+				    		<td><?php echo $value['tempat_seminar'] ?></td>
+				    	</tr>
+				    	<tr>
+				    		<td>Kuota Seminar</td>
+				    		<td>:</td>
+				    		<td><?php echo $value['kuota_seminar'] ?></td>
+				    	</tr>			    	
+				    	<tr>
+				    		<td>Semester Seminar</td>
+				    		<td>:</td>
+				    		<td><?php echo $value['semester_seminar'] ?></td>
 				    	</tr>
 				    	<tr>
 				    		<td>NIM Mahasiswa</td>
@@ -175,7 +196,7 @@
 				    		<td><?php echo $session_mhs['email_mahasiswa']?></td>
 				    	</tr>			    	
 				    	<tr>
-				    		<td colspan="3" style="color:red">*Pastikan data sudah benar, jika belum silahkan ubah data mahasiswa</td>
+				    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
 				    	</tr>
 				    </table>
 				  </div>
