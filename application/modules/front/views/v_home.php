@@ -2,75 +2,24 @@
 <!-- <div class="banner"> -->
 <!-- <div style="padding: 60px 0"> -->
 	<div class="container-row">
-			<!-- <div  id="top" class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="banner-info">
-							<h3>Make A Huge Difference Start Your Career journey With Us</h3>
-						</div>
-					</li>
-					<li>
-						<div class="banner-info">
-							<h3>Learning Online Becomes Easier And Faster</h3>
-						</div>
-					</li>
-					<li>
-						<div class="banner-info">
-							<h3>Make A Huge Difference Start Your Career journey With Us</h3>
-						</div>
-					</li>
-					<li>
-						<div class="banner-info">
-							<h3>Learning Online Becomes Easier And Faster</h3>
-						</div>
-					</li>
-				</ul>
-			</div> -->
 		<!-- Responsive slider - START -->
     	<div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
         <div class="slides" data-group="slides">
       		<ul>
   	    		<li>
-              <div class="slide-body" data-group="slide">
-                <img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
-                <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
-                  <h2>Responsive slider</h2>
-                  <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">With one to one swipe movement!</div>
-                </div> -->
-                <div class="caption img-html5" data-animate="slideAppearLeftToRight" data-delay="200">
-                  <img src="<?php echo base_url()?>assets/frontend/images/html5.png">
-                </div>
-                <div class="caption img-css3" data-animate="slideAppearLeftToRight">
-                  <img src="<?php echo base_url()?>assets/frontend/images/css3.png">
-                </div>
-              </div>
+	              	<div class="slide-body" data-group="slide">
+	                	<img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
+	              	</div>
   	    		</li>
   	    		<li>
-              <div class="slide-body" data-group="slide">
-                <img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
-                <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
-                  <h2>Twitter Boostrap</h2>
-                  <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Compatible!</div>
-                </div> -->
-                <div class="caption img-bootstrap" data-animate="slideAppearDownToUp" data-delay="200">
-                  <img src="<?php echo base_url()?>assets/frontend/images/bootstrap.png">
-                </div>
-                <div class="caption img-twitter" data-animate="slideAppearUpToDown">
-                  <img src="<?php echo base_url()?>assets/frontend/images/twitter.png">
-                </div>
-              </div>
+	              	<div class="slide-body" data-group="slide">
+	                	<img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
+	              	</div>
   	    		</li>
   	    		<li>
-              <div class="slide-body" data-group="slide">
-                <img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
-                <!-- <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
-                  <h2>Custom animations</h2>
-                  <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">For any caption you use!</div>
-                </div> -->
-                <div class="caption img-jquery" data-animate="slideAppearDownToUp" data-delay="200">
-                  <img src="<?php echo base_url()?>assets/frontend/images/jquery.png">
-                </div>
-              </div>
+	              	<div class="slide-body" data-group="slide">
+	                	<img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
+	              	</div>
   	    		</li>
   	    	</ul>
         </div>
@@ -85,7 +34,7 @@
       <!-- Responsive slider - END -->
 	</div>
 <!-- </div> -->
-<div class="banner-bottom">
+<div class="banner-bottom" style="background : none">
 	<div class="container">
 		<h2 class="tittle">WELCOME TO TUTELAGE</h2> 
 		<div class="bottom-grids">
@@ -515,25 +464,6 @@ $(document).ready(function() {
 <script src="<?php echo base_url()?>assets/frontend/js/jquery.event.move.js"></script>
 <script src="<?php echo base_url()?>assets/frontend/js/responsive-slider.js"></script>
 <script>
-	// You can also use "$(window).load(function() {"
-	$(function () {
-	 // Slideshow 4
-	$("#slider3").responsiveSlides({
-		auto: true,
-		pager: true,
-		nav: false,
-		speed: 500,
-		namespace: "callbacks",
-		before: function () {
-	$('.events').append("<li>before event fired.</li>");
-	},
-	after: function () {
-		$('.events').append("<li>after event fired.</li>");
-		}
-		});
-		});
-
-
 	function daftar_seminar(id_seminar){
 
 		var id_mhs 		= "<?php echo $session_mhs['id_mahasiswa']?>";
