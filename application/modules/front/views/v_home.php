@@ -174,7 +174,24 @@
 				    		<td>Kuota Seminar</td>
 				    		<td>:</td>
 				    		<td><?php echo $value['kuota_seminar'] ?></td>
-				    	</tr>			    	
+				    	</tr>
+						<tr>
+				    		<td>Kelas Seminar</td>
+				    		<td>:</td>
+				    		<td><?php 
+							switch($value['untuk_kelas']){
+								case '1' :
+								$kelas_seminar = 'Reguler' ;
+								break;
+								
+								case '2' :
+								$kelas_seminar = 'Paralel' ;
+								break;
+								default :
+								$kelas_seminar = 'Paralel dan Reguler' ;
+							}
+							echo $kelas_seminar ?></td>
+				    	</tr>
 				    	<tr>
 				    		<td>Semester Seminar</td>
 				    		<td>:</td>
@@ -189,12 +206,7 @@
 				    		<td>Nama Mahasiswa</td>
 				    		<td>:</td>
 				    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Email Mahasiswa</td>
-				    		<td>:</td>
-				    		<td><?php echo $session_mhs['email_mahasiswa']?></td>
-				    	</tr>			    	
+				    	</tr>	    	
 				    	<tr>
 				    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
 				    	</tr>

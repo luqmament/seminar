@@ -105,7 +105,7 @@ class C_seminar extends MY_Controller {
 	    $this->form_validation->set_rules('kuota_seminar', 'Kuota Seminar', 'required');
 	    $this->form_validation->set_rules('kelas_seminar', 'Kelas Seminar', 'required');
 	    $this->form_validation->set_rules('semester_seminar', 'Semester Seminar', 'required');
-	    $this->form_validation->set_rules('nama_jurusan', 'Jurusan Seminar', 'required');
+	    //$this->form_validation->set_rules('nama_jurusan', 'Jurusan Seminar', 'required');
 	    //$this->form_validation->set_rules('poster_seminar', 'Poster Seminar', 'required');
 	    //$this->form_validation->set_rules('sertifikat_seminar', 'Poster Seminar', 'required');
 	}else{
@@ -116,7 +116,7 @@ class C_seminar extends MY_Controller {
 	    $this->form_validation->set_rules('kuota_seminar', 'Kuota Seminar', 'required');
 	    $this->form_validation->set_rules('kelas_seminar', 'Kelas Seminar', 'required');
 	    $this->form_validation->set_rules('semester_seminar', 'Semester Seminar', 'required');
-	    $this->form_validation->set_rules('nama_jurusan', 'Jurusan Seminar', 'required');
+	    //$this->form_validation->set_rules('nama_jurusan', 'Jurusan Seminar', 'required');
 	    //$this->form_validation->set_rules('poster_seminar', 'Poster Seminar', 'required');
 	    //$this->form_validation->set_rules('sertifikat_seminar', 'Poster Seminar', 'required');
 	}
@@ -132,25 +132,29 @@ class C_seminar extends MY_Controller {
 	{
 	    $tema_seminar				= trim(strtoupper($post['tema_seminar']));
 	    $jadwal_seminar				= $post['jadwal_seminar'];
-	    $originalDate = $jadwal_seminar ;
-		$newDate = date("Y-m-d H:i:s", strtotime($originalDate));
+	    $originalDate 				= $jadwal_seminar ;
+		$newDate 					= date("Y-m-d H:i:s", strtotime($originalDate));
 	    $pembicara_seminar			= trim(strtoupper($post['pembicara_seminar']));
 	    $tempat_seminar				= trim(strtoupper($post['tempat_seminar']));
 	    $kuota_seminar				= trim(strtoupper($post['kuota_seminar']));
 	    $sisa_kuota					= trim(strtoupper($post['kuota_seminar']));
-	    $untuk_kelas				= trim(strtoupper($post['kelas_seminar']));
+	    $untuk_kelas				= $post['kelas_seminar'];
+		foreach ($untuk_kelas as $key => $value) {
+	   		$untuk_kelas		.= $value.','; 
+	   	}
+	   	$untuk_kelas			= rtrim(trim($untuk_kelas,"Array"),",") ;
+		
 	    $semester_seminar			= $post['semester_seminar'];
 	   	foreach ($semester_seminar as $key => $value) {
 	   		$semester_seminar		.= $value.','; 
 	   	}
-
 	   	$semester_seminar			= rtrim(trim($semester_seminar,"Array"),",") ;
 
-	    $jurusan_seminar			= $post['nama_jurusan'];
+	    /*$jurusan_seminar			= $post['nama_jurusan'];
 	    foreach ($jurusan_seminar as $key => $value) {
 	   		$jurusan_seminar		.= $value.','; 
 	   	}
-	   	$jurusan_seminar			= rtrim(trim($jurusan_seminar,"Array"),",") ;
+	   	$jurusan_seminar			= rtrim(trim($jurusan_seminar,"Array"),",") ;*/
 
 	    //$poster_seminar				= $_FILES['poster_seminar'];
 	    $poster_seminar      		= base_url('/assets/uploads/poster_seminar/display/250/400/no-photo.png');
@@ -193,7 +197,7 @@ class C_seminar extends MY_Controller {
 				'sisa_kuota' 			=> $kuota_seminar,
 				'untuk_kelas' 			=> $untuk_kelas,
 				'semester_seminar' 		=> $semester_seminar,
-				'jurusan_seminar' 		=> $jurusan_seminar,
+				//'jurusan_seminar' 		=> $jurusan_seminar,
 				'poster_seminar' 		=> $poster_seminar,
 				'sertifikat_seminar' 	=> $sertifikat_seminar,
 				'create_date_seminar' 	=> date('Y-m-d H:i:s')
@@ -216,7 +220,7 @@ class C_seminar extends MY_Controller {
 			}else{
 				$this->session->set_flashdata('infoSeminar', 'Data Berhasil Di Tambah');
 			}
-			redirect('seminar');			
+			redirect('seminar-admin');			
 	    } else{
 			echo "<h2>INsert Data Gagal</h2>";            
 	    }
@@ -246,7 +250,7 @@ class C_seminar extends MY_Controller {
         $data                   = array();
         $config['upload_path'] = FCPATH.'assets/uploads/poster_seminar';
         if (!is_dir($config['upload_path'])) {
-            @mkdir($config['upload_path'], 0775);
+            @mkdir($config['upload_path']);
         }
         
         $info = pathinfo($image['name']);
@@ -298,7 +302,7 @@ class C_seminar extends MY_Controller {
         $data                   = array();
         $config['upload_path'] = FCPATH.'assets/uploads/sertifikat_seminar';
         if (!is_dir($config['upload_path'])) {
-            @mkdir($config['upload_path'], 0775);
+            @mkdir($config['upload_path']);
         }
         
         $info = pathinfo($image['name']);

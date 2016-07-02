@@ -65,7 +65,7 @@
 				</div>
 				<div class="form-group">
 					<label>Kelas Seminar</label>
-					<select class="form-control" id="kelas_seminar" name="kelas_seminar">
+					<select class="form-control" id="kelas_seminar" name="kelas_seminar[]" multiple="multiple">
 						<?php 
 							$kelas_seminar = array('1' => "Reguler", '2' => 'Paralel');
 							foreach ($kelas_seminar as $key => $value) {
@@ -90,18 +90,18 @@
 					<span style="font-size : 12px ; color : orange">Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</span>
 				</div>
 				</div>
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label>Jurusan Seminar</label>
 					<select class="form-control jurusan-multiple-select2" id="nama_jurusan" name="nama_jurusan[]" multiple="multiple">
-						<?php foreach ($listfakultas as $keyFak => $valueFak) { ?>
-							<optgroup label="<?php echo $valueFak['nama_fakultas']?>">
-								<?php foreach ($valueFak['listjurusan'] as $keyJur => $valueJur) { ?>
-									<option value="<?php echo $valueJur['id_jurusan_fakultas']?>"><?php echo $valueJur['nama_jurusan']?></option>
-								<?php } ?>
+						<?php /*foreach ($listfakultas as $keyFak => $valueFak) { */?>
+							<optgroup label="<?php /*echo $valueFak['nama_fakultas']*/?>">
+								<?php /*foreach ($valueFak['listjurusan'] as $keyJur => $valueJur) { */ ?>
+									<option value="<?php /* echo $valueJur['id_jurusan_fakultas'] */?>"><?php /*echo $valueJur['nama_jurusan'] */?></option>
+								<?php /*}*/ ?>
 						  	</optgroup>
-						<?php }	?>
+						<?php /* } */	?>
 					</select>					
-				</div>
+				</div>-->
 				<div class="form-group">
 					<label>Poster Seminar</label>
 					<input id="poster_seminar" name="poster_seminar" type="file" autofocus="" ></input>
@@ -174,33 +174,10 @@ $(document).ready(function(){
 		return false;
 	    }
 	    return true;
-	}
-
-	//if(Val_Change_Agent()==false){
-        //    return false;
-        //}else{
-        //    e.preventDefault();
-        //    //var formData = new FormData(this);
-        //    var formData = $('#change-agent').serialize();
-        //    $.ajax({
-        //        type:'POST',
-        //        url: $(this).attr('action'),
-        //        dataType: 'json',
-        //        data:formData,
-        //        success:function(result){
-        //            switch (result.returnVal) {
-        //                case 'success' :
-        //                    alert(result.alert);
-        //                    window.location.reload();
-        //                break;
-        //                default:
-        //                    alert(result.alert);
-        //            }
-        //        }
-        //    });
-        //}      
+	}   
     }));
-	$(".seminar-multiple-select2").select2();
+	$("#kelas_seminar").select2();
+	$(".seminar-multiple-select2").select2();	
 	$(".jurusan-multiple-select2").select2();
 	$( "#semester_seminar" ).change(function(){
 	    var str = "";
