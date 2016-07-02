@@ -45,7 +45,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-					    <h1><a class="navbar-brand" href="<?php echo base_url()?>"><i class="glyphicon glyphicon-education" aria-hidden="true"></i><span>Event</span>OLuqmament</a></h1>
+					    <h1><a class="navbar-brand" href="<?php echo base_url()?>"><i class="glyphicon glyphicon-education" aria-hidden="true"></i><span>Event</span>Organizer</a></h1>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
