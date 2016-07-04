@@ -17,6 +17,31 @@ class M_seminar extends CI_Model {
         }
     }
 
+
+    function insertData($table, $data){
+
+        $query = $this->db->insert($table, $data);
+
+        if($query){
+            return true ;
+        }else{
+            return false ;
+        }
+
+    }
+
+    function updateData($table, $data, $where){
+        
+        $this->db->where($where);
+        $query = $this->db->update($table, $data);
+
+        if($query){
+            return true ;
+        }else{
+            return false ;
+        }
+    }
+
 }	
 
 ?>

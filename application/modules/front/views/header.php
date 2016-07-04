@@ -45,7 +45,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-					    <h1><a class="navbar-brand" href="<?php echo base_url()?>"><i class="glyphicon glyphicon-education" aria-hidden="true"></i><span>Event</span>OLuqmament</a></h1>
+					    <h1><a class="navbar-brand" href="<?php echo base_url()?>"><i class="glyphicon glyphicon-education" aria-hidden="true"></i><span>Event</span>Organizer</a></h1>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
@@ -54,7 +54,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 							<li><a class="hvr-overline-from-center button2 active" href="<?php echo base_url()?>">Home</a></li>
 							<li><a class="hvr-overline-from-center button2" href="about.html">About</a></li>
 							<!-- <li><a class="hvr-overline-from-center button2" href="typography.html">Academics</a></li> -->
-							<li><a class="hvr-overline-from-center button2" href="services.html">Services</a></li>
+							<li><a class="hvr-overline-from-center button2" href="<?php echo base_url('seminar'); ?>">Seminar</a></li>
 							<?php $session_mhs = $this->session->userdata('CMS_mahasiswa');	
 								if(!$session_mhs){ ?>
 								<li><a class="hvr-overline-from-center button2" href="contact.html">Contact</a></li>

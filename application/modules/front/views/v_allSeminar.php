@@ -34,148 +34,70 @@
       <!-- Responsive slider - END -->
 	</div>
 <!-- </div> -->
-<div class="banner-bottom" style="background : none">
-	<div class="container">
-		<h2 class="tittle">WELCOME TO TUTELAGE</h2> 
-		<div class="bottom-grids">
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR INSTRUCTIONS</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-education" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR SUPPORT</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR GUARANTEE</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR RELIABILITY</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
+
 <div style="padding: 60px 0">
 	<div class="container">
-		<h2 class="tittle">DAFTAR SEMINAR</h2>
-		<?php
-			//echo "<pre>", print_r($seminar);
-			foreach ($seminar as $key => $value):
-		?>
-			<div class="col-md-4">
-			<div class="panel panel-default">
-			  <div class="panel-body">
-			  	<p class="title-seminar-home"><?php echo $value['tema_seminar'] ?></p>
-			    <a href="#" class="thumbnail">
-			      <img src="<?php echo $value['poster_seminar'] ?>" style="height:360px" alt="...">
-			    </a>
-			    <!-- <table class="table">
-			    	<tr>
-			    		<td width="140px">Tema Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td><?php echo $value['tema_seminar'] ?></td>
-			    	</tr>
-			    	<tr>
-			    		<td>Pembicara Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['pembicara_seminar'] ?></td>
-			    	</tr>
-			    	<tr>
-			    		<td>Jadwal Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['jadwal_seminar'] ?></td>
-			    	</tr>
-			    	<tr>
-			    		<td>Tempat Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['tempat_seminar'] ?></td>
-			    	</tr>
-			    	<tr>
-			    		<td>Kuota Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['kuota_seminar'] ?></td>
-			    	</tr>			    	
-			    	<tr>
-			    		<td>Semester Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['semester_seminar'] ?></td>
-			    	</tr>
-			    </table> -->
-			    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-			  </div>
-			</div>
-		</div>
+			<div class="col-md-9">
+			<h2 class="tittle">DAFTAR SEMINAR</h2>
+			<?php
+				//echo "<pre>", print_r($seminar);
+				foreach ($seminar as $key => $value):
+			?>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					  	<p class="title-seminar"><?php echo $value['tema_seminar'] ?></p>
+					    <a href="#" class="thumbnail">
+					      <img src="<?php echo $value['poster_seminar'] ?>" style="height:360px" alt="...">
+					    </a>
+					    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
+					  </div>
+					</div>
+				</div>
 
-		<!-- Modal -->
-		<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
-		  <div class="modal-dialog">
+			<!-- Modal -->
+			<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
 
-		    <!-- Modal content-->
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal">&times;</button>
-		        <h4 class="modal-title">Seminar</h4>
-		      </div>
-		      <div class="modal-body">
-		        <div class="panel panel-default">
-				  <div class="panel-body">
-				  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
-				  //echo "<pre>",print_r($session_mhs);
-				  ?>
-				    <table class="table">
-				    	<tr>
-			    		<td width="160px">Tema Seminar</td>
-				    		<td width="10px">:</td>
-				    		<td><?php echo $value['tema_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Pembicara Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['pembicara_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Jadwal Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['jadwal_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Tempat Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['tempat_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Kuota Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['kuota_seminar'] ?></td>
-				    	</tr>
-						<tr>
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Seminar</h4>
+			      </div>
+			      <div class="modal-body">
+			        <div class="panel panel-default">
+					  <div class="panel-body">
+					  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
+					  //echo "<pre>",print_r($session_mhs);
+					  ?>
+					    <table class="table">
+					    	<tr>
+				    		<td width="160px">Tema Seminar</td>
+					    		<td width="10px">:</td>
+					    		<td><?php echo $value['tema_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Pembicara Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['pembicara_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Jadwal Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['jadwal_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Tempat Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['tempat_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Kuota Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['kuota_seminar'] ?></td>
+					    	</tr>
+<tr>
 				    		<td>Kelas Seminar</td>
 				    		<td>:</td>
 				    		<td><?php 
@@ -191,43 +113,87 @@
 								$kelas_seminar = 'Paralel dan Reguler' ;
 							}
 							echo $kelas_seminar ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Semester Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['semester_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>NIM Mahasiswa</td>
-				    		<td>:</td>
-				    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Nama Mahasiswa</td>
-				    		<td>:</td>
-				    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-				    	</tr>	    	
-				    	<tr>
-				    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
-				    	</tr>
-				    </table>
-				  </div>
-				</div>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
-		      </div>
-		    </div>
+				    	</tr>							
+					    	<tr>
+					    		<td>Semester Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['semester_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>NIM Mahasiswa</td>
+					    		<td>:</td>
+					    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Nama Mahasiswa</td>
+					    		<td>:</td>
+					    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
+					    	</tr>    	
+					    	<tr>
+					    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
+					    	</tr>
+					    </table>
+					  </div>
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
+			      </div>
+			    </div>
 
-		  </div>
+			  </div>
+			</div>
+
+			<?php		
+				endforeach;
+			?>
 		</div>
-
-		<?php		
-			endforeach;
-		?>
+		<!-- Comming soon -->
+		<div class="col-md-3">
+			<h2 class="tittle">Coming Soon</h2>	
+			<div class="row" style="border : 1px solid grey ; background: #c1c1c1 ; border-radius : 5px ; padding : 5px; margin-bottom: 10px">			
+				<!-- baris 1 -->
+		  		<div>
+		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
+				  		<label>Perkembangan masa depan</label>
+				  	</div>
+				    <a href="#" class="thumbnail">
+				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
+				    </a>
+		  		</div>
+		  		<!-- baris 1 -->
+		  		<div style="border : 1px solid grey ; background: #0066FF ; border-radius : 5px ; padding : 5px ;margin-bottom: 10px">
+		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
+				  		<label>Perkembangan masa depan</label>
+				  	</div>
+				    <a href="#" class="thumbnail">
+				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
+				    </a>
+		  		</div>
+		  		<!-- baris 1 -->
+		  		<div style="border : 1px solid grey ; background: #0066FF ; border-radius : 5px ; padding : 5px ;margin-bottom: 10px">
+		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
+				  		<label>Perkembangan masa depan</label>
+				  	</div>
+				    <a href="#" class="thumbnail">
+				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
+				    </a>
+		  		</div>
+		  		<!-- baris 1 -->
+		  		<div style="border : 1px solid grey ; background: #0066FF ; border-radius : 5px ; padding : 5px ;margin-bottom: 10px">
+		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
+				  		<label>Perkembangan masa depan</label>
+				  	</div>
+				    <a href="#" class="thumbnail">
+				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
+				    </a>
+		  		</div>
+			
+			</div>
+		</div>
+		<!-- END Comming soon -->
 	</div>
 </div>
-
 
 
 <div class="teachers">
