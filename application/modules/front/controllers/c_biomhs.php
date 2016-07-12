@@ -162,6 +162,7 @@ class C_biomhs extends MY_Controller {
             $invalid = $this->upload->display_errors();
             $this->session->set_flashdata('infoErrorsPhoto', $invalid);
             $this->frview('v_register_mhs',$data);
+            echo '<pre>',print_r($this->upload->display_errors());die();
         } else {
             /* First size */
             $configSize1['image_library'] = 'gd2';

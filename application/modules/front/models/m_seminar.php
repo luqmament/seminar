@@ -13,7 +13,7 @@ class M_seminar extends CI_Model {
         if ($query->num_rows() > 0) {
             return $query->result_array();
         } else {
-            return FALSE;
+            return array();
         }
     }
 
@@ -39,6 +39,17 @@ class M_seminar extends CI_Model {
             return true ;
         }else{
             return false ;
+        }
+    }
+
+    function getDetData($table,$id){
+        $this->db->from($table);
+        $this->db->where($id);
+        $query =  $this->db->get();
+        if($query->num_rows() > 0){
+            return $query->row();
+        }else{
+            return false;
         }
     }
 

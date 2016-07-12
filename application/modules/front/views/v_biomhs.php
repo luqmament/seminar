@@ -76,9 +76,9 @@
 				    					}				    					
 				    				}else{
 				    					if(($bulan - 2) <= 6){
-				    						$intervalThn = ($intervalThn * 2 ) - 3;
-				    					}else{
 				    						$intervalThn = ($intervalThn * 2 ) - 2;
+				    					}else{
+				    						$intervalThn = ($intervalThn * 2 ) - 1;
 				    					}
 				    				}
 				    				echo $intervalThn;

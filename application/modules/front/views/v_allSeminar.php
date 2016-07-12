@@ -41,7 +41,7 @@
 			<h2 class="tittle">DAFTAR SEMINAR</h2>
 			<?php
 				//echo "<pre>", print_r($seminar);
-				foreach ($seminar as $key => $value):
+				foreach ($seminar as $key => $value): 
 			?>
 				<div class="col-md-4">
 					<div class="panel panel-default">
@@ -97,23 +97,28 @@
 					    		<td>:</td>
 					    		<td><?php echo $value['kuota_seminar'] ?></td>
 					    	</tr>
-<tr>
-				    		<td>Kelas Seminar</td>
-				    		<td>:</td>
-				    		<td><?php 
-							switch($value['untuk_kelas']){
-								case '1' :
-								$kelas_seminar = 'Reguler' ;
-								break;
-								
-								case '2' :
-								$kelas_seminar = 'Paralel' ;
-								break;
-								default :
-								$kelas_seminar = 'Paralel dan Reguler' ;
-							}
-							echo $kelas_seminar ?></td>
-				    	</tr>							
+					    	<tr>
+					    		<td>Sisa Kuota Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['sisa_kuota'] ?></td>
+					    	</tr>
+							<tr>
+					    		<td>Kelas Seminar</td>
+					    		<td>:</td>
+					    		<td><?php 
+								switch($value['untuk_kelas']){
+									case '1' :
+									$kelas_seminar = 'Reguler' ;
+									break;
+									
+									case '2' :
+									$kelas_seminar = 'Paralel' ;
+									break;
+									default :
+									$kelas_seminar = 'Paralel dan Reguler' ;
+								}
+								echo $kelas_seminar ?></td>
+				    		</tr>							
 					    	<tr>
 					    		<td>Semester Seminar</td>
 					    		<td>:</td>
@@ -137,7 +142,7 @@
 					</div>
 			      </div>
 			      <div class="modal-footer">
-			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
+			        <button id="btn_seminar_<?php echo $value['id_seminar'];?>" type="button" class="btn btn-primary btn-lg" style="width:100%" sem_id="<?php echo $value['id_seminar'] ?>" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
 			      </div>
 			    </div>
 
@@ -471,6 +476,7 @@ $(document).ready(function() {
 			alert('Maaf, Anda harus login sebelum mendaftar!');
 			location.href = "<?php echo base_url('login'); ?>";
 		}else{
+			//alert($(this).attr('sem_id'));return false;
 			$.ajax({
 		        type: 'POST',
 		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
@@ -481,14 +487,14 @@ $(document).ready(function() {
 		        },
 		        dataType: 'json',
 		        success: function(results){
-		        	//console.log(results);
+		        	console.log(results);
 	             	if(results.status == "success"){
 		              	alert("Terima kasih, Anda telah terdaftar di seminar");
 		              	location.href = results.location;
 		              	return true;
 	             	}else{
-	             		alert("Maaf, seminar ini tidak bisa diikuti");
-		              	return false;
+	             		alert(results.alert);
+		              	window.location.reload();
 	             	}
 
 	             	return false;
@@ -499,5 +505,42 @@ $(document).ready(function() {
 		
 
 	}
+
+$(document).on("click","#btn_seminar_"+$(this).attr('sem_id'), function(){
+	alert();
+    /*var formData = {
+            id: $(this).attr("id"),
+            id_user: $(this).attr("id_user"),
+            point_user: $(this).attr("point")
+    };
+    $.ajax({
+        type: "POST",
+        url: URL+'front/reward/viewGift',
+        data: formData,
+        dataType: "json",
+        success: function(res){
+            if (res.notif != '') {
+		alert(res.notif);
+		$("#GiftRedeem").modal('hide'); 
+		return false ;
+	    }else{
+                $("#GiftRedeem").modal('show'); 
+                return ($("#modalName").text(res.data["name"])+
+                $("#modalAgentName").text('Agent Name : '+res.data["agent_name"])+
+                $("#modalMG_userID").text('MG User ID : '+res.data["mg_user_id"])+
+                $("#modalStausMember").text(res.data["status_member"])+
+                $("#modalValue").text(res.data["value"])+
+                $("#modaldescriptionGift").text(res.data["description"])+
+                $("#modalRemark").text('Jumlah point Kamu akan berkurang sebanyak '+res.data["point"]+' point')+
+                $('#modalImg').attr('src', res.data["pict_name"])+
+                $('#gift_id').val(res.data["id"])+
+                $('#point').val(res.data["point"])+
+                $('#point_user').val(formData.point_user)+
+                $('#user_id').val(formData.id_user)+
+		$('#typeGift').val(res.data["type"]));
+            }
+        }
+    });*/
+});
 
 </script>
