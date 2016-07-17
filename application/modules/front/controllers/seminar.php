@@ -82,7 +82,31 @@ class Seminar extends MY_Controller {
                 break;
                 
                 default:
-                    echo json_encode(array('status' => 'error', 'alert' => 'Validate to paralel'));
+                    $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
+
+                        if($id_ticket){
+                            $data = array(
+                                    'id_seminar'    => $id_seminar,
+                                    'id_mahasiswa'  => $id_mahasiswa,
+                                    'id_ticket'     => $id_ticket[0]['id_ticket'],
+                                    'create_date'   => date("Y-m-d H:i:s")
+
+                                );
+
+                            if($this->m_seminar->insertData("order", $data)){
+
+                                $this->m_seminar->updateData("ticket_manual", array("consume" => 1), array('id_ticket' => $id_ticket[0]['id_ticket']));
+                                $this->m_seminar->updateData("seminar", array("sisa_kuota" => ($detail_seminar->sisa_kuota - 1)), array('id_seminar' => $id_seminar));
+                                echo json_encode(array('status' => 'success', 'location' => base_url(), $data));
+                            }
+                            
+                        
+                        }else{
+
+                            echo json_encode(array('status' => 'error', 'alert' => 'Maaf ada kesalahan, silahkan check ke bagian IT'));   
+
+                        }
+                    
                 break;
             }
         }
