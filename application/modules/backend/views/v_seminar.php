@@ -147,6 +147,7 @@
 <script src="<?php echo base_url()?>assets/backend/js/easypiechart-data.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/select2.full.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/moment-with-locales.js"></script>
+<script src="<?php echo base_url()?>assets/backend/js/moment-locale-id.js"></script>
 <script src="<?php echo base_url()?>assets/backend/js/bootstrap-datetimepicker.js"></script>
 <script>
 	!function ($) {
@@ -194,6 +195,7 @@ $(document).ready(function(){
 	})
 	  .trigger( "change" );
 	$('#jadwal_seminar').datetimepicker({
+		format: 'DD MMMM YYYY HH:mm',
 		locale : 'id'
 	});
 

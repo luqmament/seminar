@@ -256,8 +256,8 @@ class C_biomhs extends MY_Controller {
     $stylesheet = file_get_contents('http://localhost/seminar/assets/frontend/css/print_ticket.css');// external css
     $this->mpdf->WriteHTML($stylesheet,1);
     $this->mpdf->WriteHTML($html);
-    $this->mpdf->Output($file_name, 'D'); // download force
-    $this->mpdf->Output($file_name, 'I'); // view in the explorer
+    $this->mpdf->Output($file_name.'pdf', 'D'); // download force
+    $this->mpdf->Output($file_name.'pdf', 'I'); // view in the explorer
 
     }
 
