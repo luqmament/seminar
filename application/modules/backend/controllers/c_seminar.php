@@ -95,7 +95,7 @@ class C_seminar extends MY_Controller {
     }
 	$post 	= $this->input->post();
 	//echo '<pre>',print_r($post);die();
-
+    
 	$id 	= $post['id'];
 	if(!isset($id)){
 	    $this->form_validation->set_rules('tema_seminar', 'Tema Fakultas', 'required');
@@ -131,9 +131,11 @@ class C_seminar extends MY_Controller {
 	else
 	{
 	    $tema_seminar				= trim(strtoupper($post['tema_seminar']));
-	    $jadwal_seminar				= $post['jadwal_seminar'];
+	    /*$jadwal_seminar				= $post['jadwal_seminar'];
 	    $originalDate 				= $jadwal_seminar ;
-		$newDate 					= date("Y-m-d H:i:s", strtotime($originalDate));
+		$newDate 					= date("Y-m-d H:i:s", strtotime($originalDate));*/
+        $jadwal_seminar             = date_create($post['jadwal_seminar']);
+        $jadwal_seminar             = date_format($jadwal_seminar,"Y-m-d H:i:s");
 	    $pembicara_seminar			= trim(strtoupper($post['pembicara_seminar']));
 	    $tempat_seminar				= trim(strtoupper($post['tempat_seminar']));
 	    $kuota_seminar				= trim(strtoupper($post['kuota_seminar']));
@@ -190,7 +192,7 @@ class C_seminar extends MY_Controller {
 	    }else{
 			$data_seminar = array(
 				'tema_seminar'			=> $tema_seminar,
-			    'jadwal_seminar'		=> $newDate,
+			    'jadwal_seminar'		=> $jadwal_seminar,
 				'pembicara_seminar' 	=> $pembicara_seminar,
 				'tempat_seminar' 		=> $tempat_seminar,
 				'kuota_seminar' 		=> $kuota_seminar,
