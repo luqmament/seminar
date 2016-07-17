@@ -106,10 +106,10 @@
 					<label>Poster Seminar</label>
 					<input id="poster_seminar" name="poster_seminar" type="file" autofocus="" ></input>
 				</div>
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label>Sertifikat Seminar</label>
 					<input id="sertifikat_seminar" name="sertifikat_seminar" type="file" autofocus="" ></input>
-				</div>
+				</div> -->
 				<?php if (isset($getDetail->id_jurusan_fakultas)){ ?>
 				<div class="form-group">
 					<label>Status Fakultas</label>

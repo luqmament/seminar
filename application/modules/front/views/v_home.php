@@ -21,20 +21,26 @@
 	                	<img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
 	              	</div>
   	    		</li>
+  	    		<li>
+	              	<div class="slide-body" data-group="slide">
+	                	<img src="<?php echo base_url()?>assets/frontend/images/banner.jpg">
+	              	</div>
+  	    		</li>
   	    	</ul>
         </div>
-        <a class="slider-control left" href="#" data-jump="prev">Prev</a>
+        <a class="slider-control left" href="#"4da4a-jump="prev">Prev</a>
         <a class="slider-control right" href="#" data-jump="next">Next</a>
         <div class="pages">
           <a class="page" href="#" data-jump-to="1">1</a>
           <a class="page" href="#" data-jump-to="2">2</a>
           <a class="page" href="#" data-jump-to="3">3</a>
+          <a class="page" href="#" data-jump-to="4">4</a>
         </div>
     	</div>
       <!-- Responsive slider - END -->
 	</div>
 <!-- </div> -->
-<div class="banner-bottom" style="background : none">
+<!-- <div class="banner-bottom" style="background : none">
 	<div class="container">
 		<h2 class="tittle">WELCOME TO TUTELAGE</h2> 
 		<div class="bottom-grids">
@@ -81,7 +87,7 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</div>
+</div> -->
 <div style="padding: 60px 0">
 	<div class="container">
 		<h2 class="tittle">DAFTAR SEMINAR</h2>
@@ -359,7 +365,7 @@
                 </div>
 				<div class="clearfix"></div>
 	</div>
-</div>
+</div> 
 <!-- //our facilities -->
 <!-- features -->
 <div class="features">
@@ -433,10 +439,10 @@
 				</ul>
 			</div>
 			<div class="clearfix"></div>
-		</div>
+		</div> -->
 		<p> &copy; 2015 Tutelage. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>
 	</div>
-</div>
+</div> 
 <!-- //footer -->
 
 <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
