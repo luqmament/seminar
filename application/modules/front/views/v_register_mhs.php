@@ -174,7 +174,7 @@
 						          //$publickey = "6LflpSITAAAAAPikqL2sdwDFlzQttbjYWq75B5GW"; // you got this from the signup page
 						          //echo recaptcha_get_html($publickey);
 							    ?>
-							    <div class="g-recaptcha" data-sitekey="6LflpSITAAAAAPikqL2sdwDFlzQttbjYWq75B5GW"></div>
+							    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
 							  	</div>
 							  	<button type="submit" class="btn btn-primary">Submit</button>
 							</form>		

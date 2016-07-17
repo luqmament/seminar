@@ -33,7 +33,7 @@ class Mahasiswa extends MY_Controller {
             $this->session->set_flashdata('infoCaptchaRegMhs', 'Please check the the captcha form.');
             $this->frview('v_register_mhs',$data);
         }else{
-            $secretKey = "6LflpSITAAAAAK3d3r4f5lWfywkzH8fgU-zr9SNu";
+            $secretKey = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
             $ip = $_SERVER['REMOTE_ADDR'];
             $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
             $responseKeys = json_decode($response,true);
