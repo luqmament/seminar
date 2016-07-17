@@ -170,6 +170,67 @@ class Seminar extends MY_Controller {
                     }
 
                 break;
+
+                case 1,2 :
+                    if (in_array($intervalThn, $arr_seminar)) {
+                        $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
+
+                        if($id_ticket){
+                            $data = array(
+                                    'id_seminar'    => $id_seminar,
+                                    'id_mahasiswa'  => $id_mahasiswa,
+                                    'id_ticket'     => $id_ticket[0]['id_ticket'],
+                                    'create_date'   => date("Y-m-d H:i:s")
+
+                                );
+
+                            if($this->m_seminar->insertData("order", $data)){
+
+                                $this->m_seminar->updateData("ticket_manual", array("consume" => 1), array('id_ticket' => $id_ticket[0]['id_ticket']));
+                                $this->m_seminar->updateData("seminar", array("sisa_kuota" => ($detail_seminar->sisa_kuota - 1)), array('id_seminar' => $id_seminar));
+                                echo json_encode(array('status' => 'success', 'location' => base_url(), $data));
+                            }
+                            
+                        
+                        }else{
+
+                            echo json_encode(array('status' => 'error', 'alert' => 'Maaf ada kesalahan, silahkan check ke bagian IT'));   
+
+                        }
+                    }else if($detail_seminar->semester_seminar == 'all'){
+                        $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
+
+                        if($id_ticket){
+                            $data = array(
+                                    'id_seminar'    => $id_seminar,
+                                    'id_mahasiswa'  => $id_mahasiswa,
+                                    'id_ticket'     => $id_ticket[0]['id_ticket'],
+                                    'create_date'   => date("Y-m-d H:i:s")
+
+                                );
+
+                            if($this->m_seminar->insertData("order", $data)){
+
+                                $this->m_seminar->updateData("ticket_manual", array("consume" => 1), array('id_ticket' => $id_ticket[0]['id_ticket']));
+                                $this->m_seminar->updateData("seminar", array("sisa_kuota" => ($detail_seminar->sisa_kuota - 1)), array('id_seminar' => $id_seminar));
+                                echo json_encode(array('status' => 'success', 'location' => base_url(), $data));
+                            }
+                            
+                        
+                        }else{
+                            echo json_encode(array('status' => 'error', 'alert' => 'Maaf ada kesalahan, silahkan check ke bagian IT'));   
+                        }
+                    }else{
+                        if($detail_seminar->untuk_kelas == 2){
+                            $kelas = 'paralel' ;
+                        }else if($detail_seminar->untuk_kelas == 1){
+                            $kelas = 'Reguler' ;
+                        }else{
+                            $kelas = 'Reguler dan Paralel' ;
+                        }
+                        echo json_encode(array('status' => 'error', 'alert' => 'Maaf seminar untuk semester '.$detail_seminar->semester_seminar. ' dan kelas '. $kelas));   
+                    }
+                break;
             }
         }
 
