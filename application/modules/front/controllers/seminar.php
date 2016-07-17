@@ -49,8 +49,8 @@ class Seminar extends MY_Controller {
         if($checkOrderSeminar){
             echo json_encode(array('status' => 'error', 'alert' => 'Maaf , anda pernah mengikuti seminar berikut'));
         }else{
-            switch ($detail_mahasiswa->tipe_mahasiswa) {
-                case 1 :
+            switch ($detail_seminar->untuk_kelas) {
+                case '1' :
                     if (in_array($intervalThn, $arr_seminar)) {
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
 
@@ -76,7 +76,7 @@ class Seminar extends MY_Controller {
                             echo json_encode(array('status' => 'error', 'alert' => 'Maaf ada kesalahan, silahkan check ke bagian IT'));   
 
                         }
-                    }else if($detail_seminar->semester_seminar == 'all'  && $detail_seminar->untuk_kelas == 1){
+                    }else if($detail_seminar->semester_seminar == 'all'  && $detail_mahasiswa->tipe_mahasiswa == 1){
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
 
                         if($id_ticket){
@@ -111,7 +111,7 @@ class Seminar extends MY_Controller {
                     }
                 break;
                 
-                case 2 :
+                case '2' :
                     if (in_array($intervalThn, $arr_seminar)) {
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
 
@@ -137,7 +137,7 @@ class Seminar extends MY_Controller {
                             echo json_encode(array('status' => 'error', 'alert' => 'Maaf ada kesalahan, silahkan check ke bagian IT'));   
 
                         }
-                    }else if($detail_seminar->semester_seminar == 'all' && $detail_seminar->untuk_kelas == 2){
+                    }else if($detail_seminar->semester_seminar == 'all' && $detail_mahasiswa->tipe_mahasiswa == 2){
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
 
                         if($id_ticket){
@@ -171,7 +171,7 @@ class Seminar extends MY_Controller {
 
                 break;
 
-                case 1,2 :
+                default:
                     if (in_array($intervalThn, $arr_seminar)) {
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
 
@@ -230,7 +230,6 @@ class Seminar extends MY_Controller {
                         }
                         echo json_encode(array('status' => 'error', 'alert' => 'Maaf seminar untuk semester '.$detail_seminar->semester_seminar. ' dan kelas '. $kelas));   
                     }
-                break;
             }
         }
 
