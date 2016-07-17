@@ -21,6 +21,7 @@
 		<div class="text-center" style="margin-top:20px; font-size: 38px; letter-spacing:5px;"> KULIAH UMUM TATA KELOLA TEKHNIK INFORMATIKA</div>
 		<div class="text-center" style="margin-top:20px; letter-spacing:5px;"> Diselenggarakan Oleh :</div>
 		<div class="text-center" style="margin-top:20px; font-size:24px; letter-spacing:5px;"> Event Organizer Seminar</div>
+		<div class="text-center" style="margin-top:20px; font-size:24px; letter-spacing:5px;"> 23 desember 2016</div>
 	</div>
 
 </div>

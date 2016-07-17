@@ -195,7 +195,7 @@ $(document).ready(function(){
 	})
 	  .trigger( "change" );
 	$('#jadwal_seminar').datetimepicker({
-		format: 'DD MMMM YYYY HH:mm',
+		format: 'YYYY-MM-DD HH:mm',
 		locale : 'id'
 	});
 
