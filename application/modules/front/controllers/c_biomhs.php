@@ -193,6 +193,116 @@ class C_biomhs extends MY_Controller {
         }
         
     }
+
+    public function list_seminar(){
+        //pagination settings
+        $id_mahasiswa = $this->sessionData['id_mahasiswa'];
+        $data['listSeminar_mahasiswa']   = array();
+        $config['base_url']     = site_url('front/c_biomhs/list_seminar');
+        $config['total_rows']   = $this->m_register->count_seminar($id_mahasiswa);
+        $config['per_page']     = "2";
+        $config["uri_segment"]  = 4;
+        $choice                 = $config["total_rows"] / $config["per_page"];
+        $config["num_links"]    = floor($choice);
+        
+        //config for bootstrap pagination class integration
+        $config['full_tag_open']    = '<ul class="pagination">';
+        $config['full_tag_close']   = '</ul>';
+        $config['first_link']       = false;
+        $config['last_link']        = false;
+        $config['first_tag_open']   = '<li>';
+        $config['first_tag_close']  = '</li>';
+        $config['prev_link']        = '&laquo';
+        $config['prev_tag_open']    = '<li class="prev">';
+        $config['prev_tag_close']   = '</li>';
+        $config['next_link']        = '&raquo';
+        $config['next_tag_open']    = '<li>';
+        $config['next_tag_close']   = '</li>';
+        $config['last_tag_open']    = '<li>';
+        $config['last_tag_close']   = '</li>';
+        $config['cur_tag_open']     = '<li class="active"><a href="#">';
+        $config['cur_tag_close']    = '</a></li>';
+        $config['num_tag_open']     = '<li>';
+        $config['num_tag_close']    = '</li>';
+        
+        $this->pagination->initialize($config);
+        $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+        
+        //call the model function to get the department data
+        $data['start']          = $this->uri->segment(4, 0);
+        $data['listSeminar_mahasiswa']   = $this->m_register->list_seminarMHS($config["per_page"],$data['page'], $id_mahasiswa);
+        
+        $data['pagination'] = $this->pagination->create_links();
+        //echo '<pre>',print_r($data);
+
+        $this->frview('v_list_seminar_mhs', $data);
+    }
+
+    public function cetak_ticket($id_order = ''){
+    //$id_order = $this->input->get('id_order');
+    $data['ticket_seminar'] = array();
+    $data['ticket_seminar'] = $this->m_register->ticket_seminar($id_order);
+    //echo $data['ticket_seminar']->serial;
+    //echo '<pre>',print_r($data);
+    $this->load->library('Barcode39');
+    $bc = new Barcode39($data['ticket_seminar']->serial); 
+    $bc->draw(trim($data['ticket_seminar']->serial.".gif"));
+    //$this->load->view('print_test', $data);
+    include_once APPPATH.'/third_party/mpdf/mpdf.php';
+    $html = $this->load->view('ticket', $data, true);
+    $this->mpdf = new mPDF('utf-8', array(250,80));
+    $file_name = $data['ticket_seminar']->tema_seminar.'-'.$data['ticket_seminar']->nim_mahasiswa;
+
+    $stylesheet = file_get_contents('http://localhost/seminar/assets/frontend/css/print_ticket.css');// external css
+    $this->mpdf->WriteHTML($stylesheet,1);
+    $this->mpdf->WriteHTML($html);
+    $this->mpdf->Output($file_name, 'D'); // download force
+    $this->mpdf->Output($file_name, 'I'); // view in the explorer
+
+    }
+
+    public function cetak_sertifikat($id_order = ''){
+    //$id_order = $this->input->get('id_order');
+    $data['ticket_seminar'] = array();
+    $data['ticket_seminar'] = $this->m_register->ticket_seminar($id_order);
+    //echo $data['ticket_seminar']->serial;
+    //echo '<pre>',print_r($data);
+   /* $this->load->library('Barcode39');
+    $bc = new Barcode39($data['ticket_seminar']->serial); 
+    $bc->draw(trim($data['ticket_seminar']->serial.".gif"));*/
+    $this->load->view('sertifikat', $data);
+    /*include_once APPPATH.'/third_party/mpdf/mpdf.php';
+    $html = $this->load->view('sertifikat', $data, true);
+    $this->mpdf = new mPDF('utf-8', array(250,80));
+    $file_name = $data['ticket_seminar']->tema_seminar.'-'.$data['ticket_seminar']->nim_mahasiswa;
+
+    $stylesheet = file_get_contents('http://localhost/seminar/assets/frontend/css/print_ticket.css');// external css
+    $this->mpdf->WriteHTML($stylesheet,1);
+    $this->mpdf->WriteHTML($html);
+    $this->mpdf->Output($file_name, 'D'); // download force
+    $this->mpdf->Output($file_name, 'I'); // view in the explorer*/
+
+    }
+
+    public function Make_PDF($view, $data, $file_name) {
+        include_once APPPATH.'/third_party/mpdf/mpdf.php';
+        $html = $this->load->view($view, $data, true);
+        $this->mpdf = new mPDF();
+        $this->stylesheet = file_get_contents('css/style.css');
+        $this->mpdf->AddPage('L', // L - landscape, P - portrait
+                '', '', '', '',
+                70, // margin_left
+                30, // margin right
+                30, // margin top
+                30, // margin bottom
+                18, // margin header
+                12); // margin footer
+        $this->mpdf->WriteHTML($html);
+        //$this->mpdf->Output($file_name, 'D'); // download force
+        $this->mpdf->Output($file_name, 'I'); // view in the explorer
+
+        // for more information rhonalejandro@gmail.com
+    }
 }
 
 /* End of file users.php */

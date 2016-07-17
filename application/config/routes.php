@@ -55,6 +55,7 @@ $route['login'] 					= 'front/mahasiswa';
 $route['logout'] 					= 'front/mahasiswa/logout';
 $route['mahasiswa-dashboard'] 		= 'front/c_biomhs';
 $route['update-mahasiswa'] 			= 'front/c_biomhs/update_mahasiswa';
+$route['list-seminar'] 				= 'front/c_biomhs/list_seminar';
 $route['seminar'] 					= 'front/seminar';
 
 $route['404_override']          = '';

@@ -15,78 +15,36 @@
 			</div>
 			<div class="col-md-9" style="font-size : 14px ;font-family : tahoma">
 				<div class="panel panel-default">
-				  <div class="panel-heading"><h4>Detail Mahasiswa</h4></div>
+				  <div class="panel-heading"><h4>List Seminar</h4></div>
 				  <div class="panel-body">
-				    	<table class="table table-bordered" style="font-weight : bold ; font-size: 16px ; color : #fff">
-				    	<?php $session_mhs = $this->session->userdata('CMS_mahasiswa');
-				    		?>
-				    		<tr>
-				    			<td>NIM</td>
-				    			<td><?php echo $session_mhs['nim_mahasiswa']?></td>
-				    			<td rowspan="6" style="text-align : center ; width : 200px">
-				    			
-				    			<img class="img-thumbnail" style="max-width: 150px" src="<?php echo $session_mhs['photo_mahasiswa']?>">
-				    			</td>
-				    		</tr>
-				    		<tr>
-				    			<td>Nama Lengkap</td>
-				    			<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-				    		</tr>
-				    		<tr>
-				    			<td>Fakultas</td>
-				    			<td><?php echo $session_mhs['nama_fakultas']?></td>
-				    		</tr>
-				    		<tr>
-				    			<td>Fakultas</td>
-				    			<td><?php echo $session_mhs['nama_jurusan']?></td>
-				    		</tr>
-				    		<tr>
-				    			<td>Email</td>
-				    			<td><?php echo $session_mhs['email_mahasiswa']?></td>
-				    		</tr>
-				    		<tr>
-				    			<td>Telp</td>
-				    			<td><?php echo $session_mhs['telp_mahasiswa']?></td>
-				    		</tr>
-				    		<tr>
-				    			<td>Alamat</td>
-				    			<td><?php echo $session_mhs['alamat_mahasiswa']?></td>
-				    		</tr>
-				    		<tr>
-				    			<td>Periode Masuk</td>
-				    			<td>Semester <?php echo $session_mhs['semester_mahasiswa'].' '.$session_mhs['tahun_masuk']?></td>
-				    		</tr>
-				    		<tr>
-				    			<td>Kelas</td>
-				    			<td><?php echo ($session_mhs['tipe_mahasiswa'] == 1 ? "Reguler" : "Paralel")?></td>
-				    		</tr>
-				    		<tr>
-				    			<td>Semester</td>
-				    			<td>
-				    			<?php 
-				    				$tahun_masuk	= $session_mhs['tahun_masuk'] ;
-				    				$now		 	= date('Y');
-				    				$bulan			= date('m');
-				    				$intervalThn 	= $now - $tahun_masuk + 1;
+				    	<table class="table table-bordered">
+				    		
+				    		<thead>
+				    			<th>No</th>
+				    			<th>Nama seminar</th>
+				    			<th>Tanggal seminar</th>
+				    			<th>Lokasi seminar</th>
+				    			<th>Pembicara seminar</th>
+				    			<th>Action seminar</th>
+				    		</thead>
+				    		<?php foreach ($listSeminar_mahasiswa as $key => $value) { ?>
+				    			<tr>
+					    			<td><?php echo ++$start?></td>
+					    			<td><?php echo $value['tema_seminar']?></td>
+					    			<td><?php echo $value['jadwal_seminar']?></td>
+					    			<td><?php echo $value['tempat_seminar']?></td>
+					    			<td><?php echo $value['pembicara_seminar']?></td>
+					    			<td class="text-center"><a href="<?php echo site_url('front/c_biomhs/cetak_ticket/'.$value['id_order'])?>"><i class="glyphicon glyphicon-print" aria-hidden="true"></i> Ticket </a> | <a href="<?php echo site_url('front/c_biomhs/cetak_sertifikat/'.$value['id_order'])?>"> <i class="glyphicon glyphicon-print" aria-hidden="true"></i> Sertifikat </a></td>
+					    		</tr>
+				    		<?php } ?>
 
-				    				if($session_mhs['semester_mahasiswa'] == 'ganjil'){
-				    					if(($bulan - 2) <= 6){
-				    						$intervalThn = ($intervalThn * 2 ) - 2;
-				    					}else{
-				    						$intervalThn = ($intervalThn * 2 ) - 1;
-				    					}				    					
-				    				}else{
-				    					if(($bulan - 2) <= 6){
-				    						$intervalThn = ($intervalThn * 2 ) - 2;
-				    					}else{
-				    						$intervalThn = ($intervalThn * 2 ) - 1;
-				    					}
-				    				}
-				    				echo $intervalThn;
-				    			?></td>
-				    		</tr>
 						</table>
 				  </div>
+				  <div class="row">
+						<div class="col-md-12 text-center">
+							<?php echo $pagination; ?>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

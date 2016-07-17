@@ -20,6 +20,7 @@ class M_fakultas extends CI_Model {
 	$res = $this->db->insert($tabelName,$data);	
 	return $res;    
     }
+    
     function list_dataFakultas($limit, $start){
 	$this->db->limit($limit , $start);
 	$list = $this->db->get('fakultas');

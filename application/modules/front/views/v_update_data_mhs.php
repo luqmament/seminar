@@ -8,6 +8,7 @@
 					<a href="<?php echo site_url('mahasiswa-dashboard')?>" class="list-group-item active">Aksi Cepat</a>
 					<a href="<?php echo site_url('mahasiswa-dashboard')?>" class="list-group-item">Detail Mahasiswa</a>
 					<a href="<?php echo site_url('update-mahasiswa')?>" class="list-group-item">Edit Mahasiswa</a>
+					<a href="<?php echo site_url('list-seminar')?>" class="list-group-item">List Seminar Mahasiswa</a>
 					<a href="#" class="list-group-item">Porta ac consectetur ac</a>
 					<a href="#" class="list-group-item">Vestibulum at eros</a>
 				</div>
