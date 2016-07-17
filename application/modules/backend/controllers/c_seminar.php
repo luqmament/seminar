@@ -149,7 +149,13 @@ class C_seminar extends MY_Controller {
 	   	foreach ($semester_seminar as $key => $value) {
 	   		$semester_seminar		.= $value.','; 
 	   	}
-	   	$semester_seminar			= rtrim(trim($semester_seminar,"Array"),",") ;
+        $arr_semester_seminar = explode(",", $semester_seminar);
+	   	if (in_array('Arrayall', $arr_semester_seminar)) {
+            $semester_seminar           = 'all' ;
+        }else{
+            $semester_seminar           = rtrim(trim($semester_seminar,"Array"),",") ;    
+        }
+        
 
 	    /*$jurusan_seminar			= $post['nama_jurusan'];
 	    foreach ($jurusan_seminar as $key => $value) {

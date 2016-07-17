@@ -25,6 +25,7 @@ class M_seminar extends CI_Model {
 	    $this->db->select('s.*');
 	    $this->db->from('seminar s');
         $this->db->limit($limit , $start);
+        $this->db->order_by('id_seminar', 'desc');
         $query =  $this->db->get();
         if($query->num_rows() > 0){
             return $query->result_array();
