@@ -24,6 +24,16 @@
 			<td>:</td>
 			<td><?php echo $ticket_seminar->pembicara_seminar?></td>
 		</tr>
+		<tr>
+			<td>Nama Mahasiswa</td>
+			<td>:</td>
+			<td><?php echo $ticket_seminar->nama_depan.' '. $ticket_seminar->nama_belakang?></td>
+		</tr>
+		<tr>
+			<td>NIM Mahasiswa</td>
+			<td>:</td>
+			<td><?php echo $ticket_seminar->nim_mahasiswa?></td>
+		</tr>
 	</table>
 	
 </div>

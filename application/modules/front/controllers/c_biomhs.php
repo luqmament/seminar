@@ -250,38 +250,46 @@ class C_biomhs extends MY_Controller {
     //$this->load->view('print_test', $data);
     include_once APPPATH.'/third_party/mpdf/mpdf.php';
     $html = $this->load->view('ticket', $data, true);
-    $this->mpdf = new mPDF('utf-8', array(250,80));
+    $this->mpdf = new mPDF('utf-8', array(250,100));
     $file_name = $data['ticket_seminar']->tema_seminar.'-'.$data['ticket_seminar']->nim_mahasiswa;
 
     $stylesheet = file_get_contents('http://localhost/seminar/assets/frontend/css/print_ticket.css');// external css
     $this->mpdf->WriteHTML($stylesheet,1);
     $this->mpdf->WriteHTML($html);
-    $this->mpdf->Output($file_name.'pdf', 'D'); // download force
-    $this->mpdf->Output($file_name.'pdf', 'I'); // view in the explorer
+    $this->mpdf->Output($file_name.'.pdf', 'D'); // download force
+    $this->mpdf->Output($file_name.'.pdf', 'I'); // view in the explorer
 
     }
 
     public function cetak_sertifikat($id_order = ''){
     //$id_order = $this->input->get('id_order');
+    include_once APPPATH.'/third_party/mpdf/mpdf.php';
     $data['ticket_seminar'] = array();
     $data['ticket_seminar'] = $this->m_register->ticket_seminar($id_order);
     //echo $data['ticket_seminar']->serial;
     //echo '<pre>',print_r($data);
-   /* $this->load->library('Barcode39');
+    $this->load->library('Barcode39');
     $bc = new Barcode39($data['ticket_seminar']->serial); 
-    $bc->draw(trim($data['ticket_seminar']->serial.".gif"));*/
-    $this->load->view('sertifikat', $data);
-    /*include_once APPPATH.'/third_party/mpdf/mpdf.php';
+    $bc->draw(trim($data['ticket_seminar']->serial.".gif"));
+    //$this->load->view('sertifikat', $data);
+    $file_name = 'SERTIFIKAT-'.$data['ticket_seminar']->tema_seminar.'-'.$data['ticket_seminar']->nim_mahasiswa.'.pdf';
     $html = $this->load->view('sertifikat', $data, true);
-    $this->mpdf = new mPDF('utf-8', array(250,80));
-    $file_name = $data['ticket_seminar']->tema_seminar.'-'.$data['ticket_seminar']->nim_mahasiswa;
+    $this->mpdf = new mPDF();
+    $stylesheet = file_get_contents('http://localhost/seminar/assets/frontend/css/bootstrap.css');// external css
 
-    $stylesheet = file_get_contents('http://localhost/seminar/assets/frontend/css/print_ticket.css');// external css
-    $this->mpdf->WriteHTML($stylesheet,1);
+    $this->mpdf->AddPage('L', // L - landscape, P - portrait
+            '', '', '', '',
+            10, // margin_left
+            10, // margin right
+            10, // margin top
+            10, // margin bottom
+            18, // margin header
+            12); // margin footer
     $this->mpdf->WriteHTML($html);
     $this->mpdf->Output($file_name, 'D'); // download force
-    $this->mpdf->Output($file_name, 'I'); // view in the explorer*/
+    $this->mpdf->Output($file_name, 'I'); // view in the explorer
 
+    // for more information rhonalejandro@gmail.com
     }
 
     public function Make_PDF($view, $data, $file_name) {
