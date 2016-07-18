@@ -141,7 +141,7 @@ class C_biomhs extends MY_Controller {
         }
         
     }
-     private function upload_image($image) {
+    private function upload_image($image) {
         $data                   = array();
         $config['upload_path'] = FCPATH.'assets/uploads/mahasiswa';
         if (!is_dir($config['upload_path'])) {
