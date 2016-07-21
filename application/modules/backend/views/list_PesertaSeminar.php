@@ -9,7 +9,7 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Seminar</h1>
+				<h1 class="page-header">Peserta Seminar</h1>
 			</div>
 		</div><!--/.row-->
 				
@@ -17,7 +17,9 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading"><a href="<?php echo site_url('backend/c_seminar/v_seminar')?>" class="btn btn-primary">Add Seminar</a></div>
+					<div class="panel-heading">
+					
+					</div>
 					<?php if($this->session->flashdata('infoSeminar')){ ?>
 						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -38,44 +40,25 @@
 					<?php } ?>
 					<div class="panel-body">
 						<table class="table table-bordered table-hover">
-							<thead>
-							  <tr>
-								<th>No</th>
-								<th>Tema Seminar</th>
-								<th>Jadwal Seminar</th>
-								<th>Pembicara Seminar</th>
-								<th>Tempat Seminar</th>
-								<th>Kuota Seminar</th>
-								<th>Sisa Kuota</th>
-								<th>Kelas Seminar</th>
-								<th>Semester Seminar</th>
-								<th>Peserta Seminar</th>
-								<th>Status Seminar</th>								
-								<th>Action</th>
-							  </tr>
-							</thead>
-							<tbody>
-							<?php
-							foreach($listSeminar as $key => $value): ?>
-							<tr>
-								<td><?php echo ++$start ?></td>
-								<td><?php echo $value['tema_seminar'] ?></td>
-								<td><?php echo $value['jadwal_seminar'] ?></td>	
-								<td><?php echo $value['pembicara_seminar'] ?></td>	
-								<td><?php echo $value['tempat_seminar'] ?></td>	
-								<td><?php echo $value['kuota_seminar'] ?></td>	
-								<td><?php echo $value['sisa_kuota'] ?></td>	
-								<td><?php echo $value['untuk_kelas'] ?></td>	
-								<td><?php echo $value['semester_seminar'] ?></td>
-								<td><?php if(!empty($value['list_peserta'])){?><a href="<?php echo site_url('backend/c_seminar/listPeserta/'.$value['id_seminar'])?>" target="_blank">List Peserta</a><?php }?></td>	
-								<td><?php echo (($value['status_seminar'] == 1) ? '<span class="label label-success">Active</span>' : '<span class="label label-danger">Non Active</span>' ); ?></td>								
-								<td class="text-center">
-								    <a href="<?php echo site_url('backend/c_seminar/v_seminar/'.$value['id_seminar'])?>" >Edit</a>  
-								    | <a id="delete_seminar" id_delete_seminar="<?php echo $value['id_seminar']?>" >Delete</td>
-							</tr>
-							<?php endforeach;  ?>
-							</tbody>
-						</table>
+				        	<tr>
+				        		<th>Kehadiran</th>
+				        		<th>Nama Peserta</th>
+				        		<th>NIM Peserta</th>
+				        		<th>Ticket Peserta</th>
+				        		<th>Tema Seminar</th>
+				        	</tr>
+				        	<form action="<?php echo site_url('backend/c_fakultas/submit_fakultas')?>" method="post" id="form_fakultas">
+				        	<?php foreach ($list_peserta as $keyList => $Listvalue): ?>
+				        	<tr>			        	
+				        		<td><input type="checkbox" name="order[]" id="peserta_<?php echo $Listvalue['id_order']?>" onclick="chkPeserta(<?php echo $Listvalue['id_order']?>)"></td>
+				        		<td><?php echo $Listvalue['nama_depan'].' '.$Listvalue['nama_belakang']?></td>
+				        		<td><?php echo $Listvalue['nim_mahasiswa']?></td>
+				        		<td><?php echo $Listvalue['serial']?></td>
+				        		<td><?php echo $Listvalue['tema_seminar']?></td>
+				        	</tr>
+				        	<?php endforeach;?>
+				        </table>
+				        </form>
 					</div>
 					<div class="row">
 						<div class="col-md-12 text-center">
@@ -138,4 +121,36 @@ $(document).on("click","#delete_jurusan_fakultas", function(){
             });
         }
     })
+
+function chkPeserta(id_order){
+    var chkPeserta;
+
+    if(document.getElementById("peserta_"+id_order).checked == true){
+        chkPeserta = 1;
+    }else{
+        chkPeserta = 0;
+    }
+
+    $.ajax({
+
+        type: "POST",
+        data: {"id":id_order, "chk":chkPeserta},
+        url: base_url+"backend/c_seminar/change_kehadiran_peserta_seminar",
+        dataType: "json",
+
+        success: function(res){
+        	switch(res.status){
+        		case 'success' :
+        			alert('Hadir') ;
+        		break;
+
+        		default:
+        			alert('Tidak Hadir');
+        		break;
+        	}    
+        }
+
+    });
+
+}
 </script>

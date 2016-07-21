@@ -37,7 +37,7 @@ class C_seminar extends MY_Controller {
         $config["uri_segment"] 	= 4;
         $choice 				= $config["total_rows"] / $config["per_page"];
         $config["num_links"] 	= floor($choice);
-        
+        //$config['use_page_numbers']  = TRUE;
         //config for bootstrap pagination class integration
         $config['full_tag_open']	= '<ul class="pagination">';
         $config['full_tag_close']	= '</ul>';
@@ -64,7 +64,9 @@ class C_seminar extends MY_Controller {
         //call the model function to get the department data
 		$data['start'] 			= $this->uri->segment(4, 0);
         $data['listSeminar'] 	= $this->m_seminar->list_dataSeminar($config["per_page"],$data['page']);
-        
+        foreach ($data['listSeminar'] as $key => $value) {
+            $data['listSeminar'][$key]['list_peserta'] = $this->m_seminar->list_PesertaSeminar($value['id_seminar']);
+        }
 		$data['pagination'] = $this->pagination->create_links();
         $this->doview('list_seminar', $data);
     }
@@ -87,6 +89,15 @@ class C_seminar extends MY_Controller {
         $this->doview('v_seminar', $data);
     
     }
+    public function listPeserta($id_seminar = ''){
+        $data                   = array();
+        $data['list_peserta'] = $this->m_seminar->list_PesertaSeminar($id_seminar);
+
+        //echo '<pre>',print_r($data);die();
+        $this->doview('list_PesertaSeminar', $data);
+    
+    }
+
     public function submit_seminar(){
 	$data   = array();
 	$data['listfakultas'] 	= $this->m_seminar->getAllDataFakultas();
@@ -358,5 +369,25 @@ class C_seminar extends MY_Controller {
         }
         
     }
+    function change_kehadiran_peserta_seminar(){
+        $id     = $this->input->post('id');
+        $chk    = $this->input->post('chk');
+        $status = "";
+
+        switch ($chk) {
+            case 1 :
+                $this->general_model->updateData('order', array('used_sertifikat' => $chk), array('id_order' => $id));
+                $status = "success";
+            break;
+            
+            case 0 :
+                $this->general_model->updateData('order', array('used_sertifikat' => $chk), array('id_order' => $id));
+                $status = "failed";
+            break;
+        }
+        echo json_encode(array('status' => $status));
+        
+    }
+
 }
 ?>

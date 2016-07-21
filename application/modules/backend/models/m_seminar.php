@@ -33,6 +33,21 @@ class M_seminar extends CI_Model {
         	return array() ;
         }
     }
+
+    function list_PesertaSeminar($id_seminar){
+	    $this->db->select('ord.*, m.*, smr.*,tk.*');
+        $this->db->from('order ord');
+        $this->db->join('mahasiswa m', 'ord.id_mahasiswa = m.id_mahasiswa');
+        $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
+        $this->db->join('ticket_manual tk', 'ord.id_ticket = tk.id_ticket');
+        $this->db->where('smr.id_seminar', $id_seminar);
+        $query =  $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        }else{
+            return array();
+        }
+    }
     
     function detailJurusanFakultas($idJurusanFakultas){
 	$this->db->where('id_jurusan_fakultas', $idJurusanFakultas); 
@@ -45,7 +60,7 @@ class M_seminar extends CI_Model {
     }
     
     public function UpdateJurusanFakultas($tabelName,$data,$where){
-	$res = $this->db->update($tabelName,$data,$where);	
+		$res = $this->db->update($tabelName,$data,$where);	
 	return $res;			    
     }
     

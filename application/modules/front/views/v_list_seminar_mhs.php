@@ -34,7 +34,7 @@
 					    			<td><?php echo $value['jadwal_seminar']?></td>
 					    			<td><?php echo $value['tempat_seminar']?></td>
 					    			<td><?php echo $value['pembicara_seminar']?></td>
-					    			<td class="text-center"><a href="<?php echo site_url('front/c_biomhs/cetak_ticket/'.$value['id_order'])?>"><i class="glyphicon glyphicon-print" aria-hidden="true"></i> Ticket </a> | <a href="<?php echo site_url('front/c_biomhs/cetak_sertifikat/'.$value['id_order'])?>"> <i class="glyphicon glyphicon-print" aria-hidden="true"></i> Sertifikat </a></td>
+					    			<td class="text-center"><a href="<?php echo site_url('front/c_biomhs/cetak_ticket/'.$value['id_order'])?>"><i class="glyphicon glyphicon-print" aria-hidden="true"></i> Ticket </a> | <?php if($value['used_sertifikat'] == 1){?> <a href="<?php echo site_url('front/c_biomhs/cetak_sertifikat/'.$value['id_order'])?>"> <i class="glyphicon glyphicon-print" aria-hidden="true"></i> Sertifikat </a><?php } ?></td>
 					    		</tr>
 				    		<?php } ?>
 
