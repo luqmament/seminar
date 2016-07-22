@@ -200,7 +200,7 @@ class C_biomhs extends MY_Controller {
         $data['listSeminar_mahasiswa']   = array();
         $config['base_url']     = site_url('front/c_biomhs/list_seminar');
         $config['total_rows']   = $this->m_register->count_seminar($id_mahasiswa);
-        $config['per_page']     = "2";
+        $config['per_page']     = "5";
         $config["uri_segment"]  = 4;
         $choice                 = $config["total_rows"] / $config["per_page"];
         $config["num_links"]    = floor($choice);
@@ -229,7 +229,7 @@ class C_biomhs extends MY_Controller {
         $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         
         //call the model function to get the department data
-        $data['start']          = $this->uri->segment(4, 0);
+        $data['start']          = $this->uri->segment(4,0);
         $data['listSeminar_mahasiswa']   = $this->m_register->list_seminarMHS($config["per_page"],$data['page'], $id_mahasiswa);
         
         $data['pagination'] = $this->pagination->create_links();
