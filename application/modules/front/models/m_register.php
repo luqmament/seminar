@@ -97,9 +97,11 @@ class M_register extends CI_Model {
     }
 
     function count_seminar($id_mahasiswa){
-        $this->db->select('id_order');
-        $this->db->where('id_mahasiswa', $id_mahasiswa);
-        $query = $this->db->get('order');
+        $this->db->select('ord.id_order');
+        $this->db->from('order ord');
+        $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
+        $this->db->where('ord.id_mahasiswa', $id_mahasiswa);
+        $query = $this->db->get();
         if ($query->num_rows() > 0) {
             return $query->num_rows();
         }else{

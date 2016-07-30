@@ -70,13 +70,13 @@
 				    				$intervalThn 	= $now - $tahun_masuk + 1;
 
 				    				if($session_mhs['semester_mahasiswa'] == 'ganjil'){
-				    					if(($bulan - 2) <= 6){
-				    						$intervalThn = ($intervalThn * 2 ) - 2;
-				    					}else{
+				    					if(($bulan) <= 6){
 				    						$intervalThn = ($intervalThn * 2 ) - 1;
+				    					}else{
+				    						$intervalThn = ($intervalThn * 2 );
 				    					}				    					
 				    				}else{
-				    					if(($bulan - 2) <= 6){
+				    					if(($bulan) <= 6){
 				    						$intervalThn = ($intervalThn * 2 ) - 2;
 				    					}else{
 				    						$intervalThn = ($intervalThn * 2 ) - 1;

@@ -37,23 +37,60 @@
 
 <div style="padding: 60px 0">
 	<div class="container">
-			<div class="col-md-9">
+		<div class="col-md-7">
 			<h2 class="tittle">DAFTAR SEMINAR</h2>
 			<?php
 				//echo "<pre>", print_r($seminar);
-				foreach ($seminar as $key => $value): 
+				foreach ($seminar as $key => $value):
 			?>
-				<div class="col-md-4">
-					<div class="panel panel-default">
-					  <div class="panel-body">
-					  	<p class="title-seminar"><?php echo $value['tema_seminar'] ?></p>
-					    <a href="#" class="thumbnail">
-					      <img src="<?php echo $value['poster_seminar'] ?>" style="height:360px" alt="...">
-					    </a>
-					    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-					  </div>
-					</div>
+				<div class="col-md-12">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <table class="table">
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:250px" alt="...">
+							    </a>
+				    		</td>
+				    		<td>
+				    			<table>
+				    				<tr>
+							    		<td colspan="3" align="center"><b><?php echo $value['tema_seminar'] ?></b></td>
+							    	</tr>
+							    	<tr>
+							    		<td width="160px">Pembicara Seminar</td>
+							    		<td width="10px">:</td>
+							    		<td><?php echo $value['pembicara_seminar'] ?></td>
+							    	</tr>
+							    	<tr>
+							    		<td>Jadwal Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['jadwal_seminar'] ?></td>
+							    	</tr>
+							    	<tr>
+							    		<td>Tempat Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['tempat_seminar'] ?></td>
+							    	</tr>
+							    	<tr>
+							    		<td>Kuota Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['kuota_seminar'] ?></td>
+							    	</tr>			    	
+							    	<tr>
+							    		<td>Semester Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['semester_seminar'] ?></td>
+							    	</tr>
+				    			</table>
+				    		</td>
+				    	</tr>
+				    </table>
+				    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
+				  </div>
 				</div>
+			</div>
 
 			<!-- Modal -->
 			<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
@@ -73,7 +110,7 @@
 					  ?>
 					    <table class="table">
 					    	<tr>
-				    		<td width="160px">Tema Seminar</td>
+				    			<td width="160px">Tema Seminar</td>
 					    		<td width="10px">:</td>
 					    		<td><?php echo $value['tema_seminar'] ?></td>
 					    	</tr>
@@ -97,11 +134,6 @@
 					    		<td>:</td>
 					    		<td><?php echo $value['kuota_seminar'] ?></td>
 					    	</tr>
-					    	<tr>
-					    		<td>Sisa Kuota Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['sisa_kuota'] ?></td>
-					    	</tr>
 							<tr>
 					    		<td>Kelas Seminar</td>
 					    		<td>:</td>
@@ -118,7 +150,7 @@
 									$kelas_seminar = 'Paralel dan Reguler' ;
 								}
 								echo $kelas_seminar ?></td>
-				    		</tr>							
+					    	</tr>
 					    	<tr>
 					    		<td>Semester Seminar</td>
 					    		<td>:</td>
@@ -133,7 +165,7 @@
 					    		<td>Nama Mahasiswa</td>
 					    		<td>:</td>
 					    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-					    	</tr>    	
+					    	</tr>	    	
 					    	<tr>
 					    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
 					    	</tr>
@@ -142,7 +174,7 @@
 					</div>
 			      </div>
 			      <div class="modal-footer">
-			        <button id="btn_seminar_<?php echo $value['id_seminar'];?>" type="button" class="btn btn-primary btn-lg" style="width:100%" sem_id="<?php echo $value['id_seminar'] ?>" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
+			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
 			      </div>
 			    </div>
 
@@ -153,50 +185,60 @@
 				endforeach;
 			?>
 		</div>
-		<!-- Comming soon -->
-		<div class="col-md-3">
-			<h2 class="tittle">Coming Soon</h2>	
-			<div class="row" style="border : 1px solid grey ; background: #c1c1c1 ; border-radius : 5px ; padding : 5px; margin-bottom: 10px">			
-				<!-- baris 1 -->
-		  		<div>
-		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
-				  		<label>Perkembangan masa depan</label>
-				  	</div>
-				    <a href="#" class="thumbnail">
-				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-		  		</div>
-		  		<!-- baris 1 -->
-		  		<div style="border : 1px solid grey ; background: #0066FF ; border-radius : 5px ; padding : 5px ;margin-bottom: 10px">
-		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
-				  		<label>Perkembangan masa depan</label>
-				  	</div>
-				    <a href="#" class="thumbnail">
-				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-		  		</div>
-		  		<!-- baris 1 -->
-		  		<div style="border : 1px solid grey ; background: #0066FF ; border-radius : 5px ; padding : 5px ;margin-bottom: 10px">
-		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
-				  		<label>Perkembangan masa depan</label>
-				  	</div>
-				    <a href="#" class="thumbnail">
-				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-		  		</div>
-		  		<!-- baris 1 -->
-		  		<div style="border : 1px solid grey ; background: #0066FF ; border-radius : 5px ; padding : 5px ;margin-bottom: 10px">
-		  			<div class="title" style="padding: 0 0 20px 0; text-align: center; color: #FFFFFF; font-family: monospace, fantasy;">
-				  		<label>Perkembangan masa depan</label>
-				  	</div>
-				    <a href="#" class="thumbnail">
-				      	<img src="http://localhost/seminar/assets/uploads/poster_seminar/display/250/400/vfxfbsgyza.jpg" style="height:360px" alt="...">
-				    </a>
-		  		</div>
-			
+		<div class="col-md-5">
+			<!-- News -->
+			<div class="col-md-12">
+				<h2 class="tittle">News</h2>	
+				<div class="row" style="border : 1px solid grey ; background: #ffffff ; border-radius : 5px ; padding : 5px; margin-bottom: 10px">			
+					<!-- baris 1 -->
+			  		<table class="table">
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Emotional Spiritual Quotient Training Mahasiswa Baru Universitas Esa Unggul 2016</a></td>
+				    	</tr>
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Himbauan Berkurban di Universitas Esa Unggul 2016</a></td>
+				    	</tr>
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Lomba untuk Mahasiswa Universitas Esa Unggul di Pekan Seni Mahasiswa Daerah Provinsi DKI Jakarta 2016</a></td>
+				    	</tr>
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Esa Unggul Welcoming Day Mahasiswa Baru 2016</a></td>
+				    	</tr>
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Universitas Esa Unggul Gelar Seminar “How to Avoid Game Addictions by Improving Your Creativity” di SMA Methodist, Jakarta</a></td>
+				    	</tr>
+				    </table>
+				
+				</div>
 			</div>
+			<!-- END News -->
 		</div>
-		<!-- END Comming soon -->
+		
 	</div>
 </div>
 
@@ -476,7 +518,6 @@ $(document).ready(function() {
 			alert('Maaf, Anda harus login sebelum mendaftar!');
 			location.href = "<?php echo base_url('login'); ?>";
 		}else{
-			//alert($(this).attr('sem_id'));return false;
 			$.ajax({
 		        type: 'POST',
 		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
@@ -487,22 +528,24 @@ $(document).ready(function() {
 		        },
 		        dataType: 'json',
 		        success: function(results){
-		        	console.log(results);
+		        	//console.log(results);
 	             	if(results.status == "success"){
 		              	alert("Terima kasih, Anda telah terdaftar di seminar");
 		              	location.href = results.location;
 		              	return true;
-	             	}else{
+	             	}else if(results.status == "error"){
 	             		alert(results.alert);
-		              	window.location.reload();
+	             		return false;
+	             	}
+	             	else{
+	             		alert("Maaf, seminar ini tidak bisa diikuti");
+		              	return false;
 	             	}
 
 	             	return false;
 		        }
 	  		});
-		}
-
-		
+		}		
 
 	}
 

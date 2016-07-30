@@ -48,6 +48,7 @@ $route['kategori_user'] = 'backend/c_kategori_user';
 $route['register_user'] = 'backend/c_reg_user';
 $route['fakultas'] 		= 'backend/c_fakultas';
 $route['jurusan-fak'] 	= 'backend/c_jurusan_fak';
+$route['mahasiswa'] 	= 'backend/c_mahasiswa';
 $route['seminar-admin'] = 'backend/c_seminar';
 
 //Management URL link Frontend

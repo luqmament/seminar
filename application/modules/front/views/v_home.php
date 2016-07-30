@@ -90,151 +90,210 @@
 </div> -->
 <div style="padding: 60px 0">
 	<div class="container">
-		<h2 class="tittle">DAFTAR SEMINAR</h2>
-		<?php
-			//echo "<pre>", print_r($seminar);
-			foreach ($seminar as $key => $value):
-		?>
-			<div class="col-md-4">
-			<div class="panel panel-default">
-			  <div class="panel-body">
-			  	<p class="title-seminar-home"><?php echo $value['tema_seminar'] ?></p>
-			    <a href="#" class="thumbnail">
-			      <img src="<?php echo $value['poster_seminar'] ?>" style="height:360px" alt="...">
-			    </a>
-			    <!-- <table class="table">
-			    	<tr>
-			    		<td width="140px">Tema Seminar</td>
-			    		<td width="10px">:</td>
-			    		<td><?php echo $value['tema_seminar'] ?></td>
-			    	</tr>
-			    	<tr>
-			    		<td>Pembicara Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['pembicara_seminar'] ?></td>
-			    	</tr>
-			    	<tr>
-			    		<td>Jadwal Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['jadwal_seminar'] ?></td>
-			    	</tr>
-			    	<tr>
-			    		<td>Tempat Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['tempat_seminar'] ?></td>
-			    	</tr>
-			    	<tr>
-			    		<td>Kuota Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['kuota_seminar'] ?></td>
-			    	</tr>			    	
-			    	<tr>
-			    		<td>Semester Seminar</td>
-			    		<td>:</td>
-			    		<td><?php echo $value['semester_seminar'] ?></td>
-			    	</tr>
-			    </table> -->
-			    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-			  </div>
-			</div>
-		</div>
-
-		<!-- Modal -->
-		<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
-		  <div class="modal-dialog">
-
-		    <!-- Modal content-->
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal">&times;</button>
-		        <h4 class="modal-title">Seminar</h4>
-		      </div>
-		      <div class="modal-body">
-		        <div class="panel panel-default">
+		<div class="col-md-7">
+			<h2 class="tittle">DAFTAR SEMINAR</h2>
+			<?php
+				//echo "<pre>", print_r($seminar);
+				foreach ($seminar as $key => $value):
+			?>
+				<div class="col-md-12">
+				<div class="panel panel-default">
 				  <div class="panel-body">
-				  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
-				  //echo "<pre>",print_r($session_mhs);
-				  ?>
 				    <table class="table">
 				    	<tr>
-			    		<td width="160px">Tema Seminar</td>
-				    		<td width="10px">:</td>
-				    		<td><?php echo $value['tema_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Pembicara Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['pembicara_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Jadwal Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['jadwal_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Tempat Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['tempat_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Kuota Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['kuota_seminar'] ?></td>
-				    	</tr>
-						<tr>
-				    		<td>Kelas Seminar</td>
-				    		<td>:</td>
-				    		<td><?php 
-							switch($value['untuk_kelas']){
-								case '1' :
-								$kelas_seminar = 'Reguler' ;
-								break;
-								
-								case '2' :
-								$kelas_seminar = 'Paralel' ;
-								break;
-								default :
-								$kelas_seminar = 'Paralel dan Reguler' ;
-							}
-							echo $kelas_seminar ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Semester Seminar</td>
-				    		<td>:</td>
-				    		<td><?php echo $value['semester_seminar'] ?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>NIM Mahasiswa</td>
-				    		<td>:</td>
-				    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
-				    	</tr>
-				    	<tr>
-				    		<td>Nama Mahasiswa</td>
-				    		<td>:</td>
-				    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-				    	</tr>	    	
-				    	<tr>
-				    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:250px" alt="...">
+							    </a>
+				    		</td>
+				    		<td>
+				    			<table>
+				    				<tr>
+							    		<td colspan="3" align="center"><b><?php echo $value['tema_seminar'] ?></b></td>
+							    	</tr>
+							    	<tr>
+							    		<td width="160px">Pembicara Seminar</td>
+							    		<td width="10px">:</td>
+							    		<td><?php echo $value['pembicara_seminar'] ?></td>
+							    	</tr>
+							    	<tr>
+							    		<td>Jadwal Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['jadwal_seminar'] ?></td>
+							    	</tr>
+							    	<tr>
+							    		<td>Tempat Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['tempat_seminar'] ?></td>
+							    	</tr>
+							    	<tr>
+							    		<td>Kuota Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['kuota_seminar'] ?></td>
+							    	</tr>			    	
+							    	<tr>
+							    		<td>Semester Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['semester_seminar'] ?></td>
+							    	</tr>
+				    			</table>
+				    		</td>
 				    	</tr>
 				    </table>
+				    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
 				  </div>
 				</div>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
-		      </div>
-		    </div>
+			</div>
 
-		  </div>
+			<!-- Modal -->
+			<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Seminar</h4>
+			      </div>
+			      <div class="modal-body">
+			        <div class="panel panel-default">
+					  <div class="panel-body">
+					  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
+					  //echo "<pre>",print_r($session_mhs);
+					  ?>
+					    <table class="table">
+					    	<tr>
+				    			<td width="160px">Tema Seminar</td>
+					    		<td width="10px">:</td>
+					    		<td><?php echo $value['tema_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Pembicara Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['pembicara_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Jadwal Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['jadwal_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Tempat Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['tempat_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Kuota Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['kuota_seminar'] ?></td>
+					    	</tr>
+							<tr>
+					    		<td>Kelas Seminar</td>
+					    		<td>:</td>
+					    		<td><?php 
+								switch($value['untuk_kelas']){
+									case '1' :
+									$kelas_seminar = 'Reguler' ;
+									break;
+									
+									case '2' :
+									$kelas_seminar = 'Paralel' ;
+									break;
+									default :
+									$kelas_seminar = 'Paralel dan Reguler' ;
+								}
+								echo $kelas_seminar ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Semester Seminar</td>
+					    		<td>:</td>
+					    		<td><?php echo $value['semester_seminar'] ?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>NIM Mahasiswa</td>
+					    		<td>:</td>
+					    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
+					    	</tr>
+					    	<tr>
+					    		<td>Nama Mahasiswa</td>
+					    		<td>:</td>
+					    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
+					    	</tr>	    	
+					    	<tr>
+					    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
+					    	</tr>
+					    </table>
+					  </div>
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+
+			<?php		
+				endforeach;
+			?>
 		</div>
-
-		<?php		
-			endforeach;
-		?>
+		<div class="col-md-5">
+			<!-- News -->
+			<div class="col-md-12">
+				<h2 class="tittle">News</h2>	
+				<div class="row" style="border : 1px solid grey ; background: #ffffff ; border-radius : 5px ; padding : 5px; margin-bottom: 10px">			
+					<!-- baris 1 -->
+			  		<table class="table">
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Emotional Spiritual Quotient Training Mahasiswa Baru Universitas Esa Unggul 2016</a></td>
+				    	</tr>
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Himbauan Berkurban di Universitas Esa Unggul 2016</a></td>
+				    	</tr>
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Lomba untuk Mahasiswa Universitas Esa Unggul di Pekan Seni Mahasiswa Daerah Provinsi DKI Jakarta 2016</a></td>
+				    	</tr>
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Esa Unggul Welcoming Day Mahasiswa Baru 2016</a></td>
+				    	</tr>
+				    	<tr>
+				    		<td>
+				    			<a href="#" class="">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							    </a>
+				    		</td>
+				    		<td><a href="#">Universitas Esa Unggul Gelar Seminar “How to Avoid Game Addictions by Improving Your Creativity” di SMA Methodist, Jakarta</a></td>
+				    	</tr>
+				    </table>
+				
+				</div>
+			</div>
+			<!-- END News -->
+		</div>
+		
 	</div>
 </div>
-
-
 
 <div class="teachers">
 	<div class="container">
@@ -527,17 +586,25 @@ $(document).ready(function() {
 		              	alert("Terima kasih, Anda telah terdaftar di seminar");
 		              	location.href = results.location;
 		              	return true;
+<<<<<<< HEAD
 	             	}else{
 	             		alert(results.alert);
 		              	window.location.reload();
+=======
+	             	}else if(results.status == "error"){
+	             		alert(results.alert);
+	             		return false;
+	             	}
+	             	else{
+	             		alert("Maaf, seminar ini tidak bisa diikuti");
+		              	return false;
+>>>>>>> ab747594f07fb5548e911ae07a88623d420f128d
 	             	}
 
 	             	return false;
 		        }
 	  		});
-		}
-
-		
+		}		
 
 	}
 
