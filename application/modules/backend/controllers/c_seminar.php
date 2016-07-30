@@ -59,7 +59,7 @@ class C_seminar extends MY_Controller {
         $config['num_tag_close'] 	= '</li>';
         
         $this->pagination->initialize($config);
-        $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+        $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0; 
         
         //call the model function to get the department data
 		$data['start'] 			= $this->uri->segment(4, 0);
@@ -67,6 +67,7 @@ class C_seminar extends MY_Controller {
         foreach ($data['listSeminar'] as $key => $value) {
             $data['listSeminar'][$key]['list_peserta'] = $this->m_seminar->list_PesertaSeminar($value['id_seminar']);
         }
+        //echo '<pre>',print_r($data);die();
 		$data['pagination'] = $this->pagination->create_links();
         $this->doview('list_seminar', $data);
     }
@@ -92,7 +93,6 @@ class C_seminar extends MY_Controller {
     public function listPeserta($id_seminar = ''){
         $data                   = array();
         $data['list_peserta'] = $this->m_seminar->list_PesertaSeminar($id_seminar);
-
         //echo '<pre>',print_r($data);die();
         $this->doview('list_PesertaSeminar', $data);
     

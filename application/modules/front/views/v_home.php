@@ -511,6 +511,7 @@ $(document).ready(function() {
 			alert('Maaf, Anda harus login sebelum mendaftar!');
 			location.href = "<?php echo base_url('login'); ?>";
 		}else{
+			//alert($(this).attr('sem_id'));return false;
 			$.ajax({
 		        type: 'POST',
 		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
@@ -521,14 +522,14 @@ $(document).ready(function() {
 		        },
 		        dataType: 'json',
 		        success: function(results){
-		        	//console.log(results);
+		        	console.log(results);
 	             	if(results.status == "success"){
 		              	alert("Terima kasih, Anda telah terdaftar di seminar");
 		              	location.href = results.location;
 		              	return true;
 	             	}else{
-	             		alert("Maaf, seminar ini tidak bisa diikuti");
-		              	return false;
+	             		alert(results.alert);
+		              	window.location.reload();
 	             	}
 
 	             	return false;
