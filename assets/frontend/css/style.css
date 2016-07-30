@@ -2232,3 +2232,9 @@ h3.tittle.tit3 {
     color: #757070; 
     font-family: monospace, fantasy;
   }
+
+  .table_margin{
+    font-size: 0.9em;
+    color: #999;
+    margin-left: 15px;
+  }

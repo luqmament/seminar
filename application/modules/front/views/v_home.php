@@ -99,17 +99,17 @@
 				<div class="col-md-12">
 				<div class="panel panel-default">
 				  <div class="panel-body">
-				    <table class="table">
+				    <table >
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:250px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px" alt="...">
 							    </a>
 				    		</td>
-				    		<td>
-				    			<table>
+				    		<td valign="top">
+				    			<table class="table_margin">
 				    				<tr>
-							    		<td colspan="3" align="center"><b><?php echo $value['tema_seminar'] ?></b></td>
+							    		<td colspan="3" align="center"><b><?php echo $value['tema_seminar'] ?></b><br><br></td>
 							    	</tr>
 							    	<tr>
 							    		<td width="160px">Pembicara Seminar</td>
@@ -140,7 +140,7 @@
 				    		</td>
 				    	</tr>
 				    </table>
-				    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
+				    <button type="button" class="btn btn-primary btn-lg" style="display:block; float:right" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
 				  </div>
 				</div>
 			</div>
