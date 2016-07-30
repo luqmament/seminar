@@ -30,13 +30,13 @@ class Seminar extends MY_Controller {
         $intervalThn    = $now - $tahun_masuk + 1;
 
         if($detail_mahasiswa->semester_mahasiswa == 'ganjil'){
-            if(($bulan - 2) <= 6){
-                $intervalThn = ($intervalThn * 2 ) - 2;
-            }else{
+            if(($bulan) <= 6){
                 $intervalThn = ($intervalThn * 2 ) - 1;
+            }else{
+                $intervalThn = ($intervalThn * 2 );
             }                                       
         }else{
-            if(($bulan - 2) <= 6){
+            if(($bulan) <= 6){
                 $intervalThn = ($intervalThn * 2 ) - 2;
             }else{
                 $intervalThn = ($intervalThn * 2 ) - 1;
@@ -47,7 +47,7 @@ class Seminar extends MY_Controller {
         $checkOrderSeminar = $this->m_seminar->getDetData('order', array('id_mahasiswa' => $id_mahasiswa, 'id_seminar' => $id_seminar));
         $arr_seminar = explode(",", $detail_seminar->semester_seminar);
         if($checkOrderSeminar){
-            echo json_encode(array('status' => 'error', 'alert' => 'Maaf , anda pernah mengikuti seminar berikut'));
+            echo json_encode(array('status' => 'error', 'alert' => 'Maaf , anda sudah pernah mengikuti seminar berikut'));
         }else{
             switch ($detail_seminar->untuk_kelas) {
                 case '1' :
