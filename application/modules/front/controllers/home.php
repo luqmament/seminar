@@ -9,8 +9,8 @@ class Home extends MY_Controller {
     
     
     public function index(){
-
-    	$data['seminar'] = $this->m_seminar->getDataKey('seminar', array('status_seminar' => 1), 'jadwal_seminar desc', 3);
+    	$today = date('Y-m-d H:i:s');
+    	$data['seminar'] = $this->m_seminar->getDataKey('seminar', array('status_seminar' => 1, 'DATE_FORMAT(jadwal_seminar, "%Y-%m-%d %H:%i:%s") >=' => $today), 'jadwal_seminar desc', 3);
 		//echo '<pre>',print_r($data);
 	   	$this->frview('v_home',$data);
     }

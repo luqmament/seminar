@@ -570,6 +570,7 @@ $(document).ready(function() {
 			alert('Maaf, Anda harus login sebelum mendaftar!');
 			location.href = "<?php echo base_url('login'); ?>";
 		}else{
+			//alert($(this).attr('sem_id'));return false;
 			$.ajax({
 		        type: 'POST',
 		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
@@ -580,11 +581,16 @@ $(document).ready(function() {
 		        },
 		        dataType: 'json',
 		        success: function(results){
-		        	//console.log(results);
+		        	console.log(results);
 	             	if(results.status == "success"){
 		              	alert("Terima kasih, Anda telah terdaftar di seminar");
 		              	location.href = results.location;
 		              	return true;
+<<<<<<< HEAD
+	             	}else{
+	             		alert(results.alert);
+		              	window.location.reload();
+=======
 	             	}else if(results.status == "error"){
 	             		alert(results.alert);
 	             		return false;
@@ -592,6 +598,7 @@ $(document).ready(function() {
 	             	else{
 	             		alert("Maaf, seminar ini tidak bisa diikuti");
 		              	return false;
+>>>>>>> ab747594f07fb5548e911ae07a88623d420f128d
 	             	}
 
 	             	return false;

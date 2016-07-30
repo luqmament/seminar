@@ -231,7 +231,7 @@ class C_biomhs extends MY_Controller {
         //call the model function to get the department data
         $data['start']          = $this->uri->segment(4,0);
         $data['listSeminar_mahasiswa']   = $this->m_register->list_seminarMHS($config["per_page"],$data['page'], $id_mahasiswa);
-        
+        //echo $this->db->last_query();
         $data['pagination'] = $this->pagination->create_links();
         //echo '<pre>',print_r($data);
 
