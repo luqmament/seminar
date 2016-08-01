@@ -103,7 +103,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px; width:100px" alt="...">
 							    </a>
 				    		</td>
 				    		<td valign="top">
@@ -248,7 +248,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Emotional Spiritual Quotient Training Mahasiswa Baru Universitas Esa Unggul 2016</a></td>
@@ -256,7 +256,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Himbauan Berkurban di Universitas Esa Unggul 2016</a></td>
@@ -264,7 +264,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Lomba untuk Mahasiswa Universitas Esa Unggul di Pekan Seni Mahasiswa Daerah Provinsi DKI Jakarta 2016</a></td>
@@ -272,7 +272,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Esa Unggul Welcoming Day Mahasiswa Baru 2016</a></td>
@@ -280,7 +280,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Universitas Esa Unggul Gelar Seminar “How to Avoid Game Addictions by Improving Your Creativity” di SMA Methodist, Jakarta</a></td>
@@ -568,7 +568,7 @@ $(document).ready(function() {
 
 		if(!id_mhs){
 			alert('Maaf, Anda harus login sebelum mendaftar!');
-			location.href = "<?php echo base_url('login'); ?>";
+			location.href = "<?php echo base_url('login?ref='); ?>";
 		}else{
 			//alert($(this).attr('sem_id'));return false;
 			$.ajax({
@@ -586,19 +586,14 @@ $(document).ready(function() {
 		              	alert("Terima kasih, Anda telah terdaftar di seminar");
 		              	location.href = results.location;
 		              	return true;
-<<<<<<< HEAD
-	             	}else{
-	             		alert(results.alert);
-		              	window.location.reload();
-=======
+
 	             	}else if(results.status == "error"){
 	             		alert(results.alert);
-	             		return false;
+	             		window.location.reload();
 	             	}
 	             	else{
-	             		alert("Maaf, seminar ini tidak bisa diikuti");
-		              	return false;
->>>>>>> ab747594f07fb5548e911ae07a88623d420f128d
+	             		alert(results.alert);
+		              	window.location.reload();
 	             	}
 
 	             	return false;

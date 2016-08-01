@@ -50,7 +50,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px; width:100px" alt="...">
 							    </a>
 				    		</td>
 				    		<td>
@@ -195,7 +195,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Emotional Spiritual Quotient Training Mahasiswa Baru Universitas Esa Unggul 2016</a></td>
@@ -203,7 +203,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Himbauan Berkurban di Universitas Esa Unggul 2016</a></td>
@@ -211,7 +211,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Lomba untuk Mahasiswa Universitas Esa Unggul di Pekan Seni Mahasiswa Daerah Provinsi DKI Jakarta 2016</a></td>
@@ -219,7 +219,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px" alt="...">
+							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:50px; width:40px" alt="...">
 							    </a>
 				    		</td>
 				    		<td><a href="#">Esa Unggul Welcoming Day Mahasiswa Baru 2016</a></td>
@@ -516,7 +516,7 @@ $(document).ready(function() {
 
 		if(!id_mhs){
 			alert('Maaf, Anda harus login sebelum mendaftar!');
-			location.href = "<?php echo base_url('login'); ?>";
+			location.href = "<?php echo base_url('login?ref='); ?>";
 		}else{
 			$.ajax({
 		        type: 'POST',
@@ -535,11 +535,11 @@ $(document).ready(function() {
 		              	return true;
 	             	}else if(results.status == "error"){
 	             		alert(results.alert);
-	             		return false;
+	             		window.location.reload();
 	             	}
 	             	else{
-	             		alert("Maaf, seminar ini tidak bisa diikuti");
-		              	return false;
+	             		alert(results.alert);
+		              	window.location.reload();
 	             	}
 
 	             	return false;
