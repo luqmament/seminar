@@ -50,11 +50,7 @@
 				    	<tr>
 				    		<td>
 				    			<a href="#" class="">
-<<<<<<< HEAD
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:250px" alt="...">
-=======
 							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px; width:100px" alt="...">
->>>>>>> 79a1190b55bfbe32eea25418e89a531bd918e58b
 							    </a>
 				    		</td>
 				    		<td>
