@@ -17,7 +17,16 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading"><a href="#" class="btn btn-primary btn-upgrade-mhs">Update mahasiswa</a></div>
+					<div class="panel-heading">
+					<div class="pull-left"><a href="#" class="btn btn-primary btn-upgrade-mhs">Update mahasiswa</a></div>
+					<div class="pull-right">
+						<?php echo form_open_multipart('backend/c_mahasiswa/cari', array("id" => "form-search-mahasiswa", "class" => "form-inline", "method" => "POST")); ?>  
+						<input type="text" name="search_mahasiswa" class="form-control" id="search_mahasiswa" placeholder="search" value="<?php $session_searchMahasiswa = $this->session->userdata('pencarian_mahasiswa'); echo (!empty($session_searchMahasiswa)) ? $session_searchMahasiswa : ''?>" />     
+						<button type="submit" class="btn btn-primary">Cari</button>
+						<a href="<?php echo site_url('backend/c_mahasiswa')?>" class="btn btn-primary btn-upgrade-mhs">show all</a>
+						<?php echo form_close();?>						
+					</div>					
+					</div>
 					<?php if($this->session->flashdata('infoFakultas')){ ?>
 						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

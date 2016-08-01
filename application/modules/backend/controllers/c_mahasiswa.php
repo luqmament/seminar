@@ -23,19 +23,44 @@ class C_mahasiswa extends MY_Controller {
 	
     public function index(){
         //pagination settings
+        /*$search 				= $this->input->get('search_mahasiswa');*/
+        //echo $search;die();
+        $session_searchMahasiswa = $this->session->userdata('pencarian_mahasiswa');
+        if(isset($session_searchMahasiswa)){
+        	$this->session->unset_userdata('pencarian_mahasiswa');
+        }
         $data['listMahasiswa']   = array();
-        $config['base_url'] 	= site_url('backend/c_mahasiswa/index');
-        $config['total_rows'] 	= $this->db->count_all('mahasiswa');
-        $config['per_page'] 	= "10";
+       /* if(isset($search)){
+        	$config['base_url'] 	= site_url('backend/c_mahasiswa/index/search_mahasiswa='.$search);	
+        }else{
+        	$config['base_url'] 	= site_url('backend/c_mahasiswa/index');	
+        }*/
+        //$config['base_url'] 	= site_url('backend/c_mahasiswa/index');	
+
+        // get search string
+        //$search = ($this->input->post("search_mahasiswa"))? $this->input->post("search_mahasiswa") : "NIL";
+
+        //$search = ($this->uri->segment(4)) ? $this->uri->segment(4) : $search;
+
+        // pagination settings
+        $config = array();
+        $config['base_url'] = site_url("backend/c_mahasiswa/index/");
+
+
+
+        $config['total_rows'] 	= $this->m_mahasiswa->jumlah_dataMahasiswa($search);
+        //echo $config['total_rows'];die();
+        $config['per_page'] 	= "20";
         $config["uri_segment"] 	= 4;
-        $choice 				= $config["total_rows"] / $config["per_page"];
-        $config["num_links"] 	= floor($choice);
+        //$choice 				= $config["total_rows"] / $config["per_page"];
+        //$config["num_links"] 	= floor($choice);
+        $config["num_links"] 	= 10;
         
         //config for bootstrap pagination class integration
         $config['full_tag_open']	= '<ul class="pagination">';
         $config['full_tag_close']	= '</ul>';
-        $config['first_link'] 		= false;
-        $config['last_link'] 		= false;
+        $config['first_link'] 		= FALSE;
+        $config['last_link'] 		= FALSE;
         $config['first_tag_open'] 	= '<li>';
         $config['first_tag_close'] 	= '</li>';
         $config['prev_link'] 		= '&laquo';
@@ -56,12 +81,78 @@ class C_mahasiswa extends MY_Controller {
         
         //call the model function to get the Mahasiswa data
 		$data['start'] 			= $this->uri->segment(4, 0);
-        $data['listMahasiswa'] 	= $this->m_mahasiswa->list_dataMahasiswa($config["per_page"],$data['page']);
-        //echo $this->db->last_query();
+		
+        $data['listMahasiswa'] 	= $this->m_mahasiswa->list_dataMahasiswa($config["per_page"],$data['page'],$search);
+        //echo $this->db->last_query();die();
 		$data['pagination'] = $this->pagination->create_links();
 		//echo '<pre>',print_r($data);die();
         $this->doview('list_mahasiswa_b', $data);
     }
+
+function cari()
+{
+	$page 	= $this->uri->segment(4);
+	//echo $page;die();
+    $batas 	= 20;
+	if(!$page):
+	$offset = 0;
+	else:
+	$offset = $page;
+	endif;
+
+	$search_mahasiswa = "";
+	$postkata = $this->input->post('search_mahasiswa');
+	if(!empty($postkata))
+	{
+		$search_mahasiswa = $this->input->post('search_mahasiswa');
+		$this->session->set_userdata('pencarian_mahasiswa', $search_mahasiswa);
+	}
+	else
+	{
+		$search_mahasiswa = $this->session->userdata('pencarian_mahasiswa');
+	}
+	//$data['listMahasiswa'] = $this->search_model->cari_dosen($batas,$offset,$data['nama']);
+	$data['listMahasiswa'] = $this->m_mahasiswa->list_dataMahasiswa($batas,$offset,$search_mahasiswa);
+	//$tot_hal = $this->search_model->tot_hal('ja_mst_dosen','nama_dosen',$data['nama']);
+
+	$config['base_url'] = base_url() . 'backend/c_mahasiswa/cari/';
+	$config['total_rows'] = $this->m_mahasiswa->jumlah_dataMahasiswa($search_mahasiswa);
+	$config['per_page'] = $batas;
+	$config['uri_segment'] = 4;
+
+
+	//config for bootstrap pagination class integration
+    $config['full_tag_open']	= '<ul class="pagination">';
+    $config['full_tag_close']	= '</ul>';
+    $config['first_link'] 		= FALSE;
+    $config['last_link'] 		= FALSE;
+    $config['first_tag_open'] 	= '<li>';
+    $config['first_tag_close'] 	= '</li>';
+    $config['prev_link'] 		= '&laquo';
+    $config['prev_tag_open'] 	= '<li class="prev">';
+    $config['prev_tag_close'] 	= '</li>';
+    $config['next_link'] 		= '&raquo';
+    $config['next_tag_open'] 	= '<li>';
+    $config['next_tag_close'] 	= '</li>';
+    $config['last_tag_open'] 	= '<li>';
+    $config['last_tag_close'] 	= '</li>';
+    $config['cur_tag_open'] 	= '<li class="active"><a href="#">';
+    $config['cur_tag_close'] 	= '</a></li>';
+    $config['num_tag_open'] 	= '<li>';
+    $config['num_tag_close'] 	= '</li>';
+    
+    $this->pagination->initialize($config);
+    $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+    
+    //call the model function to get the Mahasiswa data
+	$data['start'] 			= $this->uri->segment(4, 0);
+		
+	$data["pagination"] =$this->pagination->create_links();
+	$this->doview('list_mahasiswa_b', $data);
+       
+    //$this->load->view('search/hasil',$data);
+}
+
             
     public function v_fakultas($id = ''){
         $data               	= array();
@@ -219,55 +310,87 @@ class C_mahasiswa extends MY_Controller {
             
             $allDataInSheet = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
 
-            echo '<pre>',print_r($allDataInSheet);
+            
             $arrayCount = count($allDataInSheet); // Here get total count of row in that Excel sheet
             $no = 1 ;
             
-            $terdapatKodeAgentInsert = $tidakterdapatKodeAgent = 0;
+            //$terdapatKodeAgentInsert = $tidakterdapatKodeAgent = 0;
+            $terdapatNIMInsert = $tidakterdapatNIM = 0;
             
-            $agentKodes = array();
-            for($i=3;$i<$arrayCount;$i++){
-                $agentKodes[] = trim($allDataInSheet[$i]["B"]);
+            //$agentKodes = array();
+            $NIMS = array();
+            for($i=2;$i<$arrayCount;$i++){
+                //$agentKodes[] = trim($allDataInSheet[$i]["B"]);
+                $NIMS[] = trim($allDataInSheet[$i]["B"]);
             }
-            
+            //echo '<pre>',print_r($NIMS);die();
             $rows = $this->db
-                ->select('kode_agent')
-                ->where_in('kode_agent',$agentKodes)
-                ->get('agent_table')->result_array();
-            $agentKodes = array();
+                ->select('nim_mahasiswa')
+                ->where_in('nim_mahasiswa',$NIMS)
+                ->get('mahasiswa')->result_array();
+            //$agentKodes = array();
+            $NIMS = array();
             foreach($rows as $row){
-                $agentKodes[] = $row['kode_agent'];
+                //$agentKodes[] = $row['kode_agent'];
+                $NIMS[] = $row['nim_mahasiswa'];
             }
             
             
             $rows = array();
-            for($i=3;$i<$arrayCount;$i++){
-                $agentName  = trim($allDataInSheet[$i]["A"]);
-                $agentKode  = trim($allDataInSheet[$i]["B"]);
-                $address    = trim($allDataInSheet[$i]["D"]);
-                $telp       = trim($allDataInSheet[$i]["E"]);
-                $email      = trim($allDataInSheet[$i]["F"]);
-                $city       = trim($allDataInSheet[$i]["G"]);
-                $country    = trim($allDataInSheet[$i]["H"]);
+            for($i=2;$i<$arrayCount;$i++){
+                $nama  		= trim($allDataInSheet[$i]["H"]);
+                //echo trim($allDataInSheet[$i]["E"]);die();
+                switch (trim($allDataInSheet[$i]["E"])) {
+                	case "81":
+                		$id_jur_fakultas  = 1 ;
+                	break;
+                	case "83":
+                		$id_jur_fakultas  = 2;
+                	break;
+                }
+                $id_jur_fakultas = $id_jur_fakultas;
+                $nim_mahasiswa 	= trim($allDataInSheet[$i]["B"]);
+                $email 			= trim($allDataInSheet[$i]["I"]);
+                $alamat 		= trim($allDataInSheet[$i]["N"]);
+                $telp 			= trim($allDataInSheet[$i]["O"]);
+                $tipe_mhs 		= trim($allDataInSheet[$i]["K"]);
+                $thn_masuk 		= trim($allDataInSheet[$i]["C"]);
+                
+                switch (trim($allDataInSheet[$i]["D"])) {
+                	case "1":
+                		$smt_mhs 	= 'ganjil';
+                	break;
+                	case "2":
+                		$smt_mhs  	= 'genap';
+                	break;
+                }
+                $smt_mhs = $smt_mhs ;
+                $pass 		= encryptPass(trim($allDataInSheet[$i]["L"]));
                                 
-                if(!empty($agentKode) && array_search($agentKode,$agentKodes) === FALSE){
+                if(!empty($nim_mahasiswa) && array_search($nim_mahasiswa,$NIMS) === FALSE){
                     $rows[]   = array(
-                            'name'          => $agentName,
-                            'kode_agent'    => $agentKode,
-                            'address'       => $address,
-                            'phone'         => $telp,
-                            'email'         => $email,
-                            'city'          => $city,
-                            'country'       => $country                        
+                            'nim_mahasiswa' 	=> $nim_mahasiswa,
+                            'nama_depan'    	=> $nama,
+                            'email_mahasiswa'	=> $email,
+                            'alamat_mahasiswa' 	=> $alamat,
+                            'telp_mahasiswa'	=> $telp,
+                            'tipe_mahasiswa'	=> $tipe_mhs,
+                            'tahun_masuk'       => $thn_masuk,                        
+                            'semester_mahasiswa'=> $smt_mhs,                        
+                            'password_mahasiswa'=> $pass,                        
+                            'id_jurusan_fak'	=> $id_jur_fakultas,                        
+                            'status_mahasiswa'	=> 1,                        
+                            'date_create'		=> date('Y-m-d H:i:s')                         
                         );
-                    ++$terdapatKodeAgentInsert;
+                    ++$terdapatNIMInsert;
                 }else{
-                    ++$tidakterdapatKodeAgent;
+                    ++$tidakterdapatNIM;
                 }
                 $no++;                
             }
+            //echo '<pre>',print_r($rows);die();
             if(!empty($rows)){
-                $insert = $this->db->insert_batch('agent_table',$rows);
+                $insert = $this->db->insert_batch('mahasiswa',$rows);
                 if($insert){
                     $status     = "success" ;
                     $returnVal  = "Berhasil Ditambahkan" ;
@@ -280,13 +403,12 @@ class C_mahasiswa extends MY_Controller {
             
         }
         echo json_encode(array(
-                'Insert'        => $terdapatKodeAgentInsert,
-                'Non_Insert'    => $tidakterdapatKodeAgent,
+                'Insert'        => $terdapatNIMInsert,
+                'Non_Insert'    => $tidakterdapatNIM,
                 'status'         => $status,
                 'returnVal'     => $returnVal
                 
         ));
-        exit;    
         
     }
 }

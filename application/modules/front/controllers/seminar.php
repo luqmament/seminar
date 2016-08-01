@@ -230,6 +230,7 @@ class Seminar extends MY_Controller {
                             $kelas = 'Reguler dan Paralel' ;
                         }
                         echo json_encode(array('status' => 'error', 'alert' => 'Maaf seminar untuk semester '.$detail_seminar->semester_seminar. ' dan kelas '. $kelas));   
+        
                     }
             }
         }

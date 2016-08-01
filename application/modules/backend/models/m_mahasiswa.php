@@ -21,11 +21,13 @@ class M_mahasiswa extends CI_Model {
 	return $res;    
     }
     
-    function list_dataMahasiswa($limit, $start){
+    function list_dataMahasiswa($limit, $start, $search = ''){
     $this->db->select('m.*, jf.nama_jurusan, f.nama_fakultas');
     $this->db->from('mahasiswa m');
     $this->db->join('jurusan_fakultas jf', 'm.id_jurusan_fak = jf.id_jurusan_fakultas');
     $this->db->join('fakultas f', 'jf.id_fakultas = f.id_fakultas');
+    $this->db->where("m.nim_mahasiswa LIKE '%$search%'");
+    $this->db->or_where("m.nama_depan LIKE '%$search%'");
     $this->db->limit($limit , $start);
     $query =  $this->db->get();
 	    if ($query->num_rows() > 0) {
@@ -35,6 +37,21 @@ class M_mahasiswa extends CI_Model {
 	    }
     }
     
+    function jumlah_dataMahasiswa($search = ''){
+    $this->db->select('m.*, jf.nama_jurusan, f.nama_fakultas');
+    $this->db->from('mahasiswa m');
+    $this->db->join('jurusan_fakultas jf', 'm.id_jurusan_fak = jf.id_jurusan_fakultas');
+    $this->db->join('fakultas f', 'jf.id_fakultas = f.id_fakultas');
+    $this->db->where("m.nim_mahasiswa LIKE '%$search%'");
+    $this->db->or_where("m.nama_depan LIKE '%$search%'");
+    $query =  $this->db->get();
+	    if ($query->num_rows() > 0) {
+	        return $query->num_rows();
+	    }else{
+	        return false;
+	    }
+    }
+
     function detailFakultas($idFakultas){
 	$this->db->where('id_fakultas', $idFakultas); 
 	$query = $this->db->get('fakultas');
