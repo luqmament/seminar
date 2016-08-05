@@ -19,6 +19,9 @@ class C_mahasiswa extends MY_Controller {
 	//    }
 	    redirect('backend/c_login');
 	}
+		$this->arr_dimension = array();
+        $this->arr_dimension['display']['width'] = 100;
+        $this->arr_dimension['display']['height'] = 150;
     }
 	
     public function index(){
@@ -154,95 +157,52 @@ function cari()
 }
 
             
-    public function v_fakultas($id = ''){
+public function v_mahasiswa($id = ''){
         $data               	= array();
         $data['getDetail']  	= array();
 		$data['type_form']	= 'add' ;
         if(!empty($id)){
-            $detail	= $this->m_fakultas->detailFakultas($id);
+            $detail	= $this->m_mahasiswa->getDetailMahasiswa($id);
             $data['getDetail']  = $detail ;
-	    $data['type_form']	= 'edit' ;
+	    	$data['type_form']	= 'edit' ;
         }
-        $this->doview('v_fakultas', $data);
+        //echo '<pre>',print_r($data);die();
+        $this->doview('v_mahasiswa_b', $data);
     
     }
-    public function submit_fakultas(){
+public function edit_mahasiswa(){
+    $post 	= $this->input->post();
 	$data   = array();
-	$post 	= $this->input->post();
 	$id 	= $post['id'];
-	if(!isset($id)){
-	    $this->form_validation->set_rules('nama_fakultas', 'Name', 'required');
-	}else{
-	    $this->form_validation->set_rules('nama_fakultas', 'Name', 'required');
-	}
-        
 	
-	if ($this->form_validation->run() == FALSE)
-	{
-	    if(!isset($id)){
-			$this->doview('v_fakultas', $data);
-	    }
+	$dataUpdate = array(
+		'nama_depan' 		=> $post['nama_mhs'],
+		'email_mahasiswa' 	=> $post['emailmhs'],
+		'alamat_mahasiswa' 	=> $post['alamat_mhs'],
+		'telp_mahasiswa' 	=> $post['telp_mhs']
+		
+	);
+	if(!empty($_FILES['photo_mhs']['name'])){
+		$filename  = $this->upload_image($_FILES['photo_mhs']);
+		$file_name = base_url('/assets/uploads/mahasiswa/display/100/150/'.$filename);
+		$dataUpdate = array_merge($dataUpdate, array('photo_mahasiswa' => $file_name));
 	}
-	else
-	{
-	    $nama_fakultas		= trim(strtoupper($post['nama_fakultas']));
-	    $status_fakultas 	= $post['status_fakultas'];
-	    
-	    if(isset($id))
-	    {
-	    	$whereKondisi		= ($status_fakultas == 1) ? 1 : 2 ;
-			$checkFakultas 		= $this->m_fakultas->check_fakultas($nama_fakultas, $whereKondisi);
-			if($checkFakultas){
-			    $this->session->set_flashdata('infoCheckFakultas', 'Maaf nama fakultas sudah di gunakan');
-			    redirect('fakultas');
-			    exit;
-			}else{
-			    $data = array(
-			    'nama_fakultas'		=> $nama_fakultas,
-			    'status_fakultas'	=> $status_fakultas,
-				'date_update' 		=> date('Y-m-d H:i:s')	
-			    );
-			}		
-	    }else{
-			$checkFakultas 		= $this->m_fakultas->check_fakultas($nama_fakultas);
-			if($checkFakultas){
-			    $this->session->set_flashdata('infoCheckFakultas', 'Maaf nama fakultas sudah di gunakan');
-			    redirect('fakultas');
-			    exit;
-			}else{
-			    $data = array(
-				'nama_fakultas'	=> $nama_fakultas,
-				'date_create' 	=> date('Y-m-d H:i:s')
-			    );	
-			}			
-	    }
-	    if(isset($id)){
-			$key = array('id_fakultas' => $id) ;
-			$res = $this->m_fakultas->UpdateFakultas('fakultas',$data, $key);
-	    }else{
-			$res = $this->m_fakultas->InsertFakultas('fakultas',$data);
-	    }
-	    
-	    if ($res){
-			if(isset($id)){
-				$this->session->set_flashdata('infoFakultas', 'Data Berhasil Di Ubah');
-			}else{
-				$this->session->set_flashdata('infoFakultas', 'Data Berhasil Di Tambah');
-			}
-			redirect('fakultas');			
-	    } else{
-			echo "<h2>INsert Data Gagal</h2>";            
-	    }
-	}
-	
+	$updateMhs = $this->m_mahasiswa->UpdateData('mahasiswa',$dataUpdate,array('id_mahasiswa' => $id));
+    if ($updateMhs){
+		$this->session->set_flashdata('infoUpdateMahasiswa', 'Data Mahasiswa Berhasil Di Update');
+		redirect('mahasiswa');			
+    } else{
+		$this->session->set_flashdata('infoUpdateMahasiswa', 'Data Mahasiswa Gagal Di Update');
+		redirect('mahasiswa');         
     }
+}
     public function do_delete($id = ''){
 	$id 	= $this->input->post('id');
-	$data 	= array('status_fakultas'	=> 2);	
-    $where 	= array ('id_fakultas' 		=> $id);
+	$data 	= array('status_mahasiswa'	=> 2);	
+    $where 	= array ('id_mahasiswa' 		=> $id);
 	
-	$delete_user = $this->m_fakultas->UpdateFakultas('fakultas',$data, $where);
-        if($delete_user){
+	$delete_mahasiswa = $this->m_mahasiswa->UpdateData('mahasiswa',$data, $where);
+        if($delete_mahasiswa){
             $alert = 'Data Berhasil Di Hapus';		
             $returnVal = 'success';
         }else{
@@ -409,6 +369,85 @@ function cari()
                 'returnVal'     => $returnVal
                 
         ));
+        
+    }
+
+    public function change_password_mhs(){
+    	$id = $this->input->post('id');
+        $this->form_validation->set_rules('password', 'Password', 'required|matches[retype_password]');
+        $this->form_validation->set_rules('retype_password', 'Retype Password', 'required');
+        $data               	= array();
+        $data['getDetail']  	= array();
+		$data['type_form']	= 'add' ;
+        if(!empty($id)){
+            $detail	= $this->m_mahasiswa->getDetailMahasiswa($id);
+            $data['getDetail']  = $detail ;
+	    	$data['type_form']	= 'edit' ;
+        }
+
+        if ($this->form_validation->run() == FALSE){
+            $this->doview('v_mahasiswa_b',$data);
+        }else{
+        	$post = $this->input->post();
+        	$updatePassMhs = $this->m_mahasiswa->UpdateData('mahasiswa',array('password_mahasiswa' => encryptPass($post['password'])), array('id_mahasiswa' => $id));
+        	if ($updatePassMhs){
+				$this->session->set_flashdata('infoChangePasswordMhs', 'Data Password Berhasil Di Update');
+				redirect('mahasiswa');			
+		    } else{
+				$this->session->set_flashdata('infoChangePasswordMhs', 'Data Password Gagal Di Update');     
+				redirect('mahasiswa');	  
+		    }
+        }
+    }
+    private function upload_image($image) {
+        $data                   = array();
+        $config['upload_path'] = FCPATH.'assets/uploads/mahasiswa';
+        if (!is_dir($config['upload_path'])) {
+            @mkdir($config['upload_path'], 0775);
+        }
+        
+        $info = pathinfo($image['name']);
+        
+        $url_title = url_title($info['filename'], '_', TRUE);
+        $file_name = generateRandomString(10) . '.' . $info['extension'];
+        $config['file_name'] = $file_name;
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
+        $this->load->library('upload', $config);
+        //$this->upload->initialize($config);
+        $upload = $this->upload->do_upload('photo_mhs');
+        
+        if (!$upload) {
+            $invalid = $this->upload->display_errors();
+            $this->session->set_flashdata('infoErrorsPhoto', $invalid);
+            $this->frview('v_register_mhs',$data);
+        } else {
+            /* First size */
+            $configSize1['image_library'] = 'gd2';
+            $configSize1['source_image'] = FCPATH.'assets/uploads/mahasiswa/'.$file_name;
+            $configSize1['create_thumb'] = false;
+            $configSize1['maintain_ratio'] = true;
+            $configSize1['width'] = $this->arr_dimension['display']['width'];
+            $configSize1['height'] = $this->arr_dimension['display']['height'];
+
+            $path1['display'] = FCPATH.'assets/uploads/mahasiswa/display';
+            if (!is_dir($path1['display'])) {
+                mkdir($path1['display'], 0775, true);
+            }
+            $path2['100'] = FCPATH.'assets/uploads/mahasiswa/display/' . $this->arr_dimension['display']['width'];
+            if (!is_dir($path2['100'])) {
+                mkdir($path2['100'], 0775, true);
+            }
+            $path3['150'] = FCPATH.'assets/uploads/mahasiswa/display/' . $this->arr_dimension['display']['width'] . '/' . $this->arr_dimension['display']['height'];
+            if (!is_dir($path3['150'])) {
+                mkdir($path3['150'], 0775, true);
+            }
+
+            $configSize1['new_image'] = FCPATH.'assets/uploads/mahasiswa/display/' . $this->arr_dimension['display']['width'] . '/' . $this->arr_dimension['display']['height'] . '/' . $file_name;
+            $this->image_lib->initialize($configSize1);
+            $this->image_lib->resize();
+            $this->image_lib->clear();
+            return $file_name; 
+        }
         
     }
 }

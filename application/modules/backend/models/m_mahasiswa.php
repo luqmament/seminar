@@ -52,6 +52,20 @@ class M_mahasiswa extends CI_Model {
 	    }
     }
 
+    function getDetailMahasiswa($where){
+        $this->db->select('m.*, jf.nama_jurusan, f.nama_fakultas');
+        $this->db->from('mahasiswa m');
+        $this->db->join('jurusan_fakultas jf', 'm.id_jurusan_fak = jf.id_jurusan_fakultas');
+        $this->db->join('fakultas f', 'jf.id_jurusan_fakultas = f.id_fakultas');
+        $this->db->where('m.id_mahasiswa', $where);
+        $query =  $this->db->get();
+        if($query->num_rows() > 0){
+            return $query->row_array();
+        }else{
+        	return false;
+        }
+    }
+
     function detailFakultas($idFakultas){
 	$this->db->where('id_fakultas', $idFakultas); 
 	$query = $this->db->get('fakultas');
@@ -62,9 +76,13 @@ class M_mahasiswa extends CI_Model {
 	}
     }
     
-    public function UpdateFakultas($tabelName,$data,$where){
-	$res = $this->db->update($tabelName,$data,$where);	
-	return $res;			    
+    public function UpdateData($tabelName,$data,$where){
+		$res = $this->db->update($tabelName,$data,$where);	
+		if($res){
+            return true ;
+        }else{
+        	return false ;
+        }			    
     }
     function deleteData($table,$key){
 	$query = $this->db->delete($table,$key);
