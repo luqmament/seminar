@@ -2,14 +2,18 @@
 
 class M_seminar extends CI_Model {
 
-	function getDataSeminar($table, $where, $order_by = '', $limit = ''){
-        
+	function getDataSeminar($table, $where, $order_by = "", $like, $start = '', $limit = ''){
+
 		$this->db->where($where);
+        $this->db->like("tema_seminar", $like);
         if($order_by){
             $this->db->order_by($order_by); 
+        } 
+        if(is_numeric($limit)){
+            $this->db->limit($start, $limit);    
         }
-        ($limit) ? $this->db->limit($limit) : "";
-        $query = $this->db->get($table);
+        
+        $query = $this->db->get($table); 
         if ($query->num_rows() > 0) {
             return $query->result_array();
         } else {

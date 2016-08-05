@@ -9,9 +9,9 @@ class Seminar extends MY_Controller {
     
     
     public function index(){
-        $today = date('Y-m-d H:i:s');
+        /*$today = date('Y-m-d H:i:s');
     	$data['seminar'] = $this->m_seminar->getDataSeminar('seminar', array('status_seminar' => 1, 'DATE_FORMAT(jadwal_seminar, "%Y-%m-%d %H:%i:%s") >=' => $today), 'jadwal_seminar desc');
-	   	$this->frview('v_allSeminar',$data);
+	   	$this->frview('v_allSeminar',$data);*/
     }
 
     public function submit_order(){
