@@ -11,14 +11,29 @@ class All_seminar extends MY_Controller {
     public function index(){
 
         ($_GET['search']) ? $search = $_GET['search'] : $search = "";
-        
+
         $today = date('Y-m-d H:i:s');
         $data['page']           = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0; 
         $data['start']          = $this->uri->segment(2, 0);
-    
+
         $config['base_url']     = site_url('seminar');
+        
+
+        $query_string = $_GET;
+        if (isset($query_string['page']))
+        {
+            unset($query_string['page']);
+        }
+
+        if (count($query_string) > 0)
+        {
+            $config['suffix'] = '?' . http_build_query($query_string, '', "&");
+            $config['first_url'] = $config['base_url'] . '?' . http_build_query($query_string, '', "&");
+        }
+
+
         $config['total_rows']   = count($this->m_seminar->getDataSeminar('seminar', array('status_seminar' => 1, 'DATE_FORMAT(jadwal_seminar, "%Y-%m-%d %H:%i:%s") >=' => $today), 'jadwal_seminar desc', $search, '', ''));
-        $config['per_page']     = "5";
+        $config['per_page']     = 2;
         $config["uri_segment"]  = 2;
         $choice                 = $config["total_rows"] / $config["per_page"];
         $config["num_links"]    = floor($choice);
