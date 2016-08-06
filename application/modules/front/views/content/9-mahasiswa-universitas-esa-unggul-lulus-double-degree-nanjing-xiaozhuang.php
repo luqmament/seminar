@@ -36,158 +36,31 @@
 <!-- </div> -->
 
 <div style="padding: 60px 0">
-	<div class="container div-shadow" >
+	<div class="container div-shadow">
 		<div class="col-md-7">
-			<h2 class="tittle">DAFTAR SEMINAR</h2>
-			<?php
-				//echo "<pre>", print_r($seminar);
-				foreach ($seminar as $key => $value):
-			?>
-				<div class="col-md-12">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				    <table>
-				    	<tr>
-				    		<td>
-				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px; width:100px" alt="...">
-							    </a>
-				    		</td>
-				    		<td>
-				    			<table class="table_margin">
-				    				<tr>
-							    		<td colspan="3" align="center"><b><?php echo $value['tema_seminar'] ?></b></td>
-							    	</tr>
-							    	<tr>
-							    		<td width="160px">Pembicara Seminar</td>
-							    		<td width="10px">:</td>
-							    		<td><?php echo $value['pembicara_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Jadwal Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['jadwal_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Tempat Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['tempat_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Kuota Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['kuota_seminar'] ?></td>
-							    	</tr>			    	
-							    	<tr>
-							    		<td>Semester Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['semester_seminar'] ?></td>
-							    	</tr>
-				    			</table>
-				    		</td>
-				    	</tr>
-				    </table>
-				    <button type="button" class="btn btn-primary btn-lg" style="display:block; float:right" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
+			<div id="content">
 
-			<!-- Modal -->
-			<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
+				<div class="contentbox w620">
+						
+					<h2>Selamat dan Sukses Kepada 9 Mahasiswa Universitas Esa Unggul Lulus Double Degree Nanjing Xiaozhuang University Batch 2, China</h2>
 
-			    <!-- Modal content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Seminar</h4>
-			      </div>
-			      <div class="modal-body">
-			        <div class="panel panel-default">
-					  <div class="panel-body">
-					  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
-					  //echo "<pre>",print_r($session_mhs);
-					  ?>
-					    <table class="table">
-					    	<tr>
-				    			<td width="160px">Tema Seminar</td>
-					    		<td width="10px">:</td>
-					    		<td><?php echo $value['tema_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Pembicara Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['pembicara_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Jadwal Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['jadwal_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Tempat Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['tempat_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Kuota Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['kuota_seminar'] ?></td>
-					    	</tr>
-							<tr>
-					    		<td>Kelas Seminar</td>
-					    		<td>:</td>
-					    		<td><?php 
-								switch($value['untuk_kelas']){
-									case '1' :
-									$kelas_seminar = 'Reguler' ;
-									break;
-									
-									case '2' :
-									$kelas_seminar = 'Paralel' ;
-									break;
-									default :
-									$kelas_seminar = 'Paralel dan Reguler' ;
-								}
-								echo $kelas_seminar ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Semester Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['semester_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>NIM Mahasiswa</td>
-					    		<td>:</td>
-					    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Nama Mahasiswa</td>
-					    		<td>:</td>
-					    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-					    	</tr>	    	
-					    	<tr>
-					    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
-					    	</tr>
-					    </table>
-					  </div>
-					</div>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
-			      </div>
-			    </div>
+					<div id="attachment_23866" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Wisuda-Mahasiswa-Universitas-Esa-Unggul-Program-Beasiswa-Unggulan-Double-Degree.jpg" rel="lightbox"><img class="size-full wp-image-23866" title="Wisuda Mahasiswa Universitas Esa Unggul Program Beasiswa Unggulan Double Degree" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Wisuda-Mahasiswa-Universitas-Esa-Unggul-Program-Beasiswa-Unggulan-Double-Degree.jpg" alt="Wisuda Mahasiswa Universitas Esa Unggul Program Beasiswa Unggulan Double Degree" width="550" /></a><p class="wp-caption-text">Wisuda Mahasiswa Universitas Esa Unggul Program Beasiswa Unggulan Double Degree</p></div>
+					<h1 style="text-align: justify;">Selamat dan Sukses Kepada 9 Mahasiswa Universitas Esa Unggul Lulus Double Degree Nanjing Xiaozhuang University Batch 2, China</h1>
+					<p style="text-align: justify;">Selamat dan Sukses Atas Kelulusan dan Wisuda 9 Mahasiswa Universitas Esa Unggul Program Beasiswa Unggulan Double Degree ke Nanjing Xiaozhuang University, China pada 26 Juni 2016.</p>
+					<p style="text-align: justify;">Kesembilan mahasiswa itu merupakan mahasiswa Jurusan Akuntansi, Manajemen dan Teknik Informatika yang diberi kesempatan memperoleh Beasiswa Unggulan Program Double Degree oleh Kementerian Pendidikan dan Kebudayaan RI. Berikut nama-nama Mahasiswa tersebut :</p>
+					<p>Cecilia &#8211; Akuntansi<br />
+					Romadhon Eva Suryani &#8211; Akuntansi<br />
+					Herlan Gunawan &#8211; Manajemen<br />
+					Wahyu Wijayanto &#8211; Manajemen<br />
+					Dwi Maya Lestari &#8211; Manajemen<br />
+					Resty Kusumaningrum &#8211; Akuntansi<br />
+					Wahyudi Nugroho &#8211; Teknik Informatika<br />
+					Chandra Budi Setiawan &#8211; Teknik Informatika<br />
+					Desi Purwati &#8211; Teknik Informatika</p>
+					<div id="attachment_23867" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Para-Wisudawan-Program-Double-Degree.jpg" rel="lightbox"><img class="size-full wp-image-23867" title="Para Wisudawan Program Double Degree" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Para-Wisudawan-Program-Double-Degree.jpg" alt="Para Wisudawan Program Double Degree" width="550" /></a><p class="wp-caption-text">Para Wisudawan Program Double Degree</p></div>
+					<div id="attachment_23870" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Selamat-Kepada-Para-Wisudawan.jpg" rel="lightbox"><img class="size-full wp-image-23870" title="Selamat Kepada Para Wisudawan" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Selamat-Kepada-Para-Wisudawan.jpg" alt="Selamat Kepada Para Wisudawan" width="550" /></a><p class="wp-caption-text">Selamat Kepada Para Wisudawan</p></div>
+					
 
-			  </div>
-			</div>
-
-			<?php		
-				endforeach;
-			?>
-
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<?php echo $pagination; ?>
 				</div>
 			</div>
 		</div>
@@ -195,7 +68,7 @@
 			<!-- News -->
 			<div class="col-md-12">
 				<h2 class="tittle">News</h2>	
-				<div class="row" style="border : 1px solid grey ; background: #ffffff ; padding : 5px; margin-bottom: 10px">			
+				<div class="row" style="border : 1px solid grey ; background: #ffffff ;padding : 5px; margin-bottom: 10px">			
 					<!-- baris 1 -->
 			  		<table class="table">
 				    	<tr>
@@ -462,134 +335,3 @@
 
 </body>
 </html>
-
-
-
-<!-- js -->
-<script src="<?php echo base_url()?>assets/frontend/js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!-- for bootstrap working -->
-<script src="<?php echo base_url()?>assets/frontend/js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-
-<!-- smooth scrolling -->
-<script type="text/javascript">
-$(document).ready(function() {
-
-	/*var defaults = {
-	containerID: 'toTop', // fading element id
-	containerHoverID: 'toTopHover', // fading element hover id
-	scrollSpeed: 1200,
-	easingType: 'linear' 
-	};*/
-								
-	$().UItoTop({ easingType: 'easeOutQuart' });
-});
-</script>
-<!-- //smooth scrolling -->
-<script src="<?php echo base_url()?>assets/frontend/js/modernizr.custom.js"></script>
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="<?php echo base_url()?>assets/frontend/js/move-top.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/frontend/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
-<!-- search-scripts -->
-<script src="<?php echo base_url()?>assets/frontend/js/classie.js"></script>
-<script src="<?php echo base_url()?>assets/frontend/js/uisearch.js"></script>
-<script>
-	new UISearch( document.getElementById( 'sb-search' ) );
-</script>
-<!-- //search-scripts -->
-<script src="<?php echo base_url()?>assets/frontend/js/jquery.swipebox.min.js"></script> 
-<script type="text/javascript">
-			jQuery(function($) {
-				$(".swipebox").swipebox();
-			});
-</script>
-<script src="<?php echo base_url()?>assets/frontend/js/jquery.event.move.js"></script>
-<script src="<?php echo base_url()?>assets/frontend/js/responsive-slider.js"></script>
-<script>
-	function daftar_seminar(id_seminar){
-
-		var id_mhs 		= "<?php echo $session_mhs['id_mahasiswa']?>";
-
-		if(!id_mhs){
-			alert('Maaf, Anda harus login sebelum mendaftar!');
-			location.href = "<?php echo base_url('login?ref='); ?>";
-		}else{
-			$.ajax({
-		        type: 'POST',
-		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
-		        data: {
-		         'id_mhs': id_mhs,
-		         'id_seminar': id_seminar
-
-		        },
-		        dataType: 'json',
-		        success: function(results){
-		        	//console.log(results);
-	             	if(results.status == "success"){
-		              	alert("Terima kasih, Anda telah terdaftar di seminar");
-		              	location.href = results.location;
-		              	return true;
-	             	}else if(results.status == "error"){
-	             		alert(results.alert);
-	             		window.location.reload();
-	             	}
-	             	else{
-	             		alert(results.alert);
-		              	window.location.reload();
-	             	}
-
-	             	return false;
-		        }
-	  		});
-		}		
-
-	}
-
-$(document).on("click","#btn_seminar_"+$(this).attr('sem_id'), function(){
-	alert();
-    /*var formData = {
-            id: $(this).attr("id"),
-            id_user: $(this).attr("id_user"),
-            point_user: $(this).attr("point")
-    };
-    $.ajax({
-        type: "POST",
-        url: URL+'front/reward/viewGift',
-        data: formData,
-        dataType: "json",
-        success: function(res){
-            if (res.notif != '') {
-		alert(res.notif);
-		$("#GiftRedeem").modal('hide'); 
-		return false ;
-	    }else{
-                $("#GiftRedeem").modal('show'); 
-                return ($("#modalName").text(res.data["name"])+
-                $("#modalAgentName").text('Agent Name : '+res.data["agent_name"])+
-                $("#modalMG_userID").text('MG User ID : '+res.data["mg_user_id"])+
-                $("#modalStausMember").text(res.data["status_member"])+
-                $("#modalValue").text(res.data["value"])+
-                $("#modaldescriptionGift").text(res.data["description"])+
-                $("#modalRemark").text('Jumlah point Kamu akan berkurang sebanyak '+res.data["point"]+' point')+
-                $('#modalImg').attr('src', res.data["pict_name"])+
-                $('#gift_id').val(res.data["id"])+
-                $('#point').val(res.data["point"])+
-                $('#point_user').val(formData.point_user)+
-                $('#user_id').val(formData.id_user)+
-		$('#typeGift').val(res.data["type"]));
-            }
-        }
-    });*/
-});
-
-</script>

@@ -60,6 +60,9 @@ $route['list-seminar'] 				= 'front/c_biomhs/list_seminar';
 $route['seminar/(:any)'] 			= 'front/all_seminar/index/$1';
 $route['seminar'] 					= 'front/all_seminar/index/1';
 
+//Content Static
+$route['news/(:any)']				= 'front/content_static';
+
 $route['404_override']          = '';
 $route['translate_uri_dashes'] = FALSE;
 
