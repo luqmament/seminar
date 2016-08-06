@@ -175,6 +175,7 @@ class Mahasiswa extends MY_Controller {
                         'semester_mahasiswa'    => $mahasiswa_login->semester_mahasiswa,
                         'photo_mahasiswa'       => $mahasiswa_login->photo_mahasiswa,
                         'nama_fakultas'         => $mahasiswa_login->nama_fakultas,
+                        'nama_jurusan'          => $mahasiswa_login->nama_jurusan,                        
                         'tipe_mahasiswa'        => $mahasiswa_login->tipe_mahasiswa
                     );
                 $this->session->set_userdata('CMS_mahasiswa', $sessionMHS);
