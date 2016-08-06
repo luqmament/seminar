@@ -335,3 +335,11 @@
 
 </body>
 </html>
+
+<!-- search-scripts -->
+<script src="<?php echo base_url()?>assets/frontend/js/classie.js"></script>
+<script src="<?php echo base_url()?>assets/frontend/js/uisearch.js"></script>
+<script>
+	new UISearch( document.getElementById( 'sb-search' ) );
+</script>
+<!-- //search-scripts -->
