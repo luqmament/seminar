@@ -21,16 +21,16 @@
 					<div class="pull-left"><a href="#" class="btn btn-primary btn-upgrade-mhs">Update mahasiswa</a></div>
 					<div class="pull-right">
 						<?php echo form_open_multipart('backend/c_mahasiswa/cari', array("id" => "form-search-mahasiswa", "class" => "form-inline", "method" => "POST")); ?>  
-						<input type="text" name="search_mahasiswa" class="form-control" id="search_mahasiswa" placeholder="search" value="<?php $session_searchMahasiswa = $this->session->userdata('pencarian_mahasiswa'); echo (!empty($session_searchMahasiswa)) ? $session_searchMahasiswa : ''?>" />     
+						<input type="text" name="search_mahasiswa" class="form-control" id="search_mahasiswa" placeholder="search By NIM / NAMA" value="<?php $session_searchMahasiswa = $this->session->userdata('pencarian_mahasiswa'); echo (!empty($session_searchMahasiswa)) ? $session_searchMahasiswa : ''?>" />     
 						<button type="submit" class="btn btn-primary">Cari</button>
 						<a href="<?php echo site_url('backend/c_mahasiswa')?>" class="btn btn-primary btn-upgrade-mhs">show all</a>
 						<?php echo form_close();?>						
 					</div>					
 					</div>
-					<?php if($this->session->flashdata('infoFakultas')){ ?>
+					<?php if($this->session->flashdata('infoUpdateMahasiswa')){ ?>
 						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>Success!</strong> <?php echo $this->session->flashdata('infoFakultas'); ?>
+							<strong>Success!</strong> <?php echo $this->session->flashdata('infoUpdateMahasiswa'); ?>
 						</div>
 					<?php } ?>
 					<?php if($this->session->flashdata('infoDeleteUser')){ ?>
@@ -39,12 +39,13 @@
 							<strong>Success!</strong> <?php echo $this->session->flashdata('infoDeleteUser'); ?>
 						</div>
 					<?php } ?>
-					<?php if($this->session->flashdata('infoCheckFakultas')){ ?>
-						<div class="alert alert-warning" style="margin: 15px">
+					<?php if ($this->session->flashdata('infoChangePasswordMhs')) { ?>
+						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>Failed!</strong> <?php echo $this->session->flashdata('infoCheckFakultas'); ?>
+							<strong>Success!</strong> <?php echo $this->session->flashdata('infoChangePasswordMhs'); ?>
 						</div>
 					<?php } ?>
+
 					<div class="panel-body">
 						<table class="table table-bordered table-hover">
 							<thead>
@@ -56,6 +57,7 @@
 								<th>Telp</th>
 								<th>FAKULTAS</th>
 								<th>Jurusan</th>
+								<th>Status Mahasiswa</th>
 								<th>Action</th>
 							  </tr>
 							</thead>
@@ -70,9 +72,10 @@
 								<td><?php echo $value['telp_mahasiswa'] ?></td>
 								<td><?php echo $value['nama_fakultas'] ?></td>
 								<td><?php echo $value['nama_jurusan'] ?></td>
+								<td><?php echo ($value['status_mahasiswa'] == 1 ? 'active' : 'Non Active') ?></td>
 								<td class="text-center">
-								    <a href="<?php echo site_url('backend/c_fakultas/v_fakultas/'.$value['id_fakultas'])?>" >Edit</a>  
-								    | <a id="delete_fakultas" id_fakultas="<?php echo $value['id_fakultas']?>" >Delete</td>
+								    <a href="<?php echo site_url('backend/c_mahasiswa/v_mahasiswa/'.$value['id_mahasiswa'])?>" >Edit</a>  
+								    | <a id="delete_mhs" id_mahasiswa="<?php echo $value['id_mahasiswa']?>" >Delete</td>
 							</tr>  
 							<?php }  ?>
 							</tbody>
@@ -97,7 +100,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">File Excel Agent</h4>
       </div>
-        <?php echo form_open_multipart('backend/c_mahasiswa/upg_mahasiswa', array("id" => "form-data-mahasiswa", "class" => "form-horizontal", "enctype" => "multipart/form-data", "method" => "POST")); ?>  
+        <?php echo form_open_multipart('backend/c_mahasiswa/upg_mahasiswa', array("id" => "form-data-mahasiswa", "class" => "form-horizontal", "enctype" => "multipart/form-data", "method" => "POST", "onsubmit" => "return false")); ?>  
         <div class="modal-body"> 
             <div class="form-group">
                 <label class="col-sm-3 control-label">File</label>
@@ -148,19 +151,19 @@
 	})
 </script>
 <script>
-$(document).on("click","#delete_fakultas", function(){
-    var answer = confirm("Are you sure you want to Delete Fakultas ID = "+$(this).attr('id_fakultas')+' ?');
+$(document).on("click","#delete_mhs", function(){
+    var answer = confirm("Are you sure you want to Delete Mahasiswa ID = "+$(this).attr('id_mahasiswa')+' ?');
     if(answer){
              $.ajax({
                 type: "POST",
-                url: base_url+'backend/c_fakultas/do_delete',
-                data: {id : $(this).attr('id_fakultas')},
+                url: base_url+'backend/c_mahasiswa/do_delete',
+                data: {id : $(this).attr('id_mahasiswa')},
                 dataType: "json",
                 success: function(result){				
                     switch(result.returnVal){
                     case "success":
 				alert(result.alert);
-                    window.location.reload(base_url+'fakultas');
+                    window.location.reload(base_url+'mahasiswa');
                     break;
                     default:
                         alert(result.alert);
@@ -207,14 +210,13 @@ $('#form-data-mahasiswa').on('submit',(function(e) {
 		    $('#loading-search').css('display','none');
 		    switch (result.status) {
 			case 'success' :
-			    alert("Jumlah Data yang Masuk = "+result.Insert + "\n"
+			    alert("Jumlah Data yang Baru = "+result.Insert + "\n"
 			    +"Yang Tidak Masuk = " +result.Non_Insert);
                         window.location.reload();
 			break;
 			case 'pernah' :
 			    alert("Jumlah Data yang Masuk = "+result.Insert + "\n"
-			    +"Yang Tidak Masuk = " +result.Non_Insert + '\n'
-			    + result.returnVal);
+			    + result.returnVal  +' '+ result.Non_Insert);
                         window.location.reload();
 			break;
 			default :
@@ -240,4 +242,12 @@ function ValidateFileUpload(input, file){
     } 
        
   }
+
+function validation(){
+    if($('#file').val() ==""){
+        alert("Upload file masih kosong !");
+        $('#file').focus();
+        return false;
+    }
+}
 </script>
