@@ -36,158 +36,35 @@
 <!-- </div> -->
 
 <div style="padding: 60px 0">
-	<div class="container div-shadow" >
+	<div class="container div-shadow">
 		<div class="col-md-7">
-			<h2 class="tittle">DAFTAR SEMINAR</h2>
-			<?php
-				//echo "<pre>", print_r($seminar);
-				foreach ($seminar as $key => $value):
-			?>
-				<div class="col-md-12">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				    <table>
-				    	<tr>
-				    		<td>
-				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px; width:100px" alt="...">
-							    </a>
-				    		</td>
-				    		<td>
-				    			<table class="table_margin">
-				    				<tr>
-							    		<td colspan="3" align="center"><b><?php echo $value['tema_seminar'] ?></b></td>
-							    	</tr>
-							    	<tr>
-							    		<td width="160px">Pembicara Seminar</td>
-							    		<td width="10px">:</td>
-							    		<td><?php echo $value['pembicara_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Jadwal Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['jadwal_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Tempat Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['tempat_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Kuota Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['kuota_seminar'] ?></td>
-							    	</tr>			    	
-							    	<tr>
-							    		<td>Semester Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['semester_seminar'] ?></td>
-							    	</tr>
-				    			</table>
-				    		</td>
-				    	</tr>
-				    </table>
-				    <button type="button" class="btn btn-primary btn-lg" style="display:block; float:right" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
-				</div>
-			</div>
+			<div id="content">
 
-			<!-- Modal -->
-			<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
+				<div class="contentbox w620">
+						
+					<h2>Selamat Atas Keberhasilan 1 Team PKM Bidang  Kewirausahaan Tahun 2015 Anggaran Pendanaan 2016  Lolos Ke Pekan Ilmiah Mahasiswa Nasional (PIMNAS) Ke-29 di Institut Pertanian Bogor</h2>
 
-			    <!-- Modal content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Seminar</h4>
-			      </div>
-			      <div class="modal-body">
-			        <div class="panel panel-default">
-					  <div class="panel-body">
-					  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
-					  //echo "<pre>",print_r($session_mhs);
-					  ?>
-					    <table class="table">
-					    	<tr>
-				    			<td width="160px">Tema Seminar</td>
-					    		<td width="10px">:</td>
-					    		<td><?php echo $value['tema_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Pembicara Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['pembicara_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Jadwal Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['jadwal_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Tempat Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['tempat_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Kuota Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['kuota_seminar'] ?></td>
-					    	</tr>
-							<tr>
-					    		<td>Kelas Seminar</td>
-					    		<td>:</td>
-					    		<td><?php 
-								switch($value['untuk_kelas']){
-									case '1' :
-									$kelas_seminar = 'Reguler' ;
-									break;
-									
-									case '2' :
-									$kelas_seminar = 'Paralel' ;
-									break;
-									default :
-									$kelas_seminar = 'Paralel dan Reguler' ;
-								}
-								echo $kelas_seminar ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Semester Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['semester_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>NIM Mahasiswa</td>
-					    		<td>:</td>
-					    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Nama Mahasiswa</td>
-					    		<td>:</td>
-					    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-					    	</tr>	    	
-					    	<tr>
-					    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
-					    	</tr>
-					    </table>
-					  </div>
-					</div>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
-			      </div>
-			    </div>
+					<div id="attachment_23901" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/PIMNAS-2016.jpg" rel="lightbox"><img class="size-full wp-image-23901" title="PIMNAS 2016" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/PIMNAS-2016.jpg" alt="Selamat Atas Keberhasilan 1 Team PKM Bidang  Kewirausahaan Tahun 2015 Anggaran Pendanaan 2016  Lolos Ke Pekan Ilmiah Mahasiswa Nasional (PIMNAS) Ke-29 di Institut Pertanian Bogor" width="550" /></a><p class="wp-caption-text">Selamat Atas Keberhasilan 1 Team PKM Bidang Kewirausahaan Tahun 2015 Anggaran Pendanaan 2016 Lolos Ke Pekan Ilmiah Mahasiswa Nasional (PIMNAS) Ke-29 di Institut Pertanian Bogor</p></div>
+					<p><div class="line mb1e"><!-- --></div><br />
+					<a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/agenda-kegiatan-pimnas_1.png" rel="lightbox"><img class="size-full wp-image-23901" title="PIMNAS 2016" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/agenda-kegiatan-pimnas_1.png" alt="Selamat Atas Keberhasilan 1 Team PKM Bidang  Kewirausahaan Tahun 2015 Anggaran Pendanaan 2016  Lolos Ke Pekan Ilmiah Mahasiswa Nasional (PIMNAS) Ke-29 di Institut Pertanian Bogor" width="550" /></a><br />
+					<div class="line mb1e"><!-- --></div><br />
+					<a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/agenda-kegiatan-pimnas_2.png" rel="lightbox"><img class="size-full wp-image-23901" title="PIMNAS 2016" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/agenda-kegiatan-pimnas_2.png" alt="Selamat Atas Keberhasilan 1 Team PKM Bidang  Kewirausahaan Tahun 2015 Anggaran Pendanaan 2016  Lolos Ke Pekan Ilmiah Mahasiswa Nasional (PIMNAS) Ke-29 di Institut Pertanian Bogor" width="550" /></a></p>
+					<p>Alhamdulillah, setelah team juri melakukan penilaian terhadap beberapa proposal pemenang PKM 5 bidang tahun 2015 anggaran pendanaan 2016, baik dari segi laporan kemajuan yang di upload di www.simlitabmas.dikti.go.id dan pelaksanaan MONEV yang berlangsung di Universitas Atmajaya Jakarta pada tanggal 22 Juni 2016, 1 (satu ) team <strong>Program Kreatifitas Mahasiswa</strong> (PKM) <strong>Kewirausahaan Universitas Esa Unggul</strong> LOLOS dan berhak Ikut Pekan Ilmiah Mahasiswa Nasional (PIMNAS) ke-29 di Institut Pertanian Bogor pada tanggal 8 sampai dengan 11 Agustus 2016.</p>
+					<p>Adapun Team <strong>PKM Kewirausahaan Universitas Esa Unggul</strong> yang lolos PIMNAS tersebut adalah sbb :<br />
+					Ketua     : Syaiful Azzam Rabbani     2015 – 24 – 024<br />
+					Anggota :<br />
+					1. Anang Filya Prasetya       2015 – 51 – 005<br />
+					2. Laurentius Rullyan Christianto     2014 – 51 – 016</p>
+					<p>Produk : Latte Book Invrative Project</p>
+					<p>Dosen Pembimbing : Teddy Mohamad Darajat.,S.Sn., M.Ds<br />
+					<div class="line mb1e"><!-- --></div><br />
+					<a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/data-team-pimnas-29-11.jpg" rel="lightbox"><img class="size-full wp-image-23901" title="PIMNAS 2016" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/data-team-pimnas-29-11.jpg" alt="Selamat Atas Keberhasilan 1 Team PKM Bidang  Kewirausahaan Tahun 2015 Anggaran Pendanaan 2016  Lolos Ke Pekan Ilmiah Mahasiswa Nasional (PIMNAS) Ke-29 di Institut Pertanian Bogor" width="550" /></a><br />
+					<div class="line mb1e"><!-- --></div><br />
+					<a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/data-team-pimnas-29-21.jpg" rel="lightbox"><img class="size-full wp-image-23901" title="PIMNAS 2016" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/data-team-pimnas-29-21.jpg" alt="Selamat Atas Keberhasilan 1 Team PKM Bidang  Kewirausahaan Tahun 2015 Anggaran Pendanaan 2016  Lolos Ke Pekan Ilmiah Mahasiswa Nasional (PIMNAS) Ke-29 di Institut Pertanian Bogor" width="550" /></a><br />
+					<div class="line mb1e"><!-- --></div><br />
+					Besar harapan kiranya Civitas Akademika <strong>Universitas Esa Unggul</strong> dapat memberikan dukungan moril, materil dan do’a agar kiranya team yang mewakili UEU ini dapat mempersiapkan dengan baik segala yang dibutuhkan selama pelaksanaan PIMNAS ke-29 dan diberikan kesehatan, kemudahan serta kelancaran. Aamiin Ya Rabb.</p>
+					
 
-			  </div>
-			</div>
-
-			<?php		
-				endforeach;
-			?>
-
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<?php echo $pagination; ?>
 				</div>
 			</div>
 		</div>
@@ -195,7 +72,7 @@
 			<!-- News -->
 			<div class="col-md-12">
 				<h2 class="tittle">News</h2>	
-				<div class="row" style="border : 1px solid grey ; background: #ffffff ; padding : 5px; margin-bottom: 10px">			
+				<div class="row" style="border : 1px solid grey ; background: #ffffff ;padding : 5px; margin-bottom: 10px">			
 					<!-- baris 1 -->
 			  		<table class="table">
 				    	<tr>
@@ -462,134 +339,3 @@
 
 </body>
 </html>
-
-
-
-<!-- js -->
-<script src="<?php echo base_url()?>assets/frontend/js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!-- for bootstrap working -->
-<script src="<?php echo base_url()?>assets/frontend/js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-
-<!-- smooth scrolling -->
-<script type="text/javascript">
-$(document).ready(function() {
-
-	/*var defaults = {
-	containerID: 'toTop', // fading element id
-	containerHoverID: 'toTopHover', // fading element hover id
-	scrollSpeed: 1200,
-	easingType: 'linear' 
-	};*/
-								
-	$().UItoTop({ easingType: 'easeOutQuart' });
-});
-</script>
-<!-- //smooth scrolling -->
-<script src="<?php echo base_url()?>assets/frontend/js/modernizr.custom.js"></script>
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="<?php echo base_url()?>assets/frontend/js/move-top.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/frontend/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
-<!-- search-scripts -->
-<script src="<?php echo base_url()?>assets/frontend/js/classie.js"></script>
-<script src="<?php echo base_url()?>assets/frontend/js/uisearch.js"></script>
-<script>
-	new UISearch( document.getElementById( 'sb-search' ) );
-</script>
-<!-- //search-scripts -->
-<script src="<?php echo base_url()?>assets/frontend/js/jquery.swipebox.min.js"></script> 
-<script type="text/javascript">
-			jQuery(function($) {
-				$(".swipebox").swipebox();
-			});
-</script>
-<script src="<?php echo base_url()?>assets/frontend/js/jquery.event.move.js"></script>
-<script src="<?php echo base_url()?>assets/frontend/js/responsive-slider.js"></script>
-<script>
-	function daftar_seminar(id_seminar){
-
-		var id_mhs 		= "<?php echo $session_mhs['id_mahasiswa']?>";
-
-		if(!id_mhs){
-			alert('Maaf, Anda harus login sebelum mendaftar!');
-			location.href = "<?php echo base_url('login?ref='); ?>";
-		}else{
-			$.ajax({
-		        type: 'POST',
-		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
-		        data: {
-		         'id_mhs': id_mhs,
-		         'id_seminar': id_seminar
-
-		        },
-		        dataType: 'json',
-		        success: function(results){
-		        	//console.log(results);
-	             	if(results.status == "success"){
-		              	alert("Terima kasih, Anda telah terdaftar di seminar");
-		              	location.href = results.location;
-		              	return true;
-	             	}else if(results.status == "error"){
-	             		alert(results.alert);
-	             		window.location.reload();
-	             	}
-	             	else{
-	             		alert(results.alert);
-		              	window.location.reload();
-	             	}
-
-	             	return false;
-		        }
-	  		});
-		}		
-
-	}
-
-$(document).on("click","#btn_seminar_"+$(this).attr('sem_id'), function(){
-	alert();
-    /*var formData = {
-            id: $(this).attr("id"),
-            id_user: $(this).attr("id_user"),
-            point_user: $(this).attr("point")
-    };
-    $.ajax({
-        type: "POST",
-        url: URL+'front/reward/viewGift',
-        data: formData,
-        dataType: "json",
-        success: function(res){
-            if (res.notif != '') {
-		alert(res.notif);
-		$("#GiftRedeem").modal('hide'); 
-		return false ;
-	    }else{
-                $("#GiftRedeem").modal('show'); 
-                return ($("#modalName").text(res.data["name"])+
-                $("#modalAgentName").text('Agent Name : '+res.data["agent_name"])+
-                $("#modalMG_userID").text('MG User ID : '+res.data["mg_user_id"])+
-                $("#modalStausMember").text(res.data["status_member"])+
-                $("#modalValue").text(res.data["value"])+
-                $("#modaldescriptionGift").text(res.data["description"])+
-                $("#modalRemark").text('Jumlah point Kamu akan berkurang sebanyak '+res.data["point"]+' point')+
-                $('#modalImg').attr('src', res.data["pict_name"])+
-                $('#gift_id').val(res.data["id"])+
-                $('#point').val(res.data["point"])+
-                $('#point_user').val(formData.point_user)+
-                $('#user_id').val(formData.id_user)+
-		$('#typeGift').val(res.data["type"]));
-            }
-        }
-    });*/
-});
-
-</script>
