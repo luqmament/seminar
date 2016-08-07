@@ -41,6 +41,7 @@ class M_register extends CI_Model {
     	if($query){
             return true ;
         }else{
+            
         	return false ;
         }
 
