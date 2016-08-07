@@ -6,6 +6,7 @@ class C_seminar extends MY_Controller {
     function __construct(){
 	parent::__construct();
 	$this->load->model(array('m_seminar'));
+    $this->load->library('excel');
 	$this->sessionData = $this->session->userdata('CMS_logged_in');
 	if(!$this->sessionData){
 	//    if($this->uri->segment(1) == 'dashboard'){ 
@@ -21,7 +22,7 @@ class C_seminar extends MY_Controller {
 
 		$this->arr_dimension_poster = array();
         $this->arr_dimension_poster['display']['width'] = 250;
-        $this->arr_dimension_poster['display']['height'] = 400;
+        $this->arr_dimension_poster['display']['height'] = 400; 
 
         $this->arr_dimension_sertifikat = array();
         $this->arr_dimension_sertifikat['display']['width'] = 400;
@@ -31,9 +32,13 @@ class C_seminar extends MY_Controller {
     public function index(){
         //pagination settings
         $data['listFakultas']   = array();
+        $session_searchMahasiswa = $this->session->userdata('pencarian_seminar');
+        if(isset($session_searchMahasiswa)){
+            $this->session->unset_userdata('pencarian_seminar');
+        }
         $config['base_url'] 	= site_url('backend/c_seminar/index');
         $config['total_rows'] 	= $this->db->count_all('seminar');
-        $config['per_page'] 	= "2";
+        $config['per_page'] 	= "20";
         $config["uri_segment"] 	= 4;
         $choice 				= $config["total_rows"] / $config["per_page"];
         $config["num_links"] 	= floor($choice);
@@ -65,13 +70,76 @@ class C_seminar extends MY_Controller {
 		$data['start'] 			= $this->uri->segment(4, 0);
         $data['listSeminar'] 	= $this->m_seminar->list_dataSeminar($config["per_page"],$data['page']);
         foreach ($data['listSeminar'] as $key => $value) {
-            $data['listSeminar'][$key]['list_peserta'] = $this->m_seminar->list_PesertaSeminar($value['id_seminar']);
+            $data['listSeminar'][$key]['list_peserta'] = $this->m_seminar->list_Peserta($value['id_seminar']);
         }
         //echo '<pre>',print_r($data);die();
 		$data['pagination'] = $this->pagination->create_links();
         $this->doview('list_seminar', $data);
     }
-            
+    
+    function cari(){
+    $page   = $this->uri->segment(4);
+    //echo $page;die();
+    $batas  = 20;
+    if(!$page):
+    $offset = 0;
+    else:
+    $offset = $page;
+    endif;
+
+    $search_seminar = "";
+    $postkata = $this->input->post('search_seminar');
+    if(!empty($postkata))
+    {
+        $search_seminar = $this->input->post('search_seminar');
+        $this->session->set_userdata('pencarian_seminar', $search_seminar);
+    }
+    else
+    {
+        $search_seminar = $this->session->userdata('pencarian_seminar');
+    }
+    //$data['listMahasiswa'] = $this->search_model->cari_dosen($batas,$offset,$data['nama']);
+    $data['listSeminar'] = $this->m_seminar->list_dataSeminar($batas,$offset,$search_seminar);
+    //$tot_hal = $this->search_model->tot_hal('ja_mst_dosen','nama_dosen',$data['nama']);
+
+    $config['base_url'] = base_url() . 'backend/c_seminar/cari/';
+    $config['total_rows'] = $this->m_seminar->jumlah_dataSeminar($search_seminar);
+    $config['per_page'] = $batas;
+    $config['uri_segment'] = 4;
+
+
+    //config for bootstrap pagination class integration
+    $config['full_tag_open']    = '<ul class="pagination">';
+    $config['full_tag_close']   = '</ul>';
+    $config['first_link']       = FALSE;
+    $config['last_link']        = FALSE;
+    $config['first_tag_open']   = '<li>';
+    $config['first_tag_close']  = '</li>';
+    $config['prev_link']        = '&laquo';
+    $config['prev_tag_open']    = '<li class="prev">';
+    $config['prev_tag_close']   = '</li>';
+    $config['next_link']        = '&raquo';
+    $config['next_tag_open']    = '<li>';
+    $config['next_tag_close']   = '</li>';
+    $config['last_tag_open']    = '<li>';
+    $config['last_tag_close']   = '</li>';
+    $config['cur_tag_open']     = '<li class="active"><a href="#">';
+    $config['cur_tag_close']    = '</a></li>';
+    $config['num_tag_open']     = '<li>';
+    $config['num_tag_close']    = '</li>';
+    
+    $this->pagination->initialize($config);
+    $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+    
+    //call the model function to get the Mahasiswa data
+    $data['start']          = $this->uri->segment(4, 0);
+        
+    $data["pagination"] =$this->pagination->create_links();
+    $this->doview('list_seminar', $data);
+       
+    //$this->load->view('search/hasil',$data);
+    }
+
     public function v_seminar($id = ''){
         $data               	= array();
         $data['getDetail']  	= array();
@@ -90,11 +158,73 @@ class C_seminar extends MY_Controller {
         $this->doview('v_seminar', $data);
     
     }
+
     public function listPeserta($id_seminar = ''){
-        $data                   = array();
-        $data['list_peserta'] = $this->m_seminar->list_PesertaSeminar($id_seminar);
-        //echo '<pre>',print_r($data);die();
-        $this->doview('list_PesertaSeminar', $data);
+    $data   = array();
+    $session_searchPesertaMahasiswa = $this->session->userdata('pencarian_peserta_seminar');
+    if(isset($session_searchPesertaMahasiswa)){
+        $this->session->unset_userdata('pencarian_peserta_seminar');
+    }
+    $page   = $this->uri->segment(5);
+    //echo $page;die();
+    $batas  = 20;
+    if(!$page):
+    $offset = 0;
+    else:
+    $offset = $page;
+    endif;
+
+    $search_peserta = "";
+    $postkata = $this->input->post('search_peserta');
+    if(!empty($postkata))
+    {
+        $search_peserta = $this->input->post('search_peserta');
+        $this->session->set_userdata('pencarian_peserta_seminar', $search_peserta);
+    }
+    else
+    {
+        $search_peserta = $this->session->userdata('pencarian_peserta_seminar');
+    }
+
+    $config['base_url'] = base_url() . 'backend/c_seminar/listPeserta/'.$id_seminar;
+    $config['total_rows'] = $this->m_seminar->jumlah_dataPesertaSeminar($search_peserta, $id_seminar);
+    //echo $config['total_rows'];die();
+    $config['per_page'] = $batas;
+    $config['uri_segment'] = 5;
+
+
+    //config for bootstrap pagination class integration
+    $config['full_tag_open']    = '<ul class="pagination">';
+    $config['full_tag_close']   = '</ul>';
+    $config['first_link']       = FALSE;
+    $config['last_link']        = FALSE;
+    $config['first_tag_open']   = '<li>';
+    $config['first_tag_close']  = '</li>';
+    $config['prev_link']        = '&laquo';
+    $config['prev_tag_open']    = '<li class="prev">';
+    $config['prev_tag_close']   = '</li>';
+    $config['next_link']        = '&raquo';
+    $config['next_tag_open']    = '<li>';
+    $config['next_tag_close']   = '</li>';
+    $config['last_tag_open']    = '<li>';
+    $config['last_tag_close']   = '</li>';
+    $config['cur_tag_open']     = '<li class="active"><a href="#">';
+    $config['cur_tag_close']    = '</a></li>';
+    $config['num_tag_open']     = '<li>';
+    $config['num_tag_close']    = '</li>';
+    
+    $this->pagination->initialize($config);
+    $data['page'] = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
+    
+    //call the model function to get the Mahasiswa data
+    $data['start']          = $this->uri->segment(5, 0);
+        
+    $data["pagination"] =$this->pagination->create_links();
+    //$this->doview('list_seminar', $data);
+    
+    //$data['listSeminar'] = $this->m_seminar->list_dataSeminar($batas,$offset,$search_seminar);
+    $data['list_peserta'] = $this->m_seminar->list_PesertaSeminar($batas, $offset, $search_peserta, $id_seminar);
+    $this->doview('list_PesertaSeminar', $data);
     
     }
 
@@ -387,6 +517,119 @@ class C_seminar extends MY_Controller {
         }
         echo json_encode(array('status' => $status));
         
+    }
+
+    function print_pesertaSeminar($id_seminar = ''){
+        @set_time_limit(0);
+        ob_clean();
+        
+
+        $data_peserta = $this->m_seminar->list_Peserta($id_seminar);
+        //echo '<pre>',print_r($data_peserta);die();
+        //echo $this->db->last_query();
+        //echo '<pre>',print_r($data_Point);die();
+        //name the worksheet
+        //echo $data_peserta[0]['tema_seminar'];die();
+        $nama_seminar = $data_peserta[0]['tema_seminar'];
+        $this->excel->getActiveSheet()->setTitle('List Peserta Seminar');
+    
+        $styleArray = array(
+            'borders' => array(
+                'allborders' => array(
+                    'style' => PHPExcel_Style_Border::BORDER_THIN
+                )
+            )
+        );
+
+        $this->excel->getActiveSheet()->setCellValue('A1', 'List Peserta Seminar');
+        $this->excel->getActiveSheet()->getStyle("A1")->getFont()->setSize(20);
+
+        /*$this->excel->getActiveSheet()->setCellValue('A3', 'Start Date : '.$from_date);
+        //$this->excel->getActiveSheet()->getStyle("A3")->getFont()->setSize(12);
+        $this->excel->getActiveSheet()->mergeCells('A3:C3');
+        $this->excel->getActiveSheet()->getStyle('A3:C3')->getFont()->setBold(true);
+        
+        $this->excel->getActiveSheet()->setCellValue('A4', 'End Date : '.$to_date);
+        //$this->excel->getActiveSheet()->getStyle("A4")->getFont()->setSize(12);
+        $this->excel->getActiveSheet()->mergeCells('A4:C4');
+        $this->excel->getActiveSheet()->getStyle('A4:C4')->getFont()->setBold(true);*/
+
+        
+        $this->excel->setActiveSheetIndex(0);
+        
+        
+        
+        // Field names in the first row
+        // set cell A1 content with some text
+        $fields = array('No', 'NIM', 'Nama Mahasiswa', 'No Ticket', 'Tema Seminar', 'Keterangan');
+        
+        $col = 0;
+        foreach ($fields as $field)
+        {
+            $this->excel->getActiveSheet()->setCellValueByColumnAndRow($col, 6, $field);
+            $col++;
+        }
+        
+        // Fetching the table data
+        /*$dataReportClaimed  = $this->report_model->report_claimed($tanggalClaimed);*/
+        //echo '<pre>',print_r($dataReportClaimed->result());
+        $row = 7;
+        $no = 1 ;
+        $noCol = 0 ;
+        foreach($data_peserta as $data)
+        {
+            //echo $data['nim_mahasiswa'];die();
+            $this->excel->getActiveSheet()->setCellValueByColumnAndRow($noCol, $row, $no); 
+            $arrItem = array('nim_mahasiswa', 'nama_depan', 'serial', 'tema_seminar');
+            
+            $col = 1;
+            foreach ($arrItem as $field)
+            {
+                /*if($field == 'value'){
+                    $data->$field = str_replace('.',',',$data->$field);
+                }*/
+                /*if ($field == 'status_req') {
+                    $data->$field = $data->$field.' by '.$data->username_admin ;
+                }*/
+                $this->excel->getActiveSheet()->setCellValueByColumnAndRow($col, $row, $data[$field]);               
+                $col++;
+            }
+            //make border
+            $this->excel->getActiveSheet()->getStyle('A'.$row.':F'.$row)->applyFromArray($styleArray);
+            $no++;
+            $row++;
+            
+        }
+        //make auto size        
+        for($col = 'A'; $col !== 'L'; $col++) {
+            $this->excel->getActiveSheet()->getColumnDimension($col)->setAutoSize(true);
+        }
+        //make border
+        $this->excel->getActiveSheet()->getStyle('A6:F6')->applyFromArray($styleArray);
+        
+        //change the font size
+        $this->excel->getActiveSheet()->getStyle()->getFont()->setSize(10);
+        
+        //make the font become bold
+        $this->excel->getActiveSheet()->getStyle('A1:F3')->getFont()->setBold(true);
+        
+        //merge cell
+        $this->excel->getActiveSheet()->mergeCells('A1:F1');
+        
+        //set aligment to center for that merged cell 
+        $this->excel->getActiveSheet()->getStyle('A1:F3')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $this->excel->getActiveSheet()->getStyle('A1:F3')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
+        
+        $this->excel->setActiveSheetIndex(0);
+        
+        $objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel5');
+        $filename = "peserta-seminar-".$data_peserta[0]['tema_seminar'].".xls" ;
+        // Sending headers to force the user to download the file
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename='.$filename);
+        header('Cache-Control: max-age=0');
+ 
+        $objWriter->save('php://output');
     }
 
 }

@@ -67,7 +67,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 						</ul>
 						<div class="search-box">
 							<div id="sb-search" class="sb-search">
-								<form>
+								<form action="<?php echo base_url('seminar'); ?>">
 									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
 									<input class="sb-search-submit" type="submit" value="">
 									<span class="sb-icon-search"> </span>

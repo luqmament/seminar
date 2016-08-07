@@ -21,7 +21,7 @@ class M_mahasiswa extends CI_Model {
 	return $res;    
     }
     
-    function list_dataMahasiswa($limit, $start, $search = ''){
+    function list_dataMahasiswa($limit, $start, $search = ''){ 
     $this->db->select('m.*, jf.nama_jurusan, f.nama_fakultas');
     $this->db->from('mahasiswa m');
     $this->db->join('jurusan_fakultas jf', 'm.id_jurusan_fak = jf.id_jurusan_fakultas');

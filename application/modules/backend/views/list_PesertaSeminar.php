@@ -18,7 +18,16 @@
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-					
+					<div class="pull-left">
+						<a href="<?php echo site_url('backend/c_seminar/print_pesertaSeminar/'.$this->uri->segment(4))?>" class="btn btn-primary">Print Peserta Seminar</a>
+					</div>
+					<div class="pull-right">
+						<?php echo form_open_multipart('backend/c_seminar/listPeserta/'.$this->uri->segment(4), array("id" => "form-search-peserta-seminar", "class" => "form-inline", "method" => "POST")); ?>  
+						<input type="text" name="search_peserta" class="form-control" id="search_peserta" placeholder="search By Nama Peserta" value="<?php $session_searchPesertaSeminar = $this->session->userdata('pencarian_peserta_seminar'); echo (!empty($session_searchPesertaSeminar)) ? $session_searchPesertaSeminar : ''?>" />     
+						<button type="submit" class="btn btn-primary">Cari</button>
+						<a href="<?php echo site_url('backend/c_seminar/listPeserta/'.$this->uri->segment(4))?>" class="btn btn-primary btn-upgrade-mhs">show all</a>
+						<?php echo form_close();?>						
+					</div>
 					</div>
 					<?php if($this->session->flashdata('infoSeminar')){ ?>
 						<div class="alert alert-success" style="margin: 15px">

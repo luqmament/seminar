@@ -21,10 +21,11 @@ class M_seminar extends CI_Model {
 		return $res;    
     }
 
-    function list_dataSeminar($limit, $start){
+    function list_dataSeminar($limit, $start, $search = ''){ 
 	    $this->db->select('s.*');
 	    $this->db->from('seminar s');
         $this->db->limit($limit , $start);
+    	$this->db->where("s.tema_seminar LIKE '%$search%'");
         $this->db->order_by('id_seminar', 'desc');
         $query =  $this->db->get();
         if($query->num_rows() > 0){
@@ -34,7 +35,20 @@ class M_seminar extends CI_Model {
         }
     }
 
-    function list_PesertaSeminar($id_seminar){
+    function jumlah_dataSeminar($search = ''){ 
+	    $this->db->select('s.*');
+	    $this->db->from('seminar s');
+    	$this->db->where("s.tema_seminar LIKE '%$search%'");
+        $this->db->order_by('id_seminar', 'desc');
+        $query =  $this->db->get();
+        if($query->num_rows() > 0){
+            return $query->num_rows();
+        }else{
+        	return array() ;
+        }
+    }
+
+    function list_Peserta($id_seminar){
 	    $this->db->select('ord.*, m.*, smr.*,tk.*');
         $this->db->from('order ord');
         $this->db->join('mahasiswa m', 'ord.id_mahasiswa = m.id_mahasiswa');
@@ -46,6 +60,39 @@ class M_seminar extends CI_Model {
             return $query->result_array();
         }else{
             return array();
+        }
+    }
+
+    function list_PesertaSeminar($limit, $start, $search = '', $id_seminar){
+	    $this->db->select('ord.*, m.*, smr.*,tk.*');
+        $this->db->from('order ord');
+        $this->db->join('mahasiswa m', 'ord.id_mahasiswa = m.id_mahasiswa');
+        $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
+        $this->db->join('ticket_manual tk', 'ord.id_ticket = tk.id_ticket');
+        $this->db->limit($limit , $start);
+        $this->db->where("m.nama_depan LIKE '%$search%'");
+        $this->db->where('smr.id_seminar', $id_seminar);
+        $query =  $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        }else{
+            return array();
+        }
+    }
+
+    function jumlah_dataPesertaSeminar($search = '', $id_seminar){
+	    $this->db->select('ord.*, m.*, smr.*,tk.*');
+        $this->db->from('order ord');
+        $this->db->join('mahasiswa m', 'ord.id_mahasiswa = m.id_mahasiswa');
+        $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
+        $this->db->join('ticket_manual tk', 'ord.id_ticket = tk.id_ticket');
+        $this->db->where("m.nama_depan LIKE '%$search%'");
+        $this->db->where('smr.id_seminar', $id_seminar);
+        $query =  $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        }else{
+            return false;
         }
     }
     

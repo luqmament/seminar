@@ -21,228 +21,54 @@
 	                	<img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
 	              	</div>
   	    		</li>
-  	    		<li>
-	              	<div class="slide-body" data-group="slide">
-	                	<img src="<?php echo base_url()?>assets/frontend/images/banner.jpg">
-	              	</div>
-  	    		</li>
   	    	</ul>
         </div>
-        <a class="slider-control left" href="#"4da4a-jump="prev">Prev</a>
+        <a class="slider-control left" href="#" data-jump="prev">Prev</a>
         <a class="slider-control right" href="#" data-jump="next">Next</a>
         <div class="pages">
           <a class="page" href="#" data-jump-to="1">1</a>
           <a class="page" href="#" data-jump-to="2">2</a>
           <a class="page" href="#" data-jump-to="3">3</a>
-          <a class="page" href="#" data-jump-to="4">4</a>
         </div>
     	</div>
       <!-- Responsive slider - END -->
 	</div>
 <!-- </div> -->
-<!-- <div class="banner-bottom" style="background : none">
-	<div class="container">
-		<h2 class="tittle">WELCOME TO TUTELAGE</h2> 
-		<div class="bottom-grids">
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR INSTRUCTIONS</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-education" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR SUPPORT</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR GUARANTEE</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR RELIABILITY</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div> -->
+
 <div style="padding: 60px 0">
 	<div class="container div-shadow">
 		<div class="col-md-7">
-			<h2 class="tittle">DAFTAR SEMINAR</h2>
-			<?php
-				//echo "<pre>", print_r($seminar);
-				foreach ($seminar as $key => $value):
-			?>
-				<div class="col-md-12">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				    <table >
-				    	<tr>
-				    		<td>
-				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px; width:100px" alt="...">
-							    </a>
-				    		</td>
-				    		<td valign="top">
-				    			<table class="table_margin">
-				    				<tr>
-							    		<td colspan="3" align="center"><b><?php echo $value['tema_seminar'] ?></b><br><br></td>
-							    	</tr>
-							    	<tr>
-							    		<td width="160px">Pembicara Seminar</td>
-							    		<td width="10px">:</td>
-							    		<td><?php echo $value['pembicara_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Jadwal Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['jadwal_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Tempat Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['tempat_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Kuota Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['kuota_seminar'] ?></td>
-							    	</tr>			    	
-							    	<tr>
-							    		<td>Semester Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['semester_seminar'] ?></td>
-							    	</tr>
-				    			</table>
-				    		</td>
-				    	</tr>
-				    </table>
-				    <button type="button" class="btn btn-primary btn-lg" style="display:block; float:right" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
+			<div id="content">
+
+				<div class="contentbox w620">
+						
+					<h2>Pembukaan Pre University Education, Awali Kuliah Dengan Seminar Pengembangan Diri Untuk Berprestasi</h2>
+
+					<div id="attachment_23901" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Pre-University-Education-2016.jpg" rel="lightbox"><img class="size-full wp-image-23901" title="Pre University Education 2016" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Pre-University-Education-2016.jpg" alt="Pre University Education 2016" width="550" /></a><p class="wp-caption-text">Pre University Education 2016</p></div>
+					<h1 style="text-align: justify;">Pembukaan Pre University Education, Awali Kuliah Dengan Seminar Pengembangan Diri Untuk Berprestasi</h1>
+					<p style="text-align: justify;">Melanjutkan dan menempuh Pendidikan Tinggi merupakan langkah dalam proses meningkatkan nilai diri sebagai generasi muda penerus perjuangan individu, keluarga, masyarakat, bangsa dan Negara. Persiapan menempuh ke Perguruan Tinggi tentu saja sangat penting bagi langkah awal menuju kesuskesan. Universitas Esa Unggul mengadakan program Pre University Education Program mulai dari 2 – 19 Agustus 2016 yang khusus dipersembahkan bagi Mahasiswa Baru TA 2016/2017.</p>
+					<div id="attachment_23902" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Jajaran-Direktur-Warek-Dekan-Dosen-Trainner-dan-Rektor-Universitas-Esa-Unggul.jpg" rel="lightbox"><img class="size-full wp-image-23902" title="Jajaran Direktur, Warek, Dekan, Dosen, Trainner dan Rektor Universitas Esa Unggul" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Jajaran-Direktur-Warek-Dekan-Dosen-Trainner-dan-Rektor-Universitas-Esa-Unggul.jpg" alt="Jajaran Direktur, Warek, Dekan, Dosen, Trainner dan Rektor Universitas Esa Unggul" width="550" /></a><p class="wp-caption-text">Jajaran Direktur, Warek, Dekan, Dosen, Trainner dan Rektor Universitas Esa Unggul</p></div>
+					<p style="text-align: justify;">Rangkaian kegiatan berasal dari Universitas maupun Program Studi yang berisi kegiatan Seminar, Workshop, Talkshow, Kunjungan Studi dan masih banyak tema lainnya yang pastinya akan sangat bermanfaat bagi mahasiswa.  Dalam pidato sambutannya  Rektor UEU – Dr. Ir. Arief Kusuma, MBA menyampaikan bahwa melalui acara ini memberikan pembekalan kepada mahasiswa masuk kedunia pendidikan tinggi. Perjuangan dan usaha mahasiswa selama 4 tahun perkuliahan menjalani proses pembelajaran akademik, maupun kehidupan menjadi penentu dalam keberhasilan, jadilah kebanggaan orangtua dan diri menjadi insan visioner yang unggul.  Rektor menekankan pentingnya mahasiswa untuk memiliki daya saing yang tinggi untuk dapat mewujudkan disiplin belajar yang tinggi bagi setiap individual dengan kesadaran penuh bahwa hal itu harus dilakukan oleh setiap mahasiswa.</p>
+					<div id="attachment_23903" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Bapak-Abdul-Wahid-Matkub.jpg" rel="lightbox"><img class="size-full wp-image-23903" title="Bapak Abdul Wahid Matkub" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Bapak-Abdul-Wahid-Matkub.jpg" alt="Bapak Abdul Wahid Matkub" width="550" /></a><p class="wp-caption-text">Bapak Abdul Wahid Matkub</p></div>
+					<p style="text-align: justify;">Dalam seminar sehari yang berlangsung di Ballroom Kemala Universitas Esa Unggul tanggal 02 Agustus 2016 yang diikuti oleh mahasiswa baru, yang tampil sebagai pembicara adalah Bapak Abdul Wahid Matkub sebagai Staff Khusus Menristek Dikti yang berbicara banyak mengenai kesiapan generasi muda  menyongsong era digital yang sedang berlangsung saat ini. Dalam pemaparannya, Bapak Wahid mengatakan setelah sekian lama mengamati perkembangan dunia Pendidikan Tinggi khususnya terhadap generasi muda yang ditantang oleh zaman harus mengikuti perkembangan era teknologi jika tidak ingin terjilat oleh bangsa lain. Para mahasiswa seharusnya sudah memiliki informasi yang luas menyambut era teknologi saat ini.</p>
+					<p style="text-align: justify;">“Dalam beberapa kesempatan saya melihat kurangnya daya juang generasi muda saat ini untuk meraih mimpi-mimpinya terutama dalam hal terjalinnya kerjasama yang erat antara mahasiswa untuk menciptakan suatu terobosan dalam dunia Pendidikan Tinggi yang mestinya perlu ditekankan adalah belajar dan bekerja dengan tim yang solid untuk menciptakan suatu peluang yang produktif agar bisa diserap pasar. Hal tersebut dapat saja oleh mahasiswa dimana kompetisi antara mahasiswa harus digalakkan diinternal kampus dan memperkenalkan temuan baru dibidang teknologi”, kata Bapak Wahid.</p>
+					<p style="text-align: justify;">Hal penting adalah memberikan kesempatan kepada mahasiswa untuk dapat berkreasi dan menuangkan ide-ide cemerlangnya dalam bentuk kerja nyata, dan kalau tidak mampu merebut pasar maka kita akan tertinggal di era tekhnologi modern saat ini. Untuk dapat bersaing mahasiswa harus mampu percaya diri tampil kedepan untuk memperkenalkan temuan di era teknologi yang diciptakan jika tidak ingin tertinggal dari negara-negara ASEAN lainnya. Kita perlu mengembangkan teknologi yang tepat guna yang sesuai dengan keadaan di Indonesia. Menurut pembicara, pendidikan adalah senjata yang paling ampuh untuk merubah dunia dan hambatan itu bukan datang dari luar tetapi didalam diri sendiri, jelas Bapak Wahid. (Is/Est)</p>
+					<div id="attachment_23908" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Speaker-International-Program.jpg" rel="lightbox"><img class="size-full wp-image-23908" title="Speaker International Program" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Speaker-International-Program.jpg" alt="Speaker International Program" width="550" /></a><p class="wp-caption-text">Speaker International Program</p></div>
+					<div>
+					<div data-tooltip="Perlihatkan konten terpangkas">
+					<div id="attachment_23904" class="wp-caption aligncenter" style="width: 560px"><a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Sesi-Tanya-Jawab-di-Pre-University-Education.jpg" rel="lightbox"><img class="size-full wp-image-23904" title="Sesi Tanya Jawab di Pre University Education" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Sesi-Tanya-Jawab-di-Pre-University-Education.jpg" alt="Sesi Tanya Jawab di Pre University Education" width="550" /></a><p class="wp-caption-text">Sesi Tanya Jawab di Pre University Education</p></div>
+					</div>
+					</div>
+					
+
 				</div>
 			</div>
-
-			<!-- Modal -->
-			<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
-
-			    <!-- Modal content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Seminar</h4>
-			      </div>
-			      <div class="modal-body">
-			        <div class="panel panel-default">
-					  <div class="panel-body">
-					  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
-					  //echo "<pre>",print_r($session_mhs);
-					  ?>
-					    <table class="table">
-					    	<tr>
-				    			<td width="160px">Tema Seminar</td>
-					    		<td width="10px">:</td>
-					    		<td><?php echo $value['tema_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Pembicara Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['pembicara_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Jadwal Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['jadwal_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Tempat Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['tempat_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Kuota Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['kuota_seminar'] ?></td>
-					    	</tr>
-							<tr>
-					    		<td>Kelas Seminar</td>
-					    		<td>:</td>
-					    		<td><?php 
-								switch($value['untuk_kelas']){
-									case '1' :
-									$kelas_seminar = 'Reguler' ;
-									break;
-									
-									case '2' :
-									$kelas_seminar = 'Paralel' ;
-									break;
-									default :
-									$kelas_seminar = 'Paralel dan Reguler' ;
-								}
-								echo $kelas_seminar ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Semester Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['semester_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>NIM Mahasiswa</td>
-					    		<td>:</td>
-					    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Nama Mahasiswa</td>
-					    		<td>:</td>
-					    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-					    	</tr>	    	
-					    	<tr>
-					    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
-					    	</tr>
-					    </table>
-					  </div>
-					</div>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
-			      </div>
-			    </div>
-
-			  </div>
-			</div>
-
-			<?php		
-				endforeach;
-			?>
 		</div>
 		<div class="col-md-5">
 			<!-- News -->
 			<div class="col-md-12">
 				<h2 class="tittle">News</h2>	
-				<div class="row" style="border : 1px solid grey ; background: #ffffff ; padding : 5px; margin-bottom: 10px">			
+				<div class="row" style="border : 1px solid grey ; background: #ffffff ;padding : 5px; margin-bottom: 10px">			
 					<!-- baris 1 -->
 			  		<table class="table">
 				    	<tr>
@@ -294,6 +120,7 @@
 		
 	</div>
 </div>
+
 
 <div class="teachers">
 	<div class="container">
@@ -424,7 +251,7 @@
                 </div>
 				<div class="clearfix"></div>
 	</div>
-</div> 
+</div>
 <!-- //our facilities -->
 <!-- features -->
 <div class="features">
@@ -498,10 +325,10 @@
 				</ul>
 			</div>
 			<div class="clearfix"></div>
-		</div> -->
+		</div>
 		<p> &copy; 2015 Tutelage. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>
 	</div>
-</div> 
+</div>
 <!-- //footer -->
 
 <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
@@ -509,43 +336,6 @@
 </body>
 </html>
 
-
-
-<!-- js -->
-<script src="<?php echo base_url()?>assets/frontend/js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!-- for bootstrap working -->
-<script src="<?php echo base_url()?>assets/frontend/js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-
-<!-- smooth scrolling -->
-<script type="text/javascript">
-$(document).ready(function() {
-
-	/*var defaults = {
-	containerID: 'toTop', // fading element id
-	containerHoverID: 'toTopHover', // fading element hover id
-	scrollSpeed: 1200,
-	easingType: 'linear' 
-	};*/
-								
-	$().UItoTop({ easingType: 'easeOutQuart' });
-});
-</script>
-<!-- //smooth scrolling -->
-<script src="<?php echo base_url()?>assets/frontend/js/modernizr.custom.js"></script>
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="<?php echo base_url()?>assets/frontend/js/move-top.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/frontend/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
 <!-- search-scripts -->
 <script src="<?php echo base_url()?>assets/frontend/js/classie.js"></script>
 <script src="<?php echo base_url()?>assets/frontend/js/uisearch.js"></script>
@@ -553,54 +343,3 @@ $(document).ready(function() {
 	new UISearch( document.getElementById( 'sb-search' ) );
 </script>
 <!-- //search-scripts -->
-<script src="<?php echo base_url()?>assets/frontend/js/jquery.swipebox.min.js"></script> 
-<script type="text/javascript">
-			jQuery(function($) {
-				$(".swipebox").swipebox();
-			});
-</script>
-<script src="<?php echo base_url()?>assets/frontend/js/jquery.event.move.js"></script>
-<script src="<?php echo base_url()?>assets/frontend/js/responsive-slider.js"></script>
-<script>
-	function daftar_seminar(id_seminar){
-
-		var id_mhs 		= "<?php echo $session_mhs['id_mahasiswa']?>";
-
-		if(!id_mhs){
-			alert('Maaf, Anda harus login sebelum mendaftar!');
-			location.href = "<?php echo base_url('login?ref='); ?>";
-		}else{
-			//alert($(this).attr('sem_id'));return false;
-			$.ajax({
-		        type: 'POST',
-		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
-		        data: {
-		         'id_mhs': id_mhs,
-		         'id_seminar': id_seminar
-
-		        },
-		        dataType: 'json',
-		        success: function(results){
-		        	console.log(results);
-	             	if(results.status == "success"){
-		              	alert("Terima kasih, Anda telah terdaftar di seminar");
-		              	location.href = results.location;
-		              	return true;
-
-	             	}else if(results.status == "error"){
-	             		alert(results.alert);
-	             		window.location.reload();
-	             	}
-	             	else{
-	             		alert(results.alert);
-		              	window.location.reload();
-	             	}
-
-	             	return false;
-		        }
-	  		});
-		}		
-
-	}
-
-</script>

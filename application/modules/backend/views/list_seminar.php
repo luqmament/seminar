@@ -17,7 +17,18 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading"><a href="<?php echo site_url('backend/c_seminar/v_seminar')?>" class="btn btn-primary">Add Seminar</a></div>
+					<div class="panel-heading">
+					<div class="pull-left">
+						<a href="<?php echo site_url('backend/c_seminar/v_seminar')?>" class="btn btn-primary">Add Seminar</a>
+					</div>
+					<div class="pull-right">
+						<?php echo form_open_multipart('backend/c_seminar/cari', array("id" => "form-search-seminar", "class" => "form-inline", "method" => "POST")); ?>  
+						<input type="text" name="search_seminar" class="form-control" id="search_seminar" placeholder="search By Tema Seminar" value="<?php $session_searchSeminar = $this->session->userdata('pencarian_seminar'); echo (!empty($session_searchSeminar)) ? $session_searchSeminar : ''?>" />     
+						<button type="submit" class="btn btn-primary">Cari</button>
+						<a href="<?php echo site_url('backend/c_seminar')?>" class="btn btn-primary btn-upgrade-mhs">show all</a>
+						<?php echo form_close();?>						
+					</div>
+					</div>
 					<?php if($this->session->flashdata('infoSeminar')){ ?>
 						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
