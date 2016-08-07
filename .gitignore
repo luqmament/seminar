@@ -1,4 +1,5 @@
 /assets/uploads/*
+/assets/frontend/barcode/*
 /application/config/database.php
 /application/config/config.php
 /application/logs/*
