@@ -58,7 +58,7 @@ class M_register extends CI_Model {
         }
     }
 
-    function do_login_mahasiswa($nim, $password) {
+    function do_login_mahasiswa($nim, $password) { 
         $this->db->select('m.*, jf.nama_jurusan, f.nama_fakultas');
         $this->db->from('mahasiswa m');
         $this->db->join('jurusan_fakultas jf', 'm.id_jurusan_fak = jf.id_jurusan_fakultas');
