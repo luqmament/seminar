@@ -21,6 +21,7 @@ class Seminar extends MY_Controller {
         //check ketentuan ticket
 
         $detail_seminar     = $this->m_seminar->getDetData('seminar',array('id_seminar' => $id_seminar));
+        echo '<pre>',print_r($detail_seminar);die();
         $detail_mahasiswa   = $this->m_seminar->getDetData('mahasiswa',array('id_mahasiswa' => $id_mahasiswa));
 
 
@@ -47,7 +48,8 @@ class Seminar extends MY_Controller {
         // check mahasiswa daftar seminar;
         $checkOrderSeminar = $this->m_seminar->getDetData('order', array('id_mahasiswa' => $id_mahasiswa, 'id_seminar' => $id_seminar));
         $arr_seminar = explode(",", $detail_seminar->semester_seminar);
-        if($checkOrderSeminar){
+        if($detail_seminar->sisa_kuota > 0){
+            if($checkOrderSeminar){
             echo json_encode(array('status' => 'error', 'alert' => 'Maaf , anda sudah pernah mengikuti seminar berikut'));
         }else{
             switch ($detail_seminar->untuk_kelas) {
@@ -234,6 +236,10 @@ class Seminar extends MY_Controller {
                     }
             }
         }
+    }else{
+        echo json_encode(array('status' => 'error', 'alert' => 'maaf kuota seminar sudah habis'));   
+    }
+        
 
             	
     	

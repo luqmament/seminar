@@ -247,7 +247,7 @@ class C_biomhs extends MY_Controller {
     $this->load->library('Barcode39');
     $bc = new Barcode39($data['ticket_seminar']->serial); 
     $bc->draw(trim($data['ticket_seminar']->serial.".gif"));
-    //$this->load->view('print_test', $data);
+    //$this->load->view('print_test', $data);exit;
     include_once APPPATH.'/third_party/mpdf/mpdf.php';
     $html = $this->load->view('ticket', $data, true);
     $this->mpdf = new mPDF('utf-8', array(250,100));
