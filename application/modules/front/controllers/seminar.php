@@ -52,6 +52,7 @@ class Seminar extends MY_Controller {
         }else{
             switch ($detail_seminar->untuk_kelas) {
                 case '1' :
+                if($detail_mahasiswa->tipe_mahasiswa == $detail_seminar->untuk_kelas){
                     if (in_array($intervalThn, $arr_seminar)) {
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
 
@@ -77,7 +78,8 @@ class Seminar extends MY_Controller {
                             echo json_encode(array('status' => 'error', 'alert' => 'Maaf ada kesalahan, silahkan check ke bagian IT'));   
 
                         }
-                    }else if($detail_seminar->semester_seminar == 'all'  && $detail_mahasiswa->tipe_mahasiswa == 1){
+                    }
+                }else if($detail_seminar->semester_seminar == 'all'  && $detail_mahasiswa->tipe_mahasiswa == 1){
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
 
                         if($id_ticket){
@@ -113,7 +115,8 @@ class Seminar extends MY_Controller {
                 break;
                 
                 case '2' :
-                    if (in_array($intervalThn, $arr_seminar)) {
+                    if($detail_mahasiswa->tipe_mahasiswa == $detail_seminar->untuk_kelas){
+                        if (in_array($intervalThn, $arr_seminar)) {
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
 
                         if($id_ticket){
@@ -137,6 +140,7 @@ class Seminar extends MY_Controller {
 
                             echo json_encode(array('status' => 'error', 'alert' => 'Maaf ada kesalahan, silahkan check ke bagian IT'));   
 
+                        }
                         }
                     }else if($detail_seminar->semester_seminar == 'all' && $detail_mahasiswa->tipe_mahasiswa == 2){
                         $id_ticket = $this->m_seminar->getDataKey('ticket_manual', array('id_seminar' => $id_seminar, 'consume' => 0), 'id_ticket asc', 1);
