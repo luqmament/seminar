@@ -15,7 +15,7 @@ class M_register extends CI_Model {
         $this->db->select('m.*, jf.nama_jurusan, f.nama_fakultas');
         $this->db->from('mahasiswa m');
         $this->db->join('jurusan_fakultas jf', 'm.id_jurusan_fak = jf.id_jurusan_fakultas');
-        $this->db->join('fakultas f', 'jf.id_jurusan_fakultas = f.id_fakultas');
+        $this->db->join('fakultas f', 'jf.id_fakultas = f.id_fakultas');
         $this->db->where('m.id_mahasiswa', $where);
         $query =  $this->db->get();
         if($query->num_rows() > 0){

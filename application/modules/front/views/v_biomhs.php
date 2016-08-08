@@ -66,19 +66,19 @@
 				    				$tahun_masuk	= $session_mhs['tahun_masuk'] ;
 				    				$now		 	= date('Y');
 				    				$bulan			= date('m');
-				    				$intervalThn 	= $now - $tahun_masuk + 1;
+				    				$intervalThn 	= $now - $tahun_masuk;
 
 				    				if($session_mhs['semester_mahasiswa'] == 'ganjil'){
+				    					if(($bulan) <= 6){
+				    						$intervalThn = ($intervalThn * 2 );
+				    					}else{
+				    						$intervalThn = ($intervalThn * 2 ) + 1;
+				    					}				    					
+				    				}else{
 				    					if(($bulan) <= 6){
 				    						$intervalThn = ($intervalThn * 2 ) - 1;
 				    					}else{
 				    						$intervalThn = ($intervalThn * 2 );
-				    					}				    					
-				    				}else{
-				    					if(($bulan) <= 6){
-				    						$intervalThn = ($intervalThn * 2 ) - 2;
-				    					}else{
-				    						$intervalThn = ($intervalThn * 2 ) - 1;
 				    					}
 				    				}
 				    				echo $intervalThn;
