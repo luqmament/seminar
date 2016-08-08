@@ -66,12 +66,32 @@
 							    	<tr>
 							    		<td>Jadwal Seminar</td>
 							    		<td>:</td>
-							    		<td><?php echo $value['jadwal_seminar'] ?></td>
+							    		<td>
+							    		<?php 
+
+							    			$date = date_create($value['jadwal_seminar']);
+											$day = date_format($date,"N");
+											$array_hari = array(1=>Senin,Selasa,Rabu,Kamis,Jumat,Sabtu,Minggu);
+											$hari = $array_hari[$day];
+											$BulanIndo = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+
+											$tahun = substr($value['jadwal_seminar'], 0, 4);
+											$bulan = substr($value['jadwal_seminar'], 5, 2);
+											$tgl   = substr($value['jadwal_seminar'], 8, 2);
+
+											$result = $tgl . " " . $BulanIndo[(int)$bulan-1] . " ". $tahun;		
+											$pukul 	= substr($value['jadwal_seminar'], 11, 5);
+							    		echo $hari. ', '. $result .' - '. $pukul ?></td>
+							    	</tr>
+							    	<tr>
+							    		<td>Jam Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $pukul ?></td> 
 							    	</tr>
 							    	<tr>
 							    		<td>Tempat Seminar</td>
 							    		<td>:</td>
-							    		<td><?php echo $value['tempat_seminar'] ?></td>
+							    		<td><?php echo $value['tempat_seminar'] ?></td> 
 							    	</tr>
 							    	<tr>
 							    		<td>Kuota Seminar</td>
