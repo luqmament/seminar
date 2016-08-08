@@ -79,10 +79,22 @@
 							    		<td><?php echo $value['sisa_kuota'] ?></td>
 							    	</tr>
 							    	<tr>
-							    		<td>Tipe Seminar</td>
+							    		<td>Kelas Seminar</td>
 							    		<td>:</td>
-							    		<td><?php echo $value['untuk_kelas'] ?></td>
-							    	</tr>			    	
+							    		<td><?php 
+										switch($value['untuk_kelas']){
+											case '1' :
+											$kelas_seminar = 'Reguler' ;
+											break;
+											
+											case '2' :
+											$kelas_seminar = 'Paralel' ;
+											break;
+											default :
+											$kelas_seminar = 'Paralel dan Reguler' ;
+										}
+										echo $kelas_seminar ?></td>
+							    	</tr>		    	
 							    	<tr>
 							    		<td>Semester Seminar</td>
 							    		<td>:</td>
