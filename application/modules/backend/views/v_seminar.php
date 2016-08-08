@@ -61,18 +61,22 @@
 				</div>
 				<div class="form-group">
 					<label>Kuota Seminar</label>
-					<input class="form-control" placeholder="Kuota Seminar" id="kuota_seminar" name="kuota_seminar" type="text" autofocus="" value="<?php echo set_value('kuota_seminar', $getDetail->kuota_seminar)?> "></input>
+					<input class="form-control" placeholder="Kuota Seminar" id="kuota_seminar" name="kuota_seminar" type="text" autofocus="" value="<?php echo set_value('kuota_seminar', $getDetail->kuota_seminar)?> " <?php echo ($type_form == 'edit' ? disabled : '')?>></input>
 				</div>
 				<div class="form-group">
 					<label>Kelas Seminar</label>
 					<select class="form-control" id="kelas_seminar" name="kelas_seminar[]" multiple="multiple">
 						<?php 
 							$kelas_seminar = array('1' => "Reguler", '2' => 'Paralel');
+							$det_kelas_seminar = explode(',', $getDetail->untuk_kelas);
+							//echo '<pre>',print_r($det_kelas_seminar);
+							$no = 0 ;
 							foreach ($kelas_seminar as $key => $value) {
-								$selected = (($getDetail->untuk_kelas == $key) ? 'selected' : '') ;
+									$selected[$no] = (in_array($key, $det_kelas_seminar) ? 'selected' : '') ;
+								
 						?>
-						<option value="<?php echo $key ?>" <?php echo $selected;?>><?php echo $value?></option>
-						<?php } ?>
+							<option value="<?php echo $key ?>" <?php echo $selected[$no];?>> <?php echo $value?> </option>
+						<?php $no++;} ?>
 					</select>
 				</div>
 				<div id="form_semester">
@@ -81,11 +85,13 @@
 					<select class="form-control seminar-multiple-select2" id="semester_seminar" name="semester_seminar[]" multiple="multiple" >
 						<?php 
 							$semester = array('1', '2', '3', '4', '5', '6', '7', '8', 'all');
+							$det_semester_seminar = explode(',', $getDetail->semester_seminar);
+							$no = 0 ;
 							foreach ($semester as $key => $value) {
-								//$selected = (($getDetail->semester_seminar == $key) ? 'selected' : '') ;
+								$selected[$no] = (in_array($value, $det_semester_seminar) ? 'selected' : '') ;
 						?>
-						<option value="<?php echo $value ?>" <?php echo $selected;?>>Seminar <?php echo $value?></option>
-						<?php } ?>
+						<option value="<?php echo $value ?>" <?php echo $selected[$no];?>>Seminar <?php echo $value?></option>
+						<?php $no++;} ?>
 					</select>
 					<span style="font-size : 12px ; color : orange">Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</span>
 				</div>
@@ -105,25 +111,14 @@
 				<div class="form-group">
 					<label>Poster Seminar</label>
 					<input id="poster_seminar" name="poster_seminar" type="file" autofocus="" ></input>
+					<?php if(!empty($getDetail->poster_seminar)){ ?>
+						<img class="img-thumbnail" src="<?php echo $getDetail->poster_seminar?>">
+					<?php } ?>
 				</div>
 				<!-- <div class="form-group">
 					<label>Sertifikat Seminar</label>
 					<input id="sertifikat_seminar" name="sertifikat_seminar" type="file" autofocus="" ></input>
 				</div> -->
-				<?php if (isset($getDetail->id_jurusan_fakultas)){ ?>
-				<div class="form-group">
-					<label>Status Fakultas</label>
-					<select class="form-control " id="status_jurusan_fakultas" name="status_jurusan_fakultas">
-						<?php 
-							$status_fak = array('1' => "Active", '2' => 'Non Active');
-							foreach ($status_fak as $key => $value) {
-								$selected = (($getDetail->status_jurusan == $key) ? 'selected' : '') ;
-						?>
-						<option value="<?php echo $key ?>" <?php echo $selected;?>><?php echo $value?></option>
-						<?php } ?>
-					</select>
-				</div>
-				<?php } ?>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			    </fieldset>
 			</form>
@@ -165,6 +160,7 @@
 	})
 </script>
 <script>
+var main_url = '<?php echo base_url()?>' ;
 $(document).ready(function(){
     $('#form_jurusan_fakultas').on('submit',(function(e) {
         var type_form = $('#form_jurusan_fakultas').attr('type_form');
@@ -205,6 +201,39 @@ $(document).ready(function(){
             changeMonth: true,
             yearRange: "-100:+0"
     }); */
-    
+    /*$("#kelas_seminar").select2({
+        dropdownAutoWidth: true,
+        width: 'resolve',
+        placeholder: 'Search',
+        minimumInputLength: 1,
+        allowClear: true,
+        delay: 2000,
+        ajax: {
+            dataType: "json",
+            url: main_url + 'backend/c_seminar/get_data_sparepart',
+            data: function (term, page) {
+                return {
+                    term: term
+                };
+            },
+            results: function (data) {
+                var results = [];
+
+                $.each(data, function(index, item){
+                    results.push({
+                        id: item.sparepart_code,
+                        text: item.sparepart_code + ' - ' + item.sparepart_name,
+                        rowid: rowid,
+                        sparepart_name: item.sparepart_name,
+                        sparepart_hargajual: item.sparepart_hargajual,
+                        sparepart_id: item.sparepart_id,
+                        sparepart_code: item.sparepart_code
+                    });
+                });
+                return { results: results };
+            },
+            cache: true
+        }
+    });*/
 })
 </script>

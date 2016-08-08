@@ -96,9 +96,9 @@ class M_seminar extends CI_Model {
         }
     }
     
-    function detailJurusanFakultas($idJurusanFakultas){
-	$this->db->where('id_jurusan_fakultas', $idJurusanFakultas); 
-	$query = $this->db->get('jurusan_fakultas');
+    function detailSeminar($id_seminar){
+	$this->db->where('id_seminar', $id_seminar); 
+	$query = $this->db->get('seminar');
 	if($query->num_rows() > 0){
 		return $query->row();
 	}else{
@@ -106,7 +106,7 @@ class M_seminar extends CI_Model {
 	}
     }
     
-    public function UpdateJurusanFakultas($tabelName,$data,$where){
+    public function UpdateSeminar($tabelName,$data,$where){
 		$res = $this->db->update($tabelName,$data,$where);	
 	return $res;			    
     }

@@ -16,7 +16,7 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<div class="panel panel-default">
+				<div class="panel panel-default"> 
 					<div class="panel-heading">
 					<div class="pull-left">
 						<a href="<?php echo site_url('backend/c_seminar/v_seminar')?>" class="btn btn-primary">Add Seminar</a>
@@ -127,19 +127,19 @@
 	})
 </script>
 <script>
-$(document).on("click","#delete_jurusan_fakultas", function(){
-    var answer = confirm("Are you sure you want to Delete Jurusan Fakultas ID = "+$(this).attr('id_jur_fakultas')+' ?');
+$(document).on("click","#delete_seminar", function(){
+    var answer = confirm("Are you sure you want to Delete Seminar ID = "+$(this).attr('id_delete_seminar')+' ?');
     if(answer){
              $.ajax({
                 type: "POST",
-                url: base_url+'backend/c_jurusan_fak/do_delete',
-                data: {id : $(this).attr('id_jur_fakultas')},
+                url: base_url+'backend/c_seminar/do_delete',
+                data: {id : $(this).attr('id_delete_seminar')},
                 dataType: "json",
                 success: function(result){				
                     switch(result.returnVal){
                     case "success":
 				alert(result.alert);
-                    window.location.reload(base_url+'jurusan-fak');
+                    window.location.reload(base_url+'seminar-admin');
                     break;
                     default:
                         alert(result.alert);

@@ -149,12 +149,12 @@ class C_seminar extends MY_Controller {
         }
 		$data['type_form']		= 'add' ;
         if(!empty($id)){
-            $detail	= $this->m_jurusan_fak->detailJurusanFakultas($id);
+            $detail	= $this->m_seminar->detailSeminar($id);
             $data['getDetail']  = $detail ;
 	    	$data['type_form']	= 'edit' ;
         }
 
-        //echo '<pre>',print_r($data);
+        //echo '<pre>',print_r($data);die();
         $this->doview('v_seminar', $data);
     
     }
@@ -237,12 +237,11 @@ class C_seminar extends MY_Controller {
 	$post 	= $this->input->post();
 	//echo '<pre>',print_r($post);die();
 	$id 	= $post['id'];
-	if(!isset($id)){
+	if(isset($id)){
 	    $this->form_validation->set_rules('tema_seminar', 'Tema Fakultas', 'required');
 	    $this->form_validation->set_rules('jadwal_seminar', 'Jadwal Seminar', 'required');
 	    $this->form_validation->set_rules('pembicara_seminar', 'Pembicara Seminar', 'required');
 	    $this->form_validation->set_rules('tempat_seminar', 'Tempat Seminar', 'required');
-	    $this->form_validation->set_rules('kuota_seminar', 'Kuota Seminar', 'required');
 	    $this->form_validation->set_rules('kelas_seminar', 'Kelas Seminar', 'required');
 	    $this->form_validation->set_rules('semester_seminar', 'Semester Seminar', 'required');
 	    //$this->form_validation->set_rules('nama_jurusan', 'Jurusan Seminar', 'required');
@@ -264,7 +263,11 @@ class C_seminar extends MY_Controller {
 	
 	if ($this->form_validation->run() == FALSE)
 	{
-	    if(!isset($id)){
+	    if(isset($id)){
+            $detail = $this->m_seminar->detailSeminar($id);
+            $data['getDetail']  = $detail ;
+            $data['type_form']  = 'edit' ;
+            //echo '<pre>',print_r($data);die();
 			$this->doview('v_seminar', $data);
 	    }
 	}
@@ -304,37 +307,34 @@ class C_seminar extends MY_Controller {
 	   	}
 	   	$jurusan_seminar			= rtrim(trim($jurusan_seminar,"Array"),",") ;*/
 
-	    //$poster_seminar				= $_FILES['poster_seminar'];
-	    $poster_seminar      		= base_url('/assets/uploads/poster_seminar/display/250/400/no-photo.png');
-        if(!empty($_FILES['poster_seminar']['name'])){
-            $filename_poster  		= $this->upload_image_poster($_FILES['poster_seminar']);
-            $poster_seminar 		= base_url('/assets/uploads/poster_seminar/display/250/400/'.$filename_poster);
-        }
+	    //$poster_seminar			= $_FILES['poster_seminar'];
 
-
-	    $sertifikat_seminar			= base_url('/assets/uploads/sertifikat_seminar/display/400/150/no-photo.png');
+	    /*$sertifikat_seminar			= base_url('/assets/uploads/sertifikat_seminar/display/400/150/no-photo.png');
 	    if(!empty($_FILES['sertifikat_seminar']['name'])){
             $filename_sertifikat  	= $this->upload_image_sertifikat($_FILES['sertifikat_seminar']);
             $sertifikat_seminar 	= base_url('/assets/uploads/sertifikat_seminar/display/400/150/'.$filename_sertifikat);
-        }
+        }*/
 
 
 	    if(isset($id))
 	    {
-	    	$whereKondisi			= ($status_jurusan_fakultas == 1) ? 1 : 2 ;
-			$checkJurFakultas 		= $this->m_jurusan_fak->check_jurusan_fakultas($nama_jurusan_fak, $whereKondisi);
-			if($checkJurFakultas){
-			    $this->session->set_flashdata('infoCheckJurusanFakultas', 'Maaf nama jurusan fakultas sudah di gunakan');
-			    redirect('jurusan-fak');
-			    exit;
-			}else{
-			    $data = array(
-			    'nama_jurusan'		=> $nama_jurusan_fak,
-			    'id_fakultas'		=> $id_fakultas,
-			    'status_jurusan'	=> $status_jurusan_fakultas,
-				'date_update' 		=> date('Y-m-d H:i:s')	
-			    );
-			}		
+	    	$data_seminar = array(
+                'tema_seminar'          => $tema_seminar,
+                'jadwal_seminar'        => $jadwal_seminar,
+                'pembicara_seminar'     => $pembicara_seminar,
+                'tempat_seminar'        => $tempat_seminar,
+                'untuk_kelas'           => $untuk_kelas,
+                'semester_seminar'      => $semester_seminar,
+                //'jurusan_seminar'         => $jurusan_seminar,
+                'update_date_seminar'   => date('Y-m-d H:i:s')
+            );	
+
+            if(!empty($_FILES['poster_seminar']['name'])){
+                $filename_poster        = $this->upload_image_poster($_FILES['poster_seminar']);
+                $poster_seminar         = base_url('/assets/uploads/poster_seminar/display/250/400/'.$filename_poster);
+                $data_seminar           = array_merge($data_seminar, array('poster_seminar' => $poster_seminar));
+            }	
+            //echo '<pre>',print_r($data_seminar);die();
 	    }else{
 			$data_seminar = array(
 				'tema_seminar'			=> $tema_seminar,
@@ -350,11 +350,17 @@ class C_seminar extends MY_Controller {
 				'sertifikat_seminar' 	=> $sertifikat_seminar,
 				'create_date_seminar' 	=> date('Y-m-d H:i:s')
 		    );
+            $poster_seminar             = base_url('/assets/uploads/noimage.png');
+            if(!empty($_FILES['poster_seminar']['name'])){
+                $filename_poster        = $this->upload_image_poster($_FILES['poster_seminar']);
+                $poster_seminar         = base_url('/assets/uploads/poster_seminar/display/250/400/'.$filename_poster);
+                $data_seminar           = array_merge($data_seminar, array('poster_seminar' => $poster_seminar));
+            }
             //echo '<pre>',print_r($data_seminar);die();
 	    }
 	    if(isset($id)){
-			$key = array('id_jurusan_fakultas' => $id) ;
-			$res = $this->m_jurusan_fak->UpdateJurusanFakultas('jurusan_fakultas',$data, $key);
+			$key = array('id_seminar' => $id) ;
+			$res = $this->m_seminar->UpdateSeminar('seminar',$data_seminar, $key);
 	    }else{
 			$res = $this->m_seminar->InsertSeminar('seminar',$data_seminar);
 			$seminar_id = $this->db->insert_id();
@@ -378,11 +384,11 @@ class C_seminar extends MY_Controller {
     }
     public function do_delete($id = ''){
 	$id 	= $this->input->post('id');
-	$data 	= array('status_jurusan'	=> 2);	
-    $where 	= array ('id_jurusan_fakultas' 		=> $id);
+	$data 	= array('status_seminar'	=> 2);	
+    $where 	= array ('id_seminar' 		=> $id);
 	
-	$delete_jurusan_fakultas = $this->m_jurusan_fak->UpdateJurusanFakultas('jurusan_fakultas',$data, $where);
-        if($delete_jurusan_fakultas){
+	$delete_seminar = $this->m_seminar->UpdateSeminar('seminar',$data, $where);
+        if($delete_seminar){
             $alert = 'Data Berhasil Di Hapus';		
             $returnVal = 'success';
         }else{
@@ -427,15 +433,15 @@ class C_seminar extends MY_Controller {
 
             $path1['display'] = FCPATH.'assets/uploads/poster_seminar/display';
             if (!is_dir($path1['display'])) {
-                mkdir($path1['display'], 0775, true);
+                mkdir($path1['display'], 0775);
             }
             $path2['250'] = FCPATH.'assets/uploads/poster_seminar/display/' . $this->arr_dimension_poster['display']['width'];
             if (!is_dir($path2['250'])) {
-                mkdir($path2['250'], 0775, true);
+                mkdir($path2['250'], 0775);
             }
             $path3['400'] = FCPATH.'assets/uploads/poster_seminar/display/' . $this->arr_dimension_poster['display']['width'] . '/' . $this->arr_dimension_poster['display']['height'];
             if (!is_dir($path3['400'])) {
-                mkdir($path3['400'], 0775, true);
+                mkdir($path3['400'], 0775);
             }
 
             $configSize1['new_image'] = FCPATH.'assets/uploads/poster_seminar/display/' . $this->arr_dimension_poster['display']['width'] . '/' . $this->arr_dimension_poster['display']['height'] . '/' . $file_name;
