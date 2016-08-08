@@ -50,6 +50,7 @@
 					<div class="panel-body">
 						<table class="table table-bordered table-hover">
 				        	<tr>
+				        		<th>No</th>
 				        		<th>Kehadiran</th>
 				        		<th>Nama Peserta</th>
 				        		<th>NIM Peserta</th>
@@ -59,6 +60,7 @@
 				        	<form action="<?php echo site_url('backend/c_fakultas/submit_fakultas')?>" method="post" id="form_fakultas">
 				        	<?php foreach ($list_peserta as $keyList => $Listvalue): ?>
 				        	<tr>			        	
+				        		<td><?php echo ++$start?></td>
 				        		<td><input type="checkbox" <?php echo($Listvalue['used_sertifikat'] == 1 ? 'checked' : '')?> name="order[]" id="peserta_<?php echo $Listvalue['id_order']?>" onclick="chkPeserta(<?php echo $Listvalue['id_order']?>)"></td>
 				        		<td><?php echo $Listvalue['nama_depan'].' '.$Listvalue['nama_belakang']?></td>
 				        		<td><?php echo $Listvalue['nim_mahasiswa']?></td>

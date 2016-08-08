@@ -44,7 +44,7 @@ class M_seminar extends CI_Model {
         if($query->num_rows() > 0){
             return $query->num_rows();
         }else{
-        	return array() ;
+        	return false ;
         }
     }
 

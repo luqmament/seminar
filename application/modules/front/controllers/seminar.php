@@ -21,7 +21,7 @@ class Seminar extends MY_Controller {
         //check ketentuan ticket
 
         $detail_seminar     = $this->m_seminar->getDetData('seminar',array('id_seminar' => $id_seminar));
-        echo '<pre>',print_r($detail_seminar);die();
+        //echo '<pre>',print_r($detail_seminar);die();
         $detail_mahasiswa   = $this->m_seminar->getDetData('mahasiswa',array('id_mahasiswa' => $id_mahasiswa));
 
 

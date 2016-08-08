@@ -12,7 +12,7 @@
 			</div>
 		</div><!--/.row-->
 		
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-xs-12 col-md-6 col-lg-3">
 				<div class="panel panel-blue panel-widget ">
 					<div class="row no-padding">
@@ -65,9 +65,9 @@
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->
+		</div> --><!--/.row-->
 		
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">Site Traffic Overview</div>
@@ -78,9 +78,9 @@
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->
+		</div> --><!--/.row-->
 		
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-xs-6 col-md-3">
 				<div class="panel panel-default">
 					<div class="panel-body easypiechart-panel">
@@ -117,9 +117,9 @@
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->
+		</div> --><!--/.row-->
 								
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-8">
 			
 				<div class="panel panel-default chat">
@@ -178,9 +178,9 @@
 					</div>
 				</div>
 				
-			</div><!--/.col-->
+			</div> --><!--/.col-->
 			
-			<div class="col-md-4">
+			<!-- <div class="col-md-4">
 			
 				<div class="panel panel-blue">
 					<div class="panel-heading dark-overlay"><svg class="glyph stroked clipboard-with-paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg>To-do List</div>
@@ -264,7 +264,7 @@
 					</div>
 				</div>
 								
-			</div><!--/.col-->
+			</div> --><!--/.col-->
 		</div><!--/.row-->
 	</div>	<!--/.main-->
 
