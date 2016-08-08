@@ -52,12 +52,13 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 						<ul class="nav navbar-nav">
 							
 							<li><a class="hvr-overline-from-center button2 active" href="<?php echo base_url()?>">Home</a></li>
-							<li><a class="hvr-overline-from-center button2" href="about.html">About</a></li>
+							<li><a class="hvr-overline-from-center button2" href="<?php echo site_url('profil')?>" >Profil</a></li>
+
 							<!-- <li><a class="hvr-overline-from-center button2" href="typography.html">Academics</a></li> -->
 							<li><a class="hvr-overline-from-center button2" href="<?php echo base_url('seminar'); ?>">Seminar</a></li>
 							<?php $session_mhs = $this->session->userdata('CMS_mahasiswa');	
 								if(!$session_mhs){ ?>
-								<li><a class="hvr-overline-from-center button2" href="contact.html">Contact</a></li>
+								<!-- <li><a class="hvr-overline-from-center button2" href="contact.html">Contact</a></li> -->
 						        <li><a class="hvr-overline-from-center button2" href="<?php echo site_url('login')?>">Login</a></li>
 						    <?php }else{ ?>
 						    	<li><a class="hvr-overline-from-center button2" href="<?php echo site_url('mahasiswa-dashboard')?>">Mahasiswa</a></li>

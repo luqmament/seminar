@@ -59,6 +59,7 @@ $route['update-mahasiswa'] 			= 'front/c_biomhs/update_mahasiswa';
 $route['list-seminar'] 				= 'front/c_biomhs/list_seminar';
 $route['seminar/(:any)'] 			= 'front/all_seminar/index/$1';
 $route['seminar'] 					= 'front/all_seminar/index/1';
+$route['profil'] 					= 'front/home/profil';
 
 //Content Static
 $route['news/(:any)']				= 'front/content_static';

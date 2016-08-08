@@ -21,228 +21,57 @@
 	                	<img src="<?php echo base_url()?>assets/frontend/images/Esa-Unggul-Citra-Raya-1.jpg">
 	              	</div>
   	    		</li>
-  	    		<li>
-	              	<div class="slide-body" data-group="slide">
-	                	<img src="<?php echo base_url()?>assets/frontend/images/banner.jpg">
-	              	</div>
-  	    		</li>
   	    	</ul>
         </div>
-        <a class="slider-control left" href="#"4da4a-jump="prev">Prev</a>
+        <a class="slider-control left" href="#" data-jump="prev">Prev</a>
         <a class="slider-control right" href="#" data-jump="next">Next</a>
         <div class="pages">
           <a class="page" href="#" data-jump-to="1">1</a>
           <a class="page" href="#" data-jump-to="2">2</a>
           <a class="page" href="#" data-jump-to="3">3</a>
-          <a class="page" href="#" data-jump-to="4">4</a>
         </div>
     	</div>
       <!-- Responsive slider - END -->
 	</div>
 <!-- </div> -->
-<!-- <div class="banner-bottom" style="background : none">
-	<div class="container">
-		<h2 class="tittle">WELCOME TO TUTELAGE</h2> 
-		<div class="bottom-grids">
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR INSTRUCTIONS</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-education" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR SUPPORT</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR GUARANTEE</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></div>
-			</div>
-			<div class="col-md-3 bottom-grid">
-				<div class="bottom-text">
-					<h3>OUR RELIABILITY</h3>
-					<p>Sed ut perspiciatis unde
-					omnis iste natus error sit 
-					voluptatem accusantium doloremque
-					explicabo.</p>
-				</div>
-				<div class="bottom-spa"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div> -->
+
 <div style="padding: 60px 0">
 	<div class="container div-shadow">
 		<div class="col-md-7">
-			<h2 class="tittle">DAFTAR SEMINAR</h2>
-			<?php
-				//echo "<pre>", print_r($seminar);
-				foreach ($seminar as $key => $value):
-			?>
-				<div class="col-md-12">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				    <table >
-				    	<tr>
-				    		<td>
-				    			<a href="#" class="">
-							      <img src="<?php echo $value['poster_seminar'] ?>" style="height:140px; width:100px" alt="...">
-							    </a>
-				    		</td>
-				    		<td valign="top">
-				    			<table class="table_margin">
-				    				<tr>
-							    		<td colspan="3" align="center"><b><?php echo $value['tema_seminar'] ?></b><br><br></td>
-							    	</tr>
-							    	<tr>
-							    		<td width="160px">Pembicara Seminar</td>
-							    		<td width="10px">:</td>
-							    		<td><?php echo $value['pembicara_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Jadwal Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['jadwal_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Tempat Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['tempat_seminar'] ?></td>
-							    	</tr>
-							    	<tr>
-							    		<td>Kuota Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['kuota_seminar'] ?></td>
-							    	</tr>			    	
-							    	<tr>
-							    		<td>Semester Seminar</td>
-							    		<td>:</td>
-							    		<td><?php echo $value['semester_seminar'] ?></td>
-							    	</tr>
-				    			</table>
-				    		</td>
-				    	</tr>
-				    </table>
-				    <button type="button" class="btn btn-primary btn-lg" style="display:block; float:right" data-toggle="modal" data-target="#myModal-<?php echo $value['id_seminar'] ?>">Daftar</button>
-				  </div>
+			<div id="content">
+
+				<div class="contentbox w620">
+						
+					<h2>Event Organizer Esa Unggul</h2>
+
+<!-- 					<p><noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=Ifkqm1akKd60em" style="display:none" height="1" width="1" alt="" /></noscript><!-- End Alexa Certify Javascript --></p>
+					
+					<!-- <div id="attachment_23976" class="wp-caption aligncenter" style="width: 560px">
+						<a href="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Tim-Basket-Universitas-Esa-Unggul-Mewakili-Indonesia-di-Ajang-Asean-University-Games.jpg" rel="lightbox">
+						<img class="size-full wp-image-23976" title="Tim Basket Universitas Esa Unggul Mewakili Indonesia di Ajang Asean University Games" src="http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Tim-Basket-Universitas-Esa-Unggul-Mewakili-Indonesia-di-Ajang-Asean-University-Games.jpg" alt="Tim Basket Universitas Esa Unggul Mewakili Indonesia di Ajang Asean University Games" width="550" /></a>
+						<p class="wp-caption-text">Tim Basket Universitas Esa Unggul Mewakili Indonesia di Ajang Asean University Games</p>
+					</div> -->
+					<h4> Gambaran Singkat Event Organizer </h4>
+					<p style="text-align: justify;">Event Organizer yang berlokasi di Universitas Esa Unggul, ini berdiri sejak tahun 2000 berdedikasi untuk menjadi EO yang menyelenggarakan seminar- seminar di Universitas Esa Unggul.</p>
+					<br>
+					<h4 style="text-align: justify;"> Visi dari Event Organizer Esa Unggul </h4>
+					<p style="text-align: justify;">Menjadikan Event Organizer Esa Unggul sebagai EO yang memberikan kulalitas, kepuasan dan pelayanan kepada Mahasiswa.</p>
+					<br>
+					<h4 style="text-align: justify;">Misi dari Event Organizer Esa Unggul</h4>
+
+
+					<p style="text-align: justify;"> - Memberikan kualitas kepuasan dan solusi terbaik bagi mahasiswa dalam penyelenggaraan seminar.</p>
+					<p style="text-align: justify;"> - Membangun tim kreatif, penuh ide-ide unik serta professional dalam bekerja.</p>
+					<p style="text-align: justify;"> - Mengadakan seminar - seminar yang berkualitas.</p>
+					
 				</div>
 			</div>
-
-			<!-- Modal -->
-			<div id="myModal-<?php echo $value['id_seminar'] ?>" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
-
-			    <!-- Modal content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Seminar</h4>
-			      </div>
-			      <div class="modal-body">
-			        <div class="panel panel-default">
-					  <div class="panel-body">
-					  <?php $session_mhs = $this->session->userdata('CMS_mahasiswa'); 
-					  //echo "<pre>",print_r($session_mhs);
-					  ?>
-					    <table class="table">
-					    	<tr>
-				    			<td width="160px">Tema Seminar</td>
-					    		<td width="10px">:</td>
-					    		<td><?php echo $value['tema_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Pembicara Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['pembicara_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Jadwal Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['jadwal_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Tempat Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['tempat_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Kuota Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['kuota_seminar'] ?></td>
-					    	</tr>
-							<tr>
-					    		<td>Kelas Seminar</td>
-					    		<td>:</td>
-					    		<td><?php 
-								switch($value['untuk_kelas']){
-									case '1' :
-									$kelas_seminar = 'Reguler' ;
-									break;
-									
-									case '2' :
-									$kelas_seminar = 'Paralel' ;
-									break;
-									default :
-									$kelas_seminar = 'Paralel dan Reguler' ;
-								}
-								echo $kelas_seminar ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Semester Seminar</td>
-					    		<td>:</td>
-					    		<td><?php echo $value['semester_seminar'] ?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>NIM Mahasiswa</td>
-					    		<td>:</td>
-					    		<td><?php echo $session_mhs['nim_mahasiswa']?></td>
-					    	</tr>
-					    	<tr>
-					    		<td>Nama Mahasiswa</td>
-					    		<td>:</td>
-					    		<td><?php echo $session_mhs['nama_depan'].' '.$session_mhs['nama_belakang']?></td>
-					    	</tr>	    	
-					    	<tr>
-					    		<td colspan="3" style="color:red">*Pastikan data mahasiswa sudah benar, jika belum silahkan ubah data mahasiswa</td>
-					    	</tr>
-					    </table>
-					  </div>
-					</div>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-primary btn-lg" style="width:100%" onclick="daftar_seminar(<?php echo $value['id_seminar'] ?>)">Daftar</button>
-			      </div>
-			    </div>
-
-			  </div>
-			</div>
-
-			<?php		
-				endforeach;
-			?>
 		</div>
 		<div class="col-md-5">
 			<!-- News -->
 			<div class="col-md-12">
 				<h2 class="tittle">News</h2>	
-				<div class="row" style="border : 1px solid grey ; background: #ffffff ; padding : 5px; margin-bottom: 10px">			
+				<div class="row" style="border : 1px solid grey ; background: #ffffff ;padding : 5px; margin-bottom: 10px">			
 					<!-- baris 1 -->
 			  		<table class="table">
 				    	<tr>
@@ -251,7 +80,6 @@
 							      <img src="http://www.esaunggul.ac.id/wp-content/themes/topbusiness1/timthumb.php?src=http://www.esaunggul.ac.id/wp-content/uploads/2016/08/Tim-Basket-Universitas-Esa-Unggul-Mewakili-Indonesia-di-Ajang-Asean-University-Games.jpg&h=50&w=50&zc=1&q=90&a=t" style="height:50px; width:50px" alt="...">
 							    </a>
 				    		</td>
-				    		
 				    		<td><a href="<?php echo base_url(); ?>news/6-Mahasiswa-Terpilih-di-Asean-University-Games">Selamat dan Sukses 6 Mahasiswa Universitas Esa Unggul Terpilih Mewakili Indonesia di Ajang Asean University Games, Singapore 2016 </a></td>
 				    	</tr>
 				    	<tr>
@@ -295,6 +123,7 @@
 		
 	</div>
 </div>
+
 
 <div class="teachers">
 	<div class="container">
@@ -425,7 +254,7 @@
                 </div>
 				<div class="clearfix"></div>
 	</div>
-</div> 
+</div>
 <!-- //our facilities -->
 <!-- features -->
 <div class="features">
@@ -499,10 +328,10 @@
 				</ul>
 			</div>
 			<div class="clearfix"></div>
-		</div> -->
+		</div>
 		<p> &copy; 2015 Tutelage. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>
 	</div>
-</div> 
+</div>
 <!-- //footer -->
 
 <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
@@ -510,43 +339,6 @@
 </body>
 </html>
 
-
-
-<!-- js -->
-<script src="<?php echo base_url()?>assets/frontend/js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!-- for bootstrap working -->
-<script src="<?php echo base_url()?>assets/frontend/js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-
-<!-- smooth scrolling -->
-<script type="text/javascript">
-$(document).ready(function() {
-
-	/*var defaults = {
-	containerID: 'toTop', // fading element id
-	containerHoverID: 'toTopHover', // fading element hover id
-	scrollSpeed: 1200,
-	easingType: 'linear' 
-	};*/
-								
-	$().UItoTop({ easingType: 'easeOutQuart' });
-});
-</script>
-<!-- //smooth scrolling -->
-<script src="<?php echo base_url()?>assets/frontend/js/modernizr.custom.js"></script>
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="<?php echo base_url()?>assets/frontend/js/move-top.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/frontend/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- start-smoth-scrolling -->
 <!-- search-scripts -->
 <script src="<?php echo base_url()?>assets/frontend/js/classie.js"></script>
 <script src="<?php echo base_url()?>assets/frontend/js/uisearch.js"></script>
@@ -554,54 +346,3 @@ $(document).ready(function() {
 	new UISearch( document.getElementById( 'sb-search' ) );
 </script>
 <!-- //search-scripts -->
-<script src="<?php echo base_url()?>assets/frontend/js/jquery.swipebox.min.js"></script> 
-<script type="text/javascript">
-			jQuery(function($) {
-				$(".swipebox").swipebox();
-			});
-</script>
-<script src="<?php echo base_url()?>assets/frontend/js/jquery.event.move.js"></script>
-<script src="<?php echo base_url()?>assets/frontend/js/responsive-slider.js"></script>
-<script>
-	function daftar_seminar(id_seminar){
-
-		var id_mhs 		= "<?php echo $session_mhs['id_mahasiswa']?>";
-
-		if(!id_mhs){
-			alert('Maaf, Anda harus login sebelum mendaftar!');
-			location.href = "<?php echo base_url('login?ref='); ?>";
-		}else{
-			//alert($(this).attr('sem_id'));return false;
-			$.ajax({
-		        type: 'POST',
-		        url: "<?php echo base_url('front/seminar/submit_order') ?>",
-		        data: {
-		         'id_mhs': id_mhs,
-		         'id_seminar': id_seminar
-
-		        },
-		        dataType: 'json',
-		        success: function(results){
-		        	console.log(results);
-	             	if(results.status == "success"){
-		              	alert("Terima kasih, Anda telah terdaftar di seminar");
-		              	location.href = results.location;
-		              	return true;
-
-	             	}else if(results.status == "error"){
-	             		alert(results.alert);
-	             		window.location.reload();
-	             	}
-	             	else{
-	             		alert(results.alert);
-		              	window.location.reload();
-	             	}
-
-	             	return false;
-		        }
-	  		});
-		}		
-
-	}
-
-</script>

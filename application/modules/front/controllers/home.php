@@ -14,6 +14,11 @@ class Home extends MY_Controller {
 		//echo '<pre>',print_r($data);
 	   	$this->frview('v_home',$data);
     }
+
+     public function profil(){
+
+       $this->frview('v_profil');
+    }
 }
 
 /* End of file users.php */
