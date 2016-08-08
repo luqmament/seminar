@@ -112,6 +112,8 @@ class C_biomhs extends MY_Controller {
                                         'nama_depan'            => $getLastIdMhs['nama_depan'],
                                         'nama_belakang'         => $getLastIdMhs['nama_belakang'],
                                         'nim_mahasiswa'         => $getLastIdMhs['nim_mahasiswa'],
+                                        'nama_fakultas'         => $getLastIdMhs['nama_fakultas'],
+                                        'nama_jurusan'          => $getLastIdMhs['nama_jurusan'],
                                         'email_mahasiswa'       => $getLastIdMhs['email_mahasiswa'],
                                         'alamat_mahasiswa'      => $getLastIdMhs['alamat_mahasiswa'],
                                         'telp_mahasiswa'        => $getLastIdMhs['telp_mahasiswa'],
