@@ -74,9 +74,14 @@
 							    		<td><?php echo $value['tempat_seminar'] ?></td>
 							    	</tr>
 							    	<tr>
-							    		<td>Kuota Seminar</td>
+							    		<td>Sisa Kuota</td>
 							    		<td>:</td>
-							    		<td><?php echo $value['kuota_seminar'] ?></td>
+							    		<td><?php echo $value['sisa_kuota'] ?></td>
+							    	</tr>
+							    	<tr>
+							    		<td>Tipe Seminar</td>
+							    		<td>:</td>
+							    		<td><?php echo $value['untuk_kelas'] ?></td>
 							    	</tr>			    	
 							    	<tr>
 							    		<td>Semester Seminar</td>
