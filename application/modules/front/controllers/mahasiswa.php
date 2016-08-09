@@ -154,7 +154,8 @@ class Mahasiswa extends MY_Controller {
         $data['tab_active'] = 'login' ;
         $this->form_validation->set_rules('nim_login', 'NIM', 'required|callback_check_nim');
         $this->form_validation->set_rules('password_login', 'Password', 'required|callback_check_password');
-        if ($this->form_validation->run() == FALSE) {
+        if ($this->form_validation->run($this) == FALSE) {
+            //$data['error'] = $this->form_validation->error_array();
             $this->frview('v_register_mhs',$data);          
         } else {
             $post   = $this->input->post();
