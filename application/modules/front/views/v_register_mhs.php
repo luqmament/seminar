@@ -40,6 +40,7 @@
 		  	</ul>
 
 		  	<!-- Tab panes -->
+		  	
 		  	<div class="tab-content my-tab">
 			    <div role="tabpanel" class="tab-pane fade <?php echo ($tab_active == 'login' ? 'in active' : '');?>" id="login">
 			    	<div class="about-grids">
@@ -48,6 +49,11 @@
 						</div>
 						<div class="col-md-7 about-grid">
 						<form class="form-horizontal" action="<?php echo site_url('front/mahasiswa/mahasiswa_login')?>" method="post" id="form_register_mahasiswa" enctype="multipart/form-data" style="margin-bottom: 15px">
+								<div class="has-error">
+									<?php
+									echo validation_errors();
+									?>
+							    </div>
 								<div class="form-group">
 									<label for="input_NIM_login" class="col-sm-2 control-label">NIM</label>
 								    <div class="col-sm-10">
@@ -59,7 +65,14 @@
 							    	<div class="col-sm-10">
 							      		<input type="password" class="form-control" id="password_login" name="password_login" placeholder="Password" autocomplete="off">
 							    	</div>
-							  	</div>
+							  	</div><!-- 
+							  	<div class="form-group">
+							    	<label for="inputPassword3" class="col-sm-2 control-label">&nbsp;</label>
+							    	<div class="col-sm-10">
+							      		  	
+							    	</div>
+							  	</div> -->
+							
 							  	<div class="form-group">
 							    	<div class="col-sm-offset-2 col-sm-10">
 							      		<button type="submit" class="btn btn-default">Sign in</button>
@@ -77,12 +90,13 @@
 							<img src="<?php echo base_url()?>assets/frontend/images/sign-up.jpg" alt=""/>
 						</div>
 						<div class="col-md-7 about-grid">
-							<div class="has-error">
-								<?php
-								echo validation_errors();
-								?>
-						    </div>
+
 							<form action="<?php echo site_url('front/mahasiswa/submit_register_mhs')?>" method="post" id="form_register_mahasiswa" enctype="multipart/form-data" style="margin-bottom: 15px">
+							<div class="has-error">
+									<?php
+									echo validation_errors();
+									?>
+							    </div>
 							  	<div class="form-group">
 								    <label for="NamaDepan">Nama Depan</label>
 								    <input type="text" class="form-control" id="namaDpn" name="namaDpn" placeholder="Nama Depan" autocomplete="off">
