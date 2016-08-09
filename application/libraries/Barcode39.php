@@ -21,7 +21,7 @@ final class Barcode39 {
 	const f2w = "01";
 
 	/**
-	 * Barcode code
+	 * Barcode code 
 	 *
 	 * @var array $_code
 	 */

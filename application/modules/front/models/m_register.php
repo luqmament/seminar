@@ -24,7 +24,7 @@ class M_register extends CI_Model {
         	return false;
         }
     }
-    function CheckNIM($table, $where){
+    function CheckNIM($table, $where){ 
 		$this->db->where($where);
         $query = $this->db->get($table);
         if ($query->num_rows() > 0) {

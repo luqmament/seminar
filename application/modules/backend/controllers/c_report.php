@@ -31,7 +31,7 @@ class C_report extends MY_Controller {
 	
     public function index(){
         //pagination settings
-        $data   = array();
+        $data['report_seminar']   = array();
         $this->doview('v_report_seminar', $data);
     }
     
@@ -41,7 +41,7 @@ class C_report extends MY_Controller {
         $getDate    = explode(" - ", $periode);
         $startDate  = $getDate[0];
         $endDate    = $getDate[1];
-        
+        $data['report_seminar'] = array();
         $data['report_seminar'] = $this->m_report->report_seminar($startDate, $endDate);
         $this->doview('v_report_seminar', $data);
         //echo $this->db->last_query();
