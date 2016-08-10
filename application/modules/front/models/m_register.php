@@ -183,9 +183,11 @@ class M_register extends CI_Model {
     }
 
     function all_seminar($id_mahasiswa){
-         $this->db->select('ord.*, m.*, smr.*,tk.*');
+         $this->db->select('ord.*, m.*, smr.*,tk.*,jrf.nama_jurusan, f.nama_fakultas');
         $this->db->from('order ord');
         $this->db->join('mahasiswa m', 'ord.id_mahasiswa = m.id_mahasiswa');
+        $this->db->join('jurusan_fakultas jrf', 'm.id_jurusan_fak = jrf.id_jurusan_fakultas');
+        $this->db->join('fakultas f', 'f.id_fakultas = jrf.id_fakultas');
         $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
         $this->db->join('ticket_manual tk', 'ord.id_ticket = tk.id_ticket');
         $this->db->where('ord.id_mahasiswa', $id_mahasiswa);
