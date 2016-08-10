@@ -21,7 +21,7 @@ class M_report extends CI_Model {
 		return $res;    
     }
 
-    function report_seminar($from_date,$to_date){
+    function report_seminar($from_date = '',$to_date = ''){
         $this->db->select('smr.tema_seminar, smr.jadwal_seminar, ord.id_seminar, SUM(ord.used_sertifikat) AS total');
         $this->db->from('order ord');
         $this->db->join('mahasiswa m', 'ord.id_mahasiswa = m.id_mahasiswa');
@@ -36,7 +36,7 @@ class M_report extends CI_Model {
         if($query->num_rows() > 0){
             return $query->result_array();
         }else{
-            return false;
+            return array();
         }
     }
 
