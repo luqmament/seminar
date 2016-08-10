@@ -10,8 +10,8 @@
 					<a href="<?php echo site_url('update-mahasiswa')?>" class="list-group-item">Edit Mahasiswa</a>
 					<a href="<?php echo site_url('list-seminar')?>" class="list-group-item">List Seminar Mahasiswa</a>
 					<a href="<?php echo site_url('list-sertifikat')?>" class="list-group-item">List Sertifikat Mahasiswa</a>
-					<a href="#" class="list-group-item">Porta ac consectetur ac</a>
-					<a href="#" class="list-group-item">Vestibulum at eros</a>
+					<!-- <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+					<a href="#" class="list-group-item">Vestibulum at eros</a> -->
 				</div>
 			</div>
 			
@@ -58,7 +58,7 @@
 <div class="footer">
 	<div class="container">
 		<div class="footer-grids">
-			<div class="col-md-3 footer-grid">
+			<!-- <div class="col-md-3 footer-grid">
 				<h3>PERSPICIATIS</h3>
 				<ul>
 					<li><a href="#">SUMMER CAMPS</a></li>
@@ -97,10 +97,10 @@
 					<li><a href="#">CONDUCTING GAMES</a></li>
 					<li><a href="#">OTHER ACTIVITIES</a></li>
 				</ul>
-			</div>
+			</div> -->
 			<div class="clearfix"></div>
 		</div>
-		<p> &copy; 2015 Tutelage. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>
+		<p> &copy; 2016 Event Organizer. All Rights Reserved | Design by Ariev Nurhidayat</a></p>
 	</div>
 </div>
 <!-- smooth scrolling -->

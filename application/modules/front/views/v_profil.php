@@ -1,4 +1,4 @@
-<!-- banner -->
+<!--banner -->
 <!-- <div class="banner"> -->
 <!-- <div style="padding: 60px 0"> -->
 	<div class="container-row">
@@ -125,7 +125,7 @@
 </div>
 
 
-<div class="teachers">
+<!-- <div class="teachers">
 	<div class="container">
 		<div class="teach-head">
 			<h3>OUR TEACHERS</h3>
@@ -200,8 +200,8 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</div>
-<div class="facilities">
+</div> -->
+<!-- <div class="facilities">
 	<div class="container">
 		<h3 class="tittle">FACILITIES</h3> 	
 				<div class="view view-seventh">
@@ -254,10 +254,10 @@
                 </div>
 				<div class="clearfix"></div>
 	</div>
-</div>
+</div> -->
 <!-- //our facilities -->
 <!-- features -->
-<div class="features">
+<!-- <div class="features">
 	<div class="container">
 		<h3 class="tittle">FEATURES</h3> 
 		<div class="col-md-5 features-left">
@@ -281,13 +281,13 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-</div>
+</div> -->
 <!-- //features -->
 <!-- footer -->
 <div class="footer">
 	<div class="container">
 		<div class="footer-grids">
-			<div class="col-md-3 footer-grid">
+			<!-- <div class="col-md-3 footer-grid">
 				<h3>PERSPICIATIS</h3>
 				<ul>
 					<li><a href="#">SUMMER CAMPS</a></li>
@@ -326,10 +326,10 @@
 					<li><a href="#">CONDUCTING GAMES</a></li>
 					<li><a href="#">OTHER ACTIVITIES</a></li>
 				</ul>
-			</div>
+			</div> -->
 			<div class="clearfix"></div>
 		</div>
-		<p> &copy; 2015 Tutelage. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>
+		<p> &copy; 2016 Event Organizer. All Rights Reserved | Design by Ariev Nurhidayat</a></p>
 	</div>
 </div>
 <!-- //footer -->
@@ -345,4 +345,4 @@
 <script>
 	new UISearch( document.getElementById( 'sb-search' ) );
 </script>
-<!-- //search-scripts -->
+<!-- //search-scripts

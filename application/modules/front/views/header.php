@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Tutelage a Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Event Organizer</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -51,7 +51,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							
-							<li><a class="hvr-overline-from-center button2 active" href="<?php echo base_url()?>">Home</a></li>
+							<li><a class="hvr-overline-from-center button2" href="<?php echo base_url()?>">Home</a></li>
 							<li><a class="hvr-overline-from-center button2" href="<?php echo site_url('profil')?>" >Profil</a></li>
 
 							<!-- <li><a class="hvr-overline-from-center button2" href="typography.html">Academics</a></li> -->
