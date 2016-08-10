@@ -71,6 +71,7 @@ class M_seminar extends CI_Model {
         $this->db->join('ticket_manual tk', 'ord.id_ticket = tk.id_ticket');
         $this->db->limit($limit , $start);
         $this->db->where("m.nama_depan LIKE '%$search%'");
+        //$this->db->or_where("tk.serial", $search);
         $this->db->where('smr.id_seminar', $id_seminar);
         $query =  $this->db->get();
         if ($query->num_rows() > 0) {

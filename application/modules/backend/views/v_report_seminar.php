@@ -17,6 +17,12 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default"> 
+					<?php if($this->session->flashdata('info_Report')){ ?>
+						<div class="alert alert-success" style="margin: 15px">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+							<strong>Warning!</strong> <?php echo $this->session->flashdata('info_Report'); ?>
+						</div>
+					<?php } ?>
 					<div class="panel-heading">
 					<div class="pull-left">
 						<?php echo form_open_multipart('backend/c_report/show_report', array("id" => "form-periode-report", "class" => "form-inline", "method" => "POST")); ?>  
@@ -26,12 +32,6 @@
 						<?php echo form_close();?>						
 					</div>
 					</div>
-					<?php if($this->session->flashdata('infoSeminar')){ ?>
-						<div class="alert alert-success" style="margin: 15px">
-							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-							<strong>Success!</strong> <?php echo $this->session->flashdata('infoSeminar'); ?>
-						</div>
-					<?php } ?>
 					<?php if($this->session->flashdata('infoDeleteUser')){ ?>
 						<div class="alert alert-success" style="margin: 15px">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

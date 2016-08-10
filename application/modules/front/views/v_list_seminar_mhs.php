@@ -1,4 +1,4 @@
-<div>
+<div style="overflow: auto; padding-bottom: 190px;">
 	<div class="container" style="background: white; box-shadow: 0 5px 5px 0 grey;">
 		<h3 style="font-family: 'Alegreya', serif; margin-top: 40px">Biodata Mahasiswa</h3>
 		<div style="margin-top: 10px; height: 10px; border: 0; box-shadow: 0 10px 10px -10px #0066FF inset; border-radius: 5px;"></div>
@@ -58,51 +58,16 @@
 <div class="footer">
 	<div class="container">
 		<div class="footer-grids">
-			<!-- <div class="col-md-3 footer-grid">
-				<h3>PERSPICIATIS</h3>
-				<ul>
-					<li><a href="#">SUMMER CAMPS</a></li>
-					<li><a href="#">CELEBRATIONS</a></li>
-					<li><a href="#">ONLINE EXAMS</a></li>
-					<li><a href="#">COMPETITIONS</a></li>
-					<li><a href="#">ACTIVITIES</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 footer-grid">
-				<h3>PRAESENTIUM </h3>
-				<ul>
-					<li><a href="#">PRESENTATIONS</a></li>
-					<li><a href="#">SEMINARS</a></li>
-					<li><a href="#">PREPARATIONS</a></li>
-					<li><a href="#">CONDUCTING GAMES</a></li>
-					<li><a href="#">OTHER ACTIVITIES</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 footer-grid">
-				<h3>DIGNISSIMOS</h3>
-				<ul>
-					<li><a href="#">SUMMER CAMPS</a></li>
-					<li><a href="#">CELEBRATIONS</a></li>
-					<li><a href="#">ONLINE EXAMS</a></li>
-					<li><a href="#">COMPETITIONS</a></li>
-					<li><a href="#">ACTIVITIES</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 footer-grid">
-				<h3>PRAESENTIUM</h3>
-				<ul>
-					<li><a href="#">PRESENTATIONS</a></li>
-					<li><a href="#">SEMINARS</a></li>
-					<li><a href="#">PREPARATIONS</a></li>
-					<li><a href="#">CONDUCTING GAMES</a></li>
-					<li><a href="#">OTHER ACTIVITIES</a></li>
-				</ul>
-			</div> -->
 			<div class="clearfix"></div>
 		</div>
-		<p> &copy; 2016 Event Organizer. All Rights Reserved | Design by Ariev Nurhidayat</a></p>
+		<p> &copy; 2016 Event Organizer. All Rights Reserved | Design by Ariev Nurhidayat</p>
 	</div>
 </div>
+<!-- <div id="footer-custom">
+	
+		<p> &copy; 2016 Event Organizer. All Rights Reserved | Design by Ariev Nurhidayat</p>	
+	
+</div> -->
 <!-- smooth scrolling -->
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->

@@ -6,8 +6,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 html, body{
 	margin:0;
-	background:	url('../images/bg-image.png');
-	font-family: 'Open Sans', sans-serif;
+	
+	
+  /*height: 100%;*/
+}
+
+body{
+  background: url('../images/bg-image.png');
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  margin: 0;
+  /*padding-bottom: 6rem;*/
+  min-height: 100%;
 }
 h4, h5, h6,
 h1, h2, h3 {
@@ -879,9 +889,23 @@ margin-top:50px;
   width: 100%;
 }
 /*-- footer --*/
+#footer-custom{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  clear:both;
+}
 .footer{
-padding:50px 0;
-background:#0066FF;
+background:#292A2C;
+
+}
+.footer-grid{
+padding:0;
+margin:0;
 }
 .footer-grid ul{
 padding:0;
@@ -904,7 +928,7 @@ padding-left: 11px;
 color:#2FD828;
 }
 .footer p {
-margin:44px 0 0 0;
+margin:34px 0 0 0;
 font-size:14px;
 color: #c2c2c2;
 font-weight: 600;

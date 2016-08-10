@@ -37,13 +37,23 @@ class C_report extends MY_Controller {
     
     function show_report(){
         //echo '<pre>',print_r($this->input->post());die;
-        $periode    = $this->input->post('periode_report');
-        $getDate    = explode(" - ", $periode);
-        $startDate  = $getDate[0];
-        $endDate    = $getDate[1];
-        $data['report_seminar'] = array();
-        $data['report_seminar'] = $this->m_report->report_seminar($startDate, $endDate);
-        $this->doview('v_report_seminar', $data);
+        if($this->input->post()){
+            $post_periode = $this->input->post('periode_report');
+            if(!empty($post_periode)){
+                $periode    = $this->input->post('periode_report');
+                $getDate    = explode(" - ", $periode);
+                $startDate  = $getDate[0];
+                $endDate    = $getDate[1];
+                $data['report_seminar'] = array();
+                $data['report_seminar'] = $this->m_report->report_seminar($startDate, $endDate);
+                $this->doview('v_report_seminar', $data);    
+            }else{
+                $this->session->set_flashdata('info_Report', 'Mohon Masukkan tanggal');
+                redirect('report');
+            }
+            
+        }
+        
         //echo $this->db->last_query();
         //echo '<pre>',print_r($report_seminar);die();
 

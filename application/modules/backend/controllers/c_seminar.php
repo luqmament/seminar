@@ -224,6 +224,7 @@ class C_seminar extends MY_Controller {
     
     //$data['listSeminar'] = $this->m_seminar->list_dataSeminar($batas,$offset,$search_seminar);
     $data['list_peserta'] = $this->m_seminar->list_PesertaSeminar($batas, $offset, $search_peserta, $id_seminar);
+
     $this->doview('list_PesertaSeminar', $data);
     
     }

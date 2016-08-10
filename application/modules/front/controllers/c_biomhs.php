@@ -384,7 +384,7 @@ class C_biomhs extends MY_Controller {
     // for more information rhonalejandro@gmail.com
     }
 
-    public function cetak_all_info_seminar($id_mahasiswa = ''){
+    public function cetak_all_info_seminar($id_mahasiswa = ''){ 
     //$id_order = $this->input->get('id_order');
     include_once APPPATH.'/third_party/mpdf/mpdf.php';
     $data['all_seminar'] = array();
@@ -394,7 +394,7 @@ class C_biomhs extends MY_Controller {
     $file_name = 'REPORT.pdf';
     $html = $this->load->view('report_all_seminar', $data, true);
     $this->mpdf = new mPDF();
-    $stylesheet = file_get_contents('http://localhost/seminar/assets/frontend/css/bootstrap.css');// external css
+    $stylesheet = file_get_contents('../assets/frontend/css/style_all_seminar.css');// external css
 
     $this->mpdf->AddPage('P', // L - landscape, P - portrait
             '', '', '', '',
@@ -406,7 +406,7 @@ class C_biomhs extends MY_Controller {
             12); // margin footer
     $this->mpdf->WriteHTML($html);
     $this->mpdf->Output($file_name, 'D'); // download force
-    $this->mpdf->Output($file_name, 'I'); // view in the explorer
+    $this->mpdf->Output($file_name, 'I'); // view in the explorer*/
 
     // for more information rhonalejandro@gmail.com
     }

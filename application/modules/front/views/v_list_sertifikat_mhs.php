@@ -1,4 +1,4 @@
-<div>
+<div style="overflow: auto; padding-bottom: 190px;">
 	<div class="container" style="background: white; box-shadow: 0 5px 5px 0 grey;">
 		<h3 style="font-family: 'Alegreya', serif; margin-top: 40px">Biodata Mahasiswa</h3>
 		<div style="margin-top: 10px; height: 10px; border: 0; box-shadow: 0 10px 10px -10px #0066FF inset; border-radius: 5px;"></div>
@@ -100,7 +100,7 @@
 			</div> -->
 			<!-- <div class="clearfix"></div> -->
 		</div>
-		<p> &copy; 2016 Event Organizer. All Rights Reserved | Design by Ariev Nurhidayat</a></p>
+		<p> &copy; 2016 Event Organizer. All Rights Reserved | Design by Ariev Nurhidayat</p>
 	</div>
 </div>
 <!-- smooth scrolling -->
