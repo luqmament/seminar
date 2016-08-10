@@ -9,10 +9,12 @@
 					<a href="<?php echo site_url('mahasiswa-dashboard')?>" class="list-group-item">Detail Mahasiswa</a>
 					<a href="<?php echo site_url('update-mahasiswa')?>" class="list-group-item">Edit Mahasiswa</a>
 					<a href="<?php echo site_url('list-seminar')?>" class="list-group-item">List Seminar Mahasiswa</a>
+					<a href="<?php echo site_url('list-sertifikat')?>" class="list-group-item">List Sertifikat Mahasiswa</a>
 					<a href="#" class="list-group-item">Porta ac consectetur ac</a>
 					<a href="#" class="list-group-item">Vestibulum at eros</a>
 				</div>
 			</div>
+			
 			<div class="col-md-9" style="font-size : 14px ;font-family : tahoma">
 				<div class="panel panel-default">
 				  <div class="panel-heading"><h4>List Seminar</h4></div>
@@ -34,7 +36,7 @@
 					    			<td><?php echo $value['jadwal_seminar']?></td>
 					    			<td><?php echo $value['tempat_seminar']?></td>
 					    			<td><?php echo $value['pembicara_seminar']?></td>
-					    			<td class="text-center"><a href="<?php echo site_url('front/c_biomhs/cetak_ticket/'.$value['id_order'])?>"><i class="glyphicon glyphicon-print" aria-hidden="true"></i> Ticket </a> | <?php if($value['used_sertifikat'] == 1){?> <a href="<?php echo site_url('front/c_biomhs/cetak_sertifikat/'.$value['id_order'])?>"> <i class="glyphicon glyphicon-print" aria-hidden="true"></i> Sertifikat </a><?php } ?></td>
+					    			<td class="text-center"><a href="<?php echo site_url('front/c_biomhs/cetak_ticket/'.$value['id_order'])?>"><i class="glyphicon glyphicon-print" aria-hidden="true"></i> Ticket </a></td>
 					    		</tr>
 				    		<?php } ?>
 

@@ -143,6 +143,96 @@ class C_biomhs extends MY_Controller {
         }
         
     }
+
+    function ChangePassword() {
+        $this->form_validation->set_rules('current_pass', 'Current Password', 'required');
+        $this->form_validation->set_rules('new_pass', 'New Password', 'required|matches[re_new_pass]');
+        $this->form_validation->set_rules('re_new_pass', 'Retype New Password', 'required');
+
+        $data['mahasiswa'] = $this->m_register->getDetailMahasiswa($this->sessionData['id_mahasiswa']);
+        $data['fakultas']   = $this->m_register->getDataKey('fakultas', array('status_fakultas' => 1));
+
+        
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->frview('v_update_data_mhs',$data);
+        }
+        else
+        {
+            if($this->input->post()){
+                //echo 'selanjutnya';die();
+                $NowPassword    = encryptPass($this->input->post('current_pass'));
+                $NewPassword    = encryptPass($this->input->post('new_pass'));
+            
+                $result      = $this->m_register->check_To_password($this->sessionData['id_mahasiswa'],$NowPassword);
+                if($result){
+                    $field_key['id_mahasiswa']          = $this->sessionData['id_mahasiswa'] ;
+                    $data_update['password_mahasiswa']  = $NewPassword;
+                    $changePassword                     = $this->m_register->updateData('mahasiswa',$data_update,$field_key);
+                    if($changePassword){
+
+                        $this->session->set_flashdata('infoChangePassword', 'Password anda berhasil di ganti');
+                        redirect('update-mahasiswa');
+                    }else{
+                        $this->session->set_flashdata('infoCheckcPassword', 'Ganti Password tidak berhasil');
+                        redirect('update-mahasiswa');
+                    }                
+                }else{
+                    $this->session->set_flashdata('infoCheckPassword', 'Ganti Password tidak berhasil');
+                    redirect('update-mahasiswa');
+                }
+            }else{
+                redirect('update-mahasiswa');
+            }
+            
+        }
+        
+    }
+
+    function list_sertifikat(){
+        //pagination settings
+        $id_mahasiswa = $this->sessionData['id_mahasiswa'];
+        $data['listSeminar_mahasiswa']   = array();
+        $config['base_url']     = site_url('front/c_biomhs/list_seminar');
+        $config['total_rows']   = $this->m_register->count_sertifikat($id_mahasiswa);
+        $config['per_page']     = "5";
+        $config["uri_segment"]  = 4;
+        $choice                 = $config["total_rows"] / $config["per_page"];
+        $config["num_links"]    = floor($choice);
+        
+        //config for bootstrap pagination class integration
+        $config['full_tag_open']    = '<ul class="pagination">';
+        $config['full_tag_close']   = '</ul>';
+        $config['first_link']       = false;
+        $config['last_link']        = false;
+        $config['first_tag_open']   = '<li>';
+        $config['first_tag_close']  = '</li>';
+        $config['prev_link']        = '&laquo';
+        $config['prev_tag_open']    = '<li class="prev">';
+        $config['prev_tag_close']   = '</li>';
+        $config['next_link']        = '&raquo';
+        $config['next_tag_open']    = '<li>';
+        $config['next_tag_close']   = '</li>';
+        $config['last_tag_open']    = '<li>';
+        $config['last_tag_close']   = '</li>';
+        $config['cur_tag_open']     = '<li class="active"><a href="#">';
+        $config['cur_tag_close']    = '</a></li>';
+        $config['num_tag_open']     = '<li>';
+        $config['num_tag_close']    = '</li>';
+        
+        $this->pagination->initialize($config);
+        $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+        
+        //call the model function to get the department data
+        $data['start']          = $this->uri->segment(4,0);
+        $data['listSeminar_mahasiswa']   = $this->m_register->list_sertifikatMHS($config["per_page"],$data['page'], $id_mahasiswa);
+        //echo $this->db->last_query();
+        $data['pagination'] = $this->pagination->create_links();
+        //echo '<pre>',print_r($data);
+
+        $this->frview('v_list_sertifikat_mhs', $data);
+    }
+
     private function upload_image($image) {
         $data                   = array();
         $config['upload_path'] = FCPATH.'assets/uploads/mahasiswa';
@@ -294,6 +384,33 @@ class C_biomhs extends MY_Controller {
     // for more information rhonalejandro@gmail.com
     }
 
+    public function cetak_all_info_seminar($id_mahasiswa = ''){
+    //$id_order = $this->input->get('id_order');
+    include_once APPPATH.'/third_party/mpdf/mpdf.php';
+    $data['all_seminar'] = array();
+    $data['all_seminar'] = $this->m_register->all_seminar($id_mahasiswa);
+    //echo '<pre>',print_r($data);die;
+    //$this->load->view('report_all_seminar', $data);
+    $file_name = 'REPORT.pdf';
+    $html = $this->load->view('report_all_seminar', $data, true);
+    $this->mpdf = new mPDF();
+    $stylesheet = file_get_contents('http://localhost/seminar/assets/frontend/css/bootstrap.css');// external css
+
+    $this->mpdf->AddPage('P', // L - landscape, P - portrait
+            '', '', '', '',
+            10, // margin_left
+            10, // margin right
+            10, // margin top
+            10, // margin bottom
+            18, // margin header
+            12); // margin footer
+    $this->mpdf->WriteHTML($html);
+    $this->mpdf->Output($file_name, 'D'); // download force
+    $this->mpdf->Output($file_name, 'I'); // view in the explorer
+
+    // for more information rhonalejandro@gmail.com
+    }
+
     public function Make_PDF($view, $data, $file_name) {
         include_once APPPATH.'/third_party/mpdf/mpdf.php';
         $html = $this->load->view($view, $data, true);
@@ -313,6 +430,8 @@ class C_biomhs extends MY_Controller {
 
         // for more information rhonalejandro@gmail.com
     }
+
+
 }
 
 /* End of file users.php */

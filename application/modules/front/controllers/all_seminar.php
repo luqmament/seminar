@@ -28,7 +28,7 @@ class All_seminar extends MY_Controller {
         if (count($query_string) > 0)
         {
             $config['suffix'] = '?' . http_build_query($query_string, '', "&");
-            $config['first_url'] = $config['base_url'] . '?' . http_build_query($query_string, '', "&");
+            $config['first_url'] = $config['base_url'] . '?' . http_build_query($query_string, '', "&"); 
         }
 
 
@@ -61,7 +61,7 @@ class All_seminar extends MY_Controller {
         $this->pagination->initialize($config);
     
 
-        $data['seminar'] = $this->m_seminar->getDataSeminar('seminar', array('status_seminar' => 1, 'DATE_FORMAT(jadwal_seminar, "%Y-%m-%d %H:%i:%s") >=' => $today), 'jadwal_seminar desc', $search, $config["per_page"], $data['page']);
+        $data['seminar'] = $this->m_seminar->getDataSeminar('seminar', array('status_seminar' => 1, 'DATE_FORMAT(jadwal_seminar, "%Y-%m-%d %H:%i:%s") >=' => $today), 'jadwal_seminar asc', $search, $config["per_page"], $data['page']);
         //echo $this->db->last_query();
         //echo '<pre>',print_r($config);
         //echo '<pre>',print_r($data);die();

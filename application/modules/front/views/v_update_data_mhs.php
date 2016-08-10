@@ -1,3 +1,8 @@
+<style>
+	.has-error > p {
+    	color: red !important;
+	}
+</style>
 <div>
 	<div class="container" style="background: white; box-shadow: 0 5px 5px 0 grey;">
 		<h3 style="font-family: 'Alegreya', serif; margin-top: 40px">Biodata Mahasiswa</h3>
@@ -9,24 +14,40 @@
 					<a href="<?php echo site_url('mahasiswa-dashboard')?>" class="list-group-item">Detail Mahasiswa</a>
 					<a href="<?php echo site_url('update-mahasiswa')?>" class="list-group-item">Edit Mahasiswa</a>
 					<a href="<?php echo site_url('list-seminar')?>" class="list-group-item">List Seminar Mahasiswa</a>
+					<a href="<?php echo site_url('list-sertifikat')?>" class="list-group-item">List Sertifikat Mahasiswa</a>
 					<a href="#" class="list-group-item">Porta ac consectetur ac</a>
 					<a href="#" class="list-group-item">Vestibulum at eros</a>
 				</div>
 			</div>
 			<div class="col-md-9" style="font-size : 14px ;font-family : tahoma">
+
 				<div class="panel panel-default">
 				  <div class="panel-heading"><h4>Edit Mahasiswa</h4></div>
 				  <div class="panel-body">
+				  	<?php if($this->session->flashdata('infoCheckPassword')){ ?>
+						<div class="alert alert-danger">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+							<strong>Maaf!</strong> <?php echo $this->session->flashdata('infoCheckPassword'); ?>
+						</div>
+
+					<?php $this->session->unset_userdata('infoCheckPassword');} ?>
+					<?php if($this->session->flashdata('infoChangePassword')){ ?>
+						<div class="alert alert-success">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+							<strong>Yeeayyy ! </strong> <?php echo $this->session->flashdata('infoChangePassword'); ?>
+						</div>
+					<?php $this->session->unset_userdata('infoChangePassword'); } ?>
+					<div class="has-error">
+						<?php
+						echo validation_errors();
+
+						?>
+				    </div>
 				    	<!-- Form Register mahasiswa -->
 					    <div role="tabpanel" class="tab-pane" id="register">
 					    	<div class="about-grids">
 								<div class="col-md-7 about-grid">
-									<div class="has-error">
-										<?php
-										echo validation_errors();
-
-										?>
-								    </div>
+									
 									<form action="<?php echo site_url('front/c_biomhs/submit_update_mhs')?>" method="post" id="form_register_mahasiswa" enctype="multipart/form-data" style="margin-bottom: 15px">
 									  	<div class="form-group">
 										    <label for="NamaDepan">Nama Depan</label>
@@ -147,7 +168,23 @@
 									  	<button type="submit" class="btn btn-primary">Submit</button>
 									</form>		
 								</div>
-								<div class="clearfix"></div>
+								<div class="col-md-5 about-grid">
+									<form action="<?php echo site_url('front/c_biomhs/ChangePassword')?>" method="post" id="form_register_mahasiswa" enctype="multipart/form-data" style="margin-bottom: 15px">
+									  	<div class="form-group">
+										    <label for="">Password Sekarang</label>
+										    <input type="password" class="form-control" id="current_pass" name="current_pass" placeholder="password sekarang" autocomplete="off">
+									  	</div>
+									  	<div class="form-group">
+										    <label for="">Password Baru</label>
+										    <input type="password" class="form-control" id="new_pass" name="new_pass" placeholder="password baru" autocomplete="off">
+									  	</div>
+									  	<div class="form-group">
+										    <label for="">Ulangi Password Baru</label>
+										    <input type="password" class="form-control" id="re_new_pass" name="re_new_pass" placeholder="ulangi password baru" autocomplete="off">
+									  	</div>
+									  	<button type="submit" class="btn btn-primary">Submit</button>
+									</form>
+								</div>
 					    	</div>
 					    </div>
 					    <!-- End Form Register mahasiswa -->

@@ -34,6 +34,16 @@ class M_register extends CI_Model {
         }
     }
 
+    function check_To_password($id, $password) {
+        $this->db->where('id_mahasiswa', $id);
+        $this->db->where('password_mahasiswa',$password);
+        $query = $this->db->get('mahasiswa');
+        if ($query->num_rows() > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
     function insertData($table, $data){
 
     	$query = $this->db->insert($table, $data);
@@ -53,9 +63,9 @@ class M_register extends CI_Model {
         $query = $this->db->update($table, $data);
 
         if($query){
-            return true ;
+            return TRUE ;
         }else{
-            return false ;
+            return FALSE ;
         }
     }
 
@@ -110,6 +120,20 @@ class M_register extends CI_Model {
         }
     }
 
+    function count_sertifikat($id_mahasiswa){
+        $this->db->select('ord.id_order');
+        $this->db->from('order ord');
+        $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
+        $this->db->where('ord.id_mahasiswa', $id_mahasiswa);
+        $this->db->where('ord.used_sertifikat', 1);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        }else{
+            return FALSE;
+        }
+    }
+
     function list_seminarMHS($limit, $start , $id_mahasiswa ){
         $this->db->select('ord.*, m.*, smr.*,tk.*');
         $this->db->from('order ord');
@@ -117,6 +141,23 @@ class M_register extends CI_Model {
         $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
         $this->db->join('ticket_manual tk', 'ord.id_ticket = tk.id_ticket');
         $this->db->where('m.id_mahasiswa', $id_mahasiswa);
+        $this->db->limit($limit , $start);
+        $query =  $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        }else{
+            return array();
+        }
+    }
+
+    function list_sertifikatMHS($limit, $start , $id_mahasiswa ){
+        $this->db->select('ord.*, m.*, smr.*,tk.*');
+        $this->db->from('order ord');
+        $this->db->join('mahasiswa m', 'ord.id_mahasiswa = m.id_mahasiswa');
+        $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
+        $this->db->join('ticket_manual tk', 'ord.id_ticket = tk.id_ticket');
+        $this->db->where('m.id_mahasiswa', $id_mahasiswa);
+        $this->db->where('ord.used_sertifikat', 1);
         $this->db->limit($limit , $start);
         $query =  $this->db->get();
         if ($query->num_rows() > 0) {
@@ -138,6 +179,22 @@ class M_register extends CI_Model {
             return $query->row();
         }else{
             return false;
+        }
+    }
+
+    function all_seminar($id_mahasiswa){
+         $this->db->select('ord.*, m.*, smr.*,tk.*');
+        $this->db->from('order ord');
+        $this->db->join('mahasiswa m', 'ord.id_mahasiswa = m.id_mahasiswa');
+        $this->db->join('seminar smr', 'ord.id_seminar = smr.id_seminar');
+        $this->db->join('ticket_manual tk', 'ord.id_ticket = tk.id_ticket');
+        $this->db->where('ord.id_mahasiswa', $id_mahasiswa);
+        $this->db->where('ord.used_sertifikat', 1);
+        $query =  $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        }else{
+            return array();
         }
     }
 	

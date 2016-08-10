@@ -15,7 +15,6 @@ class Seminar extends MY_Controller {
     }
 
     public function submit_order(){
-
     	$id_seminar		= $this->input->post('id_seminar');
     	$id_mahasiswa	= $this->input->post('id_mhs');
         //check ketentuan ticket
@@ -26,7 +25,7 @@ class Seminar extends MY_Controller {
 
 
 
-        $tahun_masuk    = $detail_mahasiswa->tahun_masuk ;
+        /*$tahun_masuk    = $detail_mahasiswa->tahun_masuk ;
         $now            = date('Y');
         $bulan          = date('m');
         $intervalThn    = $now - $tahun_masuk + 1;
@@ -43,8 +42,28 @@ class Seminar extends MY_Controller {
             }else{
                 $intervalThn = ($intervalThn * 2 ) - 1;
             }
+        }*/
+
+        $tahun_masuk    = $detail_mahasiswa->tahun_masuk ;
+        $now            = date('Y');
+        $bulan          = date('m');
+        $intervalThn    = $now - $tahun_masuk;
+
+        if($detail_mahasiswa->semester_mahasiswa == 'ganjil'){
+            if(($bulan) <= 6){
+                $intervalThn = ($intervalThn * 2 );
+            }else{
+                $intervalThn = ($intervalThn * 2 ) + 1;
+            }                                       
+        }else{
+            if(($bulan) <= 6){
+                $intervalThn = ($intervalThn * 2 ) - 1;
+            }else{
+                $intervalThn = ($intervalThn * 2 );
+            }
         }
 
+        
         // check mahasiswa daftar seminar;
         $checkOrderSeminar = $this->m_seminar->getDetData('order', array('id_mahasiswa' => $id_mahasiswa, 'id_seminar' => $id_seminar));
         $arr_seminar = explode(",", $detail_seminar->semester_seminar);
@@ -105,11 +124,11 @@ class Seminar extends MY_Controller {
 
                         }
                     }else{
-                        if($detail_seminar->untuk_kelas == 2){
-                            $kelas = 'paralel' ;
-                        }else{
+                        if($detail_seminar->untuk_kelas == 1){
                             $kelas = 'Reguler' ;
-                        }
+                        }/*else{
+                            $kelas = 'Paralel' ;
+                        }*/
                         echo json_encode(array('status' => 'error', 'alert' => 'Maaf seminar untuk semester '.$detail_seminar->semester_seminar. ' dan kelas '. $kelas));   
                     }
                 break;
@@ -165,10 +184,10 @@ class Seminar extends MY_Controller {
                         }
                     }else{
                         if($detail_seminar->untuk_kelas == 2){
-                            $kelas = 'paralel' ;
-                        }else{
+                            $kelas = 'Paralel' ;
+                        }/*else{
                             $kelas = 'Reguler' ;
-                        }
+                        }*/
                         echo json_encode(array('status' => 'error', 'alert' => 'Maaf seminar untuk semester '.$detail_seminar->semester_seminar. ' dan kelas '. $kelas));   
                     }
 
