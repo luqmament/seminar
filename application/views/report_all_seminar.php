@@ -9,22 +9,32 @@
 <div class="container">
 	<div class="row">
 		<div style="float : left; width: 140mm ;">
-			<table class="table table-striped">
+			<table class="table table-bordered" style="background-color: rgba(255,255,255,0) !important;">
 				<tr>
 					<td>Nama Mahasiswa</td>
 					<td>:</td>
-					<td>Luqman Hakim</td>
+					<td><?php echo $all_seminar[0]['nama_depan']?></td>
 				</tr>
 				<tr>
 					<td>NIM</td>
 					<td>:</td>
-					<td>Luqman Hakim</td>
+					<td><?php echo $all_seminar[0]['nim_mahasiswa']?></td>
+				</tr>
+				<tr>
+					<td>Jurusan</td>
+					<td>:</td>
+					<td><?php echo $all_seminar[0]['nama_jurusan']?></td>
+				</tr>
+				<tr>
+					<td>Fakultas</td>
+					<td>:</td>
+					<td><?php echo $all_seminar[0]['nama_fakultas']?></td>
 				</tr>
 			</table>	
 		</div>
 	</div>
 	<div class="row" class="row" style="margin-top: 15mm">
-		<table class="table table-bordered">
+		<table class="table table-bordered" style="background-color: rgba(255,255,255,0) !important;">
 			<thead>
 				<tr>
 					<th>No</th>
