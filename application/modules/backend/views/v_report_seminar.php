@@ -26,9 +26,9 @@
 					<div class="panel-heading">
 					<div class="pull-left">
 						<?php echo form_open_multipart('backend/c_report/show_report', array("id" => "form-periode-report", "class" => "form-inline", "method" => "POST")); ?>  
-						<input type="text" name="periode_report" class="form-control" id="periode_report" value="<?php $session_searchSeminar = $this->session->userdata('pencarian_seminar'); echo (!empty($session_searchSeminar)) ? $session_searchSeminar : ''?>" />     
-						<button type="submit" class="btn btn-primary">Show Report</button>
-						<a href="<?php echo site_url('backend/c_seminar')?>" class="btn btn-primary btn-upgrade-mhs">show all</a>
+						<input type="text" name="periode_report" class="form-control" id="periode_report" value="<?php $session_searchReport = $this->session->userdata('pencarian_report'); echo (!empty($session_searchReport)) ? $session_searchReport : ''?>" />     
+						<button type="submit" name="show_report" class="btn btn-primary" value="show_report">Show Report</button>
+						<button type="submit" name="print_report" class="btn btn-primary" value="print_report">Print Report</button>
 						<?php echo form_close();?>						
 					</div>
 					</div>
